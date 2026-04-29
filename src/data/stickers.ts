@@ -1,3 +1,4 @@
+import type { SQLiteBindValue } from "expo-sqlite";
 import { getDb } from "./db";
 import type { Sticker, StickerWithStatus } from "@/domain/types";
 
@@ -14,7 +15,7 @@ export async function getStickersWithStatus(filter: {
 }): Promise<StickerWithStatus[]> {
   const db = getDb();
   const where: string[] = [];
-  const params: unknown[] = [];
+  const params: SQLiteBindValue[] = [];
 
   if (filter.q && filter.q.trim().length > 0) {
     where.push(`(s.name LIKE ? OR s.team LIKE ? OR CAST(s.number AS TEXT) LIKE ?)`);
