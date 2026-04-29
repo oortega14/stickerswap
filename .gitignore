@@ -1,0 +1,30 @@
+node_modules/
+.expo/
+dist/
+web-build/
+*.log
+.DS_Store
+
+# secrets
+.env
+.env.local
+.env.*.local
+
+# brainstorm session artifacts
+.superpowers/
+
+# native build artifacts
+ios/Pods/
+ios/build/
+android/build/
+android/app/build/
+android/.gradle/
+*.jks
+*.keystore
+*.mobileprovision
+*.p8
+*.p12
+
+# editor
+.vscode/
+.idea/
