@@ -11,19 +11,15 @@ import { colors } from "@/theme/colors";
 
 const COLUMNS = 4;
 
-function StickerCell({ s, onTap, onLong }: {
+function StickerCell({ s, onTap, onLong, onInfo }: {
   s: StickerWithStatus;
   onTap: () => void;
   onLong: () => void;
+  onInfo: () => void;
 }) {
   const collected = s.count >= 1;
   return (
-    <Pressable
-      onPress={onTap}
-      onLongPress={onLong}
-      delayLongPress={350}
-      className="flex-1 m-1"
-    >
+    <Pressable onPress={onTap} onLongPress={onLong} delayLongPress={350} className="flex-1 m-1">
       <View
         className="aspect-square rounded-md items-center justify-center"
         style={{
@@ -35,10 +31,7 @@ function StickerCell({ s, onTap, onLong }: {
       >
         <Text
           className="font-bold"
-          style={{
-            color: collected ? "#fff" : colors.dim,
-            fontSize: 12
-          }}
+          style={{ color: collected ? "#fff" : colors.dim, fontSize: 12 }}
         >
           {s.number}
         </Text>
@@ -52,6 +45,16 @@ function StickerCell({ s, onTap, onLong }: {
             </Text>
           </View>
         )}
+        <Pressable
+          onPress={(e) => {
+            e.stopPropagation();
+            onInfo();
+          }}
+          hitSlop={8}
+          className="absolute top-0.5 right-0.5"
+        >
+          <Text style={{ color: collected ? "#fff" : colors.dim, fontSize: 10 }}>ⓘ</Text>
+        </Pressable>
       </View>
     </Pressable>
   );
@@ -104,14 +107,15 @@ export default function AlbumScreen() {
             renderItem={({ item }) => (
               <StickerCell
                 s={item}
-                onTap={async () => {
+                onTap={() => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                   inc.mutate(item.code);
                 }}
-                onLong={async () => {
+                onLong={() => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
                   dec.mutate(item.code);
                 }}
+                onInfo={() => router.push(`/sticker/${item.code}`)}
               />
             )}
             ListEmptyComponent={
@@ -119,13 +123,6 @@ export default function AlbumScreen() {
             }
           />
         )}
-
-        <Pressable
-          onPress={() => router.push("/sticker/INTRO-1")}
-          className="absolute bottom-6 right-6 bg-space-purple rounded-full px-4 py-2"
-        >
-          <Text className="text-white text-xs">Demo detalle</Text>
-        </Pressable>
       </View>
     </StarryBackground>
   );
