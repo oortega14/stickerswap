@@ -14,7 +14,12 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "app.panini.mundial2026"
+      "bundleIdentifier": "app.panini.mundial2026",
+      "entitlements": {
+        "keychain-access-groups": [
+          "$(AppIdentifierPrefix)app.panini.mundial2026"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
