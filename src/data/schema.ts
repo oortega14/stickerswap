@@ -1,6 +1,6 @@
 import { getDb } from "./db";
 
-const SCHEMA_VERSION = 2;
+const SCHEMA_VERSION = 3;
 
 export async function initSchema(): Promise<void> {
   const db = getDb();
@@ -42,6 +42,25 @@ export async function initSchema(): Promise<void> {
     );
 
     CREATE INDEX IF NOT EXISTS idx_sync_queue_attempts ON sync_queue(attempts);
+
+    CREATE TABLE IF NOT EXISTS friends_cache (
+      friend_id TEXT PRIMARY KEY,
+      username TEXT NOT NULL,
+      display_name TEXT,
+      avatar_url TEXT,
+      status TEXT NOT NULL,
+      source TEXT NOT NULL,
+      created_at INTEGER NOT NULL,
+      fetched_at INTEGER NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS friend_matches_cache (
+      friend_id TEXT NOT NULL,
+      sticker_code TEXT NOT NULL,
+      extras INTEGER NOT NULL,
+      fetched_at INTEGER NOT NULL,
+      PRIMARY KEY (friend_id, sticker_code)
+    );
   `);
 
   await db.runAsync(
