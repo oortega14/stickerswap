@@ -148,11 +148,17 @@ export default function RootLayout() {
         <FriendUpdatesBridge />
         <StatusBar style="light" />
         <AuthGate>
-          <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: "#000" } }}>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              contentStyle: { backgroundColor: "#000" },
+              animation: "slide_from_right"
+            }}
+          >
             <Stack.Screen name="(auth)" />
             <Stack.Screen name="(tabs)" />
-            <Stack.Screen name="sticker/[code]" options={{ presentation: "modal" }} />
-            <Stack.Screen name="profile/edit" options={{ presentation: "modal" }} />
+            <Stack.Screen name="sticker/[code]" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
+            <Stack.Screen name="profile/edit" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
           </Stack>
         </AuthGate>
       </QueryClientProvider>
