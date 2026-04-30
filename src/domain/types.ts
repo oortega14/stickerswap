@@ -33,3 +33,20 @@ export interface OverallProgress {
   duplicates: number;
   bySection: SectionProgress[];
 }
+
+export interface TradeListEntry {
+  code: string;
+  number: number;
+  section: string;
+  count: number;     // 0 si falta, >1 si es repetida
+}
+
+export interface TradeList {
+  needed: TradeListEntry[];     // count = 0 — me faltan
+  duplicates: TradeListEntry[]; // count > 1 — tengo repetidas (extras = count - 1)
+}
+
+export interface TradeFormatOptions {
+  groupBySection: boolean;
+  username: string;
+}
