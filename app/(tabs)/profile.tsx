@@ -1,5 +1,8 @@
 import { ScrollView, View, Text, Pressable, Image, Alert } from "react-native";
 import { useRouter } from "expo-router";
+import * as Clipboard from "expo-clipboard";
+import * as Haptics from "expo-haptics";
+import QRCode from "react-native-qrcode-svg";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useSession } from "@/auth/useSession";
@@ -29,17 +32,10 @@ export default function Profile() {
 
   if (!user) return null;
 
-  const onSignOut = () => {
-    Alert.alert("Cerrar sesión", "¿Seguro que querés salir?", [
-      { text: "Cancelar", style: "cancel" },
-      {
-        text: "Salir",
-        style: "destructive",
-        onPress: async () => {
-          await supabase.auth.signOut();
-        }
-      }
-    ]);
+  const onCopyCode = async () => {
+    await Clipboard.setStringAsync(user.invite_code);
+    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    Alert.alert("Copiado", `Tu código ${user.invite_code} está en el portapapeles.`);
   };
 
   return (
@@ -49,29 +45,63 @@ export default function Profile() {
 
         <GlowCard className="items-center mb-4">
           {user.avatar_url ? (
-            <Image
-              source={{ uri: user.avatar_url }}
-              style={{ width: 80, height: 80, borderRadius: 40 }}
-            />
+            <Image source={{ uri: user.avatar_url }} style={{ width: 80, height: 80, borderRadius: 40 }} />
           ) : (
             <Initials name={user.display_name ?? user.username} />
           )}
-          <Text className="text-space-ink text-lg font-bold mt-3">
-            {user.display_name ?? user.username}
-          </Text>
+          <Text className="text-space-ink text-lg font-bold mt-3">{user.display_name ?? user.username}</Text>
           <Text className="text-space-mute text-sm">@{user.username}</Text>
         </GlowCard>
 
+        <GlowCard className="items-center mb-4">
+          <Text className="text-space-mute text-xs tracking-widest mb-2">TU CÓDIGO</Text>
+          <View className="bg-white p-3 rounded-lg mb-3">
+            <QRCode value={user.invite_code} size={120} backgroundColor="#fff" color="#000" />
+          </View>
+          <Text className="text-space-ink text-2xl font-mono font-bold tracking-widest">
+            {user.invite_code}
+          </Text>
+          <Pressable onPress={onCopyCode} className="mt-2">
+            <Text className="text-space-violet text-xs">Copiar código</Text>
+          </Pressable>
+        </GlowCard>
+
+        <Pressable
+          onPress={() => router.push("/add-friend/scan" as never)}
+          className="bg-space-purple rounded-xl py-3 items-center mb-2"
+        >
+          <Text className="text-white font-semibold">📷 Escanear código de amigo</Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => router.push("/add-friend/search" as never)}
+          className="bg-space-mid rounded-xl py-3 items-center mb-2"
+        >
+          <Text className="text-space-ink font-semibold">⌕ Buscar por @username</Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => router.push("/friends" as never)}
+          className="bg-space-mid rounded-xl py-3 items-center mb-2"
+        >
+          <Text className="text-space-ink font-semibold">👥 Mis amigos</Text>
+        </Pressable>
+
         <Pressable
           onPress={() => router.push("/profile/edit" as never)}
-          className="bg-space-mid rounded-lg py-3 items-center mb-2"
+          className="bg-space-mid rounded-xl py-3 items-center mb-2"
         >
           <Text className="text-space-ink font-semibold">Editar perfil</Text>
         </Pressable>
 
         <Pressable
-          onPress={onSignOut}
-          className="bg-space-dark border border-red-400/30 rounded-lg py-3 items-center"
+          onPress={() => {
+            Alert.alert("Cerrar sesión", "¿Seguro?", [
+              { text: "Cancelar", style: "cancel" },
+              { text: "Salir", style: "destructive", onPress: () => supabase.auth.signOut() }
+            ]);
+          }}
+          className="bg-space-dark border border-red-400/30 rounded-xl py-3 items-center"
         >
           <Text className="text-red-300 font-semibold">Cerrar sesión</Text>
         </Pressable>
