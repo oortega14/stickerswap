@@ -3,16 +3,21 @@ import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { useProgress } from "@/hooks/useProgress";
+import { usePendingCount } from "@/hooks/usePendingCount";
 
 export default function Home() {
   const { data, isLoading } = useProgress();
+  const { data: pending } = usePendingCount();
 
   return (
     <StarryBackground>
       <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
-        <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">
-          MUNDIAL 2026
-        </Text>
+        <View className="flex-row justify-between items-center mb-4">
+          <Text className="text-space-violet font-bold tracking-widest text-sm">MUNDIAL 2026</Text>
+          {pending && pending > 0 ? (
+            <Text className="text-space-mute text-xs">{pending} pendientes ⤴</Text>
+          ) : null}
+        </View>
 
         {isLoading || !data ? (
           <Text className="text-space-mute">Cargando…</Text>
