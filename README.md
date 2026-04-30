@@ -25,12 +25,16 @@ Luego presionar `i` para iOS o `a` para Android.
 - `assets/stickers.json` — dataset embebido del álbum
 - `docs/superpowers/` — specs y plans del proyecto
 
-## Estado actual: P1
+## Estado actual: P2
 
 - ✅ Browse del álbum, marcar pegadas/repetidas
 - ✅ Progreso por sección
 - ✅ Buscador y filtros
-- ⏳ Auth + sync remota — P2
+- ✅ Auth con Google (y Apple en iOS si tenés Developer account)
+- ✅ Sync de tu progreso entre dispositivos vía Supabase
 - ⏳ Compartir lista de cambios — P3
 - ⏳ Amigos + matches — P4
 - ⏳ Pulido visual + release — P5
+
+Variables de entorno: copiá `.env.example` a `.env` y completá los valores
+del proyecto Supabase + clientes OAuth.
