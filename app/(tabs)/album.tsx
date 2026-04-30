@@ -4,61 +4,12 @@ import { useRouter } from "expo-router";
 import { haptics } from "@/lib/haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { FilterChip } from "@/ui/FilterChip";
+import { AnimatedStickerCell } from "@/ui/AnimatedStickerCell";
 import { useStickerList, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { useFilters } from "@/store/filters";
-import type { StickerWithStatus } from "@/domain/types";
 import { colors } from "@/theme/colors";
 
 const COLUMNS = 4;
-
-function StickerCell({ s, onTap, onLong, onInfo }: {
-  s: StickerWithStatus;
-  onTap: () => void;
-  onLong: () => void;
-  onInfo: () => void;
-}) {
-  const collected = s.count >= 1;
-  return (
-    <Pressable onPress={onTap} onLongPress={onLong} delayLongPress={350} className="flex-1 m-1">
-      <View
-        className="aspect-square rounded-md items-center justify-center"
-        style={{
-          backgroundColor: collected ? colors.purple : colors.dark,
-          borderWidth: collected ? 0 : 1,
-          borderColor: "rgba(124,92,255,0.25)",
-          borderStyle: collected ? "solid" : "dashed"
-        }}
-      >
-        <Text
-          className="font-bold"
-          style={{ color: collected ? "#fff" : colors.dim, fontSize: 12 }}
-        >
-          {s.number}
-        </Text>
-        {s.count > 1 && (
-          <View
-            className="absolute -bottom-1 -right-1 rounded-full items-center justify-center"
-            style={{ width: 18, height: 18, backgroundColor: colors.blue }}
-          >
-            <Text className="text-white font-bold" style={{ fontSize: 10 }}>
-              {s.count}
-            </Text>
-          </View>
-        )}
-        <Pressable
-          onPress={(e) => {
-            e.stopPropagation();
-            onInfo();
-          }}
-          hitSlop={8}
-          className="absolute top-0.5 right-0.5"
-        >
-          <Text style={{ color: collected ? "#fff" : colors.dim, fontSize: 10 }}>ⓘ</Text>
-        </Pressable>
-      </View>
-    </Pressable>
-  );
-}
 
 export default function AlbumScreen() {
   const router = useRouter();
@@ -105,7 +56,7 @@ export default function AlbumScreen() {
             keyExtractor={(item) => item.code}
             numColumns={COLUMNS}
             renderItem={({ item }) => (
-              <StickerCell
+              <AnimatedStickerCell
                 s={item}
                 onTap={() => {
                   haptics.light();
