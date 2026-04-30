@@ -50,3 +50,35 @@ export interface TradeFormatOptions {
   groupBySection: boolean;
   username: string;
 }
+
+export type FriendshipStatus = "pending" | "accepted" | "blocked";
+export type FriendshipSource = "qr_code" | "username_search";
+
+export interface Friend {
+  id: string;
+  username: string;
+  displayName: string | null;
+  avatarUrl: string | null;
+  status: FriendshipStatus;
+  source: FriendshipSource;
+  createdAt: number;
+}
+
+export interface FriendMatch {
+  friendId: string;
+  stickerCode: string;
+  extras: number;
+}
+
+export interface FriendMatchSummary {
+  friendId: string;
+  username: string;
+  displayName: string | null;
+  matchCount: number;
+  sample: string[];
+}
+
+export interface BidirectionalMatch {
+  theyHaveYouNeed: FriendMatch[];
+  youHaveTheyNeed: FriendMatch[];
+}
