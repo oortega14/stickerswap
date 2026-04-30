@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, FlatList, Pressable, TextInput } from "react-native";
 import { useRouter } from "expo-router";
-import * as Haptics from "expo-haptics";
+import { haptics } from "@/lib/haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { FilterChip } from "@/ui/FilterChip";
 import { useStickerList, useIncrement, useDecrement } from "@/hooks/useStickers";
@@ -108,11 +108,11 @@ export default function AlbumScreen() {
               <StickerCell
                 s={item}
                 onTap={() => {
-                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  haptics.light();
                   inc.mutate(item.code);
                 }}
                 onLong={() => {
-                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+                  haptics.medium();
                   dec.mutate(item.code);
                 }}
                 onInfo={() => router.push(`/sticker/${item.code}`)}

@@ -1,7 +1,7 @@
 import { ScrollView, View, Text, Pressable, Image, Alert } from "react-native";
 import { useRouter } from "expo-router";
 import * as Clipboard from "expo-clipboard";
-import * as Haptics from "expo-haptics";
+import { haptics } from "@/lib/haptics";
 import QRCode from "react-native-qrcode-svg";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
@@ -34,7 +34,7 @@ export default function Profile() {
 
   const onCopyCode = async () => {
     await Clipboard.setStringAsync(user.invite_code);
-    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    await haptics.success();
     Alert.alert("Copiado", `Tu código ${user.invite_code} está en el portapapeles.`);
   };
 

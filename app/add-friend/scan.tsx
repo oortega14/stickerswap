@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { View, Text, Pressable, ActivityIndicator, Alert } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import { useRouter } from "expo-router";
-import * as Haptics from "expo-haptics";
+import { haptics } from "@/lib/haptics";
 import { useAddFriend } from "@/hooks/useAddFriend";
 import { isValidInviteCode, normalizeInviteCode } from "@/domain/inviteCode";
 
@@ -28,7 +28,7 @@ export default function ScanFriend() {
     }
     try {
       await addFriend.mutateAsync(code);
-      await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      await haptics.success();
       Alert.alert("¡Amigo agregado!", "Ya pueden ver matches.", [
         { text: "Listo", onPress: () => router.back() }
       ]);

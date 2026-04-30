@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ScrollView, View, Text, Pressable, Switch, Share } from "react-native";
 import { useRouter } from "expo-router";
-import * as Haptics from "expo-haptics";
+import { haptics } from "@/lib/haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { SegmentedControl } from "@/ui/SegmentedControl";
@@ -18,7 +18,7 @@ export default function Trades() {
 
   const onShare = async () => {
     if (!text) return;
-    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    await haptics.success();
     await Share.share({ message: text, title: "Mi lista de cambios" });
   };
 
