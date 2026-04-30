@@ -2,7 +2,7 @@
   "expo": {
     "name": "Panini Album",
     "slug": "panini-album",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "scheme": "panini",
@@ -15,6 +15,10 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "app.panini.mundial2026",
+      "buildNumber": "1",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
       "entitlements": {
         "keychain-access-groups": [
           "$(AppIdentifierPrefix)app.panini.mundial2026"
@@ -26,7 +30,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0a0820"
       },
-      "package": "app.panini.mundial2026"
+      "package": "app.panini.mundial2026",
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
