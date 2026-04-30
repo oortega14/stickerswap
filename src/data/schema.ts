@@ -1,6 +1,6 @@
 import { getDb } from "./db";
 
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 export async function initSchema(): Promise<void> {
   const db = getDb();
@@ -32,6 +32,16 @@ export async function initSchema(): Promise<void> {
       updated_at INTEGER NOT NULL,
       FOREIGN KEY (sticker_code) REFERENCES stickers(code) ON DELETE CASCADE
     );
+
+    CREATE TABLE IF NOT EXISTS sync_queue (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      sticker_code TEXT NOT NULL,
+      count INTEGER NOT NULL,
+      ts INTEGER NOT NULL,
+      attempts INTEGER NOT NULL DEFAULT 0
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_sync_queue_attempts ON sync_queue(attempts);
   `);
 
   await db.runAsync(
