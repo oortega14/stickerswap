@@ -135,6 +135,7 @@ export default function RootLayout() {
             <Stack.Screen name="(auth)" />
             <Stack.Screen name="(tabs)" />
             <Stack.Screen name="sticker/[code]" options={{ presentation: "modal" }} />
+            <Stack.Screen name="profile/edit" options={{ presentation: "modal" }} />
           </Stack>
         </AuthGate>
       </QueryClientProvider>
