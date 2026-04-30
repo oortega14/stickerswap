@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View } from "react-native";
+import Animated, {
+  useSharedValue,
+  useAnimatedProps,
+  withTiming
+} from "react-native-reanimated";
 import Svg, { Defs, LinearGradient, Stop, Rect } from "react-native-svg";
+
+const ARect = Animated.createAnimatedComponent(Rect);
 
 export function ProgressBar({ pct, height = 8 }: { pct: number; height?: number }) {
   const clamped = Math.max(0, Math.min(1, pct));
+  const w = useSharedValue(clamped);
+
+  useEffect(() => {
+    w.value = withTiming(clamped, { duration: 600 });
+  }, [clamped, w]);
+
+  const props = useAnimatedProps(() => ({
+    width: `${w.value * 100}%` as unknown as number
+  }));
+
   return (
     <View style={{ height, width: "100%" }}>
       <Svg width="100%" height={height}>
@@ -14,8 +31,8 @@ export function ProgressBar({ pct, height = 8 }: { pct: number; height?: number 
           </LinearGradient>
         </Defs>
         <Rect width="100%" height={height} rx={height / 2} fill="#0f0d24" />
-        <Rect
-          width={`${clamped * 100}%`}
+        <ARect
+          animatedProps={props}
           height={height}
           rx={height / 2}
           fill="url(#pb)"
