@@ -12,9 +12,30 @@ if (!url || !anon) {
 }
 
 const SecureStoreAdapter = {
-  getItem: (key: string) => SecureStore.getItemAsync(key),
-  setItem: (key: string, value: string) => SecureStore.setItemAsync(key, value),
-  removeItem: (key: string) => SecureStore.deleteItemAsync(key)
+  getItem: async (key: string) => {
+    try {
+      return await SecureStore.getItemAsync(key);
+    } catch {
+      // SecureStore lanza si la key no existe o si el keychain no está
+      // listo. Para el adapter de Supabase, eso debe traducirse a "no hay
+      // sesión guardada" (null) en vez de un reject que rompe el cliente.
+      return null;
+    }
+  },
+  setItem: async (key: string, value: string) => {
+    try {
+      await SecureStore.setItemAsync(key, value);
+    } catch (e) {
+      console.warn("SecureStore.setItem failed", e);
+    }
+  },
+  removeItem: async (key: string) => {
+    try {
+      await SecureStore.deleteItemAsync(key);
+    } catch (e) {
+      console.warn("SecureStore.deleteItem failed", e);
+    }
+  }
 };
 
 export const supabase = createClient(url, anon, {
