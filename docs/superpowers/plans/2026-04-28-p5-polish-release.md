@@ -1108,8 +1108,9 @@ import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { APP_VERSION, BUILD_NUMBER } from "@/lib/version";
 
-const PRIVACY_URL = "https://cosmaneura.com/panini/privacy";
-const TERMS_URL = "https://cosmaneura.com/panini/terms";
+// TODO: replace with real privacy/terms hosting before P5 release
+const PRIVACY_URL = "https://example.com/panini/privacy";
+const TERMS_URL = "https://example.com/panini/terms";
 
 export default function About() {
   const router = useRouter();
@@ -1213,7 +1214,7 @@ git commit -m "feat: about screen with version and legal links"
 
 ## Contacto
 
-dev@cosmaneura.com
+contact-email-tbd
 ```
 
 - [ ] **Step 15.2: Crear `docs/legal/terms.md`**
@@ -1236,7 +1237,7 @@ dev@cosmaneura.com
 
 ## Contacto
 
-dev@cosmaneura.com
+contact-email-tbd
 ```
 
 - [ ] **Step 15.3: Commit**
@@ -1344,7 +1345,7 @@ git commit -m "chore(eas): configure build profiles and submit targets"
 - [ ] **Step 17.1: Crear App ID en Apple Developer**
 
 1. https://developer.apple.com/account → Identifiers → "+" → App IDs.
-2. Bundle ID: `com.cosmaneura.panini`. Capabilities: Sign in with Apple.
+2. Bundle ID: `app.panini.mundial2026`. Capabilities: Sign in with Apple.
 
 - [ ] **Step 17.2: Crear app en App Store Connect**
 

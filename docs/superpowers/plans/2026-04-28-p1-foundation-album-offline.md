@@ -187,14 +187,14 @@ Expected: completa sin errores. Crea `node_modules/` y `package-lock.json`.
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.cosmaneura.panini"
+      "bundleIdentifier": "app.panini.mundial2026"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0a0820"
       },
-      "package": "com.cosmaneura.panini"
+      "package": "app.panini.mundial2026"
     },
     "web": {
       "bundler": "metro",
