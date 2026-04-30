@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { ScrollView, View, Text, Pressable, Switch, Share } from "react-native";
+import { useRouter } from "expo-router";
 import * as Haptics from "expo-haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { SegmentedControl } from "@/ui/SegmentedControl";
 import { useMyList } from "@/hooks/useMyList";
+import { useMatches } from "@/hooks/useMatches";
 import { useTradePrefs } from "@/store/tradePreferences";
 
 type Tab = "matches" | "mine";
@@ -37,12 +39,7 @@ export default function Trades() {
         </View>
 
         {tab === "matches" ? (
-          <GlowCard>
-            <Text className="text-space-ink text-center text-base mb-2">🛸</Text>
-            <Text className="text-space-mute text-center">
-              Los matches con amigos llegan en la próxima versión.
-            </Text>
-          </GlowCard>
+          <MatchesView />
         ) : isLoading || !data ? (
           <Text className="text-space-mute text-center mt-4">Cargando…</Text>
         ) : (
@@ -87,5 +84,40 @@ export default function Trades() {
         )}
       </ScrollView>
     </StarryBackground>
+  );
+}
+
+function MatchesView() {
+  const router = useRouter();
+  const { summary, isLoading } = useMatches();
+
+  if (isLoading) return <Text className="text-space-mute text-center mt-4">Cargando…</Text>;
+  if (summary.length === 0) {
+    return (
+      <GlowCard>
+        <Text className="text-space-mute text-center">
+          Todavía no hay matches. Sumá amigos desde Perfil.
+        </Text>
+      </GlowCard>
+    );
+  }
+
+  return (
+    <>
+      {summary.map((s) => (
+        <Pressable key={s.friendId} onPress={() => router.push(`/friends/${s.username}` as never)}>
+          <GlowCard className="mb-2">
+            <Text className="text-space-ink font-semibold">@{s.username}</Text>
+            <Text className="text-space-mute text-xs mt-1">
+              {s.matchCount} {s.matchCount === 1 ? "que te falta" : "que te faltan"}
+            </Text>
+            <Text className="text-space-violet text-xs mt-1">
+              {s.sample.join(" · ")}
+              {s.matchCount > 3 ? " · …" : ""}
+            </Text>
+          </GlowCard>
+        </Pressable>
+      ))}
+    </>
   );
 }
