@@ -31,7 +31,13 @@
     "plugins": [
       "expo-router",
       "expo-sqlite",
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.384059297758-1vsn36mcgvm1f222rcj35dd5ov413o5j"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
