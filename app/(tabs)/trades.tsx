@@ -4,6 +4,7 @@ import { useRouter } from "expo-router";
 import { haptics } from "@/lib/haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
+import { GlowGradientCard } from "@/ui/GlowGradientCard";
 import { SegmentedControl } from "@/ui/SegmentedControl";
 import { useMyList } from "@/hooks/useMyList";
 import { useMatches } from "@/hooks/useMatches";
@@ -73,13 +74,15 @@ export default function Trades() {
               </Text>
             </GlowCard>
 
-            <Pressable
-              onPress={onShare}
-              disabled={!text}
-              className={`rounded-xl py-4 items-center ${text ? "bg-space-purple" : "bg-space-mid"}`}
-            >
-              <Text className="text-white font-semibold">Compartir mi lista</Text>
-            </Pressable>
+            <GlowGradientCard>
+              <Pressable
+                onPress={onShare}
+                disabled={!text}
+                className={`rounded-xl py-4 items-center ${text ? "" : "opacity-50"}`}
+              >
+                <Text className="text-white font-semibold">Compartir mi lista</Text>
+              </Pressable>
+            </GlowGradientCard>
           </>
         )}
       </ScrollView>
