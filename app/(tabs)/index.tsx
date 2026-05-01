@@ -1,4 +1,5 @@
-import { ScrollView, View, Text } from "react-native";
+import { View, Text } from "react-native";
+import Animated, { useSharedValue, useAnimatedScrollHandler } from "react-native-reanimated";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { ProgressBar } from "@/ui/ProgressBar";
@@ -9,9 +10,21 @@ export default function Home() {
   const { data, isLoading } = useProgress();
   const { data: pending } = usePendingCount();
 
+  const scrollY = useSharedValue(0);
+  const onScroll = useAnimatedScrollHandler({
+    onScroll: (e) => {
+      scrollY.value = e.contentOffset.y;
+    }
+  });
+
   return (
-    <StarryBackground>
-      <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
+    <StarryBackground parallaxScrollY={scrollY}>
+      <Animated.ScrollView
+        className="flex-1 px-4 pt-14"
+        contentContainerStyle={{ paddingBottom: 32 }}
+        onScroll={onScroll}
+        scrollEventThrottle={16}
+      >
         <View className="flex-row justify-between items-center mb-4">
           <Text className="text-space-violet font-bold tracking-widest text-sm">MUNDIAL 2026</Text>
           {pending && pending > 0 ? (
@@ -48,7 +61,7 @@ export default function Home() {
             ))}
           </>
         )}
-      </ScrollView>
+      </Animated.ScrollView>
     </StarryBackground>
   );
 }
