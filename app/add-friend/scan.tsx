@@ -53,7 +53,12 @@ export default function ScanFriend() {
         <Text className="text-space-mute text-center mb-4">
           Necesitamos permiso de cámara para escanear códigos.
         </Text>
-        <Pressable onPress={requestPermission} className="bg-space-purple px-6 py-3 rounded-xl">
+        <Pressable
+          onPress={requestPermission}
+          className="bg-space-purple px-6 py-3 rounded-xl"
+          accessibilityLabel="Conceder permiso de cámara"
+          accessibilityRole="button"
+        >
           <Text className="text-white font-semibold">Conceder permiso</Text>
         </Pressable>
       </View>
@@ -84,6 +89,8 @@ export default function ScanFriend() {
       <Pressable
         onPress={() => router.back()}
         className="absolute top-12 right-4 bg-black/60 rounded-full px-4 py-2"
+        accessibilityLabel="Cerrar"
+        accessibilityRole="button"
       >
         <Text className="text-white">Cerrar</Text>
       </Pressable>

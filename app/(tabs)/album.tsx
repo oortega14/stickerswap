@@ -28,7 +28,12 @@ export default function AlbumScreen() {
           <Text className="text-space-violet font-bold tracking-widest text-sm">
             ÁLBUM · MUNDIAL 2026
           </Text>
-          <Pressable onPress={() => setShowSearch((v) => !v)} className="p-2">
+          <Pressable
+            onPress={() => setShowSearch((v) => !v)}
+            className="p-2"
+            accessibilityLabel="Buscar"
+            accessibilityRole="button"
+          >
             <Text className="text-space-violet text-lg">⌕</Text>
           </Pressable>
         </View>

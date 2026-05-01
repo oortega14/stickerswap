@@ -83,6 +83,8 @@ export default function Onboarding() {
           disabled={state !== "valid" || saving}
           onPress={onSave}
           className={`rounded-xl py-4 items-center ${state === "valid" ? "bg-space-purple" : "bg-space-mid"}`}
+          accessibilityLabel="Continuar"
+          accessibilityRole="button"
         >
           {saving ? (
             <ActivityIndicator color="#fff" />

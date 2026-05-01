@@ -80,6 +80,8 @@ export default function Trades() {
                 onPress={onShare}
                 disabled={!text}
                 className={`rounded-xl py-4 items-center ${text ? "" : "opacity-50"}`}
+                accessibilityLabel="Compartir mi lista"
+                accessibilityRole="button"
               >
                 <Text className="text-white font-semibold">Compartir mi lista</Text>
               </Pressable>
@@ -103,7 +105,12 @@ function MatchesView() {
   return (
     <>
       {summary.map((s) => (
-        <Pressable key={s.friendId} onPress={() => router.push(`/friends/${s.username}` as never)}>
+        <Pressable
+          key={s.friendId}
+          onPress={() => router.push(`/friends/${s.username}` as never)}
+          accessibilityLabel={`Ver matches con @${s.username}`}
+          accessibilityRole="button"
+        >
           <GlowCard className="mb-2">
             <Text className="text-space-ink font-semibold">@{s.username}</Text>
             <Text className="text-space-mute text-xs mt-1">

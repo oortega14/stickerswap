@@ -25,7 +25,11 @@ export default function FriendsList() {
           renderItem={({ item }) => {
             const count = matchMap.get(item.id) ?? 0;
             return (
-              <Pressable onPress={() => router.push(`/friends/${item.username}` as never)}>
+              <Pressable
+                onPress={() => router.push(`/friends/${item.username}` as never)}
+                accessibilityLabel={`Ver perfil de @${item.username}`}
+                accessibilityRole="button"
+              >
                 <GlowCard className="mb-2">
                   <Text className="text-space-ink font-semibold">
                     {item.displayName ?? item.username}

@@ -49,6 +49,8 @@ export default function SignIn() {
             onPress={() => handle("google", signInWithGoogle)}
             disabled={busy !== null}
             className="bg-white rounded-lg py-3 items-center"
+            accessibilityLabel="Continuar con Google"
+            accessibilityRole="button"
           >
             {busy === "google" ? (
               <ActivityIndicator color="#000" />

@@ -61,7 +61,12 @@ export default function Profile() {
           <Text className="text-space-ink text-2xl font-mono font-bold tracking-widest">
             {user.invite_code}
           </Text>
-          <Pressable onPress={onCopyCode} className="mt-2">
+          <Pressable
+            onPress={onCopyCode}
+            className="mt-2"
+            accessibilityLabel="Copiar código"
+            accessibilityRole="button"
+          >
             <Text className="text-space-violet text-xs">Copiar código</Text>
           </Pressable>
         </GlowCard>
@@ -69,6 +74,8 @@ export default function Profile() {
         <Pressable
           onPress={() => router.push("/add-friend/scan" as never)}
           className="bg-space-purple rounded-xl py-3 items-center mb-2"
+          accessibilityLabel="Escanear código de amigo"
+          accessibilityRole="button"
         >
           <Text className="text-white font-semibold">📷 Escanear código de amigo</Text>
         </Pressable>
@@ -76,6 +83,8 @@ export default function Profile() {
         <Pressable
           onPress={() => router.push("/add-friend/search" as never)}
           className="bg-space-mid rounded-xl py-3 items-center mb-2"
+          accessibilityLabel="Buscar por username"
+          accessibilityRole="button"
         >
           <Text className="text-space-ink font-semibold">⌕ Buscar por @username</Text>
         </Pressable>
@@ -83,6 +92,8 @@ export default function Profile() {
         <Pressable
           onPress={() => router.push("/friends" as never)}
           className="bg-space-mid rounded-xl py-3 items-center mb-2"
+          accessibilityLabel="Mis amigos"
+          accessibilityRole="button"
         >
           <Text className="text-space-ink font-semibold">👥 Mis amigos</Text>
         </Pressable>
@@ -90,6 +101,8 @@ export default function Profile() {
         <Pressable
           onPress={() => router.push("/profile/edit" as never)}
           className="bg-space-mid rounded-xl py-3 items-center mb-2"
+          accessibilityLabel="Editar perfil"
+          accessibilityRole="button"
         >
           <Text className="text-space-ink font-semibold">Editar perfil</Text>
         </Pressable>
@@ -111,6 +124,8 @@ export default function Profile() {
             ]);
           }}
           className="bg-space-dark border border-red-400/30 rounded-xl py-3 items-center"
+          accessibilityLabel="Cerrar sesión"
+          accessibilityRole="button"
         >
           <Text className="text-red-300 font-semibold">Cerrar sesión</Text>
         </Pressable>

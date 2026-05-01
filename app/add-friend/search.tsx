@@ -69,7 +69,12 @@ export default function SearchFriend() {
               {result.display_name ?? result.username}
             </Text>
             <Text className="text-space-mute text-sm mb-3">@{result.username}</Text>
-            <Pressable onPress={onAdd} className="bg-space-purple rounded-lg py-2 items-center">
+            <Pressable
+              onPress={onAdd}
+              className="bg-space-purple rounded-lg py-2 items-center"
+              accessibilityLabel="Enviar solicitud"
+              accessibilityRole="button"
+            >
               <Text className="text-white font-semibold">Enviar solicitud</Text>
             </Pressable>
           </GlowCard>

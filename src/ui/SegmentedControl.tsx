@@ -23,6 +23,9 @@ export function SegmentedControl<T extends string>({
           <Pressable
             key={opt.value}
             onPress={() => onChange(opt.value)}
+            accessibilityLabel={opt.label}
+            accessibilityRole="button"
+            accessibilityState={{ selected: active }}
             className={`flex-1 py-2 rounded-md ${active ? "bg-space-purple" : ""}`}
           >
             <Text

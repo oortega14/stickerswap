@@ -53,6 +53,8 @@ export default function EditProfile() {
           onPress={onSave}
           disabled={saving}
           className="bg-space-purple rounded-xl py-4 items-center mb-2"
+          accessibilityLabel="Guardar"
+          accessibilityRole="button"
         >
           {saving ? (
             <ActivityIndicator color="#fff" />
@@ -60,7 +62,12 @@ export default function EditProfile() {
             <Text className="text-white font-semibold">Guardar</Text>
           )}
         </Pressable>
-        <Pressable onPress={() => router.back()} className="py-3 items-center">
+        <Pressable
+          onPress={() => router.back()}
+          className="py-3 items-center"
+          accessibilityLabel="Cancelar"
+          accessibilityRole="button"
+        >
           <Text className="text-space-mute">Cancelar</Text>
         </Pressable>
       </View>

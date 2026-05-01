@@ -13,6 +13,9 @@ export function FilterChip({
   return (
     <Pressable
       onPress={onPress}
+      accessibilityLabel={`Filtro: ${label}`}
+      accessibilityRole="button"
+      accessibilityState={{ selected: active }}
       className={`rounded-full px-3 py-1.5 ${active ? "bg-space-purple" : "bg-space-mid"}`}
     >
       <Text className={`text-xs font-semibold ${active ? "text-white" : "text-space-mute"}`}>

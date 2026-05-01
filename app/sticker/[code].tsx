@@ -36,6 +36,8 @@ export default function StickerDetail() {
             <Pressable
               onPress={() => dec.mutate(data.code)}
               className="bg-space-mid rounded-lg px-4 py-2"
+              accessibilityLabel="Disminuir repetida"
+              accessibilityRole="button"
             >
               <Text className="text-space-ink text-lg">−</Text>
             </Pressable>
@@ -43,13 +45,20 @@ export default function StickerDetail() {
             <Pressable
               onPress={() => inc.mutate(data.code)}
               className="bg-space-purple rounded-lg px-4 py-2"
+              accessibilityLabel="Aumentar repetida"
+              accessibilityRole="button"
             >
               <Text className="text-white text-lg">+</Text>
             </Pressable>
           </View>
         </GlowCard>
 
-        <Pressable onPress={() => router.back()} className="mt-6 self-center">
+        <Pressable
+          onPress={() => router.back()}
+          className="mt-6 self-center"
+          accessibilityLabel="Cerrar"
+          accessibilityRole="button"
+        >
           <Text className="text-space-mute">Cerrar</Text>
         </Pressable>
       </View>
