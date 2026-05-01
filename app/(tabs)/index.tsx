@@ -3,6 +3,7 @@ import Animated, { useSharedValue, useAnimatedScrollHandler } from "react-native
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { ProgressBar } from "@/ui/ProgressBar";
+import { Skeleton } from "@/ui/Skeleton";
 import { useProgress } from "@/hooks/useProgress";
 import { usePendingCount } from "@/hooks/usePendingCount";
 
@@ -33,7 +34,11 @@ export default function Home() {
         </View>
 
         {isLoading || !data ? (
-          <Text className="text-space-mute">Cargando…</Text>
+          <View>
+            <Skeleton style={{ height: 120, marginBottom: 12 }} />
+            <Skeleton style={{ height: 60, marginBottom: 8 }} />
+            <Skeleton style={{ height: 60 }} />
+          </View>
         ) : (
           <>
             <GlowCard className="mb-4">

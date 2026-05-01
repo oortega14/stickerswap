@@ -5,6 +5,7 @@ import { haptics } from "@/lib/haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { FilterChip } from "@/ui/FilterChip";
 import { AnimatedStickerCell } from "@/ui/AnimatedStickerCell";
+import { SkeletonAlbumGrid } from "@/ui/SkeletonAlbumGrid";
 import { useStickerList, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { useFilters } from "@/store/filters";
 import { colors } from "@/theme/colors";
@@ -49,7 +50,7 @@ export default function AlbumScreen() {
         </View>
 
         {isLoading ? (
-          <Text className="text-space-mute text-center mt-8">Cargando…</Text>
+          <SkeletonAlbumGrid />
         ) : (
           <FlatList
             data={data ?? []}
