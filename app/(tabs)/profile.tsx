@@ -105,6 +105,35 @@ export default function Profile() {
         >
           <Text className="text-red-300 font-semibold">Cerrar sesión</Text>
         </Pressable>
+
+        <Pressable
+          onPress={() => {
+            Alert.alert(
+              "Borrar cuenta",
+              "Vas a borrar tu cuenta y todos tus datos. Esto no se puede deshacer.",
+              [
+                { text: "Cancelar", style: "cancel" },
+                {
+                  text: "Borrar",
+                  style: "destructive",
+                  onPress: async () => {
+                    const { error } = await supabase.rpc("delete_my_account");
+                    if (error) {
+                      Alert.alert("Error", error.message);
+                      return;
+                    }
+                    await supabase.auth.signOut();
+                  }
+                }
+              ]
+            );
+          }}
+          className="bg-space-dark border border-red-500/40 rounded-xl py-3 items-center mt-3"
+          accessibilityLabel="Borrar cuenta"
+          accessibilityRole="button"
+        >
+          <Text className="text-red-400 font-semibold">Borrar cuenta</Text>
+        </Pressable>
       </ScrollView>
     </StarryBackground>
   );
