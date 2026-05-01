@@ -5,6 +5,7 @@ import { haptics } from "@/lib/haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { GlowGradientCard } from "@/ui/GlowGradientCard";
+import { EmptyState } from "@/ui/EmptyState";
 import { SegmentedControl } from "@/ui/SegmentedControl";
 import { useMyList } from "@/hooks/useMyList";
 import { useMatches } from "@/hooks/useMatches";
@@ -96,13 +97,7 @@ function MatchesView() {
 
   if (isLoading) return <Text className="text-space-mute text-center mt-4">Cargando…</Text>;
   if (summary.length === 0) {
-    return (
-      <GlowCard>
-        <Text className="text-space-mute text-center">
-          Todavía no hay matches. Sumá amigos desde Perfil.
-        </Text>
-      </GlowCard>
-    );
+    return <EmptyState variant="rocket" title="Sin matches todavía" message="Sumá amigos desde Perfil." />;
   }
 
   return (

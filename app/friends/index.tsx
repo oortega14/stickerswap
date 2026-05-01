@@ -2,6 +2,7 @@ import { FlatList, View, Text, Pressable } from "react-native";
 import { useRouter } from "expo-router";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
+import { EmptyState } from "@/ui/EmptyState";
 import { useFriends } from "@/hooks/useFriends";
 import { useMatches } from "@/hooks/useMatches";
 
@@ -19,9 +20,7 @@ export default function FriendsList() {
           data={friends ?? []}
           keyExtractor={(f) => f.id}
           ListEmptyComponent={
-            <Text className="text-space-mute text-center mt-8">
-              Todavía no tenés amigos. Compartí tu código en Perfil.
-            </Text>
+            <EmptyState variant="planet" title="Sin amigos" message="Compartí tu código en Perfil." />
           }
           renderItem={({ item }) => {
             const count = matchMap.get(item.id) ?? 0;

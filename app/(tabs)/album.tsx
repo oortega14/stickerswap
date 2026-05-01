@@ -6,6 +6,7 @@ import { StarryBackground } from "@/ui/StarryBackground";
 import { FilterChip } from "@/ui/FilterChip";
 import { AnimatedStickerCell } from "@/ui/AnimatedStickerCell";
 import { SkeletonAlbumGrid } from "@/ui/SkeletonAlbumGrid";
+import { EmptyState } from "@/ui/EmptyState";
 import { useStickerList, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { useFilters } from "@/store/filters";
 import { colors } from "@/theme/colors";
@@ -71,7 +72,7 @@ export default function AlbumScreen() {
               />
             )}
             ListEmptyComponent={
-              <Text className="text-space-mute text-center mt-8">Sin resultados.</Text>
+              <EmptyState variant="stars" title="Sin resultados" message="Cambiá el filtro o el término de búsqueda." />
             }
           />
         )}
