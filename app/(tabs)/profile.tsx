@@ -95,6 +95,15 @@ export default function Profile() {
         </Pressable>
 
         <Pressable
+          onPress={() => router.push("/about" as never)}
+          className="bg-space-mid rounded-xl py-3 items-center mb-2"
+          accessibilityLabel="Acerca de"
+          accessibilityRole="button"
+        >
+          <Text className="text-space-ink">Acerca de</Text>
+        </Pressable>
+
+        <Pressable
           onPress={() => {
             Alert.alert("Cerrar sesión", "¿Seguro?", [
               { text: "Cancelar", style: "cancel" },
