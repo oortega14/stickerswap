@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { View, Text, FlatList, Pressable, TextInput } from "react-native";
+import { View, Text, Pressable, TextInput } from "react-native";
+import { FlashList } from "@shopify/flash-list";
 import { useRouter } from "expo-router";
 import { haptics } from "@/lib/haptics";
 import { StarryBackground } from "@/ui/StarryBackground";
@@ -58,7 +59,7 @@ export default function AlbumScreen() {
         {isLoading ? (
           <SkeletonAlbumGrid />
         ) : (
-          <FlatList
+          <FlashList
             data={data ?? []}
             keyExtractor={(item) => item.code}
             numColumns={COLUMNS}
