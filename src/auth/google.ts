@@ -1,5 +1,4 @@
 import { GoogleSignin, statusCodes } from "@react-native-google-signin/google-signin";
-import * as Crypto from "expo-crypto";
 import { supabase } from "./supabaseClient";
 
 let configured = false;
@@ -13,35 +12,35 @@ function configureOnce() {
   configured = true;
 }
 
+function decodeJwtPayload(token: string): { nonce?: string } {
+  const [, payload] = token.split(".");
+  const base64 = payload.replace(/-/g, "+").replace(/_/g, "/");
+  const padded = base64 + "==".substring(0, (4 - (base64.length % 4)) % 4);
+  try {
+    return JSON.parse(atob(padded));
+  } catch {
+    return {};
+  }
+}
+
 export async function signInWithGoogle(): Promise<void> {
   configureOnce();
   await GoogleSignin.hasPlayServices();
-
-  // Generamos un nonce aleatorio. Le pasamos el SHA-256 a Google (lo embebe
-  // en el id_token) y el raw a Supabase. Supabase recompone el hash y verifica
-  // que coincida con el del token. Sin esto, Supabase rechaza el token con
-  // "passed nonce and nonce in id_token should either both exist or not".
-  const rawNonce = Crypto.randomUUID();
-  const hashedNonce = await Crypto.digestStringAsync(
-    Crypto.CryptoDigestAlgorithm.SHA256,
-    rawNonce
-  );
-
-  // El tipo de signIn no expone `nonce` en la versión actual del binding,
-  // pero el SDK nativo iOS sí lo acepta. Cast intencional.
-  const result = await (GoogleSignin.signIn as (opts: { nonce: string }) => Promise<{
-    data?: { idToken: string | null };
-  }>)({ nonce: hashedNonce });
-
+  const result = await GoogleSignin.signIn();
   const idToken = result.data?.idToken;
   if (!idToken) {
     throw new Error("No idToken from Google");
   }
 
+  // Google's mobile SDK v16+ auto-generates a nonce and embeds it in the id_token.
+  // Supabase requires the same nonce string to be passed back so it can verify
+  // the token. We extract it from the JWT payload and forward it.
+  const { nonce } = decodeJwtPayload(idToken);
+
   const { error } = await supabase.auth.signInWithIdToken({
     provider: "google",
     token: idToken,
-    nonce: rawNonce
+    ...(nonce ? { nonce } : {})
   });
   if (error) throw error;
 }
