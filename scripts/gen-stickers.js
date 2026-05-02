@@ -1,173 +1,220 @@
 #!/usr/bin/env node
-// Genera assets/stickers.json con la estructura típica del Panini Mundial 2026.
-// Player names son placeholders ("Argentina #1") — cuando vayas pegando los
-// stickers reales, abrís el JSON y reemplazás `name` por el nombre real.
+// Genera assets/stickers.json con la estructura del álbum Panini Mundial 2026.
+// Estructura:
+//   - 9 stickers de intro (0-0 + FWC-1..FWC-8)
+//   - 48 equipos en 12 grupos × 4 equipos
+//   - Por equipo: 20 stickers
+//       N1 = escudo (team_badge)
+//       N2..N12 = 11 jugadores
+//       N13 = team_photo "{Country} Team"
+//       N14..N20 = 7 jugadores más
 //
-// Para regenerar:  node scripts/gen-stickers.js > assets/stickers.json
+// Para regenerar: node scripts/gen-stickers.js
+// Player names que no estén en KNOWN_PLAYERS arrancan como "{Country} #N";
+// los reemplazás cuando los tengas reales.
 
 const fs = require("fs");
 const path = require("path");
 
-const TEAMS = [
-  // Anfitriones
-  { code: "USA", name: "United States" },
-  { code: "CAN", name: "Canada" },
-  { code: "MEX", name: "Mexico" },
-  // Conmebol
-  { code: "ARG", name: "Argentina" },
-  { code: "BRA", name: "Brasil" },
-  { code: "URU", name: "Uruguay" },
-  { code: "COL", name: "Colombia" },
-  { code: "ECU", name: "Ecuador" },
-  { code: "PAR", name: "Paraguay" },
-  // UEFA
-  { code: "ESP", name: "España" },
-  { code: "FRA", name: "Francia" },
-  { code: "ENG", name: "Inglaterra" },
-  { code: "GER", name: "Alemania" },
-  { code: "POR", name: "Portugal" },
-  { code: "ITA", name: "Italia" },
-  { code: "NED", name: "Países Bajos" },
-  { code: "BEL", name: "Bélgica" },
-  { code: "CRO", name: "Croacia" },
-  { code: "DEN", name: "Dinamarca" },
-  { code: "SUI", name: "Suiza" },
-  { code: "POL", name: "Polonia" },
-  { code: "AUT", name: "Austria" },
-  { code: "HUN", name: "Hungría" },
-  { code: "TUR", name: "Turquía" },
-  { code: "SCO", name: "Escocia" },
-  { code: "UKR", name: "Ucrania" },
-  // CAF
-  { code: "MAR", name: "Marruecos" },
-  { code: "SEN", name: "Senegal" },
-  { code: "EGY", name: "Egipto" },
-  { code: "TUN", name: "Túnez" },
-  { code: "NGA", name: "Nigeria" },
-  { code: "GHA", name: "Ghana" },
-  { code: "ALG", name: "Argelia" },
-  { code: "CMR", name: "Camerún" },
-  { code: "CIV", name: "Costa de Marfil" },
-  // AFC
-  { code: "JPN", name: "Japón" },
-  { code: "KOR", name: "Corea del Sur" },
-  { code: "AUS", name: "Australia" },
-  { code: "IRN", name: "Irán" },
-  { code: "KSA", name: "Arabia Saudita" },
-  { code: "QAT", name: "Qatar" },
-  { code: "UZB", name: "Uzbekistán" },
-  { code: "JOR", name: "Jordania" },
-  // Concacaf
-  { code: "CRC", name: "Costa Rica" },
-  { code: "PAN", name: "Panamá" },
-  { code: "JAM", name: "Jamaica" },
-  // OFC
-  { code: "NZL", name: "Nueva Zelanda" },
-  // Wildcard
-  { code: "BFA", name: "Burkina Faso" }
+// 12 grupos del Mundial 2026 — orden por nombre del grupo (A-L), y dentro de
+// cada grupo el orden tal como me lo pasaste.
+const GROUPS = [
+  ["A", [
+    { code: "MEX", section: "México",                english: "Mexico" },
+    { code: "RSA", section: "Sudáfrica",             english: "South Africa" },
+    { code: "KOR", section: "Corea del Sur",         english: "Korea Republic" },
+    { code: "CZE", section: "República Checa",       english: "Czechia" }
+  ]],
+  ["B", [
+    { code: "CAN", section: "Canadá",                english: "Canada" },
+    { code: "BIH", section: "Bosnia y Herzegovina",  english: "Bosnia-Herzegovina" },
+    { code: "QAT", section: "Catar",                 english: "Qatar" },
+    { code: "SUI", section: "Suiza",                 english: "Switzerland" }
+  ]],
+  ["C", [
+    { code: "BRA", section: "Brasil",                english: "Brazil" },
+    { code: "MAR", section: "Marruecos",             english: "Morocco" },
+    { code: "HAI", section: "Haití",                 english: "Haiti" },
+    { code: "SCO", section: "Escocia",               english: "Scotland" }
+  ]],
+  ["D", [
+    { code: "USA", section: "USA",                   english: "USA" },
+    { code: "PAR", section: "Paraguay",              english: "Paraguay" },
+    { code: "AUS", section: "Australia",             english: "Australia" },
+    { code: "TUR", section: "Turquía",               english: "Türkiye" }
+  ]],
+  ["E", [
+    { code: "GER", section: "Alemania",              english: "Germany" },
+    { code: "CUW", section: "Curazao",               english: "Curaçao" },
+    { code: "CIV", section: "Costa de Marfil",       english: "Côte d'Ivoire" },
+    { code: "ECU", section: "Ecuador",               english: "Ecuador" }
+  ]],
+  ["F", [
+    { code: "NED", section: "Países Bajos",          english: "Netherlands" },
+    { code: "JPN", section: "Japón",                 english: "Japan" },
+    { code: "SWE", section: "Suecia",                english: "Sweden" },
+    { code: "TUN", section: "Túnez",                 english: "Tunisia" }
+  ]],
+  ["G", [
+    { code: "BEL", section: "Bélgica",               english: "Belgium" },
+    { code: "EGY", section: "Egipto",                english: "Egypt" },
+    { code: "IRN", section: "Irán",                  english: "Iran" },
+    { code: "NZL", section: "Nueva Zelanda",         english: "New Zealand" }
+  ]],
+  ["H", [
+    { code: "ESP", section: "España",                english: "Spain" },
+    { code: "CPV", section: "Cabo Verde",            english: "Cape Verde" },
+    { code: "KSA", section: "Arabia Saudita",        english: "Saudi Arabia" },
+    { code: "URU", section: "Uruguay",               english: "Uruguay" }
+  ]],
+  ["I", [
+    { code: "FRA", section: "Francia",               english: "France" },
+    { code: "SEN", section: "Senegal",               english: "Senegal" },
+    { code: "IRQ", section: "Irak",                  english: "Iraq" },
+    { code: "NOR", section: "Noruega",               english: "Norway" }
+  ]],
+  ["J", [
+    { code: "ARG", section: "Argentina",             english: "Argentina" },
+    { code: "ALG", section: "Argelia",               english: "Algeria" },
+    { code: "AUT", section: "Austria",               english: "Austria" },
+    { code: "JOR", section: "Jordania",              english: "Jordan" }
+  ]],
+  ["K", [
+    { code: "POR", section: "Portugal",              english: "Portugal" },
+    { code: "COD", section: "RD Congo",              english: "Congo DR" },
+    { code: "UZB", section: "Uzbekistán",            english: "Uzbekistan" },
+    { code: "COL", section: "Colombia",              english: "Colombia" }
+  ]],
+  ["L", [
+    { code: "ENG", section: "Inglaterra",            english: "England" },
+    { code: "CRO", section: "Croacia",               english: "Croatia" },
+    { code: "GHA", section: "Ghana",                 english: "Ghana" },
+    { code: "PAN", section: "Panamá",                english: "Panama" }
+  ]]
 ];
+
+// Nombres reales tipeados por el usuario. Para los demás equipos quedan
+// placeholders. Cuando tipees nombres reales para más equipos, pegalos acá y
+// regenerás.
+const KNOWN_PLAYERS = {
+  MEX: [
+    "Luis Malagon",
+    "Johan Vasquez",
+    "Jorge Sanchez",
+    "Cesar Montes",
+    "Jesus Gallardo",
+    "Israel Reves",
+    "Diego Lainez",
+    "Carlos Rodriguez",
+    "Edson Alvarez",
+    "Orbelin Pineda",
+    "Marcel Ruiz",
+    // posición 12 ↑ — termina jugadores antes del team_photo (N13)
+    "Erick Sanchez",
+    "Hirving Lozano",
+    "Santiago Gimenez",
+    "Paul Jimenez",
+    "Alexis Vega",
+    "Roberto Alvarado",
+    "Cesar Huerta"
+    // hasta 18 jugadores en total (N2..N12 + N14..N20)
+  ]
+};
 
 const INTRO = [
-  "Trofeo FIFA",
-  "Mascota Maple",
-  "Mascota Zayu",
-  "Mascota Clutch",
-  "Pelota Oficial",
-  "Logo FIFA World Cup 2026",
-  "Países Anfitriones",
-  "Bandera USA",
-  "Bandera Canadá",
-  "Bandera México",
-  "Calendario",
-  "Bracket"
-];
-
-const STADIUMS = [
-  "MetLife Stadium · East Rutherford",
-  "AT&T Stadium · Arlington",
-  "SoFi Stadium · Inglewood",
-  "Mercedes-Benz Stadium · Atlanta",
-  "Lincoln Financial Field · Philadelphia",
-  "Lumen Field · Seattle",
-  "Levi's Stadium · Santa Clara",
-  "NRG Stadium · Houston",
-  "Hard Rock Stadium · Miami",
-  "Arrowhead Stadium · Kansas City",
-  "Gillette Stadium · Foxborough",
-  "BMO Field · Toronto",
-  "BC Place · Vancouver",
-  "Estadio Azteca · Ciudad de México",
-  "Estadio BBVA · Monterrey",
-  "Estadio Akron · Guadalajara"
-];
-
-const LEGENDS = [
-  "Pelé",
-  "Diego Maradona",
-  "Lionel Messi (Leyenda)",
-  "Cristiano Ronaldo (Leyenda)",
-  "Zinedine Zidane",
-  "Ronaldo Nazário",
-  "Johan Cruyff",
-  "Franz Beckenbauer",
-  "Bobby Charlton",
-  "Paolo Maldini",
-  "Roberto Baggio",
-  "Lothar Matthäus",
-  "Ronaldinho",
-  "Kaká",
-  "Iniesta",
-  "Xavi"
+  { code: "0-0",   name: "Chilena Iconica" },
+  { code: "FWC-1", name: "Trofeo FIFA Primera Parte" },
+  { code: "FWC-2", name: "Trofeo FIFA Segunda Parte" },
+  { code: "FWC-3", name: "Mascotas World Cup 2026" },
+  { code: "FWC-4", name: "We Are Fifa World Cup 2026" },
+  { code: "FWC-5", name: "Pelota Oficial" },
+  { code: "FWC-6", name: "Emblema Oficial - Canada" },
+  { code: "FWC-7", name: "Emblema Oficial - Mexico" },
+  { code: "FWC-8", name: "Emblema Oficial - USA" }
 ];
 
 const stickers = [];
 let n = 1;
 
-function pushSticker(rest) {
+// === Intro ===
+for (const item of INTRO) {
   stickers.push({
-    code: `FWC-${n}`,
+    code: item.code,
     number: n,
-    ...rest
+    name: item.name,
+    team: null,
+    section: "Intro",
+    type: "icon",
+    group: null
   });
   n++;
 }
 
-for (const name of INTRO) {
-  pushSticker({ name, team: null, section: "Intro", type: "icon" });
-}
+// === Equipos por grupo ===
+for (const [groupLetter, teams] of GROUPS) {
+  for (const team of teams) {
+    const known = KNOWN_PLAYERS[team.code] ?? [];
+    const players = []; // 18 nombres total (N2-N12 + N14-N20)
+    for (let i = 0; i < 18; i++) {
+      players.push(known[i] ?? `${team.section} #${i + 1}`);
+    }
 
-for (const name of STADIUMS) {
-  pushSticker({ name, team: null, section: "Estadios", type: "stadium" });
-}
-
-for (const name of LEGENDS) {
-  pushSticker({ name, team: null, section: "Leyendas", type: "special" });
-}
-
-for (const team of TEAMS) {
-  pushSticker({
-    name: `${team.name} (Escudo)`,
-    team: team.code,
-    section: team.name,
-    type: "team_badge"
-  });
-  for (let p = 1; p <= 12; p++) {
-    pushSticker({
-      name: `${team.name} #${p}`,
+    // N1 escudo
+    stickers.push({
+      code: `${team.code}-1`,
+      number: n++,
+      name: `Escudo ${team.section}`,
       team: team.code,
-      section: team.name,
-      type: "player"
+      section: team.section,
+      type: "team_badge",
+      group: groupLetter
     });
+
+    // N2..N12 → 11 jugadores
+    for (let i = 0; i < 11; i++) {
+      stickers.push({
+        code: `${team.code}-${i + 2}`,
+        number: n++,
+        name: players[i],
+        team: team.code,
+        section: team.section,
+        type: "player",
+        group: groupLetter
+      });
+    }
+
+    // N13 team_photo
+    stickers.push({
+      code: `${team.code}-13`,
+      number: n++,
+      name: `${team.english} Team`,
+      team: team.code,
+      section: team.section,
+      type: "team_photo",
+      group: groupLetter
+    });
+
+    // N14..N20 → 7 jugadores más
+    for (let i = 0; i < 7; i++) {
+      stickers.push({
+        code: `${team.code}-${i + 14}`,
+        number: n++,
+        name: players[11 + i],
+        team: team.code,
+        section: team.section,
+        type: "player",
+        group: groupLetter
+      });
+    }
   }
 }
 
 const dataset = {
-  version: 3,
+  version: 4,
   album: "FIFA World Cup 2026",
   stickers
 };
 
-const out = JSON.stringify(dataset, null, 2);
 const target = path.join(__dirname, "..", "assets", "stickers.json");
-fs.writeFileSync(target, out + "\n");
+fs.writeFileSync(target, JSON.stringify(dataset, null, 2) + "\n");
 console.error(`✓ wrote ${stickers.length} stickers to ${target}`);
