@@ -87,10 +87,12 @@ export function SessionProvider() {
       setLoading(false);
     })();
 
-    const { data: sub } = supabase.auth.onAuthStateChange(async (_e, session) => {
+    const { data: sub } = supabase.auth.onAuthStateChange(async (event, session) => {
+      console.log("[onAuthStateChange]", event, "hasSession:", !!session);
       setSession(session);
       if (session?.user) {
         const profile = await fetchProfile(session.user.id);
+        console.log("[onAuthStateChange] profile loaded:", !!profile);
         setProfile(profile);
       } else {
         setProfile(null);
