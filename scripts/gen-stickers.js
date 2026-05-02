@@ -123,71 +123,46 @@ const LEGENDS = [
 const stickers = [];
 let n = 1;
 
+function pushSticker(rest) {
+  stickers.push({
+    code: `FWC-${n}`,
+    number: n,
+    ...rest
+  });
+  n++;
+}
+
 for (const name of INTRO) {
-  stickers.push({
-    code: `INTRO-${n}`,
-    number: n,
-    name,
-    team: null,
-    section: "Intro",
-    type: "icon"
-  });
-  n++;
+  pushSticker({ name, team: null, section: "Intro", type: "icon" });
 }
 
-let stadIdx = 1;
 for (const name of STADIUMS) {
-  stickers.push({
-    code: `STAD-${stadIdx}`,
-    number: n,
-    name,
-    team: null,
-    section: "Estadios",
-    type: "stadium"
-  });
-  n++;
-  stadIdx++;
+  pushSticker({ name, team: null, section: "Estadios", type: "stadium" });
 }
 
-let legIdx = 1;
 for (const name of LEGENDS) {
-  stickers.push({
-    code: `LEG-${legIdx}`,
-    number: n,
-    name,
-    team: null,
-    section: "Leyendas",
-    type: "special"
-  });
-  n++;
-  legIdx++;
+  pushSticker({ name, team: null, section: "Leyendas", type: "special" });
 }
 
 for (const team of TEAMS) {
-  stickers.push({
-    code: `${team.code}-BADGE`,
-    number: n,
+  pushSticker({
     name: `${team.name} (Escudo)`,
     team: team.code,
     section: team.name,
     type: "team_badge"
   });
-  n++;
   for (let p = 1; p <= 12; p++) {
-    stickers.push({
-      code: `${team.code}-P${p}`,
-      number: n,
+    pushSticker({
       name: `${team.name} #${p}`,
       team: team.code,
       section: team.name,
       type: "player"
     });
-    n++;
   }
 }
 
 const dataset = {
-  version: 2,
+  version: 3,
   album: "FIFA World Cup 2026",
   stickers
 };

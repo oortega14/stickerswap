@@ -1,9 +1,9 @@
 {
-  "version": 2,
+  "version": 3,
   "album": "FIFA World Cup 2026",
   "stickers": [
     {
-      "code": "INTRO-1",
+      "code": "FWC-1",
       "number": 1,
       "name": "Trofeo FIFA",
       "team": null,
@@ -11,7 +11,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-2",
+      "code": "FWC-2",
       "number": 2,
       "name": "Mascota Maple",
       "team": null,
@@ -19,7 +19,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-3",
+      "code": "FWC-3",
       "number": 3,
       "name": "Mascota Zayu",
       "team": null,
@@ -27,7 +27,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-4",
+      "code": "FWC-4",
       "number": 4,
       "name": "Mascota Clutch",
       "team": null,
@@ -35,7 +35,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-5",
+      "code": "FWC-5",
       "number": 5,
       "name": "Pelota Oficial",
       "team": null,
@@ -43,7 +43,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-6",
+      "code": "FWC-6",
       "number": 6,
       "name": "Logo FIFA World Cup 2026",
       "team": null,
@@ -51,7 +51,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-7",
+      "code": "FWC-7",
       "number": 7,
       "name": "Países Anfitriones",
       "team": null,
@@ -59,7 +59,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-8",
+      "code": "FWC-8",
       "number": 8,
       "name": "Bandera USA",
       "team": null,
@@ -67,7 +67,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-9",
+      "code": "FWC-9",
       "number": 9,
       "name": "Bandera Canadá",
       "team": null,
@@ -75,7 +75,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-10",
+      "code": "FWC-10",
       "number": 10,
       "name": "Bandera México",
       "team": null,
@@ -83,7 +83,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-11",
+      "code": "FWC-11",
       "number": 11,
       "name": "Calendario",
       "team": null,
@@ -91,7 +91,7 @@
       "type": "icon"
     },
     {
-      "code": "INTRO-12",
+      "code": "FWC-12",
       "number": 12,
       "name": "Bracket",
       "team": null,
@@ -99,7 +99,7 @@
       "type": "icon"
     },
     {
-      "code": "STAD-1",
+      "code": "FWC-13",
       "number": 13,
       "name": "MetLife Stadium · East Rutherford",
       "team": null,
@@ -107,7 +107,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-2",
+      "code": "FWC-14",
       "number": 14,
       "name": "AT&T Stadium · Arlington",
       "team": null,
@@ -115,7 +115,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-3",
+      "code": "FWC-15",
       "number": 15,
       "name": "SoFi Stadium · Inglewood",
       "team": null,
@@ -123,7 +123,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-4",
+      "code": "FWC-16",
       "number": 16,
       "name": "Mercedes-Benz Stadium · Atlanta",
       "team": null,
@@ -131,7 +131,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-5",
+      "code": "FWC-17",
       "number": 17,
       "name": "Lincoln Financial Field · Philadelphia",
       "team": null,
@@ -139,7 +139,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-6",
+      "code": "FWC-18",
       "number": 18,
       "name": "Lumen Field · Seattle",
       "team": null,
@@ -147,7 +147,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-7",
+      "code": "FWC-19",
       "number": 19,
       "name": "Levi's Stadium · Santa Clara",
       "team": null,
@@ -155,7 +155,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-8",
+      "code": "FWC-20",
       "number": 20,
       "name": "NRG Stadium · Houston",
       "team": null,
@@ -163,7 +163,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-9",
+      "code": "FWC-21",
       "number": 21,
       "name": "Hard Rock Stadium · Miami",
       "team": null,
@@ -171,7 +171,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-10",
+      "code": "FWC-22",
       "number": 22,
       "name": "Arrowhead Stadium · Kansas City",
       "team": null,
@@ -179,7 +179,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-11",
+      "code": "FWC-23",
       "number": 23,
       "name": "Gillette Stadium · Foxborough",
       "team": null,
@@ -187,7 +187,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-12",
+      "code": "FWC-24",
       "number": 24,
       "name": "BMO Field · Toronto",
       "team": null,
@@ -195,7 +195,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-13",
+      "code": "FWC-25",
       "number": 25,
       "name": "BC Place · Vancouver",
       "team": null,
@@ -203,7 +203,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-14",
+      "code": "FWC-26",
       "number": 26,
       "name": "Estadio Azteca · Ciudad de México",
       "team": null,
@@ -211,7 +211,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-15",
+      "code": "FWC-27",
       "number": 27,
       "name": "Estadio BBVA · Monterrey",
       "team": null,
@@ -219,7 +219,7 @@
       "type": "stadium"
     },
     {
-      "code": "STAD-16",
+      "code": "FWC-28",
       "number": 28,
       "name": "Estadio Akron · Guadalajara",
       "team": null,
@@ -227,7 +227,7 @@
       "type": "stadium"
     },
     {
-      "code": "LEG-1",
+      "code": "FWC-29",
       "number": 29,
       "name": "Pelé",
       "team": null,
@@ -235,7 +235,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-2",
+      "code": "FWC-30",
       "number": 30,
       "name": "Diego Maradona",
       "team": null,
@@ -243,7 +243,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-3",
+      "code": "FWC-31",
       "number": 31,
       "name": "Lionel Messi (Leyenda)",
       "team": null,
@@ -251,7 +251,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-4",
+      "code": "FWC-32",
       "number": 32,
       "name": "Cristiano Ronaldo (Leyenda)",
       "team": null,
@@ -259,7 +259,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-5",
+      "code": "FWC-33",
       "number": 33,
       "name": "Zinedine Zidane",
       "team": null,
@@ -267,7 +267,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-6",
+      "code": "FWC-34",
       "number": 34,
       "name": "Ronaldo Nazário",
       "team": null,
@@ -275,7 +275,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-7",
+      "code": "FWC-35",
       "number": 35,
       "name": "Johan Cruyff",
       "team": null,
@@ -283,7 +283,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-8",
+      "code": "FWC-36",
       "number": 36,
       "name": "Franz Beckenbauer",
       "team": null,
@@ -291,7 +291,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-9",
+      "code": "FWC-37",
       "number": 37,
       "name": "Bobby Charlton",
       "team": null,
@@ -299,7 +299,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-10",
+      "code": "FWC-38",
       "number": 38,
       "name": "Paolo Maldini",
       "team": null,
@@ -307,7 +307,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-11",
+      "code": "FWC-39",
       "number": 39,
       "name": "Roberto Baggio",
       "team": null,
@@ -315,7 +315,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-12",
+      "code": "FWC-40",
       "number": 40,
       "name": "Lothar Matthäus",
       "team": null,
@@ -323,7 +323,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-13",
+      "code": "FWC-41",
       "number": 41,
       "name": "Ronaldinho",
       "team": null,
@@ -331,7 +331,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-14",
+      "code": "FWC-42",
       "number": 42,
       "name": "Kaká",
       "team": null,
@@ -339,7 +339,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-15",
+      "code": "FWC-43",
       "number": 43,
       "name": "Iniesta",
       "team": null,
@@ -347,7 +347,7 @@
       "type": "special"
     },
     {
-      "code": "LEG-16",
+      "code": "FWC-44",
       "number": 44,
       "name": "Xavi",
       "team": null,
@@ -355,7 +355,7 @@
       "type": "special"
     },
     {
-      "code": "USA-BADGE",
+      "code": "FWC-45",
       "number": 45,
       "name": "United States (Escudo)",
       "team": "USA",
@@ -363,7 +363,7 @@
       "type": "team_badge"
     },
     {
-      "code": "USA-P1",
+      "code": "FWC-46",
       "number": 46,
       "name": "United States #1",
       "team": "USA",
@@ -371,7 +371,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P2",
+      "code": "FWC-47",
       "number": 47,
       "name": "United States #2",
       "team": "USA",
@@ -379,7 +379,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P3",
+      "code": "FWC-48",
       "number": 48,
       "name": "United States #3",
       "team": "USA",
@@ -387,7 +387,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P4",
+      "code": "FWC-49",
       "number": 49,
       "name": "United States #4",
       "team": "USA",
@@ -395,7 +395,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P5",
+      "code": "FWC-50",
       "number": 50,
       "name": "United States #5",
       "team": "USA",
@@ -403,7 +403,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P6",
+      "code": "FWC-51",
       "number": 51,
       "name": "United States #6",
       "team": "USA",
@@ -411,7 +411,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P7",
+      "code": "FWC-52",
       "number": 52,
       "name": "United States #7",
       "team": "USA",
@@ -419,7 +419,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P8",
+      "code": "FWC-53",
       "number": 53,
       "name": "United States #8",
       "team": "USA",
@@ -427,7 +427,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P9",
+      "code": "FWC-54",
       "number": 54,
       "name": "United States #9",
       "team": "USA",
@@ -435,7 +435,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P10",
+      "code": "FWC-55",
       "number": 55,
       "name": "United States #10",
       "team": "USA",
@@ -443,7 +443,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P11",
+      "code": "FWC-56",
       "number": 56,
       "name": "United States #11",
       "team": "USA",
@@ -451,7 +451,7 @@
       "type": "player"
     },
     {
-      "code": "USA-P12",
+      "code": "FWC-57",
       "number": 57,
       "name": "United States #12",
       "team": "USA",
@@ -459,7 +459,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-BADGE",
+      "code": "FWC-58",
       "number": 58,
       "name": "Canada (Escudo)",
       "team": "CAN",
@@ -467,7 +467,7 @@
       "type": "team_badge"
     },
     {
-      "code": "CAN-P1",
+      "code": "FWC-59",
       "number": 59,
       "name": "Canada #1",
       "team": "CAN",
@@ -475,7 +475,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P2",
+      "code": "FWC-60",
       "number": 60,
       "name": "Canada #2",
       "team": "CAN",
@@ -483,7 +483,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P3",
+      "code": "FWC-61",
       "number": 61,
       "name": "Canada #3",
       "team": "CAN",
@@ -491,7 +491,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P4",
+      "code": "FWC-62",
       "number": 62,
       "name": "Canada #4",
       "team": "CAN",
@@ -499,7 +499,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P5",
+      "code": "FWC-63",
       "number": 63,
       "name": "Canada #5",
       "team": "CAN",
@@ -507,7 +507,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P6",
+      "code": "FWC-64",
       "number": 64,
       "name": "Canada #6",
       "team": "CAN",
@@ -515,7 +515,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P7",
+      "code": "FWC-65",
       "number": 65,
       "name": "Canada #7",
       "team": "CAN",
@@ -523,7 +523,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P8",
+      "code": "FWC-66",
       "number": 66,
       "name": "Canada #8",
       "team": "CAN",
@@ -531,7 +531,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P9",
+      "code": "FWC-67",
       "number": 67,
       "name": "Canada #9",
       "team": "CAN",
@@ -539,7 +539,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P10",
+      "code": "FWC-68",
       "number": 68,
       "name": "Canada #10",
       "team": "CAN",
@@ -547,7 +547,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P11",
+      "code": "FWC-69",
       "number": 69,
       "name": "Canada #11",
       "team": "CAN",
@@ -555,7 +555,7 @@
       "type": "player"
     },
     {
-      "code": "CAN-P12",
+      "code": "FWC-70",
       "number": 70,
       "name": "Canada #12",
       "team": "CAN",
@@ -563,7 +563,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-BADGE",
+      "code": "FWC-71",
       "number": 71,
       "name": "Mexico (Escudo)",
       "team": "MEX",
@@ -571,7 +571,7 @@
       "type": "team_badge"
     },
     {
-      "code": "MEX-P1",
+      "code": "FWC-72",
       "number": 72,
       "name": "Mexico #1",
       "team": "MEX",
@@ -579,7 +579,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P2",
+      "code": "FWC-73",
       "number": 73,
       "name": "Mexico #2",
       "team": "MEX",
@@ -587,7 +587,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P3",
+      "code": "FWC-74",
       "number": 74,
       "name": "Mexico #3",
       "team": "MEX",
@@ -595,7 +595,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P4",
+      "code": "FWC-75",
       "number": 75,
       "name": "Mexico #4",
       "team": "MEX",
@@ -603,7 +603,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P5",
+      "code": "FWC-76",
       "number": 76,
       "name": "Mexico #5",
       "team": "MEX",
@@ -611,7 +611,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P6",
+      "code": "FWC-77",
       "number": 77,
       "name": "Mexico #6",
       "team": "MEX",
@@ -619,7 +619,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P7",
+      "code": "FWC-78",
       "number": 78,
       "name": "Mexico #7",
       "team": "MEX",
@@ -627,7 +627,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P8",
+      "code": "FWC-79",
       "number": 79,
       "name": "Mexico #8",
       "team": "MEX",
@@ -635,7 +635,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P9",
+      "code": "FWC-80",
       "number": 80,
       "name": "Mexico #9",
       "team": "MEX",
@@ -643,7 +643,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P10",
+      "code": "FWC-81",
       "number": 81,
       "name": "Mexico #10",
       "team": "MEX",
@@ -651,7 +651,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P11",
+      "code": "FWC-82",
       "number": 82,
       "name": "Mexico #11",
       "team": "MEX",
@@ -659,7 +659,7 @@
       "type": "player"
     },
     {
-      "code": "MEX-P12",
+      "code": "FWC-83",
       "number": 83,
       "name": "Mexico #12",
       "team": "MEX",
@@ -667,7 +667,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-BADGE",
+      "code": "FWC-84",
       "number": 84,
       "name": "Argentina (Escudo)",
       "team": "ARG",
@@ -675,7 +675,7 @@
       "type": "team_badge"
     },
     {
-      "code": "ARG-P1",
+      "code": "FWC-85",
       "number": 85,
       "name": "Argentina #1",
       "team": "ARG",
@@ -683,7 +683,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P2",
+      "code": "FWC-86",
       "number": 86,
       "name": "Argentina #2",
       "team": "ARG",
@@ -691,7 +691,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P3",
+      "code": "FWC-87",
       "number": 87,
       "name": "Argentina #3",
       "team": "ARG",
@@ -699,7 +699,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P4",
+      "code": "FWC-88",
       "number": 88,
       "name": "Argentina #4",
       "team": "ARG",
@@ -707,7 +707,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P5",
+      "code": "FWC-89",
       "number": 89,
       "name": "Argentina #5",
       "team": "ARG",
@@ -715,7 +715,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P6",
+      "code": "FWC-90",
       "number": 90,
       "name": "Argentina #6",
       "team": "ARG",
@@ -723,7 +723,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P7",
+      "code": "FWC-91",
       "number": 91,
       "name": "Argentina #7",
       "team": "ARG",
@@ -731,7 +731,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P8",
+      "code": "FWC-92",
       "number": 92,
       "name": "Argentina #8",
       "team": "ARG",
@@ -739,7 +739,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P9",
+      "code": "FWC-93",
       "number": 93,
       "name": "Argentina #9",
       "team": "ARG",
@@ -747,7 +747,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P10",
+      "code": "FWC-94",
       "number": 94,
       "name": "Argentina #10",
       "team": "ARG",
@@ -755,7 +755,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P11",
+      "code": "FWC-95",
       "number": 95,
       "name": "Argentina #11",
       "team": "ARG",
@@ -763,7 +763,7 @@
       "type": "player"
     },
     {
-      "code": "ARG-P12",
+      "code": "FWC-96",
       "number": 96,
       "name": "Argentina #12",
       "team": "ARG",
@@ -771,7 +771,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-BADGE",
+      "code": "FWC-97",
       "number": 97,
       "name": "Brasil (Escudo)",
       "team": "BRA",
@@ -779,7 +779,7 @@
       "type": "team_badge"
     },
     {
-      "code": "BRA-P1",
+      "code": "FWC-98",
       "number": 98,
       "name": "Brasil #1",
       "team": "BRA",
@@ -787,7 +787,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P2",
+      "code": "FWC-99",
       "number": 99,
       "name": "Brasil #2",
       "team": "BRA",
@@ -795,7 +795,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P3",
+      "code": "FWC-100",
       "number": 100,
       "name": "Brasil #3",
       "team": "BRA",
@@ -803,7 +803,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P4",
+      "code": "FWC-101",
       "number": 101,
       "name": "Brasil #4",
       "team": "BRA",
@@ -811,7 +811,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P5",
+      "code": "FWC-102",
       "number": 102,
       "name": "Brasil #5",
       "team": "BRA",
@@ -819,7 +819,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P6",
+      "code": "FWC-103",
       "number": 103,
       "name": "Brasil #6",
       "team": "BRA",
@@ -827,7 +827,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P7",
+      "code": "FWC-104",
       "number": 104,
       "name": "Brasil #7",
       "team": "BRA",
@@ -835,7 +835,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P8",
+      "code": "FWC-105",
       "number": 105,
       "name": "Brasil #8",
       "team": "BRA",
@@ -843,7 +843,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P9",
+      "code": "FWC-106",
       "number": 106,
       "name": "Brasil #9",
       "team": "BRA",
@@ -851,7 +851,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P10",
+      "code": "FWC-107",
       "number": 107,
       "name": "Brasil #10",
       "team": "BRA",
@@ -859,7 +859,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P11",
+      "code": "FWC-108",
       "number": 108,
       "name": "Brasil #11",
       "team": "BRA",
@@ -867,7 +867,7 @@
       "type": "player"
     },
     {
-      "code": "BRA-P12",
+      "code": "FWC-109",
       "number": 109,
       "name": "Brasil #12",
       "team": "BRA",
@@ -875,7 +875,7 @@
       "type": "player"
     },
     {
-      "code": "URU-BADGE",
+      "code": "FWC-110",
       "number": 110,
       "name": "Uruguay (Escudo)",
       "team": "URU",
@@ -883,7 +883,7 @@
       "type": "team_badge"
     },
     {
-      "code": "URU-P1",
+      "code": "FWC-111",
       "number": 111,
       "name": "Uruguay #1",
       "team": "URU",
@@ -891,7 +891,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P2",
+      "code": "FWC-112",
       "number": 112,
       "name": "Uruguay #2",
       "team": "URU",
@@ -899,7 +899,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P3",
+      "code": "FWC-113",
       "number": 113,
       "name": "Uruguay #3",
       "team": "URU",
@@ -907,7 +907,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P4",
+      "code": "FWC-114",
       "number": 114,
       "name": "Uruguay #4",
       "team": "URU",
@@ -915,7 +915,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P5",
+      "code": "FWC-115",
       "number": 115,
       "name": "Uruguay #5",
       "team": "URU",
@@ -923,7 +923,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P6",
+      "code": "FWC-116",
       "number": 116,
       "name": "Uruguay #6",
       "team": "URU",
@@ -931,7 +931,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P7",
+      "code": "FWC-117",
       "number": 117,
       "name": "Uruguay #7",
       "team": "URU",
@@ -939,7 +939,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P8",
+      "code": "FWC-118",
       "number": 118,
       "name": "Uruguay #8",
       "team": "URU",
@@ -947,7 +947,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P9",
+      "code": "FWC-119",
       "number": 119,
       "name": "Uruguay #9",
       "team": "URU",
@@ -955,7 +955,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P10",
+      "code": "FWC-120",
       "number": 120,
       "name": "Uruguay #10",
       "team": "URU",
@@ -963,7 +963,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P11",
+      "code": "FWC-121",
       "number": 121,
       "name": "Uruguay #11",
       "team": "URU",
@@ -971,7 +971,7 @@
       "type": "player"
     },
     {
-      "code": "URU-P12",
+      "code": "FWC-122",
       "number": 122,
       "name": "Uruguay #12",
       "team": "URU",
@@ -979,7 +979,7 @@
       "type": "player"
     },
     {
-      "code": "COL-BADGE",
+      "code": "FWC-123",
       "number": 123,
       "name": "Colombia (Escudo)",
       "team": "COL",
@@ -987,7 +987,7 @@
       "type": "team_badge"
     },
     {
-      "code": "COL-P1",
+      "code": "FWC-124",
       "number": 124,
       "name": "Colombia #1",
       "team": "COL",
@@ -995,7 +995,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P2",
+      "code": "FWC-125",
       "number": 125,
       "name": "Colombia #2",
       "team": "COL",
@@ -1003,7 +1003,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P3",
+      "code": "FWC-126",
       "number": 126,
       "name": "Colombia #3",
       "team": "COL",
@@ -1011,7 +1011,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P4",
+      "code": "FWC-127",
       "number": 127,
       "name": "Colombia #4",
       "team": "COL",
@@ -1019,7 +1019,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P5",
+      "code": "FWC-128",
       "number": 128,
       "name": "Colombia #5",
       "team": "COL",
@@ -1027,7 +1027,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P6",
+      "code": "FWC-129",
       "number": 129,
       "name": "Colombia #6",
       "team": "COL",
@@ -1035,7 +1035,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P7",
+      "code": "FWC-130",
       "number": 130,
       "name": "Colombia #7",
       "team": "COL",
@@ -1043,7 +1043,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P8",
+      "code": "FWC-131",
       "number": 131,
       "name": "Colombia #8",
       "team": "COL",
@@ -1051,7 +1051,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P9",
+      "code": "FWC-132",
       "number": 132,
       "name": "Colombia #9",
       "team": "COL",
@@ -1059,7 +1059,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P10",
+      "code": "FWC-133",
       "number": 133,
       "name": "Colombia #10",
       "team": "COL",
@@ -1067,7 +1067,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P11",
+      "code": "FWC-134",
       "number": 134,
       "name": "Colombia #11",
       "team": "COL",
@@ -1075,7 +1075,7 @@
       "type": "player"
     },
     {
-      "code": "COL-P12",
+      "code": "FWC-135",
       "number": 135,
       "name": "Colombia #12",
       "team": "COL",
@@ -1083,7 +1083,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-BADGE",
+      "code": "FWC-136",
       "number": 136,
       "name": "Ecuador (Escudo)",
       "team": "ECU",
@@ -1091,7 +1091,7 @@
       "type": "team_badge"
     },
     {
-      "code": "ECU-P1",
+      "code": "FWC-137",
       "number": 137,
       "name": "Ecuador #1",
       "team": "ECU",
@@ -1099,7 +1099,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P2",
+      "code": "FWC-138",
       "number": 138,
       "name": "Ecuador #2",
       "team": "ECU",
@@ -1107,7 +1107,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P3",
+      "code": "FWC-139",
       "number": 139,
       "name": "Ecuador #3",
       "team": "ECU",
@@ -1115,7 +1115,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P4",
+      "code": "FWC-140",
       "number": 140,
       "name": "Ecuador #4",
       "team": "ECU",
@@ -1123,7 +1123,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P5",
+      "code": "FWC-141",
       "number": 141,
       "name": "Ecuador #5",
       "team": "ECU",
@@ -1131,7 +1131,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P6",
+      "code": "FWC-142",
       "number": 142,
       "name": "Ecuador #6",
       "team": "ECU",
@@ -1139,7 +1139,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P7",
+      "code": "FWC-143",
       "number": 143,
       "name": "Ecuador #7",
       "team": "ECU",
@@ -1147,7 +1147,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P8",
+      "code": "FWC-144",
       "number": 144,
       "name": "Ecuador #8",
       "team": "ECU",
@@ -1155,7 +1155,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P9",
+      "code": "FWC-145",
       "number": 145,
       "name": "Ecuador #9",
       "team": "ECU",
@@ -1163,7 +1163,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P10",
+      "code": "FWC-146",
       "number": 146,
       "name": "Ecuador #10",
       "team": "ECU",
@@ -1171,7 +1171,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P11",
+      "code": "FWC-147",
       "number": 147,
       "name": "Ecuador #11",
       "team": "ECU",
@@ -1179,7 +1179,7 @@
       "type": "player"
     },
     {
-      "code": "ECU-P12",
+      "code": "FWC-148",
       "number": 148,
       "name": "Ecuador #12",
       "team": "ECU",
@@ -1187,7 +1187,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-BADGE",
+      "code": "FWC-149",
       "number": 149,
       "name": "Paraguay (Escudo)",
       "team": "PAR",
@@ -1195,7 +1195,7 @@
       "type": "team_badge"
     },
     {
-      "code": "PAR-P1",
+      "code": "FWC-150",
       "number": 150,
       "name": "Paraguay #1",
       "team": "PAR",
@@ -1203,7 +1203,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P2",
+      "code": "FWC-151",
       "number": 151,
       "name": "Paraguay #2",
       "team": "PAR",
@@ -1211,7 +1211,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P3",
+      "code": "FWC-152",
       "number": 152,
       "name": "Paraguay #3",
       "team": "PAR",
@@ -1219,7 +1219,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P4",
+      "code": "FWC-153",
       "number": 153,
       "name": "Paraguay #4",
       "team": "PAR",
@@ -1227,7 +1227,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P5",
+      "code": "FWC-154",
       "number": 154,
       "name": "Paraguay #5",
       "team": "PAR",
@@ -1235,7 +1235,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P6",
+      "code": "FWC-155",
       "number": 155,
       "name": "Paraguay #6",
       "team": "PAR",
@@ -1243,7 +1243,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P7",
+      "code": "FWC-156",
       "number": 156,
       "name": "Paraguay #7",
       "team": "PAR",
@@ -1251,7 +1251,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P8",
+      "code": "FWC-157",
       "number": 157,
       "name": "Paraguay #8",
       "team": "PAR",
@@ -1259,7 +1259,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P9",
+      "code": "FWC-158",
       "number": 158,
       "name": "Paraguay #9",
       "team": "PAR",
@@ -1267,7 +1267,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P10",
+      "code": "FWC-159",
       "number": 159,
       "name": "Paraguay #10",
       "team": "PAR",
@@ -1275,7 +1275,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P11",
+      "code": "FWC-160",
       "number": 160,
       "name": "Paraguay #11",
       "team": "PAR",
@@ -1283,7 +1283,7 @@
       "type": "player"
     },
     {
-      "code": "PAR-P12",
+      "code": "FWC-161",
       "number": 161,
       "name": "Paraguay #12",
       "team": "PAR",
@@ -1291,7 +1291,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-BADGE",
+      "code": "FWC-162",
       "number": 162,
       "name": "España (Escudo)",
       "team": "ESP",
@@ -1299,7 +1299,7 @@
       "type": "team_badge"
     },
     {
-      "code": "ESP-P1",
+      "code": "FWC-163",
       "number": 163,
       "name": "España #1",
       "team": "ESP",
@@ -1307,7 +1307,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P2",
+      "code": "FWC-164",
       "number": 164,
       "name": "España #2",
       "team": "ESP",
@@ -1315,7 +1315,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P3",
+      "code": "FWC-165",
       "number": 165,
       "name": "España #3",
       "team": "ESP",
@@ -1323,7 +1323,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P4",
+      "code": "FWC-166",
       "number": 166,
       "name": "España #4",
       "team": "ESP",
@@ -1331,7 +1331,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P5",
+      "code": "FWC-167",
       "number": 167,
       "name": "España #5",
       "team": "ESP",
@@ -1339,7 +1339,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P6",
+      "code": "FWC-168",
       "number": 168,
       "name": "España #6",
       "team": "ESP",
@@ -1347,7 +1347,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P7",
+      "code": "FWC-169",
       "number": 169,
       "name": "España #7",
       "team": "ESP",
@@ -1355,7 +1355,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P8",
+      "code": "FWC-170",
       "number": 170,
       "name": "España #8",
       "team": "ESP",
@@ -1363,7 +1363,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P9",
+      "code": "FWC-171",
       "number": 171,
       "name": "España #9",
       "team": "ESP",
@@ -1371,7 +1371,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P10",
+      "code": "FWC-172",
       "number": 172,
       "name": "España #10",
       "team": "ESP",
@@ -1379,7 +1379,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P11",
+      "code": "FWC-173",
       "number": 173,
       "name": "España #11",
       "team": "ESP",
@@ -1387,7 +1387,7 @@
       "type": "player"
     },
     {
-      "code": "ESP-P12",
+      "code": "FWC-174",
       "number": 174,
       "name": "España #12",
       "team": "ESP",
@@ -1395,7 +1395,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-BADGE",
+      "code": "FWC-175",
       "number": 175,
       "name": "Francia (Escudo)",
       "team": "FRA",
@@ -1403,7 +1403,7 @@
       "type": "team_badge"
     },
     {
-      "code": "FRA-P1",
+      "code": "FWC-176",
       "number": 176,
       "name": "Francia #1",
       "team": "FRA",
@@ -1411,7 +1411,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P2",
+      "code": "FWC-177",
       "number": 177,
       "name": "Francia #2",
       "team": "FRA",
@@ -1419,7 +1419,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P3",
+      "code": "FWC-178",
       "number": 178,
       "name": "Francia #3",
       "team": "FRA",
@@ -1427,7 +1427,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P4",
+      "code": "FWC-179",
       "number": 179,
       "name": "Francia #4",
       "team": "FRA",
@@ -1435,7 +1435,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P5",
+      "code": "FWC-180",
       "number": 180,
       "name": "Francia #5",
       "team": "FRA",
@@ -1443,7 +1443,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P6",
+      "code": "FWC-181",
       "number": 181,
       "name": "Francia #6",
       "team": "FRA",
@@ -1451,7 +1451,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P7",
+      "code": "FWC-182",
       "number": 182,
       "name": "Francia #7",
       "team": "FRA",
@@ -1459,7 +1459,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P8",
+      "code": "FWC-183",
       "number": 183,
       "name": "Francia #8",
       "team": "FRA",
@@ -1467,7 +1467,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P9",
+      "code": "FWC-184",
       "number": 184,
       "name": "Francia #9",
       "team": "FRA",
@@ -1475,7 +1475,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P10",
+      "code": "FWC-185",
       "number": 185,
       "name": "Francia #10",
       "team": "FRA",
@@ -1483,7 +1483,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P11",
+      "code": "FWC-186",
       "number": 186,
       "name": "Francia #11",
       "team": "FRA",
@@ -1491,7 +1491,7 @@
       "type": "player"
     },
     {
-      "code": "FRA-P12",
+      "code": "FWC-187",
       "number": 187,
       "name": "Francia #12",
       "team": "FRA",
@@ -1499,7 +1499,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-BADGE",
+      "code": "FWC-188",
       "number": 188,
       "name": "Inglaterra (Escudo)",
       "team": "ENG",
@@ -1507,7 +1507,7 @@
       "type": "team_badge"
     },
     {
-      "code": "ENG-P1",
+      "code": "FWC-189",
       "number": 189,
       "name": "Inglaterra #1",
       "team": "ENG",
@@ -1515,7 +1515,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P2",
+      "code": "FWC-190",
       "number": 190,
       "name": "Inglaterra #2",
       "team": "ENG",
@@ -1523,7 +1523,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P3",
+      "code": "FWC-191",
       "number": 191,
       "name": "Inglaterra #3",
       "team": "ENG",
@@ -1531,7 +1531,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P4",
+      "code": "FWC-192",
       "number": 192,
       "name": "Inglaterra #4",
       "team": "ENG",
@@ -1539,7 +1539,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P5",
+      "code": "FWC-193",
       "number": 193,
       "name": "Inglaterra #5",
       "team": "ENG",
@@ -1547,7 +1547,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P6",
+      "code": "FWC-194",
       "number": 194,
       "name": "Inglaterra #6",
       "team": "ENG",
@@ -1555,7 +1555,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P7",
+      "code": "FWC-195",
       "number": 195,
       "name": "Inglaterra #7",
       "team": "ENG",
@@ -1563,7 +1563,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P8",
+      "code": "FWC-196",
       "number": 196,
       "name": "Inglaterra #8",
       "team": "ENG",
@@ -1571,7 +1571,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P9",
+      "code": "FWC-197",
       "number": 197,
       "name": "Inglaterra #9",
       "team": "ENG",
@@ -1579,7 +1579,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P10",
+      "code": "FWC-198",
       "number": 198,
       "name": "Inglaterra #10",
       "team": "ENG",
@@ -1587,7 +1587,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P11",
+      "code": "FWC-199",
       "number": 199,
       "name": "Inglaterra #11",
       "team": "ENG",
@@ -1595,7 +1595,7 @@
       "type": "player"
     },
     {
-      "code": "ENG-P12",
+      "code": "FWC-200",
       "number": 200,
       "name": "Inglaterra #12",
       "team": "ENG",
@@ -1603,7 +1603,7 @@
       "type": "player"
     },
     {
-      "code": "GER-BADGE",
+      "code": "FWC-201",
       "number": 201,
       "name": "Alemania (Escudo)",
       "team": "GER",
@@ -1611,7 +1611,7 @@
       "type": "team_badge"
     },
     {
-      "code": "GER-P1",
+      "code": "FWC-202",
       "number": 202,
       "name": "Alemania #1",
       "team": "GER",
@@ -1619,7 +1619,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P2",
+      "code": "FWC-203",
       "number": 203,
       "name": "Alemania #2",
       "team": "GER",
@@ -1627,7 +1627,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P3",
+      "code": "FWC-204",
       "number": 204,
       "name": "Alemania #3",
       "team": "GER",
@@ -1635,7 +1635,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P4",
+      "code": "FWC-205",
       "number": 205,
       "name": "Alemania #4",
       "team": "GER",
@@ -1643,7 +1643,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P5",
+      "code": "FWC-206",
       "number": 206,
       "name": "Alemania #5",
       "team": "GER",
@@ -1651,7 +1651,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P6",
+      "code": "FWC-207",
       "number": 207,
       "name": "Alemania #6",
       "team": "GER",
@@ -1659,7 +1659,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P7",
+      "code": "FWC-208",
       "number": 208,
       "name": "Alemania #7",
       "team": "GER",
@@ -1667,7 +1667,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P8",
+      "code": "FWC-209",
       "number": 209,
       "name": "Alemania #8",
       "team": "GER",
@@ -1675,7 +1675,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P9",
+      "code": "FWC-210",
       "number": 210,
       "name": "Alemania #9",
       "team": "GER",
@@ -1683,7 +1683,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P10",
+      "code": "FWC-211",
       "number": 211,
       "name": "Alemania #10",
       "team": "GER",
@@ -1691,7 +1691,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P11",
+      "code": "FWC-212",
       "number": 212,
       "name": "Alemania #11",
       "team": "GER",
@@ -1699,7 +1699,7 @@
       "type": "player"
     },
     {
-      "code": "GER-P12",
+      "code": "FWC-213",
       "number": 213,
       "name": "Alemania #12",
       "team": "GER",
@@ -1707,7 +1707,7 @@
       "type": "player"
     },
     {
-      "code": "POR-BADGE",
+      "code": "FWC-214",
       "number": 214,
       "name": "Portugal (Escudo)",
       "team": "POR",
@@ -1715,7 +1715,7 @@
       "type": "team_badge"
     },
     {
-      "code": "POR-P1",
+      "code": "FWC-215",
       "number": 215,
       "name": "Portugal #1",
       "team": "POR",
@@ -1723,7 +1723,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P2",
+      "code": "FWC-216",
       "number": 216,
       "name": "Portugal #2",
       "team": "POR",
@@ -1731,7 +1731,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P3",
+      "code": "FWC-217",
       "number": 217,
       "name": "Portugal #3",
       "team": "POR",
@@ -1739,7 +1739,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P4",
+      "code": "FWC-218",
       "number": 218,
       "name": "Portugal #4",
       "team": "POR",
@@ -1747,7 +1747,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P5",
+      "code": "FWC-219",
       "number": 219,
       "name": "Portugal #5",
       "team": "POR",
@@ -1755,7 +1755,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P6",
+      "code": "FWC-220",
       "number": 220,
       "name": "Portugal #6",
       "team": "POR",
@@ -1763,7 +1763,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P7",
+      "code": "FWC-221",
       "number": 221,
       "name": "Portugal #7",
       "team": "POR",
@@ -1771,7 +1771,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P8",
+      "code": "FWC-222",
       "number": 222,
       "name": "Portugal #8",
       "team": "POR",
@@ -1779,7 +1779,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P9",
+      "code": "FWC-223",
       "number": 223,
       "name": "Portugal #9",
       "team": "POR",
@@ -1787,7 +1787,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P10",
+      "code": "FWC-224",
       "number": 224,
       "name": "Portugal #10",
       "team": "POR",
@@ -1795,7 +1795,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P11",
+      "code": "FWC-225",
       "number": 225,
       "name": "Portugal #11",
       "team": "POR",
@@ -1803,7 +1803,7 @@
       "type": "player"
     },
     {
-      "code": "POR-P12",
+      "code": "FWC-226",
       "number": 226,
       "name": "Portugal #12",
       "team": "POR",
@@ -1811,7 +1811,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-BADGE",
+      "code": "FWC-227",
       "number": 227,
       "name": "Italia (Escudo)",
       "team": "ITA",
@@ -1819,7 +1819,7 @@
       "type": "team_badge"
     },
     {
-      "code": "ITA-P1",
+      "code": "FWC-228",
       "number": 228,
       "name": "Italia #1",
       "team": "ITA",
@@ -1827,7 +1827,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P2",
+      "code": "FWC-229",
       "number": 229,
       "name": "Italia #2",
       "team": "ITA",
@@ -1835,7 +1835,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P3",
+      "code": "FWC-230",
       "number": 230,
       "name": "Italia #3",
       "team": "ITA",
@@ -1843,7 +1843,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P4",
+      "code": "FWC-231",
       "number": 231,
       "name": "Italia #4",
       "team": "ITA",
@@ -1851,7 +1851,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P5",
+      "code": "FWC-232",
       "number": 232,
       "name": "Italia #5",
       "team": "ITA",
@@ -1859,7 +1859,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P6",
+      "code": "FWC-233",
       "number": 233,
       "name": "Italia #6",
       "team": "ITA",
@@ -1867,7 +1867,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P7",
+      "code": "FWC-234",
       "number": 234,
       "name": "Italia #7",
       "team": "ITA",
@@ -1875,7 +1875,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P8",
+      "code": "FWC-235",
       "number": 235,
       "name": "Italia #8",
       "team": "ITA",
@@ -1883,7 +1883,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P9",
+      "code": "FWC-236",
       "number": 236,
       "name": "Italia #9",
       "team": "ITA",
@@ -1891,7 +1891,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P10",
+      "code": "FWC-237",
       "number": 237,
       "name": "Italia #10",
       "team": "ITA",
@@ -1899,7 +1899,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P11",
+      "code": "FWC-238",
       "number": 238,
       "name": "Italia #11",
       "team": "ITA",
@@ -1907,7 +1907,7 @@
       "type": "player"
     },
     {
-      "code": "ITA-P12",
+      "code": "FWC-239",
       "number": 239,
       "name": "Italia #12",
       "team": "ITA",
@@ -1915,7 +1915,7 @@
       "type": "player"
     },
     {
-      "code": "NED-BADGE",
+      "code": "FWC-240",
       "number": 240,
       "name": "Países Bajos (Escudo)",
       "team": "NED",
@@ -1923,7 +1923,7 @@
       "type": "team_badge"
     },
     {
-      "code": "NED-P1",
+      "code": "FWC-241",
       "number": 241,
       "name": "Países Bajos #1",
       "team": "NED",
@@ -1931,7 +1931,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P2",
+      "code": "FWC-242",
       "number": 242,
       "name": "Países Bajos #2",
       "team": "NED",
@@ -1939,7 +1939,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P3",
+      "code": "FWC-243",
       "number": 243,
       "name": "Países Bajos #3",
       "team": "NED",
@@ -1947,7 +1947,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P4",
+      "code": "FWC-244",
       "number": 244,
       "name": "Países Bajos #4",
       "team": "NED",
@@ -1955,7 +1955,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P5",
+      "code": "FWC-245",
       "number": 245,
       "name": "Países Bajos #5",
       "team": "NED",
@@ -1963,7 +1963,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P6",
+      "code": "FWC-246",
       "number": 246,
       "name": "Países Bajos #6",
       "team": "NED",
@@ -1971,7 +1971,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P7",
+      "code": "FWC-247",
       "number": 247,
       "name": "Países Bajos #7",
       "team": "NED",
@@ -1979,7 +1979,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P8",
+      "code": "FWC-248",
       "number": 248,
       "name": "Países Bajos #8",
       "team": "NED",
@@ -1987,7 +1987,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P9",
+      "code": "FWC-249",
       "number": 249,
       "name": "Países Bajos #9",
       "team": "NED",
@@ -1995,7 +1995,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P10",
+      "code": "FWC-250",
       "number": 250,
       "name": "Países Bajos #10",
       "team": "NED",
@@ -2003,7 +2003,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P11",
+      "code": "FWC-251",
       "number": 251,
       "name": "Países Bajos #11",
       "team": "NED",
@@ -2011,7 +2011,7 @@
       "type": "player"
     },
     {
-      "code": "NED-P12",
+      "code": "FWC-252",
       "number": 252,
       "name": "Países Bajos #12",
       "team": "NED",
@@ -2019,7 +2019,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-BADGE",
+      "code": "FWC-253",
       "number": 253,
       "name": "Bélgica (Escudo)",
       "team": "BEL",
@@ -2027,7 +2027,7 @@
       "type": "team_badge"
     },
     {
-      "code": "BEL-P1",
+      "code": "FWC-254",
       "number": 254,
       "name": "Bélgica #1",
       "team": "BEL",
@@ -2035,7 +2035,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P2",
+      "code": "FWC-255",
       "number": 255,
       "name": "Bélgica #2",
       "team": "BEL",
@@ -2043,7 +2043,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P3",
+      "code": "FWC-256",
       "number": 256,
       "name": "Bélgica #3",
       "team": "BEL",
@@ -2051,7 +2051,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P4",
+      "code": "FWC-257",
       "number": 257,
       "name": "Bélgica #4",
       "team": "BEL",
@@ -2059,7 +2059,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P5",
+      "code": "FWC-258",
       "number": 258,
       "name": "Bélgica #5",
       "team": "BEL",
@@ -2067,7 +2067,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P6",
+      "code": "FWC-259",
       "number": 259,
       "name": "Bélgica #6",
       "team": "BEL",
@@ -2075,7 +2075,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P7",
+      "code": "FWC-260",
       "number": 260,
       "name": "Bélgica #7",
       "team": "BEL",
@@ -2083,7 +2083,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P8",
+      "code": "FWC-261",
       "number": 261,
       "name": "Bélgica #8",
       "team": "BEL",
@@ -2091,7 +2091,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P9",
+      "code": "FWC-262",
       "number": 262,
       "name": "Bélgica #9",
       "team": "BEL",
@@ -2099,7 +2099,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P10",
+      "code": "FWC-263",
       "number": 263,
       "name": "Bélgica #10",
       "team": "BEL",
@@ -2107,7 +2107,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P11",
+      "code": "FWC-264",
       "number": 264,
       "name": "Bélgica #11",
       "team": "BEL",
@@ -2115,7 +2115,7 @@
       "type": "player"
     },
     {
-      "code": "BEL-P12",
+      "code": "FWC-265",
       "number": 265,
       "name": "Bélgica #12",
       "team": "BEL",
@@ -2123,7 +2123,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-BADGE",
+      "code": "FWC-266",
       "number": 266,
       "name": "Croacia (Escudo)",
       "team": "CRO",
@@ -2131,7 +2131,7 @@
       "type": "team_badge"
     },
     {
-      "code": "CRO-P1",
+      "code": "FWC-267",
       "number": 267,
       "name": "Croacia #1",
       "team": "CRO",
@@ -2139,7 +2139,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P2",
+      "code": "FWC-268",
       "number": 268,
       "name": "Croacia #2",
       "team": "CRO",
@@ -2147,7 +2147,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P3",
+      "code": "FWC-269",
       "number": 269,
       "name": "Croacia #3",
       "team": "CRO",
@@ -2155,7 +2155,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P4",
+      "code": "FWC-270",
       "number": 270,
       "name": "Croacia #4",
       "team": "CRO",
@@ -2163,7 +2163,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P5",
+      "code": "FWC-271",
       "number": 271,
       "name": "Croacia #5",
       "team": "CRO",
@@ -2171,7 +2171,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P6",
+      "code": "FWC-272",
       "number": 272,
       "name": "Croacia #6",
       "team": "CRO",
@@ -2179,7 +2179,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P7",
+      "code": "FWC-273",
       "number": 273,
       "name": "Croacia #7",
       "team": "CRO",
@@ -2187,7 +2187,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P8",
+      "code": "FWC-274",
       "number": 274,
       "name": "Croacia #8",
       "team": "CRO",
@@ -2195,7 +2195,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P9",
+      "code": "FWC-275",
       "number": 275,
       "name": "Croacia #9",
       "team": "CRO",
@@ -2203,7 +2203,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P10",
+      "code": "FWC-276",
       "number": 276,
       "name": "Croacia #10",
       "team": "CRO",
@@ -2211,7 +2211,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P11",
+      "code": "FWC-277",
       "number": 277,
       "name": "Croacia #11",
       "team": "CRO",
@@ -2219,7 +2219,7 @@
       "type": "player"
     },
     {
-      "code": "CRO-P12",
+      "code": "FWC-278",
       "number": 278,
       "name": "Croacia #12",
       "team": "CRO",
@@ -2227,7 +2227,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-BADGE",
+      "code": "FWC-279",
       "number": 279,
       "name": "Dinamarca (Escudo)",
       "team": "DEN",
@@ -2235,7 +2235,7 @@
       "type": "team_badge"
     },
     {
-      "code": "DEN-P1",
+      "code": "FWC-280",
       "number": 280,
       "name": "Dinamarca #1",
       "team": "DEN",
@@ -2243,7 +2243,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P2",
+      "code": "FWC-281",
       "number": 281,
       "name": "Dinamarca #2",
       "team": "DEN",
@@ -2251,7 +2251,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P3",
+      "code": "FWC-282",
       "number": 282,
       "name": "Dinamarca #3",
       "team": "DEN",
@@ -2259,7 +2259,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P4",
+      "code": "FWC-283",
       "number": 283,
       "name": "Dinamarca #4",
       "team": "DEN",
@@ -2267,7 +2267,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P5",
+      "code": "FWC-284",
       "number": 284,
       "name": "Dinamarca #5",
       "team": "DEN",
@@ -2275,7 +2275,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P6",
+      "code": "FWC-285",
       "number": 285,
       "name": "Dinamarca #6",
       "team": "DEN",
@@ -2283,7 +2283,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P7",
+      "code": "FWC-286",
       "number": 286,
       "name": "Dinamarca #7",
       "team": "DEN",
@@ -2291,7 +2291,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P8",
+      "code": "FWC-287",
       "number": 287,
       "name": "Dinamarca #8",
       "team": "DEN",
@@ -2299,7 +2299,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P9",
+      "code": "FWC-288",
       "number": 288,
       "name": "Dinamarca #9",
       "team": "DEN",
@@ -2307,7 +2307,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P10",
+      "code": "FWC-289",
       "number": 289,
       "name": "Dinamarca #10",
       "team": "DEN",
@@ -2315,7 +2315,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P11",
+      "code": "FWC-290",
       "number": 290,
       "name": "Dinamarca #11",
       "team": "DEN",
@@ -2323,7 +2323,7 @@
       "type": "player"
     },
     {
-      "code": "DEN-P12",
+      "code": "FWC-291",
       "number": 291,
       "name": "Dinamarca #12",
       "team": "DEN",
@@ -2331,7 +2331,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-BADGE",
+      "code": "FWC-292",
       "number": 292,
       "name": "Suiza (Escudo)",
       "team": "SUI",
@@ -2339,7 +2339,7 @@
       "type": "team_badge"
     },
     {
-      "code": "SUI-P1",
+      "code": "FWC-293",
       "number": 293,
       "name": "Suiza #1",
       "team": "SUI",
@@ -2347,7 +2347,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P2",
+      "code": "FWC-294",
       "number": 294,
       "name": "Suiza #2",
       "team": "SUI",
@@ -2355,7 +2355,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P3",
+      "code": "FWC-295",
       "number": 295,
       "name": "Suiza #3",
       "team": "SUI",
@@ -2363,7 +2363,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P4",
+      "code": "FWC-296",
       "number": 296,
       "name": "Suiza #4",
       "team": "SUI",
@@ -2371,7 +2371,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P5",
+      "code": "FWC-297",
       "number": 297,
       "name": "Suiza #5",
       "team": "SUI",
@@ -2379,7 +2379,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P6",
+      "code": "FWC-298",
       "number": 298,
       "name": "Suiza #6",
       "team": "SUI",
@@ -2387,7 +2387,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P7",
+      "code": "FWC-299",
       "number": 299,
       "name": "Suiza #7",
       "team": "SUI",
@@ -2395,7 +2395,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P8",
+      "code": "FWC-300",
       "number": 300,
       "name": "Suiza #8",
       "team": "SUI",
@@ -2403,7 +2403,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P9",
+      "code": "FWC-301",
       "number": 301,
       "name": "Suiza #9",
       "team": "SUI",
@@ -2411,7 +2411,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P10",
+      "code": "FWC-302",
       "number": 302,
       "name": "Suiza #10",
       "team": "SUI",
@@ -2419,7 +2419,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P11",
+      "code": "FWC-303",
       "number": 303,
       "name": "Suiza #11",
       "team": "SUI",
@@ -2427,7 +2427,7 @@
       "type": "player"
     },
     {
-      "code": "SUI-P12",
+      "code": "FWC-304",
       "number": 304,
       "name": "Suiza #12",
       "team": "SUI",
@@ -2435,7 +2435,7 @@
       "type": "player"
     },
     {
-      "code": "POL-BADGE",
+      "code": "FWC-305",
       "number": 305,
       "name": "Polonia (Escudo)",
       "team": "POL",
@@ -2443,7 +2443,7 @@
       "type": "team_badge"
     },
     {
-      "code": "POL-P1",
+      "code": "FWC-306",
       "number": 306,
       "name": "Polonia #1",
       "team": "POL",
@@ -2451,7 +2451,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P2",
+      "code": "FWC-307",
       "number": 307,
       "name": "Polonia #2",
       "team": "POL",
@@ -2459,7 +2459,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P3",
+      "code": "FWC-308",
       "number": 308,
       "name": "Polonia #3",
       "team": "POL",
@@ -2467,7 +2467,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P4",
+      "code": "FWC-309",
       "number": 309,
       "name": "Polonia #4",
       "team": "POL",
@@ -2475,7 +2475,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P5",
+      "code": "FWC-310",
       "number": 310,
       "name": "Polonia #5",
       "team": "POL",
@@ -2483,7 +2483,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P6",
+      "code": "FWC-311",
       "number": 311,
       "name": "Polonia #6",
       "team": "POL",
@@ -2491,7 +2491,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P7",
+      "code": "FWC-312",
       "number": 312,
       "name": "Polonia #7",
       "team": "POL",
@@ -2499,7 +2499,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P8",
+      "code": "FWC-313",
       "number": 313,
       "name": "Polonia #8",
       "team": "POL",
@@ -2507,7 +2507,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P9",
+      "code": "FWC-314",
       "number": 314,
       "name": "Polonia #9",
       "team": "POL",
@@ -2515,7 +2515,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P10",
+      "code": "FWC-315",
       "number": 315,
       "name": "Polonia #10",
       "team": "POL",
@@ -2523,7 +2523,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P11",
+      "code": "FWC-316",
       "number": 316,
       "name": "Polonia #11",
       "team": "POL",
@@ -2531,7 +2531,7 @@
       "type": "player"
     },
     {
-      "code": "POL-P12",
+      "code": "FWC-317",
       "number": 317,
       "name": "Polonia #12",
       "team": "POL",
@@ -2539,7 +2539,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-BADGE",
+      "code": "FWC-318",
       "number": 318,
       "name": "Austria (Escudo)",
       "team": "AUT",
@@ -2547,7 +2547,7 @@
       "type": "team_badge"
     },
     {
-      "code": "AUT-P1",
+      "code": "FWC-319",
       "number": 319,
       "name": "Austria #1",
       "team": "AUT",
@@ -2555,7 +2555,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P2",
+      "code": "FWC-320",
       "number": 320,
       "name": "Austria #2",
       "team": "AUT",
@@ -2563,7 +2563,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P3",
+      "code": "FWC-321",
       "number": 321,
       "name": "Austria #3",
       "team": "AUT",
@@ -2571,7 +2571,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P4",
+      "code": "FWC-322",
       "number": 322,
       "name": "Austria #4",
       "team": "AUT",
@@ -2579,7 +2579,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P5",
+      "code": "FWC-323",
       "number": 323,
       "name": "Austria #5",
       "team": "AUT",
@@ -2587,7 +2587,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P6",
+      "code": "FWC-324",
       "number": 324,
       "name": "Austria #6",
       "team": "AUT",
@@ -2595,7 +2595,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P7",
+      "code": "FWC-325",
       "number": 325,
       "name": "Austria #7",
       "team": "AUT",
@@ -2603,7 +2603,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P8",
+      "code": "FWC-326",
       "number": 326,
       "name": "Austria #8",
       "team": "AUT",
@@ -2611,7 +2611,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P9",
+      "code": "FWC-327",
       "number": 327,
       "name": "Austria #9",
       "team": "AUT",
@@ -2619,7 +2619,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P10",
+      "code": "FWC-328",
       "number": 328,
       "name": "Austria #10",
       "team": "AUT",
@@ -2627,7 +2627,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P11",
+      "code": "FWC-329",
       "number": 329,
       "name": "Austria #11",
       "team": "AUT",
@@ -2635,7 +2635,7 @@
       "type": "player"
     },
     {
-      "code": "AUT-P12",
+      "code": "FWC-330",
       "number": 330,
       "name": "Austria #12",
       "team": "AUT",
@@ -2643,7 +2643,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-BADGE",
+      "code": "FWC-331",
       "number": 331,
       "name": "Hungría (Escudo)",
       "team": "HUN",
@@ -2651,7 +2651,7 @@
       "type": "team_badge"
     },
     {
-      "code": "HUN-P1",
+      "code": "FWC-332",
       "number": 332,
       "name": "Hungría #1",
       "team": "HUN",
@@ -2659,7 +2659,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P2",
+      "code": "FWC-333",
       "number": 333,
       "name": "Hungría #2",
       "team": "HUN",
@@ -2667,7 +2667,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P3",
+      "code": "FWC-334",
       "number": 334,
       "name": "Hungría #3",
       "team": "HUN",
@@ -2675,7 +2675,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P4",
+      "code": "FWC-335",
       "number": 335,
       "name": "Hungría #4",
       "team": "HUN",
@@ -2683,7 +2683,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P5",
+      "code": "FWC-336",
       "number": 336,
       "name": "Hungría #5",
       "team": "HUN",
@@ -2691,7 +2691,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P6",
+      "code": "FWC-337",
       "number": 337,
       "name": "Hungría #6",
       "team": "HUN",
@@ -2699,7 +2699,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P7",
+      "code": "FWC-338",
       "number": 338,
       "name": "Hungría #7",
       "team": "HUN",
@@ -2707,7 +2707,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P8",
+      "code": "FWC-339",
       "number": 339,
       "name": "Hungría #8",
       "team": "HUN",
@@ -2715,7 +2715,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P9",
+      "code": "FWC-340",
       "number": 340,
       "name": "Hungría #9",
       "team": "HUN",
@@ -2723,7 +2723,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P10",
+      "code": "FWC-341",
       "number": 341,
       "name": "Hungría #10",
       "team": "HUN",
@@ -2731,7 +2731,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P11",
+      "code": "FWC-342",
       "number": 342,
       "name": "Hungría #11",
       "team": "HUN",
@@ -2739,7 +2739,7 @@
       "type": "player"
     },
     {
-      "code": "HUN-P12",
+      "code": "FWC-343",
       "number": 343,
       "name": "Hungría #12",
       "team": "HUN",
@@ -2747,7 +2747,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-BADGE",
+      "code": "FWC-344",
       "number": 344,
       "name": "Turquía (Escudo)",
       "team": "TUR",
@@ -2755,7 +2755,7 @@
       "type": "team_badge"
     },
     {
-      "code": "TUR-P1",
+      "code": "FWC-345",
       "number": 345,
       "name": "Turquía #1",
       "team": "TUR",
@@ -2763,7 +2763,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P2",
+      "code": "FWC-346",
       "number": 346,
       "name": "Turquía #2",
       "team": "TUR",
@@ -2771,7 +2771,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P3",
+      "code": "FWC-347",
       "number": 347,
       "name": "Turquía #3",
       "team": "TUR",
@@ -2779,7 +2779,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P4",
+      "code": "FWC-348",
       "number": 348,
       "name": "Turquía #4",
       "team": "TUR",
@@ -2787,7 +2787,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P5",
+      "code": "FWC-349",
       "number": 349,
       "name": "Turquía #5",
       "team": "TUR",
@@ -2795,7 +2795,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P6",
+      "code": "FWC-350",
       "number": 350,
       "name": "Turquía #6",
       "team": "TUR",
@@ -2803,7 +2803,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P7",
+      "code": "FWC-351",
       "number": 351,
       "name": "Turquía #7",
       "team": "TUR",
@@ -2811,7 +2811,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P8",
+      "code": "FWC-352",
       "number": 352,
       "name": "Turquía #8",
       "team": "TUR",
@@ -2819,7 +2819,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P9",
+      "code": "FWC-353",
       "number": 353,
       "name": "Turquía #9",
       "team": "TUR",
@@ -2827,7 +2827,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P10",
+      "code": "FWC-354",
       "number": 354,
       "name": "Turquía #10",
       "team": "TUR",
@@ -2835,7 +2835,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P11",
+      "code": "FWC-355",
       "number": 355,
       "name": "Turquía #11",
       "team": "TUR",
@@ -2843,7 +2843,7 @@
       "type": "player"
     },
     {
-      "code": "TUR-P12",
+      "code": "FWC-356",
       "number": 356,
       "name": "Turquía #12",
       "team": "TUR",
@@ -2851,7 +2851,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-BADGE",
+      "code": "FWC-357",
       "number": 357,
       "name": "Escocia (Escudo)",
       "team": "SCO",
@@ -2859,7 +2859,7 @@
       "type": "team_badge"
     },
     {
-      "code": "SCO-P1",
+      "code": "FWC-358",
       "number": 358,
       "name": "Escocia #1",
       "team": "SCO",
@@ -2867,7 +2867,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P2",
+      "code": "FWC-359",
       "number": 359,
       "name": "Escocia #2",
       "team": "SCO",
@@ -2875,7 +2875,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P3",
+      "code": "FWC-360",
       "number": 360,
       "name": "Escocia #3",
       "team": "SCO",
@@ -2883,7 +2883,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P4",
+      "code": "FWC-361",
       "number": 361,
       "name": "Escocia #4",
       "team": "SCO",
@@ -2891,7 +2891,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P5",
+      "code": "FWC-362",
       "number": 362,
       "name": "Escocia #5",
       "team": "SCO",
@@ -2899,7 +2899,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P6",
+      "code": "FWC-363",
       "number": 363,
       "name": "Escocia #6",
       "team": "SCO",
@@ -2907,7 +2907,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P7",
+      "code": "FWC-364",
       "number": 364,
       "name": "Escocia #7",
       "team": "SCO",
@@ -2915,7 +2915,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P8",
+      "code": "FWC-365",
       "number": 365,
       "name": "Escocia #8",
       "team": "SCO",
@@ -2923,7 +2923,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P9",
+      "code": "FWC-366",
       "number": 366,
       "name": "Escocia #9",
       "team": "SCO",
@@ -2931,7 +2931,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P10",
+      "code": "FWC-367",
       "number": 367,
       "name": "Escocia #10",
       "team": "SCO",
@@ -2939,7 +2939,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P11",
+      "code": "FWC-368",
       "number": 368,
       "name": "Escocia #11",
       "team": "SCO",
@@ -2947,7 +2947,7 @@
       "type": "player"
     },
     {
-      "code": "SCO-P12",
+      "code": "FWC-369",
       "number": 369,
       "name": "Escocia #12",
       "team": "SCO",
@@ -2955,7 +2955,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-BADGE",
+      "code": "FWC-370",
       "number": 370,
       "name": "Ucrania (Escudo)",
       "team": "UKR",
@@ -2963,7 +2963,7 @@
       "type": "team_badge"
     },
     {
-      "code": "UKR-P1",
+      "code": "FWC-371",
       "number": 371,
       "name": "Ucrania #1",
       "team": "UKR",
@@ -2971,7 +2971,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P2",
+      "code": "FWC-372",
       "number": 372,
       "name": "Ucrania #2",
       "team": "UKR",
@@ -2979,7 +2979,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P3",
+      "code": "FWC-373",
       "number": 373,
       "name": "Ucrania #3",
       "team": "UKR",
@@ -2987,7 +2987,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P4",
+      "code": "FWC-374",
       "number": 374,
       "name": "Ucrania #4",
       "team": "UKR",
@@ -2995,7 +2995,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P5",
+      "code": "FWC-375",
       "number": 375,
       "name": "Ucrania #5",
       "team": "UKR",
@@ -3003,7 +3003,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P6",
+      "code": "FWC-376",
       "number": 376,
       "name": "Ucrania #6",
       "team": "UKR",
@@ -3011,7 +3011,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P7",
+      "code": "FWC-377",
       "number": 377,
       "name": "Ucrania #7",
       "team": "UKR",
@@ -3019,7 +3019,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P8",
+      "code": "FWC-378",
       "number": 378,
       "name": "Ucrania #8",
       "team": "UKR",
@@ -3027,7 +3027,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P9",
+      "code": "FWC-379",
       "number": 379,
       "name": "Ucrania #9",
       "team": "UKR",
@@ -3035,7 +3035,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P10",
+      "code": "FWC-380",
       "number": 380,
       "name": "Ucrania #10",
       "team": "UKR",
@@ -3043,7 +3043,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P11",
+      "code": "FWC-381",
       "number": 381,
       "name": "Ucrania #11",
       "team": "UKR",
@@ -3051,7 +3051,7 @@
       "type": "player"
     },
     {
-      "code": "UKR-P12",
+      "code": "FWC-382",
       "number": 382,
       "name": "Ucrania #12",
       "team": "UKR",
@@ -3059,7 +3059,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-BADGE",
+      "code": "FWC-383",
       "number": 383,
       "name": "Marruecos (Escudo)",
       "team": "MAR",
@@ -3067,7 +3067,7 @@
       "type": "team_badge"
     },
     {
-      "code": "MAR-P1",
+      "code": "FWC-384",
       "number": 384,
       "name": "Marruecos #1",
       "team": "MAR",
@@ -3075,7 +3075,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P2",
+      "code": "FWC-385",
       "number": 385,
       "name": "Marruecos #2",
       "team": "MAR",
@@ -3083,7 +3083,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P3",
+      "code": "FWC-386",
       "number": 386,
       "name": "Marruecos #3",
       "team": "MAR",
@@ -3091,7 +3091,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P4",
+      "code": "FWC-387",
       "number": 387,
       "name": "Marruecos #4",
       "team": "MAR",
@@ -3099,7 +3099,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P5",
+      "code": "FWC-388",
       "number": 388,
       "name": "Marruecos #5",
       "team": "MAR",
@@ -3107,7 +3107,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P6",
+      "code": "FWC-389",
       "number": 389,
       "name": "Marruecos #6",
       "team": "MAR",
@@ -3115,7 +3115,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P7",
+      "code": "FWC-390",
       "number": 390,
       "name": "Marruecos #7",
       "team": "MAR",
@@ -3123,7 +3123,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P8",
+      "code": "FWC-391",
       "number": 391,
       "name": "Marruecos #8",
       "team": "MAR",
@@ -3131,7 +3131,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P9",
+      "code": "FWC-392",
       "number": 392,
       "name": "Marruecos #9",
       "team": "MAR",
@@ -3139,7 +3139,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P10",
+      "code": "FWC-393",
       "number": 393,
       "name": "Marruecos #10",
       "team": "MAR",
@@ -3147,7 +3147,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P11",
+      "code": "FWC-394",
       "number": 394,
       "name": "Marruecos #11",
       "team": "MAR",
@@ -3155,7 +3155,7 @@
       "type": "player"
     },
     {
-      "code": "MAR-P12",
+      "code": "FWC-395",
       "number": 395,
       "name": "Marruecos #12",
       "team": "MAR",
@@ -3163,7 +3163,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-BADGE",
+      "code": "FWC-396",
       "number": 396,
       "name": "Senegal (Escudo)",
       "team": "SEN",
@@ -3171,7 +3171,7 @@
       "type": "team_badge"
     },
     {
-      "code": "SEN-P1",
+      "code": "FWC-397",
       "number": 397,
       "name": "Senegal #1",
       "team": "SEN",
@@ -3179,7 +3179,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P2",
+      "code": "FWC-398",
       "number": 398,
       "name": "Senegal #2",
       "team": "SEN",
@@ -3187,7 +3187,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P3",
+      "code": "FWC-399",
       "number": 399,
       "name": "Senegal #3",
       "team": "SEN",
@@ -3195,7 +3195,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P4",
+      "code": "FWC-400",
       "number": 400,
       "name": "Senegal #4",
       "team": "SEN",
@@ -3203,7 +3203,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P5",
+      "code": "FWC-401",
       "number": 401,
       "name": "Senegal #5",
       "team": "SEN",
@@ -3211,7 +3211,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P6",
+      "code": "FWC-402",
       "number": 402,
       "name": "Senegal #6",
       "team": "SEN",
@@ -3219,7 +3219,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P7",
+      "code": "FWC-403",
       "number": 403,
       "name": "Senegal #7",
       "team": "SEN",
@@ -3227,7 +3227,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P8",
+      "code": "FWC-404",
       "number": 404,
       "name": "Senegal #8",
       "team": "SEN",
@@ -3235,7 +3235,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P9",
+      "code": "FWC-405",
       "number": 405,
       "name": "Senegal #9",
       "team": "SEN",
@@ -3243,7 +3243,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P10",
+      "code": "FWC-406",
       "number": 406,
       "name": "Senegal #10",
       "team": "SEN",
@@ -3251,7 +3251,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P11",
+      "code": "FWC-407",
       "number": 407,
       "name": "Senegal #11",
       "team": "SEN",
@@ -3259,7 +3259,7 @@
       "type": "player"
     },
     {
-      "code": "SEN-P12",
+      "code": "FWC-408",
       "number": 408,
       "name": "Senegal #12",
       "team": "SEN",
@@ -3267,7 +3267,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-BADGE",
+      "code": "FWC-409",
       "number": 409,
       "name": "Egipto (Escudo)",
       "team": "EGY",
@@ -3275,7 +3275,7 @@
       "type": "team_badge"
     },
     {
-      "code": "EGY-P1",
+      "code": "FWC-410",
       "number": 410,
       "name": "Egipto #1",
       "team": "EGY",
@@ -3283,7 +3283,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P2",
+      "code": "FWC-411",
       "number": 411,
       "name": "Egipto #2",
       "team": "EGY",
@@ -3291,7 +3291,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P3",
+      "code": "FWC-412",
       "number": 412,
       "name": "Egipto #3",
       "team": "EGY",
@@ -3299,7 +3299,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P4",
+      "code": "FWC-413",
       "number": 413,
       "name": "Egipto #4",
       "team": "EGY",
@@ -3307,7 +3307,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P5",
+      "code": "FWC-414",
       "number": 414,
       "name": "Egipto #5",
       "team": "EGY",
@@ -3315,7 +3315,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P6",
+      "code": "FWC-415",
       "number": 415,
       "name": "Egipto #6",
       "team": "EGY",
@@ -3323,7 +3323,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P7",
+      "code": "FWC-416",
       "number": 416,
       "name": "Egipto #7",
       "team": "EGY",
@@ -3331,7 +3331,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P8",
+      "code": "FWC-417",
       "number": 417,
       "name": "Egipto #8",
       "team": "EGY",
@@ -3339,7 +3339,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P9",
+      "code": "FWC-418",
       "number": 418,
       "name": "Egipto #9",
       "team": "EGY",
@@ -3347,7 +3347,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P10",
+      "code": "FWC-419",
       "number": 419,
       "name": "Egipto #10",
       "team": "EGY",
@@ -3355,7 +3355,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P11",
+      "code": "FWC-420",
       "number": 420,
       "name": "Egipto #11",
       "team": "EGY",
@@ -3363,7 +3363,7 @@
       "type": "player"
     },
     {
-      "code": "EGY-P12",
+      "code": "FWC-421",
       "number": 421,
       "name": "Egipto #12",
       "team": "EGY",
@@ -3371,7 +3371,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-BADGE",
+      "code": "FWC-422",
       "number": 422,
       "name": "Túnez (Escudo)",
       "team": "TUN",
@@ -3379,7 +3379,7 @@
       "type": "team_badge"
     },
     {
-      "code": "TUN-P1",
+      "code": "FWC-423",
       "number": 423,
       "name": "Túnez #1",
       "team": "TUN",
@@ -3387,7 +3387,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P2",
+      "code": "FWC-424",
       "number": 424,
       "name": "Túnez #2",
       "team": "TUN",
@@ -3395,7 +3395,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P3",
+      "code": "FWC-425",
       "number": 425,
       "name": "Túnez #3",
       "team": "TUN",
@@ -3403,7 +3403,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P4",
+      "code": "FWC-426",
       "number": 426,
       "name": "Túnez #4",
       "team": "TUN",
@@ -3411,7 +3411,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P5",
+      "code": "FWC-427",
       "number": 427,
       "name": "Túnez #5",
       "team": "TUN",
@@ -3419,7 +3419,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P6",
+      "code": "FWC-428",
       "number": 428,
       "name": "Túnez #6",
       "team": "TUN",
@@ -3427,7 +3427,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P7",
+      "code": "FWC-429",
       "number": 429,
       "name": "Túnez #7",
       "team": "TUN",
@@ -3435,7 +3435,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P8",
+      "code": "FWC-430",
       "number": 430,
       "name": "Túnez #8",
       "team": "TUN",
@@ -3443,7 +3443,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P9",
+      "code": "FWC-431",
       "number": 431,
       "name": "Túnez #9",
       "team": "TUN",
@@ -3451,7 +3451,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P10",
+      "code": "FWC-432",
       "number": 432,
       "name": "Túnez #10",
       "team": "TUN",
@@ -3459,7 +3459,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P11",
+      "code": "FWC-433",
       "number": 433,
       "name": "Túnez #11",
       "team": "TUN",
@@ -3467,7 +3467,7 @@
       "type": "player"
     },
     {
-      "code": "TUN-P12",
+      "code": "FWC-434",
       "number": 434,
       "name": "Túnez #12",
       "team": "TUN",
@@ -3475,7 +3475,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-BADGE",
+      "code": "FWC-435",
       "number": 435,
       "name": "Nigeria (Escudo)",
       "team": "NGA",
@@ -3483,7 +3483,7 @@
       "type": "team_badge"
     },
     {
-      "code": "NGA-P1",
+      "code": "FWC-436",
       "number": 436,
       "name": "Nigeria #1",
       "team": "NGA",
@@ -3491,7 +3491,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P2",
+      "code": "FWC-437",
       "number": 437,
       "name": "Nigeria #2",
       "team": "NGA",
@@ -3499,7 +3499,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P3",
+      "code": "FWC-438",
       "number": 438,
       "name": "Nigeria #3",
       "team": "NGA",
@@ -3507,7 +3507,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P4",
+      "code": "FWC-439",
       "number": 439,
       "name": "Nigeria #4",
       "team": "NGA",
@@ -3515,7 +3515,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P5",
+      "code": "FWC-440",
       "number": 440,
       "name": "Nigeria #5",
       "team": "NGA",
@@ -3523,7 +3523,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P6",
+      "code": "FWC-441",
       "number": 441,
       "name": "Nigeria #6",
       "team": "NGA",
@@ -3531,7 +3531,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P7",
+      "code": "FWC-442",
       "number": 442,
       "name": "Nigeria #7",
       "team": "NGA",
@@ -3539,7 +3539,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P8",
+      "code": "FWC-443",
       "number": 443,
       "name": "Nigeria #8",
       "team": "NGA",
@@ -3547,7 +3547,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P9",
+      "code": "FWC-444",
       "number": 444,
       "name": "Nigeria #9",
       "team": "NGA",
@@ -3555,7 +3555,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P10",
+      "code": "FWC-445",
       "number": 445,
       "name": "Nigeria #10",
       "team": "NGA",
@@ -3563,7 +3563,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P11",
+      "code": "FWC-446",
       "number": 446,
       "name": "Nigeria #11",
       "team": "NGA",
@@ -3571,7 +3571,7 @@
       "type": "player"
     },
     {
-      "code": "NGA-P12",
+      "code": "FWC-447",
       "number": 447,
       "name": "Nigeria #12",
       "team": "NGA",
@@ -3579,7 +3579,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-BADGE",
+      "code": "FWC-448",
       "number": 448,
       "name": "Ghana (Escudo)",
       "team": "GHA",
@@ -3587,7 +3587,7 @@
       "type": "team_badge"
     },
     {
-      "code": "GHA-P1",
+      "code": "FWC-449",
       "number": 449,
       "name": "Ghana #1",
       "team": "GHA",
@@ -3595,7 +3595,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P2",
+      "code": "FWC-450",
       "number": 450,
       "name": "Ghana #2",
       "team": "GHA",
@@ -3603,7 +3603,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P3",
+      "code": "FWC-451",
       "number": 451,
       "name": "Ghana #3",
       "team": "GHA",
@@ -3611,7 +3611,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P4",
+      "code": "FWC-452",
       "number": 452,
       "name": "Ghana #4",
       "team": "GHA",
@@ -3619,7 +3619,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P5",
+      "code": "FWC-453",
       "number": 453,
       "name": "Ghana #5",
       "team": "GHA",
@@ -3627,7 +3627,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P6",
+      "code": "FWC-454",
       "number": 454,
       "name": "Ghana #6",
       "team": "GHA",
@@ -3635,7 +3635,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P7",
+      "code": "FWC-455",
       "number": 455,
       "name": "Ghana #7",
       "team": "GHA",
@@ -3643,7 +3643,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P8",
+      "code": "FWC-456",
       "number": 456,
       "name": "Ghana #8",
       "team": "GHA",
@@ -3651,7 +3651,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P9",
+      "code": "FWC-457",
       "number": 457,
       "name": "Ghana #9",
       "team": "GHA",
@@ -3659,7 +3659,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P10",
+      "code": "FWC-458",
       "number": 458,
       "name": "Ghana #10",
       "team": "GHA",
@@ -3667,7 +3667,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P11",
+      "code": "FWC-459",
       "number": 459,
       "name": "Ghana #11",
       "team": "GHA",
@@ -3675,7 +3675,7 @@
       "type": "player"
     },
     {
-      "code": "GHA-P12",
+      "code": "FWC-460",
       "number": 460,
       "name": "Ghana #12",
       "team": "GHA",
@@ -3683,7 +3683,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-BADGE",
+      "code": "FWC-461",
       "number": 461,
       "name": "Argelia (Escudo)",
       "team": "ALG",
@@ -3691,7 +3691,7 @@
       "type": "team_badge"
     },
     {
-      "code": "ALG-P1",
+      "code": "FWC-462",
       "number": 462,
       "name": "Argelia #1",
       "team": "ALG",
@@ -3699,7 +3699,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P2",
+      "code": "FWC-463",
       "number": 463,
       "name": "Argelia #2",
       "team": "ALG",
@@ -3707,7 +3707,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P3",
+      "code": "FWC-464",
       "number": 464,
       "name": "Argelia #3",
       "team": "ALG",
@@ -3715,7 +3715,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P4",
+      "code": "FWC-465",
       "number": 465,
       "name": "Argelia #4",
       "team": "ALG",
@@ -3723,7 +3723,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P5",
+      "code": "FWC-466",
       "number": 466,
       "name": "Argelia #5",
       "team": "ALG",
@@ -3731,7 +3731,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P6",
+      "code": "FWC-467",
       "number": 467,
       "name": "Argelia #6",
       "team": "ALG",
@@ -3739,7 +3739,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P7",
+      "code": "FWC-468",
       "number": 468,
       "name": "Argelia #7",
       "team": "ALG",
@@ -3747,7 +3747,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P8",
+      "code": "FWC-469",
       "number": 469,
       "name": "Argelia #8",
       "team": "ALG",
@@ -3755,7 +3755,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P9",
+      "code": "FWC-470",
       "number": 470,
       "name": "Argelia #9",
       "team": "ALG",
@@ -3763,7 +3763,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P10",
+      "code": "FWC-471",
       "number": 471,
       "name": "Argelia #10",
       "team": "ALG",
@@ -3771,7 +3771,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P11",
+      "code": "FWC-472",
       "number": 472,
       "name": "Argelia #11",
       "team": "ALG",
@@ -3779,7 +3779,7 @@
       "type": "player"
     },
     {
-      "code": "ALG-P12",
+      "code": "FWC-473",
       "number": 473,
       "name": "Argelia #12",
       "team": "ALG",
@@ -3787,7 +3787,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-BADGE",
+      "code": "FWC-474",
       "number": 474,
       "name": "Camerún (Escudo)",
       "team": "CMR",
@@ -3795,7 +3795,7 @@
       "type": "team_badge"
     },
     {
-      "code": "CMR-P1",
+      "code": "FWC-475",
       "number": 475,
       "name": "Camerún #1",
       "team": "CMR",
@@ -3803,7 +3803,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P2",
+      "code": "FWC-476",
       "number": 476,
       "name": "Camerún #2",
       "team": "CMR",
@@ -3811,7 +3811,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P3",
+      "code": "FWC-477",
       "number": 477,
       "name": "Camerún #3",
       "team": "CMR",
@@ -3819,7 +3819,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P4",
+      "code": "FWC-478",
       "number": 478,
       "name": "Camerún #4",
       "team": "CMR",
@@ -3827,7 +3827,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P5",
+      "code": "FWC-479",
       "number": 479,
       "name": "Camerún #5",
       "team": "CMR",
@@ -3835,7 +3835,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P6",
+      "code": "FWC-480",
       "number": 480,
       "name": "Camerún #6",
       "team": "CMR",
@@ -3843,7 +3843,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P7",
+      "code": "FWC-481",
       "number": 481,
       "name": "Camerún #7",
       "team": "CMR",
@@ -3851,7 +3851,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P8",
+      "code": "FWC-482",
       "number": 482,
       "name": "Camerún #8",
       "team": "CMR",
@@ -3859,7 +3859,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P9",
+      "code": "FWC-483",
       "number": 483,
       "name": "Camerún #9",
       "team": "CMR",
@@ -3867,7 +3867,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P10",
+      "code": "FWC-484",
       "number": 484,
       "name": "Camerún #10",
       "team": "CMR",
@@ -3875,7 +3875,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P11",
+      "code": "FWC-485",
       "number": 485,
       "name": "Camerún #11",
       "team": "CMR",
@@ -3883,7 +3883,7 @@
       "type": "player"
     },
     {
-      "code": "CMR-P12",
+      "code": "FWC-486",
       "number": 486,
       "name": "Camerún #12",
       "team": "CMR",
@@ -3891,7 +3891,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-BADGE",
+      "code": "FWC-487",
       "number": 487,
       "name": "Costa de Marfil (Escudo)",
       "team": "CIV",
@@ -3899,7 +3899,7 @@
       "type": "team_badge"
     },
     {
-      "code": "CIV-P1",
+      "code": "FWC-488",
       "number": 488,
       "name": "Costa de Marfil #1",
       "team": "CIV",
@@ -3907,7 +3907,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P2",
+      "code": "FWC-489",
       "number": 489,
       "name": "Costa de Marfil #2",
       "team": "CIV",
@@ -3915,7 +3915,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P3",
+      "code": "FWC-490",
       "number": 490,
       "name": "Costa de Marfil #3",
       "team": "CIV",
@@ -3923,7 +3923,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P4",
+      "code": "FWC-491",
       "number": 491,
       "name": "Costa de Marfil #4",
       "team": "CIV",
@@ -3931,7 +3931,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P5",
+      "code": "FWC-492",
       "number": 492,
       "name": "Costa de Marfil #5",
       "team": "CIV",
@@ -3939,7 +3939,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P6",
+      "code": "FWC-493",
       "number": 493,
       "name": "Costa de Marfil #6",
       "team": "CIV",
@@ -3947,7 +3947,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P7",
+      "code": "FWC-494",
       "number": 494,
       "name": "Costa de Marfil #7",
       "team": "CIV",
@@ -3955,7 +3955,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P8",
+      "code": "FWC-495",
       "number": 495,
       "name": "Costa de Marfil #8",
       "team": "CIV",
@@ -3963,7 +3963,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P9",
+      "code": "FWC-496",
       "number": 496,
       "name": "Costa de Marfil #9",
       "team": "CIV",
@@ -3971,7 +3971,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P10",
+      "code": "FWC-497",
       "number": 497,
       "name": "Costa de Marfil #10",
       "team": "CIV",
@@ -3979,7 +3979,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P11",
+      "code": "FWC-498",
       "number": 498,
       "name": "Costa de Marfil #11",
       "team": "CIV",
@@ -3987,7 +3987,7 @@
       "type": "player"
     },
     {
-      "code": "CIV-P12",
+      "code": "FWC-499",
       "number": 499,
       "name": "Costa de Marfil #12",
       "team": "CIV",
@@ -3995,7 +3995,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-BADGE",
+      "code": "FWC-500",
       "number": 500,
       "name": "Japón (Escudo)",
       "team": "JPN",
@@ -4003,7 +4003,7 @@
       "type": "team_badge"
     },
     {
-      "code": "JPN-P1",
+      "code": "FWC-501",
       "number": 501,
       "name": "Japón #1",
       "team": "JPN",
@@ -4011,7 +4011,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P2",
+      "code": "FWC-502",
       "number": 502,
       "name": "Japón #2",
       "team": "JPN",
@@ -4019,7 +4019,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P3",
+      "code": "FWC-503",
       "number": 503,
       "name": "Japón #3",
       "team": "JPN",
@@ -4027,7 +4027,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P4",
+      "code": "FWC-504",
       "number": 504,
       "name": "Japón #4",
       "team": "JPN",
@@ -4035,7 +4035,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P5",
+      "code": "FWC-505",
       "number": 505,
       "name": "Japón #5",
       "team": "JPN",
@@ -4043,7 +4043,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P6",
+      "code": "FWC-506",
       "number": 506,
       "name": "Japón #6",
       "team": "JPN",
@@ -4051,7 +4051,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P7",
+      "code": "FWC-507",
       "number": 507,
       "name": "Japón #7",
       "team": "JPN",
@@ -4059,7 +4059,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P8",
+      "code": "FWC-508",
       "number": 508,
       "name": "Japón #8",
       "team": "JPN",
@@ -4067,7 +4067,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P9",
+      "code": "FWC-509",
       "number": 509,
       "name": "Japón #9",
       "team": "JPN",
@@ -4075,7 +4075,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P10",
+      "code": "FWC-510",
       "number": 510,
       "name": "Japón #10",
       "team": "JPN",
@@ -4083,7 +4083,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P11",
+      "code": "FWC-511",
       "number": 511,
       "name": "Japón #11",
       "team": "JPN",
@@ -4091,7 +4091,7 @@
       "type": "player"
     },
     {
-      "code": "JPN-P12",
+      "code": "FWC-512",
       "number": 512,
       "name": "Japón #12",
       "team": "JPN",
@@ -4099,7 +4099,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-BADGE",
+      "code": "FWC-513",
       "number": 513,
       "name": "Corea del Sur (Escudo)",
       "team": "KOR",
@@ -4107,7 +4107,7 @@
       "type": "team_badge"
     },
     {
-      "code": "KOR-P1",
+      "code": "FWC-514",
       "number": 514,
       "name": "Corea del Sur #1",
       "team": "KOR",
@@ -4115,7 +4115,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P2",
+      "code": "FWC-515",
       "number": 515,
       "name": "Corea del Sur #2",
       "team": "KOR",
@@ -4123,7 +4123,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P3",
+      "code": "FWC-516",
       "number": 516,
       "name": "Corea del Sur #3",
       "team": "KOR",
@@ -4131,7 +4131,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P4",
+      "code": "FWC-517",
       "number": 517,
       "name": "Corea del Sur #4",
       "team": "KOR",
@@ -4139,7 +4139,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P5",
+      "code": "FWC-518",
       "number": 518,
       "name": "Corea del Sur #5",
       "team": "KOR",
@@ -4147,7 +4147,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P6",
+      "code": "FWC-519",
       "number": 519,
       "name": "Corea del Sur #6",
       "team": "KOR",
@@ -4155,7 +4155,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P7",
+      "code": "FWC-520",
       "number": 520,
       "name": "Corea del Sur #7",
       "team": "KOR",
@@ -4163,7 +4163,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P8",
+      "code": "FWC-521",
       "number": 521,
       "name": "Corea del Sur #8",
       "team": "KOR",
@@ -4171,7 +4171,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P9",
+      "code": "FWC-522",
       "number": 522,
       "name": "Corea del Sur #9",
       "team": "KOR",
@@ -4179,7 +4179,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P10",
+      "code": "FWC-523",
       "number": 523,
       "name": "Corea del Sur #10",
       "team": "KOR",
@@ -4187,7 +4187,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P11",
+      "code": "FWC-524",
       "number": 524,
       "name": "Corea del Sur #11",
       "team": "KOR",
@@ -4195,7 +4195,7 @@
       "type": "player"
     },
     {
-      "code": "KOR-P12",
+      "code": "FWC-525",
       "number": 525,
       "name": "Corea del Sur #12",
       "team": "KOR",
@@ -4203,7 +4203,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-BADGE",
+      "code": "FWC-526",
       "number": 526,
       "name": "Australia (Escudo)",
       "team": "AUS",
@@ -4211,7 +4211,7 @@
       "type": "team_badge"
     },
     {
-      "code": "AUS-P1",
+      "code": "FWC-527",
       "number": 527,
       "name": "Australia #1",
       "team": "AUS",
@@ -4219,7 +4219,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P2",
+      "code": "FWC-528",
       "number": 528,
       "name": "Australia #2",
       "team": "AUS",
@@ -4227,7 +4227,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P3",
+      "code": "FWC-529",
       "number": 529,
       "name": "Australia #3",
       "team": "AUS",
@@ -4235,7 +4235,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P4",
+      "code": "FWC-530",
       "number": 530,
       "name": "Australia #4",
       "team": "AUS",
@@ -4243,7 +4243,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P5",
+      "code": "FWC-531",
       "number": 531,
       "name": "Australia #5",
       "team": "AUS",
@@ -4251,7 +4251,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P6",
+      "code": "FWC-532",
       "number": 532,
       "name": "Australia #6",
       "team": "AUS",
@@ -4259,7 +4259,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P7",
+      "code": "FWC-533",
       "number": 533,
       "name": "Australia #7",
       "team": "AUS",
@@ -4267,7 +4267,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P8",
+      "code": "FWC-534",
       "number": 534,
       "name": "Australia #8",
       "team": "AUS",
@@ -4275,7 +4275,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P9",
+      "code": "FWC-535",
       "number": 535,
       "name": "Australia #9",
       "team": "AUS",
@@ -4283,7 +4283,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P10",
+      "code": "FWC-536",
       "number": 536,
       "name": "Australia #10",
       "team": "AUS",
@@ -4291,7 +4291,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P11",
+      "code": "FWC-537",
       "number": 537,
       "name": "Australia #11",
       "team": "AUS",
@@ -4299,7 +4299,7 @@
       "type": "player"
     },
     {
-      "code": "AUS-P12",
+      "code": "FWC-538",
       "number": 538,
       "name": "Australia #12",
       "team": "AUS",
@@ -4307,7 +4307,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-BADGE",
+      "code": "FWC-539",
       "number": 539,
       "name": "Irán (Escudo)",
       "team": "IRN",
@@ -4315,7 +4315,7 @@
       "type": "team_badge"
     },
     {
-      "code": "IRN-P1",
+      "code": "FWC-540",
       "number": 540,
       "name": "Irán #1",
       "team": "IRN",
@@ -4323,7 +4323,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P2",
+      "code": "FWC-541",
       "number": 541,
       "name": "Irán #2",
       "team": "IRN",
@@ -4331,7 +4331,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P3",
+      "code": "FWC-542",
       "number": 542,
       "name": "Irán #3",
       "team": "IRN",
@@ -4339,7 +4339,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P4",
+      "code": "FWC-543",
       "number": 543,
       "name": "Irán #4",
       "team": "IRN",
@@ -4347,7 +4347,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P5",
+      "code": "FWC-544",
       "number": 544,
       "name": "Irán #5",
       "team": "IRN",
@@ -4355,7 +4355,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P6",
+      "code": "FWC-545",
       "number": 545,
       "name": "Irán #6",
       "team": "IRN",
@@ -4363,7 +4363,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P7",
+      "code": "FWC-546",
       "number": 546,
       "name": "Irán #7",
       "team": "IRN",
@@ -4371,7 +4371,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P8",
+      "code": "FWC-547",
       "number": 547,
       "name": "Irán #8",
       "team": "IRN",
@@ -4379,7 +4379,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P9",
+      "code": "FWC-548",
       "number": 548,
       "name": "Irán #9",
       "team": "IRN",
@@ -4387,7 +4387,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P10",
+      "code": "FWC-549",
       "number": 549,
       "name": "Irán #10",
       "team": "IRN",
@@ -4395,7 +4395,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P11",
+      "code": "FWC-550",
       "number": 550,
       "name": "Irán #11",
       "team": "IRN",
@@ -4403,7 +4403,7 @@
       "type": "player"
     },
     {
-      "code": "IRN-P12",
+      "code": "FWC-551",
       "number": 551,
       "name": "Irán #12",
       "team": "IRN",
@@ -4411,7 +4411,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-BADGE",
+      "code": "FWC-552",
       "number": 552,
       "name": "Arabia Saudita (Escudo)",
       "team": "KSA",
@@ -4419,7 +4419,7 @@
       "type": "team_badge"
     },
     {
-      "code": "KSA-P1",
+      "code": "FWC-553",
       "number": 553,
       "name": "Arabia Saudita #1",
       "team": "KSA",
@@ -4427,7 +4427,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P2",
+      "code": "FWC-554",
       "number": 554,
       "name": "Arabia Saudita #2",
       "team": "KSA",
@@ -4435,7 +4435,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P3",
+      "code": "FWC-555",
       "number": 555,
       "name": "Arabia Saudita #3",
       "team": "KSA",
@@ -4443,7 +4443,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P4",
+      "code": "FWC-556",
       "number": 556,
       "name": "Arabia Saudita #4",
       "team": "KSA",
@@ -4451,7 +4451,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P5",
+      "code": "FWC-557",
       "number": 557,
       "name": "Arabia Saudita #5",
       "team": "KSA",
@@ -4459,7 +4459,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P6",
+      "code": "FWC-558",
       "number": 558,
       "name": "Arabia Saudita #6",
       "team": "KSA",
@@ -4467,7 +4467,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P7",
+      "code": "FWC-559",
       "number": 559,
       "name": "Arabia Saudita #7",
       "team": "KSA",
@@ -4475,7 +4475,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P8",
+      "code": "FWC-560",
       "number": 560,
       "name": "Arabia Saudita #8",
       "team": "KSA",
@@ -4483,7 +4483,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P9",
+      "code": "FWC-561",
       "number": 561,
       "name": "Arabia Saudita #9",
       "team": "KSA",
@@ -4491,7 +4491,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P10",
+      "code": "FWC-562",
       "number": 562,
       "name": "Arabia Saudita #10",
       "team": "KSA",
@@ -4499,7 +4499,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P11",
+      "code": "FWC-563",
       "number": 563,
       "name": "Arabia Saudita #11",
       "team": "KSA",
@@ -4507,7 +4507,7 @@
       "type": "player"
     },
     {
-      "code": "KSA-P12",
+      "code": "FWC-564",
       "number": 564,
       "name": "Arabia Saudita #12",
       "team": "KSA",
@@ -4515,7 +4515,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-BADGE",
+      "code": "FWC-565",
       "number": 565,
       "name": "Qatar (Escudo)",
       "team": "QAT",
@@ -4523,7 +4523,7 @@
       "type": "team_badge"
     },
     {
-      "code": "QAT-P1",
+      "code": "FWC-566",
       "number": 566,
       "name": "Qatar #1",
       "team": "QAT",
@@ -4531,7 +4531,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P2",
+      "code": "FWC-567",
       "number": 567,
       "name": "Qatar #2",
       "team": "QAT",
@@ -4539,7 +4539,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P3",
+      "code": "FWC-568",
       "number": 568,
       "name": "Qatar #3",
       "team": "QAT",
@@ -4547,7 +4547,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P4",
+      "code": "FWC-569",
       "number": 569,
       "name": "Qatar #4",
       "team": "QAT",
@@ -4555,7 +4555,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P5",
+      "code": "FWC-570",
       "number": 570,
       "name": "Qatar #5",
       "team": "QAT",
@@ -4563,7 +4563,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P6",
+      "code": "FWC-571",
       "number": 571,
       "name": "Qatar #6",
       "team": "QAT",
@@ -4571,7 +4571,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P7",
+      "code": "FWC-572",
       "number": 572,
       "name": "Qatar #7",
       "team": "QAT",
@@ -4579,7 +4579,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P8",
+      "code": "FWC-573",
       "number": 573,
       "name": "Qatar #8",
       "team": "QAT",
@@ -4587,7 +4587,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P9",
+      "code": "FWC-574",
       "number": 574,
       "name": "Qatar #9",
       "team": "QAT",
@@ -4595,7 +4595,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P10",
+      "code": "FWC-575",
       "number": 575,
       "name": "Qatar #10",
       "team": "QAT",
@@ -4603,7 +4603,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P11",
+      "code": "FWC-576",
       "number": 576,
       "name": "Qatar #11",
       "team": "QAT",
@@ -4611,7 +4611,7 @@
       "type": "player"
     },
     {
-      "code": "QAT-P12",
+      "code": "FWC-577",
       "number": 577,
       "name": "Qatar #12",
       "team": "QAT",
@@ -4619,7 +4619,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-BADGE",
+      "code": "FWC-578",
       "number": 578,
       "name": "Uzbekistán (Escudo)",
       "team": "UZB",
@@ -4627,7 +4627,7 @@
       "type": "team_badge"
     },
     {
-      "code": "UZB-P1",
+      "code": "FWC-579",
       "number": 579,
       "name": "Uzbekistán #1",
       "team": "UZB",
@@ -4635,7 +4635,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P2",
+      "code": "FWC-580",
       "number": 580,
       "name": "Uzbekistán #2",
       "team": "UZB",
@@ -4643,7 +4643,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P3",
+      "code": "FWC-581",
       "number": 581,
       "name": "Uzbekistán #3",
       "team": "UZB",
@@ -4651,7 +4651,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P4",
+      "code": "FWC-582",
       "number": 582,
       "name": "Uzbekistán #4",
       "team": "UZB",
@@ -4659,7 +4659,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P5",
+      "code": "FWC-583",
       "number": 583,
       "name": "Uzbekistán #5",
       "team": "UZB",
@@ -4667,7 +4667,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P6",
+      "code": "FWC-584",
       "number": 584,
       "name": "Uzbekistán #6",
       "team": "UZB",
@@ -4675,7 +4675,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P7",
+      "code": "FWC-585",
       "number": 585,
       "name": "Uzbekistán #7",
       "team": "UZB",
@@ -4683,7 +4683,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P8",
+      "code": "FWC-586",
       "number": 586,
       "name": "Uzbekistán #8",
       "team": "UZB",
@@ -4691,7 +4691,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P9",
+      "code": "FWC-587",
       "number": 587,
       "name": "Uzbekistán #9",
       "team": "UZB",
@@ -4699,7 +4699,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P10",
+      "code": "FWC-588",
       "number": 588,
       "name": "Uzbekistán #10",
       "team": "UZB",
@@ -4707,7 +4707,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P11",
+      "code": "FWC-589",
       "number": 589,
       "name": "Uzbekistán #11",
       "team": "UZB",
@@ -4715,7 +4715,7 @@
       "type": "player"
     },
     {
-      "code": "UZB-P12",
+      "code": "FWC-590",
       "number": 590,
       "name": "Uzbekistán #12",
       "team": "UZB",
@@ -4723,7 +4723,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-BADGE",
+      "code": "FWC-591",
       "number": 591,
       "name": "Jordania (Escudo)",
       "team": "JOR",
@@ -4731,7 +4731,7 @@
       "type": "team_badge"
     },
     {
-      "code": "JOR-P1",
+      "code": "FWC-592",
       "number": 592,
       "name": "Jordania #1",
       "team": "JOR",
@@ -4739,7 +4739,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P2",
+      "code": "FWC-593",
       "number": 593,
       "name": "Jordania #2",
       "team": "JOR",
@@ -4747,7 +4747,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P3",
+      "code": "FWC-594",
       "number": 594,
       "name": "Jordania #3",
       "team": "JOR",
@@ -4755,7 +4755,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P4",
+      "code": "FWC-595",
       "number": 595,
       "name": "Jordania #4",
       "team": "JOR",
@@ -4763,7 +4763,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P5",
+      "code": "FWC-596",
       "number": 596,
       "name": "Jordania #5",
       "team": "JOR",
@@ -4771,7 +4771,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P6",
+      "code": "FWC-597",
       "number": 597,
       "name": "Jordania #6",
       "team": "JOR",
@@ -4779,7 +4779,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P7",
+      "code": "FWC-598",
       "number": 598,
       "name": "Jordania #7",
       "team": "JOR",
@@ -4787,7 +4787,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P8",
+      "code": "FWC-599",
       "number": 599,
       "name": "Jordania #8",
       "team": "JOR",
@@ -4795,7 +4795,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P9",
+      "code": "FWC-600",
       "number": 600,
       "name": "Jordania #9",
       "team": "JOR",
@@ -4803,7 +4803,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P10",
+      "code": "FWC-601",
       "number": 601,
       "name": "Jordania #10",
       "team": "JOR",
@@ -4811,7 +4811,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P11",
+      "code": "FWC-602",
       "number": 602,
       "name": "Jordania #11",
       "team": "JOR",
@@ -4819,7 +4819,7 @@
       "type": "player"
     },
     {
-      "code": "JOR-P12",
+      "code": "FWC-603",
       "number": 603,
       "name": "Jordania #12",
       "team": "JOR",
@@ -4827,7 +4827,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-BADGE",
+      "code": "FWC-604",
       "number": 604,
       "name": "Costa Rica (Escudo)",
       "team": "CRC",
@@ -4835,7 +4835,7 @@
       "type": "team_badge"
     },
     {
-      "code": "CRC-P1",
+      "code": "FWC-605",
       "number": 605,
       "name": "Costa Rica #1",
       "team": "CRC",
@@ -4843,7 +4843,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P2",
+      "code": "FWC-606",
       "number": 606,
       "name": "Costa Rica #2",
       "team": "CRC",
@@ -4851,7 +4851,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P3",
+      "code": "FWC-607",
       "number": 607,
       "name": "Costa Rica #3",
       "team": "CRC",
@@ -4859,7 +4859,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P4",
+      "code": "FWC-608",
       "number": 608,
       "name": "Costa Rica #4",
       "team": "CRC",
@@ -4867,7 +4867,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P5",
+      "code": "FWC-609",
       "number": 609,
       "name": "Costa Rica #5",
       "team": "CRC",
@@ -4875,7 +4875,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P6",
+      "code": "FWC-610",
       "number": 610,
       "name": "Costa Rica #6",
       "team": "CRC",
@@ -4883,7 +4883,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P7",
+      "code": "FWC-611",
       "number": 611,
       "name": "Costa Rica #7",
       "team": "CRC",
@@ -4891,7 +4891,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P8",
+      "code": "FWC-612",
       "number": 612,
       "name": "Costa Rica #8",
       "team": "CRC",
@@ -4899,7 +4899,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P9",
+      "code": "FWC-613",
       "number": 613,
       "name": "Costa Rica #9",
       "team": "CRC",
@@ -4907,7 +4907,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P10",
+      "code": "FWC-614",
       "number": 614,
       "name": "Costa Rica #10",
       "team": "CRC",
@@ -4915,7 +4915,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P11",
+      "code": "FWC-615",
       "number": 615,
       "name": "Costa Rica #11",
       "team": "CRC",
@@ -4923,7 +4923,7 @@
       "type": "player"
     },
     {
-      "code": "CRC-P12",
+      "code": "FWC-616",
       "number": 616,
       "name": "Costa Rica #12",
       "team": "CRC",
@@ -4931,7 +4931,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-BADGE",
+      "code": "FWC-617",
       "number": 617,
       "name": "Panamá (Escudo)",
       "team": "PAN",
@@ -4939,7 +4939,7 @@
       "type": "team_badge"
     },
     {
-      "code": "PAN-P1",
+      "code": "FWC-618",
       "number": 618,
       "name": "Panamá #1",
       "team": "PAN",
@@ -4947,7 +4947,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P2",
+      "code": "FWC-619",
       "number": 619,
       "name": "Panamá #2",
       "team": "PAN",
@@ -4955,7 +4955,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P3",
+      "code": "FWC-620",
       "number": 620,
       "name": "Panamá #3",
       "team": "PAN",
@@ -4963,7 +4963,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P4",
+      "code": "FWC-621",
       "number": 621,
       "name": "Panamá #4",
       "team": "PAN",
@@ -4971,7 +4971,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P5",
+      "code": "FWC-622",
       "number": 622,
       "name": "Panamá #5",
       "team": "PAN",
@@ -4979,7 +4979,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P6",
+      "code": "FWC-623",
       "number": 623,
       "name": "Panamá #6",
       "team": "PAN",
@@ -4987,7 +4987,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P7",
+      "code": "FWC-624",
       "number": 624,
       "name": "Panamá #7",
       "team": "PAN",
@@ -4995,7 +4995,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P8",
+      "code": "FWC-625",
       "number": 625,
       "name": "Panamá #8",
       "team": "PAN",
@@ -5003,7 +5003,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P9",
+      "code": "FWC-626",
       "number": 626,
       "name": "Panamá #9",
       "team": "PAN",
@@ -5011,7 +5011,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P10",
+      "code": "FWC-627",
       "number": 627,
       "name": "Panamá #10",
       "team": "PAN",
@@ -5019,7 +5019,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P11",
+      "code": "FWC-628",
       "number": 628,
       "name": "Panamá #11",
       "team": "PAN",
@@ -5027,7 +5027,7 @@
       "type": "player"
     },
     {
-      "code": "PAN-P12",
+      "code": "FWC-629",
       "number": 629,
       "name": "Panamá #12",
       "team": "PAN",
@@ -5035,7 +5035,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-BADGE",
+      "code": "FWC-630",
       "number": 630,
       "name": "Jamaica (Escudo)",
       "team": "JAM",
@@ -5043,7 +5043,7 @@
       "type": "team_badge"
     },
     {
-      "code": "JAM-P1",
+      "code": "FWC-631",
       "number": 631,
       "name": "Jamaica #1",
       "team": "JAM",
@@ -5051,7 +5051,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P2",
+      "code": "FWC-632",
       "number": 632,
       "name": "Jamaica #2",
       "team": "JAM",
@@ -5059,7 +5059,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P3",
+      "code": "FWC-633",
       "number": 633,
       "name": "Jamaica #3",
       "team": "JAM",
@@ -5067,7 +5067,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P4",
+      "code": "FWC-634",
       "number": 634,
       "name": "Jamaica #4",
       "team": "JAM",
@@ -5075,7 +5075,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P5",
+      "code": "FWC-635",
       "number": 635,
       "name": "Jamaica #5",
       "team": "JAM",
@@ -5083,7 +5083,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P6",
+      "code": "FWC-636",
       "number": 636,
       "name": "Jamaica #6",
       "team": "JAM",
@@ -5091,7 +5091,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P7",
+      "code": "FWC-637",
       "number": 637,
       "name": "Jamaica #7",
       "team": "JAM",
@@ -5099,7 +5099,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P8",
+      "code": "FWC-638",
       "number": 638,
       "name": "Jamaica #8",
       "team": "JAM",
@@ -5107,7 +5107,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P9",
+      "code": "FWC-639",
       "number": 639,
       "name": "Jamaica #9",
       "team": "JAM",
@@ -5115,7 +5115,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P10",
+      "code": "FWC-640",
       "number": 640,
       "name": "Jamaica #10",
       "team": "JAM",
@@ -5123,7 +5123,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P11",
+      "code": "FWC-641",
       "number": 641,
       "name": "Jamaica #11",
       "team": "JAM",
@@ -5131,7 +5131,7 @@
       "type": "player"
     },
     {
-      "code": "JAM-P12",
+      "code": "FWC-642",
       "number": 642,
       "name": "Jamaica #12",
       "team": "JAM",
@@ -5139,7 +5139,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-BADGE",
+      "code": "FWC-643",
       "number": 643,
       "name": "Nueva Zelanda (Escudo)",
       "team": "NZL",
@@ -5147,7 +5147,7 @@
       "type": "team_badge"
     },
     {
-      "code": "NZL-P1",
+      "code": "FWC-644",
       "number": 644,
       "name": "Nueva Zelanda #1",
       "team": "NZL",
@@ -5155,7 +5155,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P2",
+      "code": "FWC-645",
       "number": 645,
       "name": "Nueva Zelanda #2",
       "team": "NZL",
@@ -5163,7 +5163,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P3",
+      "code": "FWC-646",
       "number": 646,
       "name": "Nueva Zelanda #3",
       "team": "NZL",
@@ -5171,7 +5171,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P4",
+      "code": "FWC-647",
       "number": 647,
       "name": "Nueva Zelanda #4",
       "team": "NZL",
@@ -5179,7 +5179,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P5",
+      "code": "FWC-648",
       "number": 648,
       "name": "Nueva Zelanda #5",
       "team": "NZL",
@@ -5187,7 +5187,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P6",
+      "code": "FWC-649",
       "number": 649,
       "name": "Nueva Zelanda #6",
       "team": "NZL",
@@ -5195,7 +5195,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P7",
+      "code": "FWC-650",
       "number": 650,
       "name": "Nueva Zelanda #7",
       "team": "NZL",
@@ -5203,7 +5203,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P8",
+      "code": "FWC-651",
       "number": 651,
       "name": "Nueva Zelanda #8",
       "team": "NZL",
@@ -5211,7 +5211,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P9",
+      "code": "FWC-652",
       "number": 652,
       "name": "Nueva Zelanda #9",
       "team": "NZL",
@@ -5219,7 +5219,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P10",
+      "code": "FWC-653",
       "number": 653,
       "name": "Nueva Zelanda #10",
       "team": "NZL",
@@ -5227,7 +5227,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P11",
+      "code": "FWC-654",
       "number": 654,
       "name": "Nueva Zelanda #11",
       "team": "NZL",
@@ -5235,7 +5235,7 @@
       "type": "player"
     },
     {
-      "code": "NZL-P12",
+      "code": "FWC-655",
       "number": 655,
       "name": "Nueva Zelanda #12",
       "team": "NZL",
@@ -5243,7 +5243,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-BADGE",
+      "code": "FWC-656",
       "number": 656,
       "name": "Burkina Faso (Escudo)",
       "team": "BFA",
@@ -5251,7 +5251,7 @@
       "type": "team_badge"
     },
     {
-      "code": "BFA-P1",
+      "code": "FWC-657",
       "number": 657,
       "name": "Burkina Faso #1",
       "team": "BFA",
@@ -5259,7 +5259,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P2",
+      "code": "FWC-658",
       "number": 658,
       "name": "Burkina Faso #2",
       "team": "BFA",
@@ -5267,7 +5267,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P3",
+      "code": "FWC-659",
       "number": 659,
       "name": "Burkina Faso #3",
       "team": "BFA",
@@ -5275,7 +5275,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P4",
+      "code": "FWC-660",
       "number": 660,
       "name": "Burkina Faso #4",
       "team": "BFA",
@@ -5283,7 +5283,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P5",
+      "code": "FWC-661",
       "number": 661,
       "name": "Burkina Faso #5",
       "team": "BFA",
@@ -5291,7 +5291,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P6",
+      "code": "FWC-662",
       "number": 662,
       "name": "Burkina Faso #6",
       "team": "BFA",
@@ -5299,7 +5299,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P7",
+      "code": "FWC-663",
       "number": 663,
       "name": "Burkina Faso #7",
       "team": "BFA",
@@ -5307,7 +5307,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P8",
+      "code": "FWC-664",
       "number": 664,
       "name": "Burkina Faso #8",
       "team": "BFA",
@@ -5315,7 +5315,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P9",
+      "code": "FWC-665",
       "number": 665,
       "name": "Burkina Faso #9",
       "team": "BFA",
@@ -5323,7 +5323,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P10",
+      "code": "FWC-666",
       "number": 666,
       "name": "Burkina Faso #10",
       "team": "BFA",
@@ -5331,7 +5331,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P11",
+      "code": "FWC-667",
       "number": 667,
       "name": "Burkina Faso #11",
       "team": "BFA",
@@ -5339,7 +5339,7 @@
       "type": "player"
     },
     {
-      "code": "BFA-P12",
+      "code": "FWC-668",
       "number": 668,
       "name": "Burkina Faso #12",
       "team": "BFA",
