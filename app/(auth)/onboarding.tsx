@@ -11,11 +11,15 @@ type CheckState = "idle" | "checking" | "valid" | "invalid" | "taken";
 
 export default function Onboarding() {
   const { user } = useSession();
-  const [value, setValue] = useState(user?.username ?? "");
+  // Arrancamos vacío. Pre-llenar con `user.username` confunde al usuario
+  // (el default es auto-generado tipo `user_e9fc` y muchos lo apretan
+  // creyendo que es su username elegido). Que escriba uno propio.
+  const [value, setValue] = useState("");
   const [state, setState] = useState<CheckState>("idle");
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
+    if (!user?.id) return; // esperar a que cargue el profile antes de validar
     if (!isValidUsername(value)) {
       setState(value.length === 0 ? "idle" : "invalid");
       return;
@@ -23,7 +27,7 @@ export default function Onboarding() {
     setState("checking");
     const handle = setTimeout(async () => {
       try {
-        const taken = await isUsernameTaken(value, user?.id);
+        const taken = await isUsernameTaken(value, user.id);
         setState(taken ? "taken" : "valid");
       } catch {
         setState("invalid");
