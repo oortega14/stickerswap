@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { View, Text, TextInput, Pressable, ActivityIndicator, Alert } from "react-native";
+import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, Keyboard } from "react-native";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { isValidUsername, isUsernameTaken } from "@/auth/username";
-import { useSession } from "@/auth/useSession";
+import { useSession, useSessionStore } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
 import { colors } from "@/theme/colors";
 
@@ -34,6 +34,7 @@ export default function Onboarding() {
 
   const onSave = async () => {
     if (state !== "valid" || !user) return;
+    Keyboard.dismiss();
     setSaving(true);
     const { error } = await supabase
       .from("profiles")
@@ -44,7 +45,10 @@ export default function Onboarding() {
       Alert.alert("No se pudo guardar", error.message);
       return;
     }
-    // useSession listener refrescará el profile y _layout despachará a tabs.
+    // El listener de useSession solo se refresca en login/logout. Después de
+    // un UPDATE manual, actualizamos el store local para que AuthGate vea el
+    // username nuevo y despache a tabs.
+    useSessionStore.getState().setProfile({ ...user, username: value });
   };
 
   const hint =
