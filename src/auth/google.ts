@@ -32,8 +32,8 @@ async function createSessionFromUrl(url: string) {
   // Intenta primero con QueryParams (cubre el camino estándar).
   const { params, errorCode } = QueryParams.getQueryParams(url);
   if (errorCode) throw new Error(errorCode);
-  let access_token = params.access_token;
-  let refresh_token = params.refresh_token;
+  let access_token: string | undefined = params.access_token;
+  let refresh_token: string | undefined = params.refresh_token;
 
   if (!access_token || !refresh_token) {
     // Fallback: parseo manual del fragment.
