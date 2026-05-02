@@ -1,36 +1,5350 @@
 {
-  "version": 1,
+  "version": 2,
   "album": "FIFA World Cup 2026",
   "stickers": [
-    { "code": "INTRO-1", "number": 1, "name": "Trophy", "team": null, "section": "Intro", "type": "icon" },
-    { "code": "INTRO-2", "number": 2, "name": "Mascot", "team": null, "section": "Intro", "type": "icon" },
-    { "code": "STAD-1", "number": 3, "name": "MetLife Stadium", "team": null, "section": "Estadios", "type": "stadium" },
-    { "code": "STAD-2", "number": 4, "name": "AT&T Stadium", "team": null, "section": "Estadios", "type": "stadium" },
-    { "code": "STAD-3", "number": 5, "name": "Estadio Azteca", "team": null, "section": "Estadios", "type": "stadium" },
-    { "code": "ARG-1", "number": 100, "name": "Argentina (Crest)", "team": "ARG", "section": "Argentina", "type": "team_badge" },
-    { "code": "ARG-2", "number": 101, "name": "Lionel Messi", "team": "ARG", "section": "Argentina", "type": "player" },
-    { "code": "ARG-3", "number": 102, "name": "Emiliano Martínez", "team": "ARG", "section": "Argentina", "type": "player" },
-    { "code": "ARG-4", "number": 103, "name": "Rodrigo De Paul", "team": "ARG", "section": "Argentina", "type": "player" },
-    { "code": "ARG-5", "number": 104, "name": "Julián Álvarez", "team": "ARG", "section": "Argentina", "type": "player" },
-    { "code": "BRA-1", "number": 110, "name": "Brasil (Crest)", "team": "BRA", "section": "Brasil", "type": "team_badge" },
-    { "code": "BRA-2", "number": 111, "name": "Vinícius Júnior", "team": "BRA", "section": "Brasil", "type": "player" },
-    { "code": "BRA-3", "number": 112, "name": "Rodrygo", "team": "BRA", "section": "Brasil", "type": "player" },
-    { "code": "BRA-4", "number": 113, "name": "Casemiro", "team": "BRA", "section": "Brasil", "type": "player" },
-    { "code": "FRA-1", "number": 120, "name": "Francia (Crest)", "team": "FRA", "section": "Francia", "type": "team_badge" },
-    { "code": "FRA-2", "number": 121, "name": "Kylian Mbappé", "team": "FRA", "section": "Francia", "type": "player" },
-    { "code": "FRA-3", "number": 122, "name": "Antoine Griezmann", "team": "FRA", "section": "Francia", "type": "player" },
-    { "code": "ENG-1", "number": 130, "name": "Inglaterra (Crest)", "team": "ENG", "section": "Inglaterra", "type": "team_badge" },
-    { "code": "ENG-2", "number": 131, "name": "Harry Kane", "team": "ENG", "section": "Inglaterra", "type": "player" },
-    { "code": "ENG-3", "number": 132, "name": "Jude Bellingham", "team": "ENG", "section": "Inglaterra", "type": "player" },
-    { "code": "ESP-1", "number": 140, "name": "España (Crest)", "team": "ESP", "section": "España", "type": "team_badge" },
-    { "code": "ESP-2", "number": 141, "name": "Lamine Yamal", "team": "ESP", "section": "España", "type": "player" },
-    { "code": "ESP-3", "number": 142, "name": "Pedri", "team": "ESP", "section": "España", "type": "player" },
-    { "code": "COL-1", "number": 150, "name": "Colombia (Crest)", "team": "COL", "section": "Colombia", "type": "team_badge" },
-    { "code": "COL-2", "number": 151, "name": "James Rodríguez", "team": "COL", "section": "Colombia", "type": "player" },
-    { "code": "COL-3", "number": 152, "name": "Luis Díaz", "team": "COL", "section": "Colombia", "type": "player" },
-    { "code": "MEX-1", "number": 160, "name": "México (Crest)", "team": "MEX", "section": "México", "type": "team_badge" },
-    { "code": "MEX-2", "number": 161, "name": "Hirving Lozano", "team": "MEX", "section": "México", "type": "player" },
-    { "code": "USA-1", "number": 170, "name": "USA (Crest)", "team": "USA", "section": "USA", "type": "team_badge" },
-    { "code": "USA-2", "number": 171, "name": "Christian Pulisic", "team": "USA", "section": "USA", "type": "player" }
+    {
+      "code": "INTRO-1",
+      "number": 1,
+      "name": "Trofeo FIFA",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-2",
+      "number": 2,
+      "name": "Mascota Maple",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-3",
+      "number": 3,
+      "name": "Mascota Zayu",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-4",
+      "number": 4,
+      "name": "Mascota Clutch",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-5",
+      "number": 5,
+      "name": "Pelota Oficial",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-6",
+      "number": 6,
+      "name": "Logo FIFA World Cup 2026",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-7",
+      "number": 7,
+      "name": "Países Anfitriones",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-8",
+      "number": 8,
+      "name": "Bandera USA",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-9",
+      "number": 9,
+      "name": "Bandera Canadá",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-10",
+      "number": 10,
+      "name": "Bandera México",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-11",
+      "number": 11,
+      "name": "Calendario",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "INTRO-12",
+      "number": 12,
+      "name": "Bracket",
+      "team": null,
+      "section": "Intro",
+      "type": "icon"
+    },
+    {
+      "code": "STAD-1",
+      "number": 13,
+      "name": "MetLife Stadium · East Rutherford",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-2",
+      "number": 14,
+      "name": "AT&T Stadium · Arlington",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-3",
+      "number": 15,
+      "name": "SoFi Stadium · Inglewood",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-4",
+      "number": 16,
+      "name": "Mercedes-Benz Stadium · Atlanta",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-5",
+      "number": 17,
+      "name": "Lincoln Financial Field · Philadelphia",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-6",
+      "number": 18,
+      "name": "Lumen Field · Seattle",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-7",
+      "number": 19,
+      "name": "Levi's Stadium · Santa Clara",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-8",
+      "number": 20,
+      "name": "NRG Stadium · Houston",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-9",
+      "number": 21,
+      "name": "Hard Rock Stadium · Miami",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-10",
+      "number": 22,
+      "name": "Arrowhead Stadium · Kansas City",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-11",
+      "number": 23,
+      "name": "Gillette Stadium · Foxborough",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-12",
+      "number": 24,
+      "name": "BMO Field · Toronto",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-13",
+      "number": 25,
+      "name": "BC Place · Vancouver",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-14",
+      "number": 26,
+      "name": "Estadio Azteca · Ciudad de México",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-15",
+      "number": 27,
+      "name": "Estadio BBVA · Monterrey",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "STAD-16",
+      "number": 28,
+      "name": "Estadio Akron · Guadalajara",
+      "team": null,
+      "section": "Estadios",
+      "type": "stadium"
+    },
+    {
+      "code": "LEG-1",
+      "number": 29,
+      "name": "Pelé",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-2",
+      "number": 30,
+      "name": "Diego Maradona",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-3",
+      "number": 31,
+      "name": "Lionel Messi (Leyenda)",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-4",
+      "number": 32,
+      "name": "Cristiano Ronaldo (Leyenda)",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-5",
+      "number": 33,
+      "name": "Zinedine Zidane",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-6",
+      "number": 34,
+      "name": "Ronaldo Nazário",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-7",
+      "number": 35,
+      "name": "Johan Cruyff",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-8",
+      "number": 36,
+      "name": "Franz Beckenbauer",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-9",
+      "number": 37,
+      "name": "Bobby Charlton",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-10",
+      "number": 38,
+      "name": "Paolo Maldini",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-11",
+      "number": 39,
+      "name": "Roberto Baggio",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-12",
+      "number": 40,
+      "name": "Lothar Matthäus",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-13",
+      "number": 41,
+      "name": "Ronaldinho",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-14",
+      "number": 42,
+      "name": "Kaká",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-15",
+      "number": 43,
+      "name": "Iniesta",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "LEG-16",
+      "number": 44,
+      "name": "Xavi",
+      "team": null,
+      "section": "Leyendas",
+      "type": "special"
+    },
+    {
+      "code": "USA-BADGE",
+      "number": 45,
+      "name": "United States (Escudo)",
+      "team": "USA",
+      "section": "United States",
+      "type": "team_badge"
+    },
+    {
+      "code": "USA-P1",
+      "number": 46,
+      "name": "United States #1",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P2",
+      "number": 47,
+      "name": "United States #2",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P3",
+      "number": 48,
+      "name": "United States #3",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P4",
+      "number": 49,
+      "name": "United States #4",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P5",
+      "number": 50,
+      "name": "United States #5",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P6",
+      "number": 51,
+      "name": "United States #6",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P7",
+      "number": 52,
+      "name": "United States #7",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P8",
+      "number": 53,
+      "name": "United States #8",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P9",
+      "number": 54,
+      "name": "United States #9",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P10",
+      "number": 55,
+      "name": "United States #10",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P11",
+      "number": 56,
+      "name": "United States #11",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "USA-P12",
+      "number": 57,
+      "name": "United States #12",
+      "team": "USA",
+      "section": "United States",
+      "type": "player"
+    },
+    {
+      "code": "CAN-BADGE",
+      "number": 58,
+      "name": "Canada (Escudo)",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "team_badge"
+    },
+    {
+      "code": "CAN-P1",
+      "number": 59,
+      "name": "Canada #1",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P2",
+      "number": 60,
+      "name": "Canada #2",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P3",
+      "number": 61,
+      "name": "Canada #3",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P4",
+      "number": 62,
+      "name": "Canada #4",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P5",
+      "number": 63,
+      "name": "Canada #5",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P6",
+      "number": 64,
+      "name": "Canada #6",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P7",
+      "number": 65,
+      "name": "Canada #7",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P8",
+      "number": 66,
+      "name": "Canada #8",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P9",
+      "number": 67,
+      "name": "Canada #9",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P10",
+      "number": 68,
+      "name": "Canada #10",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P11",
+      "number": 69,
+      "name": "Canada #11",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "CAN-P12",
+      "number": 70,
+      "name": "Canada #12",
+      "team": "CAN",
+      "section": "Canada",
+      "type": "player"
+    },
+    {
+      "code": "MEX-BADGE",
+      "number": 71,
+      "name": "Mexico (Escudo)",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "team_badge"
+    },
+    {
+      "code": "MEX-P1",
+      "number": 72,
+      "name": "Mexico #1",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P2",
+      "number": 73,
+      "name": "Mexico #2",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P3",
+      "number": 74,
+      "name": "Mexico #3",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P4",
+      "number": 75,
+      "name": "Mexico #4",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P5",
+      "number": 76,
+      "name": "Mexico #5",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P6",
+      "number": 77,
+      "name": "Mexico #6",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P7",
+      "number": 78,
+      "name": "Mexico #7",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P8",
+      "number": 79,
+      "name": "Mexico #8",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P9",
+      "number": 80,
+      "name": "Mexico #9",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P10",
+      "number": 81,
+      "name": "Mexico #10",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P11",
+      "number": 82,
+      "name": "Mexico #11",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "MEX-P12",
+      "number": 83,
+      "name": "Mexico #12",
+      "team": "MEX",
+      "section": "Mexico",
+      "type": "player"
+    },
+    {
+      "code": "ARG-BADGE",
+      "number": 84,
+      "name": "Argentina (Escudo)",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "team_badge"
+    },
+    {
+      "code": "ARG-P1",
+      "number": 85,
+      "name": "Argentina #1",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P2",
+      "number": 86,
+      "name": "Argentina #2",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P3",
+      "number": 87,
+      "name": "Argentina #3",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P4",
+      "number": 88,
+      "name": "Argentina #4",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P5",
+      "number": 89,
+      "name": "Argentina #5",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P6",
+      "number": 90,
+      "name": "Argentina #6",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P7",
+      "number": 91,
+      "name": "Argentina #7",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P8",
+      "number": 92,
+      "name": "Argentina #8",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P9",
+      "number": 93,
+      "name": "Argentina #9",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P10",
+      "number": 94,
+      "name": "Argentina #10",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P11",
+      "number": 95,
+      "name": "Argentina #11",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "ARG-P12",
+      "number": 96,
+      "name": "Argentina #12",
+      "team": "ARG",
+      "section": "Argentina",
+      "type": "player"
+    },
+    {
+      "code": "BRA-BADGE",
+      "number": 97,
+      "name": "Brasil (Escudo)",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "team_badge"
+    },
+    {
+      "code": "BRA-P1",
+      "number": 98,
+      "name": "Brasil #1",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P2",
+      "number": 99,
+      "name": "Brasil #2",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P3",
+      "number": 100,
+      "name": "Brasil #3",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P4",
+      "number": 101,
+      "name": "Brasil #4",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P5",
+      "number": 102,
+      "name": "Brasil #5",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P6",
+      "number": 103,
+      "name": "Brasil #6",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P7",
+      "number": 104,
+      "name": "Brasil #7",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P8",
+      "number": 105,
+      "name": "Brasil #8",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P9",
+      "number": 106,
+      "name": "Brasil #9",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P10",
+      "number": 107,
+      "name": "Brasil #10",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P11",
+      "number": 108,
+      "name": "Brasil #11",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "BRA-P12",
+      "number": 109,
+      "name": "Brasil #12",
+      "team": "BRA",
+      "section": "Brasil",
+      "type": "player"
+    },
+    {
+      "code": "URU-BADGE",
+      "number": 110,
+      "name": "Uruguay (Escudo)",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "team_badge"
+    },
+    {
+      "code": "URU-P1",
+      "number": 111,
+      "name": "Uruguay #1",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P2",
+      "number": 112,
+      "name": "Uruguay #2",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P3",
+      "number": 113,
+      "name": "Uruguay #3",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P4",
+      "number": 114,
+      "name": "Uruguay #4",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P5",
+      "number": 115,
+      "name": "Uruguay #5",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P6",
+      "number": 116,
+      "name": "Uruguay #6",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P7",
+      "number": 117,
+      "name": "Uruguay #7",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P8",
+      "number": 118,
+      "name": "Uruguay #8",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P9",
+      "number": 119,
+      "name": "Uruguay #9",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P10",
+      "number": 120,
+      "name": "Uruguay #10",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P11",
+      "number": 121,
+      "name": "Uruguay #11",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "URU-P12",
+      "number": 122,
+      "name": "Uruguay #12",
+      "team": "URU",
+      "section": "Uruguay",
+      "type": "player"
+    },
+    {
+      "code": "COL-BADGE",
+      "number": 123,
+      "name": "Colombia (Escudo)",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "team_badge"
+    },
+    {
+      "code": "COL-P1",
+      "number": 124,
+      "name": "Colombia #1",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P2",
+      "number": 125,
+      "name": "Colombia #2",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P3",
+      "number": 126,
+      "name": "Colombia #3",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P4",
+      "number": 127,
+      "name": "Colombia #4",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P5",
+      "number": 128,
+      "name": "Colombia #5",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P6",
+      "number": 129,
+      "name": "Colombia #6",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P7",
+      "number": 130,
+      "name": "Colombia #7",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P8",
+      "number": 131,
+      "name": "Colombia #8",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P9",
+      "number": 132,
+      "name": "Colombia #9",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P10",
+      "number": 133,
+      "name": "Colombia #10",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P11",
+      "number": 134,
+      "name": "Colombia #11",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "COL-P12",
+      "number": 135,
+      "name": "Colombia #12",
+      "team": "COL",
+      "section": "Colombia",
+      "type": "player"
+    },
+    {
+      "code": "ECU-BADGE",
+      "number": 136,
+      "name": "Ecuador (Escudo)",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "team_badge"
+    },
+    {
+      "code": "ECU-P1",
+      "number": 137,
+      "name": "Ecuador #1",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P2",
+      "number": 138,
+      "name": "Ecuador #2",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P3",
+      "number": 139,
+      "name": "Ecuador #3",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P4",
+      "number": 140,
+      "name": "Ecuador #4",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P5",
+      "number": 141,
+      "name": "Ecuador #5",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P6",
+      "number": 142,
+      "name": "Ecuador #6",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P7",
+      "number": 143,
+      "name": "Ecuador #7",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P8",
+      "number": 144,
+      "name": "Ecuador #8",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P9",
+      "number": 145,
+      "name": "Ecuador #9",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P10",
+      "number": 146,
+      "name": "Ecuador #10",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P11",
+      "number": 147,
+      "name": "Ecuador #11",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "ECU-P12",
+      "number": 148,
+      "name": "Ecuador #12",
+      "team": "ECU",
+      "section": "Ecuador",
+      "type": "player"
+    },
+    {
+      "code": "PAR-BADGE",
+      "number": 149,
+      "name": "Paraguay (Escudo)",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "team_badge"
+    },
+    {
+      "code": "PAR-P1",
+      "number": 150,
+      "name": "Paraguay #1",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P2",
+      "number": 151,
+      "name": "Paraguay #2",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P3",
+      "number": 152,
+      "name": "Paraguay #3",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P4",
+      "number": 153,
+      "name": "Paraguay #4",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P5",
+      "number": 154,
+      "name": "Paraguay #5",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P6",
+      "number": 155,
+      "name": "Paraguay #6",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P7",
+      "number": 156,
+      "name": "Paraguay #7",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P8",
+      "number": 157,
+      "name": "Paraguay #8",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P9",
+      "number": 158,
+      "name": "Paraguay #9",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P10",
+      "number": 159,
+      "name": "Paraguay #10",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P11",
+      "number": 160,
+      "name": "Paraguay #11",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "PAR-P12",
+      "number": 161,
+      "name": "Paraguay #12",
+      "team": "PAR",
+      "section": "Paraguay",
+      "type": "player"
+    },
+    {
+      "code": "ESP-BADGE",
+      "number": 162,
+      "name": "España (Escudo)",
+      "team": "ESP",
+      "section": "España",
+      "type": "team_badge"
+    },
+    {
+      "code": "ESP-P1",
+      "number": 163,
+      "name": "España #1",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P2",
+      "number": 164,
+      "name": "España #2",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P3",
+      "number": 165,
+      "name": "España #3",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P4",
+      "number": 166,
+      "name": "España #4",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P5",
+      "number": 167,
+      "name": "España #5",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P6",
+      "number": 168,
+      "name": "España #6",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P7",
+      "number": 169,
+      "name": "España #7",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P8",
+      "number": 170,
+      "name": "España #8",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P9",
+      "number": 171,
+      "name": "España #9",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P10",
+      "number": 172,
+      "name": "España #10",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P11",
+      "number": 173,
+      "name": "España #11",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "ESP-P12",
+      "number": 174,
+      "name": "España #12",
+      "team": "ESP",
+      "section": "España",
+      "type": "player"
+    },
+    {
+      "code": "FRA-BADGE",
+      "number": 175,
+      "name": "Francia (Escudo)",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "team_badge"
+    },
+    {
+      "code": "FRA-P1",
+      "number": 176,
+      "name": "Francia #1",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P2",
+      "number": 177,
+      "name": "Francia #2",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P3",
+      "number": 178,
+      "name": "Francia #3",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P4",
+      "number": 179,
+      "name": "Francia #4",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P5",
+      "number": 180,
+      "name": "Francia #5",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P6",
+      "number": 181,
+      "name": "Francia #6",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P7",
+      "number": 182,
+      "name": "Francia #7",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P8",
+      "number": 183,
+      "name": "Francia #8",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P9",
+      "number": 184,
+      "name": "Francia #9",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P10",
+      "number": 185,
+      "name": "Francia #10",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P11",
+      "number": 186,
+      "name": "Francia #11",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "FRA-P12",
+      "number": 187,
+      "name": "Francia #12",
+      "team": "FRA",
+      "section": "Francia",
+      "type": "player"
+    },
+    {
+      "code": "ENG-BADGE",
+      "number": 188,
+      "name": "Inglaterra (Escudo)",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "team_badge"
+    },
+    {
+      "code": "ENG-P1",
+      "number": 189,
+      "name": "Inglaterra #1",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P2",
+      "number": 190,
+      "name": "Inglaterra #2",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P3",
+      "number": 191,
+      "name": "Inglaterra #3",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P4",
+      "number": 192,
+      "name": "Inglaterra #4",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P5",
+      "number": 193,
+      "name": "Inglaterra #5",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P6",
+      "number": 194,
+      "name": "Inglaterra #6",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P7",
+      "number": 195,
+      "name": "Inglaterra #7",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P8",
+      "number": 196,
+      "name": "Inglaterra #8",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P9",
+      "number": 197,
+      "name": "Inglaterra #9",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P10",
+      "number": 198,
+      "name": "Inglaterra #10",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P11",
+      "number": 199,
+      "name": "Inglaterra #11",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "ENG-P12",
+      "number": 200,
+      "name": "Inglaterra #12",
+      "team": "ENG",
+      "section": "Inglaterra",
+      "type": "player"
+    },
+    {
+      "code": "GER-BADGE",
+      "number": 201,
+      "name": "Alemania (Escudo)",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "team_badge"
+    },
+    {
+      "code": "GER-P1",
+      "number": 202,
+      "name": "Alemania #1",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P2",
+      "number": 203,
+      "name": "Alemania #2",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P3",
+      "number": 204,
+      "name": "Alemania #3",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P4",
+      "number": 205,
+      "name": "Alemania #4",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P5",
+      "number": 206,
+      "name": "Alemania #5",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P6",
+      "number": 207,
+      "name": "Alemania #6",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P7",
+      "number": 208,
+      "name": "Alemania #7",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P8",
+      "number": 209,
+      "name": "Alemania #8",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P9",
+      "number": 210,
+      "name": "Alemania #9",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P10",
+      "number": 211,
+      "name": "Alemania #10",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P11",
+      "number": 212,
+      "name": "Alemania #11",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "GER-P12",
+      "number": 213,
+      "name": "Alemania #12",
+      "team": "GER",
+      "section": "Alemania",
+      "type": "player"
+    },
+    {
+      "code": "POR-BADGE",
+      "number": 214,
+      "name": "Portugal (Escudo)",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "team_badge"
+    },
+    {
+      "code": "POR-P1",
+      "number": 215,
+      "name": "Portugal #1",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P2",
+      "number": 216,
+      "name": "Portugal #2",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P3",
+      "number": 217,
+      "name": "Portugal #3",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P4",
+      "number": 218,
+      "name": "Portugal #4",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P5",
+      "number": 219,
+      "name": "Portugal #5",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P6",
+      "number": 220,
+      "name": "Portugal #6",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P7",
+      "number": 221,
+      "name": "Portugal #7",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P8",
+      "number": 222,
+      "name": "Portugal #8",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P9",
+      "number": 223,
+      "name": "Portugal #9",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P10",
+      "number": 224,
+      "name": "Portugal #10",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P11",
+      "number": 225,
+      "name": "Portugal #11",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "POR-P12",
+      "number": 226,
+      "name": "Portugal #12",
+      "team": "POR",
+      "section": "Portugal",
+      "type": "player"
+    },
+    {
+      "code": "ITA-BADGE",
+      "number": 227,
+      "name": "Italia (Escudo)",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "team_badge"
+    },
+    {
+      "code": "ITA-P1",
+      "number": 228,
+      "name": "Italia #1",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P2",
+      "number": 229,
+      "name": "Italia #2",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P3",
+      "number": 230,
+      "name": "Italia #3",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P4",
+      "number": 231,
+      "name": "Italia #4",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P5",
+      "number": 232,
+      "name": "Italia #5",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P6",
+      "number": 233,
+      "name": "Italia #6",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P7",
+      "number": 234,
+      "name": "Italia #7",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P8",
+      "number": 235,
+      "name": "Italia #8",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P9",
+      "number": 236,
+      "name": "Italia #9",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P10",
+      "number": 237,
+      "name": "Italia #10",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P11",
+      "number": 238,
+      "name": "Italia #11",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "ITA-P12",
+      "number": 239,
+      "name": "Italia #12",
+      "team": "ITA",
+      "section": "Italia",
+      "type": "player"
+    },
+    {
+      "code": "NED-BADGE",
+      "number": 240,
+      "name": "Países Bajos (Escudo)",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "team_badge"
+    },
+    {
+      "code": "NED-P1",
+      "number": 241,
+      "name": "Países Bajos #1",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P2",
+      "number": 242,
+      "name": "Países Bajos #2",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P3",
+      "number": 243,
+      "name": "Países Bajos #3",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P4",
+      "number": 244,
+      "name": "Países Bajos #4",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P5",
+      "number": 245,
+      "name": "Países Bajos #5",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P6",
+      "number": 246,
+      "name": "Países Bajos #6",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P7",
+      "number": 247,
+      "name": "Países Bajos #7",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P8",
+      "number": 248,
+      "name": "Países Bajos #8",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P9",
+      "number": 249,
+      "name": "Países Bajos #9",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P10",
+      "number": 250,
+      "name": "Países Bajos #10",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P11",
+      "number": 251,
+      "name": "Países Bajos #11",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "NED-P12",
+      "number": 252,
+      "name": "Países Bajos #12",
+      "team": "NED",
+      "section": "Países Bajos",
+      "type": "player"
+    },
+    {
+      "code": "BEL-BADGE",
+      "number": 253,
+      "name": "Bélgica (Escudo)",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "team_badge"
+    },
+    {
+      "code": "BEL-P1",
+      "number": 254,
+      "name": "Bélgica #1",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P2",
+      "number": 255,
+      "name": "Bélgica #2",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P3",
+      "number": 256,
+      "name": "Bélgica #3",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P4",
+      "number": 257,
+      "name": "Bélgica #4",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P5",
+      "number": 258,
+      "name": "Bélgica #5",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P6",
+      "number": 259,
+      "name": "Bélgica #6",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P7",
+      "number": 260,
+      "name": "Bélgica #7",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P8",
+      "number": 261,
+      "name": "Bélgica #8",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P9",
+      "number": 262,
+      "name": "Bélgica #9",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P10",
+      "number": 263,
+      "name": "Bélgica #10",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P11",
+      "number": 264,
+      "name": "Bélgica #11",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "BEL-P12",
+      "number": 265,
+      "name": "Bélgica #12",
+      "team": "BEL",
+      "section": "Bélgica",
+      "type": "player"
+    },
+    {
+      "code": "CRO-BADGE",
+      "number": 266,
+      "name": "Croacia (Escudo)",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "team_badge"
+    },
+    {
+      "code": "CRO-P1",
+      "number": 267,
+      "name": "Croacia #1",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P2",
+      "number": 268,
+      "name": "Croacia #2",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P3",
+      "number": 269,
+      "name": "Croacia #3",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P4",
+      "number": 270,
+      "name": "Croacia #4",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P5",
+      "number": 271,
+      "name": "Croacia #5",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P6",
+      "number": 272,
+      "name": "Croacia #6",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P7",
+      "number": 273,
+      "name": "Croacia #7",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P8",
+      "number": 274,
+      "name": "Croacia #8",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P9",
+      "number": 275,
+      "name": "Croacia #9",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P10",
+      "number": 276,
+      "name": "Croacia #10",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P11",
+      "number": 277,
+      "name": "Croacia #11",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "CRO-P12",
+      "number": 278,
+      "name": "Croacia #12",
+      "team": "CRO",
+      "section": "Croacia",
+      "type": "player"
+    },
+    {
+      "code": "DEN-BADGE",
+      "number": 279,
+      "name": "Dinamarca (Escudo)",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "team_badge"
+    },
+    {
+      "code": "DEN-P1",
+      "number": 280,
+      "name": "Dinamarca #1",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P2",
+      "number": 281,
+      "name": "Dinamarca #2",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P3",
+      "number": 282,
+      "name": "Dinamarca #3",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P4",
+      "number": 283,
+      "name": "Dinamarca #4",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P5",
+      "number": 284,
+      "name": "Dinamarca #5",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P6",
+      "number": 285,
+      "name": "Dinamarca #6",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P7",
+      "number": 286,
+      "name": "Dinamarca #7",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P8",
+      "number": 287,
+      "name": "Dinamarca #8",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P9",
+      "number": 288,
+      "name": "Dinamarca #9",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P10",
+      "number": 289,
+      "name": "Dinamarca #10",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P11",
+      "number": 290,
+      "name": "Dinamarca #11",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "DEN-P12",
+      "number": 291,
+      "name": "Dinamarca #12",
+      "team": "DEN",
+      "section": "Dinamarca",
+      "type": "player"
+    },
+    {
+      "code": "SUI-BADGE",
+      "number": 292,
+      "name": "Suiza (Escudo)",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "team_badge"
+    },
+    {
+      "code": "SUI-P1",
+      "number": 293,
+      "name": "Suiza #1",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P2",
+      "number": 294,
+      "name": "Suiza #2",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P3",
+      "number": 295,
+      "name": "Suiza #3",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P4",
+      "number": 296,
+      "name": "Suiza #4",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P5",
+      "number": 297,
+      "name": "Suiza #5",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P6",
+      "number": 298,
+      "name": "Suiza #6",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P7",
+      "number": 299,
+      "name": "Suiza #7",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P8",
+      "number": 300,
+      "name": "Suiza #8",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P9",
+      "number": 301,
+      "name": "Suiza #9",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P10",
+      "number": 302,
+      "name": "Suiza #10",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P11",
+      "number": 303,
+      "name": "Suiza #11",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "SUI-P12",
+      "number": 304,
+      "name": "Suiza #12",
+      "team": "SUI",
+      "section": "Suiza",
+      "type": "player"
+    },
+    {
+      "code": "POL-BADGE",
+      "number": 305,
+      "name": "Polonia (Escudo)",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "team_badge"
+    },
+    {
+      "code": "POL-P1",
+      "number": 306,
+      "name": "Polonia #1",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P2",
+      "number": 307,
+      "name": "Polonia #2",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P3",
+      "number": 308,
+      "name": "Polonia #3",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P4",
+      "number": 309,
+      "name": "Polonia #4",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P5",
+      "number": 310,
+      "name": "Polonia #5",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P6",
+      "number": 311,
+      "name": "Polonia #6",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P7",
+      "number": 312,
+      "name": "Polonia #7",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P8",
+      "number": 313,
+      "name": "Polonia #8",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P9",
+      "number": 314,
+      "name": "Polonia #9",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P10",
+      "number": 315,
+      "name": "Polonia #10",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P11",
+      "number": 316,
+      "name": "Polonia #11",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "POL-P12",
+      "number": 317,
+      "name": "Polonia #12",
+      "team": "POL",
+      "section": "Polonia",
+      "type": "player"
+    },
+    {
+      "code": "AUT-BADGE",
+      "number": 318,
+      "name": "Austria (Escudo)",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "team_badge"
+    },
+    {
+      "code": "AUT-P1",
+      "number": 319,
+      "name": "Austria #1",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P2",
+      "number": 320,
+      "name": "Austria #2",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P3",
+      "number": 321,
+      "name": "Austria #3",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P4",
+      "number": 322,
+      "name": "Austria #4",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P5",
+      "number": 323,
+      "name": "Austria #5",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P6",
+      "number": 324,
+      "name": "Austria #6",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P7",
+      "number": 325,
+      "name": "Austria #7",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P8",
+      "number": 326,
+      "name": "Austria #8",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P9",
+      "number": 327,
+      "name": "Austria #9",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P10",
+      "number": 328,
+      "name": "Austria #10",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P11",
+      "number": 329,
+      "name": "Austria #11",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "AUT-P12",
+      "number": 330,
+      "name": "Austria #12",
+      "team": "AUT",
+      "section": "Austria",
+      "type": "player"
+    },
+    {
+      "code": "HUN-BADGE",
+      "number": 331,
+      "name": "Hungría (Escudo)",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "team_badge"
+    },
+    {
+      "code": "HUN-P1",
+      "number": 332,
+      "name": "Hungría #1",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P2",
+      "number": 333,
+      "name": "Hungría #2",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P3",
+      "number": 334,
+      "name": "Hungría #3",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P4",
+      "number": 335,
+      "name": "Hungría #4",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P5",
+      "number": 336,
+      "name": "Hungría #5",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P6",
+      "number": 337,
+      "name": "Hungría #6",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P7",
+      "number": 338,
+      "name": "Hungría #7",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P8",
+      "number": 339,
+      "name": "Hungría #8",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P9",
+      "number": 340,
+      "name": "Hungría #9",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P10",
+      "number": 341,
+      "name": "Hungría #10",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P11",
+      "number": 342,
+      "name": "Hungría #11",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "HUN-P12",
+      "number": 343,
+      "name": "Hungría #12",
+      "team": "HUN",
+      "section": "Hungría",
+      "type": "player"
+    },
+    {
+      "code": "TUR-BADGE",
+      "number": 344,
+      "name": "Turquía (Escudo)",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "team_badge"
+    },
+    {
+      "code": "TUR-P1",
+      "number": 345,
+      "name": "Turquía #1",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P2",
+      "number": 346,
+      "name": "Turquía #2",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P3",
+      "number": 347,
+      "name": "Turquía #3",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P4",
+      "number": 348,
+      "name": "Turquía #4",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P5",
+      "number": 349,
+      "name": "Turquía #5",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P6",
+      "number": 350,
+      "name": "Turquía #6",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P7",
+      "number": 351,
+      "name": "Turquía #7",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P8",
+      "number": 352,
+      "name": "Turquía #8",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P9",
+      "number": 353,
+      "name": "Turquía #9",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P10",
+      "number": 354,
+      "name": "Turquía #10",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P11",
+      "number": 355,
+      "name": "Turquía #11",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "TUR-P12",
+      "number": 356,
+      "name": "Turquía #12",
+      "team": "TUR",
+      "section": "Turquía",
+      "type": "player"
+    },
+    {
+      "code": "SCO-BADGE",
+      "number": 357,
+      "name": "Escocia (Escudo)",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "team_badge"
+    },
+    {
+      "code": "SCO-P1",
+      "number": 358,
+      "name": "Escocia #1",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P2",
+      "number": 359,
+      "name": "Escocia #2",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P3",
+      "number": 360,
+      "name": "Escocia #3",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P4",
+      "number": 361,
+      "name": "Escocia #4",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P5",
+      "number": 362,
+      "name": "Escocia #5",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P6",
+      "number": 363,
+      "name": "Escocia #6",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P7",
+      "number": 364,
+      "name": "Escocia #7",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P8",
+      "number": 365,
+      "name": "Escocia #8",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P9",
+      "number": 366,
+      "name": "Escocia #9",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P10",
+      "number": 367,
+      "name": "Escocia #10",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P11",
+      "number": 368,
+      "name": "Escocia #11",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "SCO-P12",
+      "number": 369,
+      "name": "Escocia #12",
+      "team": "SCO",
+      "section": "Escocia",
+      "type": "player"
+    },
+    {
+      "code": "UKR-BADGE",
+      "number": 370,
+      "name": "Ucrania (Escudo)",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "team_badge"
+    },
+    {
+      "code": "UKR-P1",
+      "number": 371,
+      "name": "Ucrania #1",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P2",
+      "number": 372,
+      "name": "Ucrania #2",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P3",
+      "number": 373,
+      "name": "Ucrania #3",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P4",
+      "number": 374,
+      "name": "Ucrania #4",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P5",
+      "number": 375,
+      "name": "Ucrania #5",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P6",
+      "number": 376,
+      "name": "Ucrania #6",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P7",
+      "number": 377,
+      "name": "Ucrania #7",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P8",
+      "number": 378,
+      "name": "Ucrania #8",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P9",
+      "number": 379,
+      "name": "Ucrania #9",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P10",
+      "number": 380,
+      "name": "Ucrania #10",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P11",
+      "number": 381,
+      "name": "Ucrania #11",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "UKR-P12",
+      "number": 382,
+      "name": "Ucrania #12",
+      "team": "UKR",
+      "section": "Ucrania",
+      "type": "player"
+    },
+    {
+      "code": "MAR-BADGE",
+      "number": 383,
+      "name": "Marruecos (Escudo)",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "team_badge"
+    },
+    {
+      "code": "MAR-P1",
+      "number": 384,
+      "name": "Marruecos #1",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P2",
+      "number": 385,
+      "name": "Marruecos #2",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P3",
+      "number": 386,
+      "name": "Marruecos #3",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P4",
+      "number": 387,
+      "name": "Marruecos #4",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P5",
+      "number": 388,
+      "name": "Marruecos #5",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P6",
+      "number": 389,
+      "name": "Marruecos #6",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P7",
+      "number": 390,
+      "name": "Marruecos #7",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P8",
+      "number": 391,
+      "name": "Marruecos #8",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P9",
+      "number": 392,
+      "name": "Marruecos #9",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P10",
+      "number": 393,
+      "name": "Marruecos #10",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P11",
+      "number": 394,
+      "name": "Marruecos #11",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "MAR-P12",
+      "number": 395,
+      "name": "Marruecos #12",
+      "team": "MAR",
+      "section": "Marruecos",
+      "type": "player"
+    },
+    {
+      "code": "SEN-BADGE",
+      "number": 396,
+      "name": "Senegal (Escudo)",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "team_badge"
+    },
+    {
+      "code": "SEN-P1",
+      "number": 397,
+      "name": "Senegal #1",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P2",
+      "number": 398,
+      "name": "Senegal #2",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P3",
+      "number": 399,
+      "name": "Senegal #3",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P4",
+      "number": 400,
+      "name": "Senegal #4",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P5",
+      "number": 401,
+      "name": "Senegal #5",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P6",
+      "number": 402,
+      "name": "Senegal #6",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P7",
+      "number": 403,
+      "name": "Senegal #7",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P8",
+      "number": 404,
+      "name": "Senegal #8",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P9",
+      "number": 405,
+      "name": "Senegal #9",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P10",
+      "number": 406,
+      "name": "Senegal #10",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P11",
+      "number": 407,
+      "name": "Senegal #11",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "SEN-P12",
+      "number": 408,
+      "name": "Senegal #12",
+      "team": "SEN",
+      "section": "Senegal",
+      "type": "player"
+    },
+    {
+      "code": "EGY-BADGE",
+      "number": 409,
+      "name": "Egipto (Escudo)",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "team_badge"
+    },
+    {
+      "code": "EGY-P1",
+      "number": 410,
+      "name": "Egipto #1",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P2",
+      "number": 411,
+      "name": "Egipto #2",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P3",
+      "number": 412,
+      "name": "Egipto #3",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P4",
+      "number": 413,
+      "name": "Egipto #4",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P5",
+      "number": 414,
+      "name": "Egipto #5",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P6",
+      "number": 415,
+      "name": "Egipto #6",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P7",
+      "number": 416,
+      "name": "Egipto #7",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P8",
+      "number": 417,
+      "name": "Egipto #8",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P9",
+      "number": 418,
+      "name": "Egipto #9",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P10",
+      "number": 419,
+      "name": "Egipto #10",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P11",
+      "number": 420,
+      "name": "Egipto #11",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "EGY-P12",
+      "number": 421,
+      "name": "Egipto #12",
+      "team": "EGY",
+      "section": "Egipto",
+      "type": "player"
+    },
+    {
+      "code": "TUN-BADGE",
+      "number": 422,
+      "name": "Túnez (Escudo)",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "team_badge"
+    },
+    {
+      "code": "TUN-P1",
+      "number": 423,
+      "name": "Túnez #1",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P2",
+      "number": 424,
+      "name": "Túnez #2",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P3",
+      "number": 425,
+      "name": "Túnez #3",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P4",
+      "number": 426,
+      "name": "Túnez #4",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P5",
+      "number": 427,
+      "name": "Túnez #5",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P6",
+      "number": 428,
+      "name": "Túnez #6",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P7",
+      "number": 429,
+      "name": "Túnez #7",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P8",
+      "number": 430,
+      "name": "Túnez #8",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P9",
+      "number": 431,
+      "name": "Túnez #9",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P10",
+      "number": 432,
+      "name": "Túnez #10",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P11",
+      "number": 433,
+      "name": "Túnez #11",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "TUN-P12",
+      "number": 434,
+      "name": "Túnez #12",
+      "team": "TUN",
+      "section": "Túnez",
+      "type": "player"
+    },
+    {
+      "code": "NGA-BADGE",
+      "number": 435,
+      "name": "Nigeria (Escudo)",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "team_badge"
+    },
+    {
+      "code": "NGA-P1",
+      "number": 436,
+      "name": "Nigeria #1",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P2",
+      "number": 437,
+      "name": "Nigeria #2",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P3",
+      "number": 438,
+      "name": "Nigeria #3",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P4",
+      "number": 439,
+      "name": "Nigeria #4",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P5",
+      "number": 440,
+      "name": "Nigeria #5",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P6",
+      "number": 441,
+      "name": "Nigeria #6",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P7",
+      "number": 442,
+      "name": "Nigeria #7",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P8",
+      "number": 443,
+      "name": "Nigeria #8",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P9",
+      "number": 444,
+      "name": "Nigeria #9",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P10",
+      "number": 445,
+      "name": "Nigeria #10",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P11",
+      "number": 446,
+      "name": "Nigeria #11",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "NGA-P12",
+      "number": 447,
+      "name": "Nigeria #12",
+      "team": "NGA",
+      "section": "Nigeria",
+      "type": "player"
+    },
+    {
+      "code": "GHA-BADGE",
+      "number": 448,
+      "name": "Ghana (Escudo)",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "team_badge"
+    },
+    {
+      "code": "GHA-P1",
+      "number": 449,
+      "name": "Ghana #1",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P2",
+      "number": 450,
+      "name": "Ghana #2",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P3",
+      "number": 451,
+      "name": "Ghana #3",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P4",
+      "number": 452,
+      "name": "Ghana #4",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P5",
+      "number": 453,
+      "name": "Ghana #5",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P6",
+      "number": 454,
+      "name": "Ghana #6",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P7",
+      "number": 455,
+      "name": "Ghana #7",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P8",
+      "number": 456,
+      "name": "Ghana #8",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P9",
+      "number": 457,
+      "name": "Ghana #9",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P10",
+      "number": 458,
+      "name": "Ghana #10",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P11",
+      "number": 459,
+      "name": "Ghana #11",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "GHA-P12",
+      "number": 460,
+      "name": "Ghana #12",
+      "team": "GHA",
+      "section": "Ghana",
+      "type": "player"
+    },
+    {
+      "code": "ALG-BADGE",
+      "number": 461,
+      "name": "Argelia (Escudo)",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "team_badge"
+    },
+    {
+      "code": "ALG-P1",
+      "number": 462,
+      "name": "Argelia #1",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P2",
+      "number": 463,
+      "name": "Argelia #2",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P3",
+      "number": 464,
+      "name": "Argelia #3",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P4",
+      "number": 465,
+      "name": "Argelia #4",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P5",
+      "number": 466,
+      "name": "Argelia #5",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P6",
+      "number": 467,
+      "name": "Argelia #6",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P7",
+      "number": 468,
+      "name": "Argelia #7",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P8",
+      "number": 469,
+      "name": "Argelia #8",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P9",
+      "number": 470,
+      "name": "Argelia #9",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P10",
+      "number": 471,
+      "name": "Argelia #10",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P11",
+      "number": 472,
+      "name": "Argelia #11",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "ALG-P12",
+      "number": 473,
+      "name": "Argelia #12",
+      "team": "ALG",
+      "section": "Argelia",
+      "type": "player"
+    },
+    {
+      "code": "CMR-BADGE",
+      "number": 474,
+      "name": "Camerún (Escudo)",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "team_badge"
+    },
+    {
+      "code": "CMR-P1",
+      "number": 475,
+      "name": "Camerún #1",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P2",
+      "number": 476,
+      "name": "Camerún #2",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P3",
+      "number": 477,
+      "name": "Camerún #3",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P4",
+      "number": 478,
+      "name": "Camerún #4",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P5",
+      "number": 479,
+      "name": "Camerún #5",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P6",
+      "number": 480,
+      "name": "Camerún #6",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P7",
+      "number": 481,
+      "name": "Camerún #7",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P8",
+      "number": 482,
+      "name": "Camerún #8",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P9",
+      "number": 483,
+      "name": "Camerún #9",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P10",
+      "number": 484,
+      "name": "Camerún #10",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P11",
+      "number": 485,
+      "name": "Camerún #11",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CMR-P12",
+      "number": 486,
+      "name": "Camerún #12",
+      "team": "CMR",
+      "section": "Camerún",
+      "type": "player"
+    },
+    {
+      "code": "CIV-BADGE",
+      "number": 487,
+      "name": "Costa de Marfil (Escudo)",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "team_badge"
+    },
+    {
+      "code": "CIV-P1",
+      "number": 488,
+      "name": "Costa de Marfil #1",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P2",
+      "number": 489,
+      "name": "Costa de Marfil #2",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P3",
+      "number": 490,
+      "name": "Costa de Marfil #3",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P4",
+      "number": 491,
+      "name": "Costa de Marfil #4",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P5",
+      "number": 492,
+      "name": "Costa de Marfil #5",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P6",
+      "number": 493,
+      "name": "Costa de Marfil #6",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P7",
+      "number": 494,
+      "name": "Costa de Marfil #7",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P8",
+      "number": 495,
+      "name": "Costa de Marfil #8",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P9",
+      "number": 496,
+      "name": "Costa de Marfil #9",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P10",
+      "number": 497,
+      "name": "Costa de Marfil #10",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P11",
+      "number": 498,
+      "name": "Costa de Marfil #11",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "CIV-P12",
+      "number": 499,
+      "name": "Costa de Marfil #12",
+      "team": "CIV",
+      "section": "Costa de Marfil",
+      "type": "player"
+    },
+    {
+      "code": "JPN-BADGE",
+      "number": 500,
+      "name": "Japón (Escudo)",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "team_badge"
+    },
+    {
+      "code": "JPN-P1",
+      "number": 501,
+      "name": "Japón #1",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P2",
+      "number": 502,
+      "name": "Japón #2",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P3",
+      "number": 503,
+      "name": "Japón #3",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P4",
+      "number": 504,
+      "name": "Japón #4",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P5",
+      "number": 505,
+      "name": "Japón #5",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P6",
+      "number": 506,
+      "name": "Japón #6",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P7",
+      "number": 507,
+      "name": "Japón #7",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P8",
+      "number": 508,
+      "name": "Japón #8",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P9",
+      "number": 509,
+      "name": "Japón #9",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P10",
+      "number": 510,
+      "name": "Japón #10",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P11",
+      "number": 511,
+      "name": "Japón #11",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "JPN-P12",
+      "number": 512,
+      "name": "Japón #12",
+      "team": "JPN",
+      "section": "Japón",
+      "type": "player"
+    },
+    {
+      "code": "KOR-BADGE",
+      "number": 513,
+      "name": "Corea del Sur (Escudo)",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "team_badge"
+    },
+    {
+      "code": "KOR-P1",
+      "number": 514,
+      "name": "Corea del Sur #1",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P2",
+      "number": 515,
+      "name": "Corea del Sur #2",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P3",
+      "number": 516,
+      "name": "Corea del Sur #3",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P4",
+      "number": 517,
+      "name": "Corea del Sur #4",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P5",
+      "number": 518,
+      "name": "Corea del Sur #5",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P6",
+      "number": 519,
+      "name": "Corea del Sur #6",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P7",
+      "number": 520,
+      "name": "Corea del Sur #7",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P8",
+      "number": 521,
+      "name": "Corea del Sur #8",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P9",
+      "number": 522,
+      "name": "Corea del Sur #9",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P10",
+      "number": 523,
+      "name": "Corea del Sur #10",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P11",
+      "number": 524,
+      "name": "Corea del Sur #11",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "KOR-P12",
+      "number": 525,
+      "name": "Corea del Sur #12",
+      "team": "KOR",
+      "section": "Corea del Sur",
+      "type": "player"
+    },
+    {
+      "code": "AUS-BADGE",
+      "number": 526,
+      "name": "Australia (Escudo)",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "team_badge"
+    },
+    {
+      "code": "AUS-P1",
+      "number": 527,
+      "name": "Australia #1",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P2",
+      "number": 528,
+      "name": "Australia #2",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P3",
+      "number": 529,
+      "name": "Australia #3",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P4",
+      "number": 530,
+      "name": "Australia #4",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P5",
+      "number": 531,
+      "name": "Australia #5",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P6",
+      "number": 532,
+      "name": "Australia #6",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P7",
+      "number": 533,
+      "name": "Australia #7",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P8",
+      "number": 534,
+      "name": "Australia #8",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P9",
+      "number": 535,
+      "name": "Australia #9",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P10",
+      "number": 536,
+      "name": "Australia #10",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P11",
+      "number": 537,
+      "name": "Australia #11",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "AUS-P12",
+      "number": 538,
+      "name": "Australia #12",
+      "team": "AUS",
+      "section": "Australia",
+      "type": "player"
+    },
+    {
+      "code": "IRN-BADGE",
+      "number": 539,
+      "name": "Irán (Escudo)",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "team_badge"
+    },
+    {
+      "code": "IRN-P1",
+      "number": 540,
+      "name": "Irán #1",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P2",
+      "number": 541,
+      "name": "Irán #2",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P3",
+      "number": 542,
+      "name": "Irán #3",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P4",
+      "number": 543,
+      "name": "Irán #4",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P5",
+      "number": 544,
+      "name": "Irán #5",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P6",
+      "number": 545,
+      "name": "Irán #6",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P7",
+      "number": 546,
+      "name": "Irán #7",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P8",
+      "number": 547,
+      "name": "Irán #8",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P9",
+      "number": 548,
+      "name": "Irán #9",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P10",
+      "number": 549,
+      "name": "Irán #10",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P11",
+      "number": 550,
+      "name": "Irán #11",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "IRN-P12",
+      "number": 551,
+      "name": "Irán #12",
+      "team": "IRN",
+      "section": "Irán",
+      "type": "player"
+    },
+    {
+      "code": "KSA-BADGE",
+      "number": 552,
+      "name": "Arabia Saudita (Escudo)",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "team_badge"
+    },
+    {
+      "code": "KSA-P1",
+      "number": 553,
+      "name": "Arabia Saudita #1",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P2",
+      "number": 554,
+      "name": "Arabia Saudita #2",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P3",
+      "number": 555,
+      "name": "Arabia Saudita #3",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P4",
+      "number": 556,
+      "name": "Arabia Saudita #4",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P5",
+      "number": 557,
+      "name": "Arabia Saudita #5",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P6",
+      "number": 558,
+      "name": "Arabia Saudita #6",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P7",
+      "number": 559,
+      "name": "Arabia Saudita #7",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P8",
+      "number": 560,
+      "name": "Arabia Saudita #8",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P9",
+      "number": 561,
+      "name": "Arabia Saudita #9",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P10",
+      "number": 562,
+      "name": "Arabia Saudita #10",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P11",
+      "number": 563,
+      "name": "Arabia Saudita #11",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "KSA-P12",
+      "number": 564,
+      "name": "Arabia Saudita #12",
+      "team": "KSA",
+      "section": "Arabia Saudita",
+      "type": "player"
+    },
+    {
+      "code": "QAT-BADGE",
+      "number": 565,
+      "name": "Qatar (Escudo)",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "team_badge"
+    },
+    {
+      "code": "QAT-P1",
+      "number": 566,
+      "name": "Qatar #1",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P2",
+      "number": 567,
+      "name": "Qatar #2",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P3",
+      "number": 568,
+      "name": "Qatar #3",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P4",
+      "number": 569,
+      "name": "Qatar #4",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P5",
+      "number": 570,
+      "name": "Qatar #5",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P6",
+      "number": 571,
+      "name": "Qatar #6",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P7",
+      "number": 572,
+      "name": "Qatar #7",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P8",
+      "number": 573,
+      "name": "Qatar #8",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P9",
+      "number": 574,
+      "name": "Qatar #9",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P10",
+      "number": 575,
+      "name": "Qatar #10",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P11",
+      "number": 576,
+      "name": "Qatar #11",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "QAT-P12",
+      "number": 577,
+      "name": "Qatar #12",
+      "team": "QAT",
+      "section": "Qatar",
+      "type": "player"
+    },
+    {
+      "code": "UZB-BADGE",
+      "number": 578,
+      "name": "Uzbekistán (Escudo)",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "team_badge"
+    },
+    {
+      "code": "UZB-P1",
+      "number": 579,
+      "name": "Uzbekistán #1",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P2",
+      "number": 580,
+      "name": "Uzbekistán #2",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P3",
+      "number": 581,
+      "name": "Uzbekistán #3",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P4",
+      "number": 582,
+      "name": "Uzbekistán #4",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P5",
+      "number": 583,
+      "name": "Uzbekistán #5",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P6",
+      "number": 584,
+      "name": "Uzbekistán #6",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P7",
+      "number": 585,
+      "name": "Uzbekistán #7",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P8",
+      "number": 586,
+      "name": "Uzbekistán #8",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P9",
+      "number": 587,
+      "name": "Uzbekistán #9",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P10",
+      "number": 588,
+      "name": "Uzbekistán #10",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P11",
+      "number": 589,
+      "name": "Uzbekistán #11",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "UZB-P12",
+      "number": 590,
+      "name": "Uzbekistán #12",
+      "team": "UZB",
+      "section": "Uzbekistán",
+      "type": "player"
+    },
+    {
+      "code": "JOR-BADGE",
+      "number": 591,
+      "name": "Jordania (Escudo)",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "team_badge"
+    },
+    {
+      "code": "JOR-P1",
+      "number": 592,
+      "name": "Jordania #1",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P2",
+      "number": 593,
+      "name": "Jordania #2",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P3",
+      "number": 594,
+      "name": "Jordania #3",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P4",
+      "number": 595,
+      "name": "Jordania #4",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P5",
+      "number": 596,
+      "name": "Jordania #5",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P6",
+      "number": 597,
+      "name": "Jordania #6",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P7",
+      "number": 598,
+      "name": "Jordania #7",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P8",
+      "number": 599,
+      "name": "Jordania #8",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P9",
+      "number": 600,
+      "name": "Jordania #9",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P10",
+      "number": 601,
+      "name": "Jordania #10",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P11",
+      "number": 602,
+      "name": "Jordania #11",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "JOR-P12",
+      "number": 603,
+      "name": "Jordania #12",
+      "team": "JOR",
+      "section": "Jordania",
+      "type": "player"
+    },
+    {
+      "code": "CRC-BADGE",
+      "number": 604,
+      "name": "Costa Rica (Escudo)",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "team_badge"
+    },
+    {
+      "code": "CRC-P1",
+      "number": 605,
+      "name": "Costa Rica #1",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P2",
+      "number": 606,
+      "name": "Costa Rica #2",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P3",
+      "number": 607,
+      "name": "Costa Rica #3",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P4",
+      "number": 608,
+      "name": "Costa Rica #4",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P5",
+      "number": 609,
+      "name": "Costa Rica #5",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P6",
+      "number": 610,
+      "name": "Costa Rica #6",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P7",
+      "number": 611,
+      "name": "Costa Rica #7",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P8",
+      "number": 612,
+      "name": "Costa Rica #8",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P9",
+      "number": 613,
+      "name": "Costa Rica #9",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P10",
+      "number": 614,
+      "name": "Costa Rica #10",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P11",
+      "number": 615,
+      "name": "Costa Rica #11",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "CRC-P12",
+      "number": 616,
+      "name": "Costa Rica #12",
+      "team": "CRC",
+      "section": "Costa Rica",
+      "type": "player"
+    },
+    {
+      "code": "PAN-BADGE",
+      "number": 617,
+      "name": "Panamá (Escudo)",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "team_badge"
+    },
+    {
+      "code": "PAN-P1",
+      "number": 618,
+      "name": "Panamá #1",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P2",
+      "number": 619,
+      "name": "Panamá #2",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P3",
+      "number": 620,
+      "name": "Panamá #3",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P4",
+      "number": 621,
+      "name": "Panamá #4",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P5",
+      "number": 622,
+      "name": "Panamá #5",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P6",
+      "number": 623,
+      "name": "Panamá #6",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P7",
+      "number": 624,
+      "name": "Panamá #7",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P8",
+      "number": 625,
+      "name": "Panamá #8",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P9",
+      "number": 626,
+      "name": "Panamá #9",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P10",
+      "number": 627,
+      "name": "Panamá #10",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P11",
+      "number": 628,
+      "name": "Panamá #11",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "PAN-P12",
+      "number": 629,
+      "name": "Panamá #12",
+      "team": "PAN",
+      "section": "Panamá",
+      "type": "player"
+    },
+    {
+      "code": "JAM-BADGE",
+      "number": 630,
+      "name": "Jamaica (Escudo)",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "team_badge"
+    },
+    {
+      "code": "JAM-P1",
+      "number": 631,
+      "name": "Jamaica #1",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P2",
+      "number": 632,
+      "name": "Jamaica #2",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P3",
+      "number": 633,
+      "name": "Jamaica #3",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P4",
+      "number": 634,
+      "name": "Jamaica #4",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P5",
+      "number": 635,
+      "name": "Jamaica #5",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P6",
+      "number": 636,
+      "name": "Jamaica #6",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P7",
+      "number": 637,
+      "name": "Jamaica #7",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P8",
+      "number": 638,
+      "name": "Jamaica #8",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P9",
+      "number": 639,
+      "name": "Jamaica #9",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P10",
+      "number": 640,
+      "name": "Jamaica #10",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P11",
+      "number": 641,
+      "name": "Jamaica #11",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "JAM-P12",
+      "number": 642,
+      "name": "Jamaica #12",
+      "team": "JAM",
+      "section": "Jamaica",
+      "type": "player"
+    },
+    {
+      "code": "NZL-BADGE",
+      "number": 643,
+      "name": "Nueva Zelanda (Escudo)",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "team_badge"
+    },
+    {
+      "code": "NZL-P1",
+      "number": 644,
+      "name": "Nueva Zelanda #1",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P2",
+      "number": 645,
+      "name": "Nueva Zelanda #2",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P3",
+      "number": 646,
+      "name": "Nueva Zelanda #3",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P4",
+      "number": 647,
+      "name": "Nueva Zelanda #4",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P5",
+      "number": 648,
+      "name": "Nueva Zelanda #5",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P6",
+      "number": 649,
+      "name": "Nueva Zelanda #6",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P7",
+      "number": 650,
+      "name": "Nueva Zelanda #7",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P8",
+      "number": 651,
+      "name": "Nueva Zelanda #8",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P9",
+      "number": 652,
+      "name": "Nueva Zelanda #9",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P10",
+      "number": 653,
+      "name": "Nueva Zelanda #10",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P11",
+      "number": 654,
+      "name": "Nueva Zelanda #11",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "NZL-P12",
+      "number": 655,
+      "name": "Nueva Zelanda #12",
+      "team": "NZL",
+      "section": "Nueva Zelanda",
+      "type": "player"
+    },
+    {
+      "code": "BFA-BADGE",
+      "number": 656,
+      "name": "Burkina Faso (Escudo)",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "team_badge"
+    },
+    {
+      "code": "BFA-P1",
+      "number": 657,
+      "name": "Burkina Faso #1",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P2",
+      "number": 658,
+      "name": "Burkina Faso #2",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P3",
+      "number": 659,
+      "name": "Burkina Faso #3",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P4",
+      "number": 660,
+      "name": "Burkina Faso #4",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P5",
+      "number": 661,
+      "name": "Burkina Faso #5",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P6",
+      "number": 662,
+      "name": "Burkina Faso #6",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P7",
+      "number": 663,
+      "name": "Burkina Faso #7",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P8",
+      "number": 664,
+      "name": "Burkina Faso #8",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P9",
+      "number": 665,
+      "name": "Burkina Faso #9",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P10",
+      "number": 666,
+      "name": "Burkina Faso #10",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P11",
+      "number": 667,
+      "name": "Burkina Faso #11",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    },
+    {
+      "code": "BFA-P12",
+      "number": 668,
+      "name": "Burkina Faso #12",
+      "team": "BFA",
+      "section": "Burkina Faso",
+      "type": "player"
+    }
   ]
 }
