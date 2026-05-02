@@ -36,12 +36,32 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     .from("profiles")
     .select("id, username, display_name, avatar_url, invite_code")
     .eq("id", userId)
-    .single();
+    .maybeSingle();
   if (error) {
     console.warn("fetchProfile error", error.message);
     return null;
   }
-  return data as ProfileUser;
+  if (data) return data as ProfileUser;
+
+  // Fallback: el trigger handle_new_user no se ejecutó (puede pasar con OAuth
+  // si el contexto de la sesión no estaba listo). Creamos el profile manual.
+  console.warn("fetchProfile: no profile row, creating fallback");
+  const fallbackUsername = `user_${userId.slice(0, 4)}${userId.slice(-4)}`.toLowerCase();
+  const fallbackInvite = userId.replace(/-/g, "").slice(0, 8).toUpperCase();
+  const { data: created, error: insertError } = await supabase
+    .from("profiles")
+    .insert({
+      id: userId,
+      username: fallbackUsername,
+      invite_code: fallbackInvite
+    })
+    .select("id, username, display_name, avatar_url, invite_code")
+    .single();
+  if (insertError) {
+    console.warn("fallback profile insert failed:", insertError.message);
+    return null;
+  }
+  return created as ProfileUser;
 }
 
 export function SessionProvider() {

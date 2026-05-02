@@ -171,7 +171,7 @@ export default function RootLayout() {
           >
             <Stack.Screen name="(auth)" />
             <Stack.Screen name="(tabs)" />
-            <Stack.Screen name="onboarding/[step]" />
+            <Stack.Screen name="onboarding" />
             <Stack.Screen name="sticker/[code]" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
             <Stack.Screen name="profile/edit" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
             <Stack.Screen name="about" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
