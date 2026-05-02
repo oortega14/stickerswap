@@ -1,50 +1,47 @@
-import { GoogleSignin, statusCodes } from "@react-native-google-signin/google-signin";
+import * as WebBrowser from "expo-web-browser";
+import * as Linking from "expo-linking";
+import * as QueryParams from "expo-auth-session/build/QueryParams";
 import { supabase } from "./supabaseClient";
 
-let configured = false;
+WebBrowser.maybeCompleteAuthSession();
 
-function configureOnce() {
-  if (configured) return;
-  GoogleSignin.configure({
-    webClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID!,
-    iosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID!
-  });
-  configured = true;
-}
-
-function decodeJwtPayload(token: string): { nonce?: string } {
-  const [, payload] = token.split(".");
-  const base64 = payload.replace(/-/g, "+").replace(/_/g, "/");
-  const padded = base64 + "==".substring(0, (4 - (base64.length % 4)) % 4);
-  try {
-    return JSON.parse(atob(padded));
-  } catch {
-    return {};
+async function createSessionFromUrl(url: string) {
+  const { params, errorCode } = QueryParams.getQueryParams(url);
+  if (errorCode) throw new Error(errorCode);
+  const access_token = params.access_token;
+  const refresh_token = params.refresh_token;
+  if (!access_token || !refresh_token) {
+    throw new Error("Faltan tokens en el callback de OAuth");
   }
-}
-
-export async function signInWithGoogle(): Promise<void> {
-  configureOnce();
-  await GoogleSignin.hasPlayServices();
-  const result = await GoogleSignin.signIn();
-  const idToken = result.data?.idToken;
-  if (!idToken) {
-    throw new Error("No idToken from Google");
-  }
-
-  // Google's mobile SDK v16+ auto-generates a nonce and embeds it in the id_token.
-  // Supabase requires the same nonce string to be passed back so it can verify
-  // the token. We extract it from the JWT payload and forward it.
-  const { nonce } = decodeJwtPayload(idToken);
-
-  const { error } = await supabase.auth.signInWithIdToken({
-    provider: "google",
-    token: idToken,
-    ...(nonce ? { nonce } : {})
-  });
+  const { error } = await supabase.auth.setSession({ access_token, refresh_token });
   if (error) throw error;
 }
 
+export async function signInWithGoogle(): Promise<void> {
+  const redirectTo = Linking.createURL("/");
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo,
+      skipBrowserRedirect: true
+    }
+  });
+  if (error) throw error;
+  if (!data?.url) throw new Error("No OAuth URL returned by Supabase");
+
+  const result = await WebBrowser.openAuthSessionAsync(data.url, redirectTo);
+
+  if (result.type === "success") {
+    await createSessionFromUrl(result.url);
+    return;
+  }
+  if (result.type === "cancel" || result.type === "dismiss") {
+    throw Object.assign(new Error("Sign-in cancelled"), { code: "CANCELLED" });
+  }
+  throw new Error("OAuth flow falló");
+}
+
 export function isCancelError(e: unknown): boolean {
-  return (e as { code?: string })?.code === statusCodes.SIGN_IN_CANCELLED;
+  return (e as { code?: string })?.code === "CANCELLED";
 }
