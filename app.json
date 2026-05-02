@@ -48,12 +48,6 @@
           "cameraPermission": "Necesitamos la cámara para escanear códigos de amigos."
         }
       ],
-      [
-        "@react-native-google-signin/google-signin",
-        {
-          "iosUrlScheme": "com.googleusercontent.apps.384059297758-1vsn36mcgvm1f222rcj35dd5ov413o5j"
-        }
-      ],
       "expo-web-browser"
     ],
     "experiments": {
