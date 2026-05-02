@@ -9,6 +9,7 @@ export interface ProfileUser {
   display_name: string | null;
   avatar_url: string | null;
   invite_code: string;
+  onboarding_completed: boolean;
 }
 
 interface SessionState {
@@ -72,13 +73,13 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     }
   })();
 
-  let data: { id: string; username: string; display_name: string | null; avatar_url: string | null; invite_code: string } | null = null;
+  let data: { id: string; username: string; display_name: string | null; avatar_url: string | null; invite_code: string; onboarding_completed: boolean } | null = null;
   let error: { message: string; code?: string } | null = null;
   try {
     const result = await withTimeout(
       supabase
         .from("profiles")
-        .select("id, username, display_name, avatar_url, invite_code")
+        .select("id, username, display_name, avatar_url, invite_code, onboarding_completed")
         .eq("id", userId)
         .maybeSingle(),
       5000,
@@ -109,7 +110,7 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
       username: fallbackUsername,
       invite_code: fallbackInvite
     })
-    .select("id, username, display_name, avatar_url, invite_code")
+    .select("id, username, display_name, avatar_url, invite_code, onboarding_completed")
     .single();
   console.log("[fetchProfile] insert returned:", { hasData: !!created, error: insertError?.message, code: insertError?.code });
   if (insertError) {

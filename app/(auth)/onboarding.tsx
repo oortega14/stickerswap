@@ -11,10 +11,10 @@ type CheckState = "idle" | "checking" | "valid" | "invalid" | "taken";
 
 export default function Onboarding() {
   const { user } = useSession();
-  // Arrancamos vacío. Pre-llenar con `user.username` confunde al usuario
-  // (el default es auto-generado tipo `user_e9fc` y muchos lo apretan
-  // creyendo que es su username elegido). Que escriba uno propio.
-  const [value, setValue] = useState("");
+  // Pre-llenamos con el username auto-generado (ej. `user_ec81`). El usuario
+  // puede dejarlo o cambiarlo. La columna `onboarding_completed` en profiles
+  // es la que marca que ya pasó por acá.
+  const [value, setValue] = useState(user?.username ?? "");
   const [state, setState] = useState<CheckState>("idle");
   const [saving, setSaving] = useState(false);
 
@@ -42,17 +42,20 @@ export default function Onboarding() {
     setSaving(true);
     const { error } = await supabase
       .from("profiles")
-      .update({ username: value })
+      .update({ username: value, onboarding_completed: true })
       .eq("id", user.id);
     setSaving(false);
     if (error) {
       Alert.alert("No se pudo guardar", error.message);
       return;
     }
-    // El listener de useSession solo se refresca en login/logout. Después de
-    // un UPDATE manual, actualizamos el store local para que AuthGate vea el
-    // username nuevo y despache a tabs.
-    useSessionStore.getState().setProfile({ ...user, username: value });
+    // Reflejar el cambio en el store local para que AuthGate vea
+    // onboarding_completed=true y despache a tabs.
+    useSessionStore.getState().setProfile({
+      ...user,
+      username: value,
+      onboarding_completed: true
+    });
   };
 
   const hint =
