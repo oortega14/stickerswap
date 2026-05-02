@@ -1,25 +1,12 @@
-import { Platform } from "react-native";
-import * as AppleAuthentication from "expo-apple-authentication";
-import { supabase } from "./supabaseClient";
+// Apple Sign-In está deshabilitado por ahora — requiere licencia paga de Apple
+// Developer para que la entitlement com.apple.developer.applesignin funcione.
+// Cuando llegue la licencia, reinstalar `expo-apple-authentication` y restaurar
+// el contenido original (ver git log).
 
 export async function isAppleAvailable(): Promise<boolean> {
-  if (Platform.OS !== "ios") return false;
-  return AppleAuthentication.isAvailableAsync();
+  return false;
 }
 
 export async function signInWithApple(): Promise<void> {
-  const credential = await AppleAuthentication.signInAsync({
-    requestedScopes: [
-      AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
-      AppleAuthentication.AppleAuthenticationScope.EMAIL
-    ]
-  });
-  if (!credential.identityToken) {
-    throw new Error("No identity token from Apple");
-  }
-  const { error } = await supabase.auth.signInWithIdToken({
-    provider: "apple",
-    token: credential.identityToken
-  });
-  if (error) throw error;
+  throw new Error("Apple Sign-In no disponible en esta build.");
 }

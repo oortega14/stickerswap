@@ -1,29 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { View, Text, Pressable, Alert, ActivityIndicator } from "react-native";
-import * as AppleAuthentication from "expo-apple-authentication";
 import { StarryBackground } from "@/ui/StarryBackground";
 import { GlowCard } from "@/ui/GlowCard";
-import { isAppleAvailable, signInWithApple } from "@/auth/apple";
 import { signInWithGoogle, isCancelError } from "@/auth/google";
 
 export default function SignIn() {
-  const [appleAvailable, setAppleAvailable] = useState(false);
-  const [busy, setBusy] = useState<"apple" | "google" | null>(null);
+  const [busy, setBusy] = useState(false);
 
-  useEffect(() => {
-    isAppleAvailable().then(setAppleAvailable);
-  }, []);
-
-  const handle = async (provider: "apple" | "google", fn: () => Promise<void>) => {
-    setBusy(provider);
+  const onGoogle = async () => {
+    setBusy(true);
     try {
-      await fn();
+      await signInWithGoogle();
     } catch (e) {
       if (!isCancelError(e)) {
         Alert.alert("No se pudo iniciar sesión", String((e as Error).message ?? e));
       }
     } finally {
-      setBusy(null);
+      setBusy(false);
     }
   };
 
@@ -36,23 +29,14 @@ export default function SignIn() {
         </Text>
 
         <GlowCard className="w-full mb-3">
-          {appleAvailable && (
-            <AppleAuthentication.AppleAuthenticationButton
-              buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN}
-              buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
-              cornerRadius={10}
-              style={{ width: "100%", height: 48, marginBottom: 12 }}
-              onPress={() => handle("apple", signInWithApple)}
-            />
-          )}
           <Pressable
-            onPress={() => handle("google", signInWithGoogle)}
-            disabled={busy !== null}
+            onPress={onGoogle}
+            disabled={busy}
             className="bg-white rounded-lg py-3 items-center"
             accessibilityLabel="Continuar con Google"
             accessibilityRole="button"
           >
-            {busy === "google" ? (
+            {busy ? (
               <ActivityIndicator color="#000" />
             ) : (
               <Text className="text-black font-semibold">Continuar con Google</Text>
