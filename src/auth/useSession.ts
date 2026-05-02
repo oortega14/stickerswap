@@ -143,13 +143,21 @@ export function SessionProvider() {
       setLoading(false);
     })();
 
-    const { data: sub } = supabase.auth.onAuthStateChange(async (event, session) => {
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       console.log("[onAuthStateChange]", event, "hasSession:", !!session);
       setSession(session);
-      if (session?.user) {
-        const profile = await fetchProfile(session.user.id);
-        console.log("[onAuthStateChange] profile loaded:", !!profile);
-        setProfile(profile);
+      // IMPORTANTE: las queries Supabase NO pueden correr en este callback.
+      // El cliente toma un lock interno y cualquier `from(...).select(...)`
+      // queda esperando ese lock → deadlock. Lo deferimos al next tick para
+      // que el listener libere primero.
+      // Ref: https://github.com/supabase/supabase-js/issues/...
+      const userId = session?.user?.id;
+      if (userId) {
+        setTimeout(async () => {
+          const profile = await fetchProfile(userId);
+          console.log("[onAuthStateChange] profile loaded:", !!profile);
+          setProfile(profile);
+        }, 0);
       } else {
         setProfile(null);
       }
