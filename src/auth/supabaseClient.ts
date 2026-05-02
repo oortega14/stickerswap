@@ -1,6 +1,5 @@
 import "react-native-url-polyfill/auto";
 import { createClient } from "@supabase/supabase-js";
-import * as SecureStore from "expo-secure-store";
 
 const url = process.env.EXPO_PUBLIC_SUPABASE_URL;
 const anon = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
@@ -10,6 +9,20 @@ if (!url || !anon) {
     "Missing EXPO_PUBLIC_SUPABASE_URL or EXPO_PUBLIC_SUPABASE_ANON_KEY (check your .env)"
   );
 }
+
+// DIAGNÓSTICO: storage in-memory mientras descartamos el problema con SecureStore.
+// La sesión NO persiste entre arrancadas — hay que loguearse en cada apertura.
+// TODO: migrar a AsyncStorage cuando confirmemos que SecureStore era el problema.
+const memStore = new Map<string, string>();
+const MemoryAdapter = {
+  getItem: async (key: string) => memStore.get(key) ?? null,
+  setItem: async (key: string, value: string) => {
+    memStore.set(key, value);
+  },
+  removeItem: async (key: string) => {
+    memStore.delete(key);
+  }
+};
 
 // SecureStore tiene un límite duro de 2KB por item en iOS. Las JWT de Supabase
 // se pasan ese tamaño fácil. Para no romper, partimos el valor en chunks y los
@@ -94,7 +107,7 @@ const SecureStoreAdapter = {
 
 export const supabase = createClient(url, anon, {
   auth: {
-    storage: SecureStoreAdapter,
+    storage: MemoryAdapter,
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: false
