@@ -11,30 +11,84 @@ if (!url || !anon) {
   );
 }
 
+// SecureStore tiene un límite duro de 2KB por item en iOS. Las JWT de Supabase
+// se pasan ese tamaño fácil. Para no romper, partimos el valor en chunks y los
+// guardamos bajo `key.0`, `key.1`, etc, con un meta `key.chunks` con el conteo.
+const CHUNK_SIZE = 1800;
+
+async function safeGet(key: string): Promise<string | null> {
+  try {
+    return await SecureStore.getItemAsync(key);
+  } catch {
+    return null;
+  }
+}
+
+async function safeSet(key: string, value: string): Promise<void> {
+  try {
+    await SecureStore.setItemAsync(key, value);
+  } catch (e) {
+    console.warn("SecureStore.setItemAsync failed for", key, e);
+  }
+}
+
+async function safeDelete(key: string): Promise<void> {
+  try {
+    await SecureStore.deleteItemAsync(key);
+  } catch {
+    // ignore
+  }
+}
+
+async function clearChunks(key: string): Promise<void> {
+  const countStr = await safeGet(`${key}.chunks`);
+  if (countStr) {
+    const count = parseInt(countStr, 10);
+    for (let i = 0; i < count; i++) {
+      await safeDelete(`${key}.${i}`);
+    }
+    await safeDelete(`${key}.chunks`);
+  }
+}
+
 const SecureStoreAdapter = {
-  getItem: async (key: string) => {
-    try {
-      return await SecureStore.getItemAsync(key);
-    } catch {
-      // SecureStore lanza si la key no existe o si el keychain no está
-      // listo. Para el adapter de Supabase, eso debe traducirse a "no hay
-      // sesión guardada" (null) en vez de un reject que rompe el cliente.
-      return null;
+  getItem: async (key: string): Promise<string | null> => {
+    const direct = await safeGet(key);
+    if (direct !== null) return direct;
+    const countStr = await safeGet(`${key}.chunks`);
+    if (!countStr) return null;
+    const count = parseInt(countStr, 10);
+    const parts: string[] = [];
+    for (let i = 0; i < count; i++) {
+      const part = await safeGet(`${key}.${i}`);
+      if (part === null) return null;
+      parts.push(part);
     }
+    return parts.join("");
   },
-  setItem: async (key: string, value: string) => {
-    try {
-      await SecureStore.setItemAsync(key, value);
-    } catch (e) {
-      console.warn("SecureStore.setItem failed", e);
+
+  setItem: async (key: string, value: string): Promise<void> => {
+    // Limpiar tanto la versión simple como la chunked previa
+    await safeDelete(key);
+    await clearChunks(key);
+
+    if (value.length <= CHUNK_SIZE) {
+      await safeSet(key, value);
+      return;
     }
+    const chunks = Math.ceil(value.length / CHUNK_SIZE);
+    for (let i = 0; i < chunks; i++) {
+      await safeSet(
+        `${key}.${i}`,
+        value.slice(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE)
+      );
+    }
+    await safeSet(`${key}.chunks`, String(chunks));
   },
-  removeItem: async (key: string) => {
-    try {
-      await SecureStore.deleteItemAsync(key);
-    } catch (e) {
-      console.warn("SecureStore.deleteItem failed", e);
-    }
+
+  removeItem: async (key: string): Promise<void> => {
+    await safeDelete(key);
+    await clearChunks(key);
   }
 };
 
