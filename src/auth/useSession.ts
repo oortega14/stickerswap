@@ -43,6 +43,35 @@ function withTimeout<T>(promise: PromiseLike<T>, ms: number, label: string): Pro
 
 async function fetchProfile(userId: string): Promise<ProfileUser | null> {
   console.log("[fetchProfile] start userId:", userId);
+
+  // DIAGNÓSTICO: probamos fetch directo en paralelo al cliente JS para ver
+  // si es el cliente o la red en general lo que cuelga.
+  (async () => {
+    try {
+      const url = process.env.EXPO_PUBLIC_SUPABASE_URL!;
+      const anon = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!;
+      const session = (await supabase.auth.getSession()).data.session;
+      const accessToken = session?.access_token;
+      console.log("[direct-fetch] starting; hasAccessToken:", !!accessToken);
+      const t0 = Date.now();
+      const res = await fetch(
+        `${url}/rest/v1/profiles?id=eq.${userId}&select=id,username`,
+        {
+          headers: {
+            apikey: anon,
+            Authorization: accessToken ? `Bearer ${accessToken}` : `Bearer ${anon}`,
+            Accept: "application/json"
+          }
+        }
+      );
+      const ms = Date.now() - t0;
+      const text = await res.text();
+      console.log(`[direct-fetch] status=${res.status} took=${ms}ms body=${text.slice(0, 200)}`);
+    } catch (e) {
+      console.warn("[direct-fetch] threw:", (e as Error).message);
+    }
+  })();
+
   let data: { id: string; username: string; display_name: string | null; avatar_url: string | null; invite_code: string } | null = null;
   let error: { message: string; code?: string } | null = null;
   try {
