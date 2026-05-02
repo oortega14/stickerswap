@@ -59,6 +59,13 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     .single();
   if (insertError) {
     console.warn("fallback profile insert failed:", insertError.message);
+    // FK violation a auth.users → el user fue borrado del servidor pero el
+    // JWT sigue cacheado localmente. Sign-out fuerza al usuario a autenticarse
+    // de nuevo y se crea un user fresh.
+    if (insertError.code === "23503") {
+      console.warn("auth user no longer exists in server, signing out");
+      await supabase.auth.signOut();
+    }
     return null;
   }
   return created as ProfileUser;
