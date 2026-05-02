@@ -32,11 +32,13 @@ export const useSessionStore = create<SessionState>((set) => ({
 }));
 
 async function fetchProfile(userId: string): Promise<ProfileUser | null> {
+  console.log("[fetchProfile] start userId:", userId);
   const { data, error } = await supabase
     .from("profiles")
     .select("id, username, display_name, avatar_url, invite_code")
     .eq("id", userId)
     .maybeSingle();
+  console.log("[fetchProfile] select returned:", { hasData: !!data, error: error?.message });
   if (error) {
     console.warn("fetchProfile error", error.message);
     return null;
@@ -57,6 +59,7 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     })
     .select("id, username, display_name, avatar_url, invite_code")
     .single();
+  console.log("[fetchProfile] insert returned:", { hasData: !!created, error: insertError?.message, code: insertError?.code });
   if (insertError) {
     console.warn("fallback profile insert failed:", insertError.message);
     // FK violation a auth.users → el user fue borrado del servidor pero el
@@ -68,6 +71,7 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     }
     return null;
   }
+  console.log("[fetchProfile] fallback created OK");
   return created as ProfileUser;
 }
 
