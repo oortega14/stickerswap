@@ -31,13 +31,14 @@ export const useSessionStore = create<SessionState>((set) => ({
   setLoading: (isLoading) => set({ isLoading })
 }));
 
-function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
-  return Promise.race([
-    promise,
-    new Promise<T>((_, reject) =>
-      setTimeout(() => reject(new Error(`${label} timeout after ${ms}ms`)), ms)
-    )
-  ]);
+function withTimeout<T>(promise: PromiseLike<T>, ms: number, label: string): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error(`${label} timeout after ${ms}ms`)), ms);
+    Promise.resolve(promise).then(
+      (v) => { clearTimeout(timer); resolve(v); },
+      (e) => { clearTimeout(timer); reject(e); }
+    );
+  });
 }
 
 async function fetchProfile(userId: string): Promise<ProfileUser | null> {
@@ -54,8 +55,8 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
       5000,
       "fetchProfile.select"
     );
-    data = result.data;
-    error = result.error;
+    data = result.data as typeof data;
+    error = result.error as typeof error;
   } catch (e) {
     console.warn("[fetchProfile] select threw:", (e as Error).message);
     error = { message: (e as Error).message };
