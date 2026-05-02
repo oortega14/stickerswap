@@ -31,13 +31,35 @@ export const useSessionStore = create<SessionState>((set) => ({
   setLoading: (isLoading) => set({ isLoading })
 }));
 
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error(`${label} timeout after ${ms}ms`)), ms)
+    )
+  ]);
+}
+
 async function fetchProfile(userId: string): Promise<ProfileUser | null> {
   console.log("[fetchProfile] start userId:", userId);
-  const { data, error } = await supabase
-    .from("profiles")
-    .select("id, username, display_name, avatar_url, invite_code")
-    .eq("id", userId)
-    .maybeSingle();
+  let data: { id: string; username: string; display_name: string | null; avatar_url: string | null; invite_code: string } | null = null;
+  let error: { message: string; code?: string } | null = null;
+  try {
+    const result = await withTimeout(
+      supabase
+        .from("profiles")
+        .select("id, username, display_name, avatar_url, invite_code")
+        .eq("id", userId)
+        .maybeSingle(),
+      5000,
+      "fetchProfile.select"
+    );
+    data = result.data;
+    error = result.error;
+  } catch (e) {
+    console.warn("[fetchProfile] select threw:", (e as Error).message);
+    error = { message: (e as Error).message };
+  }
   console.log("[fetchProfile] select returned:", { hasData: !!data, error: error?.message });
   if (error) {
     console.warn("fetchProfile error", error.message);
