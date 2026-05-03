@@ -62,7 +62,7 @@ export default function SearchFriend() {
         </GlowCard>
 
         {find.isPending ? (
-          <ActivityIndicator color="#7c5cff" />
+          <ActivityIndicator color="#6b4423" />
         ) : result ? (
           <GlowCard>
             <Text className="text-space-ink text-base font-bold">

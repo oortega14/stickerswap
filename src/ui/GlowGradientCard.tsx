@@ -12,18 +12,18 @@ export function GlowGradientCard({
     <View
       style={[
         {
-          shadowColor: "#7c5cff",
+          shadowColor: "#3a2e1a",
           shadowOffset: { width: 0, height: 0 },
-          shadowOpacity: 0.5,
-          shadowRadius: 20,
-          elevation: 10,
+          shadowOpacity: 0.12,
+          shadowRadius: 6,
+          elevation: 3,
           borderRadius: 16
         },
         style
       ]}
     >
       <LinearGradient
-        colors={["#7c5cff", "#3b82f6"]}
+        colors={["#6b4423", "#8b6f47"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={{ borderRadius: 16, padding: 1 }}

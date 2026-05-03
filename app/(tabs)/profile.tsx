@@ -19,7 +19,7 @@ function Initials({ name }: { name: string }) {
   return (
     <View
       className="rounded-full items-center justify-center"
-      style={{ width: 80, height: 80, backgroundColor: "#7c5cff" }}
+      style={{ width: 80, height: 80, backgroundColor: "#6b4423" }}
     >
       <Text className="text-white text-2xl font-bold">{initials || "?"}</Text>
     </View>

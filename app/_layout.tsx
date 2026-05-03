@@ -172,7 +172,7 @@ export default function RootLayout() {
   if (!ready) {
     return (
       <View className="flex-1 items-center justify-center bg-space-deep">
-        <ActivityIndicator color="#7c5cff" />
+        <ActivityIndicator color="#6b4423" />
       </View>
     );
   }
@@ -189,7 +189,7 @@ export default function RootLayout() {
           <Stack
             screenOptions={{
               headerShown: false,
-              contentStyle: { backgroundColor: "#000" },
+              contentStyle: { backgroundColor: "#fdf6e3" },
               animation: "slide_from_right"
             }}
           >

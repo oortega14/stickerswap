@@ -54,7 +54,7 @@ export function AnimatedStickerCell({
         style={{
           backgroundColor: collected ? colors.purple : colors.dark,
           borderWidth: collected ? 0 : 1,
-          borderColor: "rgba(124,92,255,0.25)",
+          borderColor: collected ? "rgba(0,0,0,0.12)" : "rgba(0,0,0,0.18)",
           borderStyle: collected ? "solid" : "dashed"
         }}
       >
@@ -67,7 +67,7 @@ export function AnimatedStickerCell({
         {s.count > 1 && (
           <View
             className="absolute -bottom-1 -right-1 rounded-full items-center justify-center"
-            style={{ width: 18, height: 18, backgroundColor: colors.blue }}
+            style={{ width: 18, height: 18, backgroundColor: colors.ink }}
           >
             <Text className="text-white font-bold" style={{ fontSize: 10 }}>
               {s.count}

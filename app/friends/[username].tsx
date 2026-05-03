@@ -56,7 +56,7 @@ export default function FriendDetail() {
         </Text>
 
         {loading ? (
-          <ActivityIndicator color="#7c5cff" />
+          <ActivityIndicator color="#6b4423" />
         ) : match ? (
           <>
             <GlowCard className="mb-3">

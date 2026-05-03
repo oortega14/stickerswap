@@ -176,7 +176,7 @@ Usa SecureStore con chunking (las JWT pesan >2KB, sobre el límite de iOS). El a
 
 - El generator `scripts/gen-stickers.js` es la fuente de verdad para el dataset. Editar ahí, no `assets/stickers.json` directamente — se sobrescribe.
 - `src/theme/teamColors.ts` mapea ~60 códigos FIFA a colores de bandera. Para agregar uno nuevo, seguir el mismo formato `{ primary, accent, text }`.
-- La app es dark-only (`userInterfaceStyle: "dark"`). No hay modo claro y no se planea.
+- La app usa un tema cream/coffee con barras de progreso dinámicas (rojo→ámbar→verde). Hay infraestructura para tema oscuro vía `ThemeProvider`/`useTheme` (F2 sumará el toggle + persistencia + paleta dark).
 
 ## Personal Team y signing
 

@@ -40,7 +40,7 @@ export function ProgressBar({
             <Stop offset="1" stopColor={to} />
           </LinearGradient>
         </Defs>
-        <Rect width="100%" height={height} rx={height / 2} fill="#0f0d24" />
+        <Rect width="100%" height={height} rx={height / 2} fill="rgba(0,0,0,0.10)" />
         <ARect
           animatedProps={props}
           height={height}

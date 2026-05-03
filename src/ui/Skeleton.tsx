@@ -18,7 +18,7 @@ export function Skeleton({ style }: { style?: ViewStyle }) {
   return (
     <Animated.View
       style={[
-        { backgroundColor: "#1c1648", borderRadius: 8 },
+        { backgroundColor: "rgba(0,0,0,0.06)", borderRadius: 8 },
         anim,
         style
       ]}

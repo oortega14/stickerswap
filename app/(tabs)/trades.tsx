@@ -63,7 +63,7 @@ export default function Trades() {
                 <Switch
                   value={groupBySection}
                   onValueChange={setGroupBySection}
-                  trackColor={{ false: "#1c1648", true: "#7c5cff" }}
+                  trackColor={{ false: "rgba(0,0,0,0.15)", true: "#6b4423" }}
                 />
               </View>
             </GlowCard>
