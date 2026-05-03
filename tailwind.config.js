@@ -10,16 +10,16 @@ module.exports = {
       colors: {
         space: {
           black: "#000000",
-          deep: "#0a0820",
-          dark: "#16142e",
-          mid: "#1c1648",
-          purple: "#7c5cff",
-          violet: "#a78bfa",
-          blue: "#3b82f6",
-          sky: "#60a5fa",
-          ink: "#e8e6ff",
-          mute: "#a59cdf",
-          dim: "#8b86c4"
+          deep: "#fdf6e3",
+          dark: "#fffaf0",
+          mid: "#f5e8c8",
+          purple: "#6b4423",
+          violet: "#8b6f47",
+          blue: "#dc2626",
+          sky: "#16a34a",
+          ink: "#3a2e1a",
+          mute: "#8b6f47",
+          dim: "#a89472"
         }
       },
       fontFamily: {

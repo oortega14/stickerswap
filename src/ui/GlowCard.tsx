@@ -5,14 +5,14 @@ export function GlowCard({ children, className, style, ...rest }: ViewProps & { 
   return (
     <View
       {...rest}
-      className={`rounded-xl border border-space-purple/30 bg-space-dark/70 p-4 ${className ?? ""}`}
+      className={`rounded-xl border border-space-purple/15 bg-space-dark p-4 ${className ?? ""}`}
       style={[
         {
-          shadowColor: "#7c5cff",
-          shadowOffset: { width: 0, height: 0 },
-          shadowOpacity: 0.25,
-          shadowRadius: 12,
-          elevation: 6
+          shadowColor: "#3a2e1a",
+          shadowOffset: { width: 0, height: 1 },
+          shadowOpacity: 0.06,
+          shadowRadius: 4,
+          elevation: 2
         },
         style
       ]}

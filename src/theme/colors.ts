@@ -1,15 +1,19 @@
+// Paleta legacy. Las claves se conservan para no romper consumidores
+// (`colors.dim`, `colors.purple`, etc.), pero los valores se remapearon
+// a la paleta cream/coffee del nuevo theme. Los nombres son misnombres
+// post-cream — la limpieza completa es trabajo de seguimiento.
 export const colors = {
   black: "#000000",
-  deep: "#0a0820",
-  dark: "#16142e",
-  mid: "#1c1648",
-  purple: "#7c5cff",
-  violet: "#a78bfa",
-  blue: "#3b82f6",
-  sky: "#60a5fa",
-  ink: "#e8e6ff",
-  mute: "#a59cdf",
-  dim: "#8b86c4"
+  deep: "#fdf6e3",     // bg crema (era space deep)
+  dark: "#fffaf0",     // card off-white (era space dark)
+  mid: "#f5e8c8",      // tan suave (era space mid)
+  purple: "#6b4423",   // accent café oscuro (era purple)
+  violet: "#8b6f47",   // café medio (era violet)
+  blue: "#dc2626",     // rojo progress (era blue) — usado en algunos hilos visuales
+  sky: "#16a34a",      // verde progress (era sky)
+  ink: "#3a2e1a",      // texto principal (era ink)
+  mute: "#8b6f47",     // texto mute = café medio (era mute)
+  dim: "#a89472"       // texto dim = sand (era dim)
 } as const;
 
 export type ColorKey = keyof typeof colors;
