@@ -10,6 +10,7 @@ import { SegmentedControl } from "@/ui/SegmentedControl";
 import { useMyList } from "@/hooks/useMyList";
 import { useMatches } from "@/hooks/useMatches";
 import { useTradePrefs } from "@/store/tradePreferences";
+import { useTheme } from "@/theme/ThemeProvider";
 
 type Tab = "matches" | "mine";
 
@@ -17,6 +18,7 @@ export default function Trades() {
   const [tab, setTab] = useState<Tab>("mine");
   const { data, text, isLoading } = useMyList();
   const { groupBySection, setGroupBySection } = useTradePrefs();
+  const { theme } = useTheme();
 
   const onShare = async () => {
     if (!text) return;
@@ -63,7 +65,8 @@ export default function Trades() {
                 <Switch
                   value={groupBySection}
                   onValueChange={setGroupBySection}
-                  trackColor={{ false: "rgba(0,0,0,0.15)", true: "#6b4423" }}
+                  trackColor={{ false: theme.border, true: theme.accent }}
+                  thumbColor={theme.card}
                 />
               </View>
             </GlowCard>

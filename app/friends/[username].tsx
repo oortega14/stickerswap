@@ -8,9 +8,11 @@ import { useFriends } from "@/hooks/useFriends";
 import { listStatuses } from "@/data/stickerStatus";
 import { buildBidirectional } from "@/domain/friendMatchBuilder";
 import type { BidirectionalMatch, StickerStatus } from "@/domain/types";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export default function FriendDetail() {
   const { username } = useLocalSearchParams<{ username: string }>();
+  const { theme } = useTheme();
   const { data: friends } = useFriends();
   const friend = friends?.find((f) => f.username === username);
   const [match, setMatch] = useState<BidirectionalMatch | null>(null);
@@ -56,7 +58,7 @@ export default function FriendDetail() {
         </Text>
 
         {loading ? (
-          <ActivityIndicator color="#6b4423" />
+          <ActivityIndicator color={theme.accent} />
         ) : match ? (
           <>
             <GlowCard className="mb-3">

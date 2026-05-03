@@ -7,8 +7,10 @@ import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useSession } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
+import { useTheme } from "@/theme/ThemeProvider";
 
 function Initials({ name }: { name: string }) {
+  const { theme } = useTheme();
   const initials = name
     .split(/\s+/)
     .filter(Boolean)
@@ -19,7 +21,7 @@ function Initials({ name }: { name: string }) {
   return (
     <View
       className="rounded-full items-center justify-center"
-      style={{ width: 80, height: 80, backgroundColor: "#6b4423" }}
+      style={{ width: 80, height: 80, backgroundColor: theme.accent }}
     >
       <Text className="text-white text-2xl font-bold">{initials || "?"}</Text>
     </View>

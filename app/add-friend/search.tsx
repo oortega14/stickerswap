@@ -6,9 +6,11 @@ import { GlowCard } from "@/ui/GlowCard";
 import { useFindUser } from "@/hooks/useFindUser";
 import { requestFriendByUsername } from "@/social/friendships";
 import { colors } from "@/theme/colors";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export default function SearchFriend() {
   const router = useRouter();
+  const { theme } = useTheme();
   const [q, setQ] = useState("");
   const find = useFindUser();
   const [result, setResult] = useState<typeof find.data>(undefined);
@@ -62,7 +64,7 @@ export default function SearchFriend() {
         </GlowCard>
 
         {find.isPending ? (
-          <ActivityIndicator color="#6b4423" />
+          <ActivityIndicator color={theme.accent} />
         ) : result ? (
           <GlowCard>
             <Text className="text-space-ink text-base font-bold">

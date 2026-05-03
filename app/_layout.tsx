@@ -8,7 +8,7 @@ import { StatusBar } from "expo-status-bar";
 import NetInfo from "@react-native-community/netinfo";
 import { initSchema } from "@/data/schema";
 import { seedStickers, type StickerDataset } from "@/data/seed";
-import { ThemeProvider } from "@/theme/ThemeProvider";
+import { ThemeProvider, useTheme } from "@/theme/ThemeProvider";
 import { SessionProvider, useSession } from "@/auth/useSession";
 import { drainQueue, pullRemoteStatus } from "@/sync/worker";
 import { subscribeToFriendUpdates, unsubscribe } from "@/social/realtime";
@@ -21,6 +21,32 @@ const queryClient = new QueryClient({
     queries: { staleTime: 5_000, retry: false, refetchOnWindowFocus: false }
   }
 });
+
+function ThemedLoader() {
+  const { theme } = useTheme();
+  return <ActivityIndicator color={theme.accent} />;
+}
+
+function ThemedStack() {
+  const { theme } = useTheme();
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: theme.bg },
+        animation: "slide_from_right"
+      }}
+    >
+      <Stack.Screen name="(auth)" />
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="onboarding" />
+      <Stack.Screen name="sticker/[code]" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
+      <Stack.Screen name="team/[code]" options={{ animation: "slide_from_right" }} />
+      <Stack.Screen name="profile/edit" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
+      <Stack.Screen name="about" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
+    </Stack>
+  );
+}
 
 function SyncEngine() {
   const { user } = useSession();
@@ -171,9 +197,13 @@ export default function RootLayout() {
 
   if (!ready) {
     return (
-      <View className="flex-1 items-center justify-center bg-space-deep">
-        <ActivityIndicator color="#6b4423" />
-      </View>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <ThemeProvider>
+          <View className="flex-1 items-center justify-center bg-space-deep">
+            <ThemedLoader />
+          </View>
+        </ThemeProvider>
+      </GestureHandlerRootView>
     );
   }
 
@@ -186,21 +216,7 @@ export default function RootLayout() {
         <FriendUpdatesBridge />
         <StatusBar style="dark" />
         <AuthGate>
-          <Stack
-            screenOptions={{
-              headerShown: false,
-              contentStyle: { backgroundColor: "#fdf6e3" },
-              animation: "slide_from_right"
-            }}
-          >
-            <Stack.Screen name="(auth)" />
-            <Stack.Screen name="(tabs)" />
-            <Stack.Screen name="onboarding" />
-            <Stack.Screen name="sticker/[code]" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
-            <Stack.Screen name="team/[code]" options={{ animation: "slide_from_right" }} />
-            <Stack.Screen name="profile/edit" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
-            <Stack.Screen name="about" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
-          </Stack>
+          <ThemedStack />
         </AuthGate>
       </QueryClientProvider>
       </ThemeProvider>
