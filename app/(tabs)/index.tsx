@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { View, Text, TextInput, Pressable } from "react-native";
 import Animated, { useSharedValue, useAnimatedScrollHandler } from "react-native-reanimated";
 import { useRouter } from "expo-router";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { Skeleton } from "@/ui/Skeleton";
@@ -42,7 +42,7 @@ export default function Home() {
   }, [data, query, sort]);
 
   return (
-    <StarryBackground parallaxScrollY={scrollY}>
+    <ThemedBackground>
       <Animated.ScrollView
         onScroll={onScroll}
         scrollEventThrottle={16}
@@ -116,7 +116,7 @@ export default function Home() {
           </>
         )}
       </Animated.ScrollView>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }
 

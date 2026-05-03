@@ -1,6 +1,6 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { View, Text, Pressable } from "react-native";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowGradientCard } from "@/ui/GlowGradientCard";
 import { markOnboardingSeen } from "@/lib/onboarding";
 
@@ -40,7 +40,7 @@ export default function OnboardingStep() {
   };
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 px-6 justify-center">
         <Text className="text-space-violet text-xs tracking-widest mb-2">
           {step}/3
@@ -58,6 +58,6 @@ export default function OnboardingStep() {
           </Pressable>
         </GlowGradientCard>
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

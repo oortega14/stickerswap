@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ScrollView, View, Text, Pressable, Switch, Share } from "react-native";
 import { useRouter } from "expo-router";
 import { haptics } from "@/lib/haptics";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { GlowGradientCard } from "@/ui/GlowGradientCard";
 import { EmptyState } from "@/ui/EmptyState";
@@ -25,7 +25,7 @@ export default function Trades() {
   };
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">CAMBIOS</Text>
 
@@ -89,7 +89,7 @@ export default function Trades() {
           </>
         )}
       </ScrollView>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }
 

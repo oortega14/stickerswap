@@ -3,7 +3,7 @@ import { useRouter } from "expo-router";
 import * as Clipboard from "expo-clipboard";
 import { haptics } from "@/lib/haptics";
 import QRCode from "react-native-qrcode-svg";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useSession } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
@@ -39,7 +39,7 @@ export default function Profile() {
   };
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">PERFIL</Text>
 
@@ -159,6 +159,6 @@ export default function Profile() {
           <Text className="text-red-400 font-semibold">Borrar cuenta</Text>
         </Pressable>
       </ScrollView>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

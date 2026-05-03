@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, Text, Pressable, Alert, ActivityIndicator } from "react-native";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { signInWithGoogle, isCancelError } from "@/auth/google";
 
@@ -21,7 +21,7 @@ export default function SignIn() {
   };
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 items-center justify-center px-6">
         <Text className="text-space-violet font-bold text-3xl mb-2">🪐 Panini</Text>
         <Text className="text-space-mute text-center mb-10">
@@ -48,6 +48,6 @@ export default function SignIn() {
           Al continuar aceptás los términos y la política de privacidad.
         </Text>
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

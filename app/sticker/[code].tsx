@@ -1,6 +1,6 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { View, Text, Pressable } from "react-native";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useStickerDetail, useIncrement, useDecrement } from "@/hooks/useStickers";
 
@@ -13,16 +13,16 @@ export default function StickerDetail() {
 
   if (isLoading || !data) {
     return (
-      <StarryBackground>
+      <ThemedBackground>
         <View className="flex-1 items-center justify-center">
           <Text className="text-space-mute">Cargando…</Text>
         </View>
-      </StarryBackground>
+      </ThemedBackground>
     );
   }
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 p-6 justify-center">
         <GlowCard>
           <Text className="text-space-mute text-xs tracking-wider mb-1">#{data.number}</Text>
@@ -62,6 +62,6 @@ export default function StickerDetail() {
           <Text className="text-space-mute">Cerrar</Text>
         </Pressable>
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

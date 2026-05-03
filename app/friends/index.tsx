@@ -1,6 +1,6 @@
 import { FlatList, View, Text, Pressable } from "react-native";
 import { useRouter } from "expo-router";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { EmptyState } from "@/ui/EmptyState";
 import { useFriends } from "@/hooks/useFriends";
@@ -13,7 +13,7 @@ export default function FriendsList() {
   const matchMap = new Map(summary.map((s) => [s.friendId, s.matchCount]));
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 px-4 pt-14">
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">AMIGOS</Text>
         <FlatList
@@ -46,6 +46,6 @@ export default function FriendsList() {
           }}
         />
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

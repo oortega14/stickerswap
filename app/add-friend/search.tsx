@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert } from "react-native";
 import { useRouter } from "expo-router";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useFindUser } from "@/hooks/useFindUser";
 import { requestFriendByUsername } from "@/social/friendships";
@@ -42,7 +42,7 @@ export default function SearchFriend() {
   };
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 px-4 pt-14">
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">
           BUSCAR AMIGO
@@ -82,6 +82,6 @@ export default function SearchFriend() {
           <Text className="text-space-mute text-center">No encontramos a nadie con ese username.</Text>
         ) : null}
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

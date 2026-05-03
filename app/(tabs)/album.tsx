@@ -3,7 +3,7 @@ import { View, Text, Pressable, TextInput } from "react-native";
 import { FlashList } from "@shopify/flash-list";
 import { useRouter } from "expo-router";
 import { haptics } from "@/lib/haptics";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { FilterChip } from "@/ui/FilterChip";
 import { AnimatedStickerCell } from "@/ui/AnimatedStickerCell";
 import { SkeletonAlbumGrid } from "@/ui/SkeletonAlbumGrid";
@@ -23,7 +23,7 @@ export default function AlbumScreen() {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 px-3 pt-14">
         <View className="flex-row items-center justify-between mb-3">
           <Text className="text-space-violet font-bold tracking-widest text-sm">
@@ -83,6 +83,6 @@ export default function AlbumScreen() {
           />
         )}
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

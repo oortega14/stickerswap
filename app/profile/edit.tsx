@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert } from "react-native";
 import { useRouter } from "expo-router";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useSession } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
@@ -34,7 +34,7 @@ export default function EditProfile() {
   };
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 px-4 pt-14">
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">EDITAR</Text>
         <GlowCard className="mb-4">
@@ -71,6 +71,6 @@ export default function EditProfile() {
           <Text className="text-space-mute">Cancelar</Text>
         </Pressable>
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

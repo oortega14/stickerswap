@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, Keyboard } from "react-native";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { isValidUsername, isUsernameTaken } from "@/auth/username";
 import { useSession, useSessionStore } from "@/auth/useSession";
@@ -70,7 +70,7 @@ export default function Onboarding() {
       : " ";
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <View className="flex-1 px-6 pt-24">
         <Text className="text-space-violet font-bold text-2xl mb-1">Elegí tu username</Text>
         <Text className="text-space-mute mb-6">Así te encuentran tus amigos para cambios.</Text>
@@ -104,6 +104,6 @@ export default function Onboarding() {
           )}
         </Pressable>
       </View>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

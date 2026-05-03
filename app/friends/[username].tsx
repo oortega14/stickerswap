@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ScrollView, View, Text, ActivityIndicator } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { supabase } from "@/auth/supabaseClient";
 import { useFriends } from "@/hooks/useFriends";
@@ -37,16 +37,16 @@ export default function FriendDetail() {
 
   if (!friend) {
     return (
-      <StarryBackground>
+      <ThemedBackground>
         <View className="flex-1 items-center justify-center">
           <Text className="text-space-mute">Amigo no encontrado.</Text>
         </View>
-      </StarryBackground>
+      </ThemedBackground>
     );
   }
 
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-2">
           @{friend.username}
@@ -83,6 +83,6 @@ export default function FriendDetail() {
           </>
         ) : null}
       </ScrollView>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }

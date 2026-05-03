@@ -1,6 +1,6 @@
 import { ScrollView, View, Text, Pressable, Linking } from "react-native";
 import { useRouter } from "expo-router";
-import { StarryBackground } from "@/ui/StarryBackground";
+import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { APP_VERSION, BUILD_NUMBER } from "@/lib/version";
 
@@ -10,7 +10,7 @@ const TERMS_URL = "https://example.com/panini/terms";
 export default function About() {
   const router = useRouter();
   return (
-    <StarryBackground>
+    <ThemedBackground>
       <ScrollView className="flex-1 px-4 pt-14">
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">
           ACERCA DE
@@ -41,6 +41,6 @@ export default function About() {
           <Text className="text-space-mute">Cerrar</Text>
         </Pressable>
       </ScrollView>
-    </StarryBackground>
+    </ThemedBackground>
   );
 }
