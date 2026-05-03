@@ -40,6 +40,19 @@ export async function getStickersWithStatus(filter: {
   );
 }
 
+export async function getStickersByTeam(teamCode: string): Promise<StickerWithStatus[]> {
+  const db = getDb();
+  return db.getAllAsync<StickerWithStatus>(
+    `SELECT s.code, s.number, s.name, s.team, s.section, s.type,
+            COALESCE(ss.count, 0) AS count
+     FROM stickers s
+     LEFT JOIN sticker_status ss ON ss.sticker_code = s.code
+     WHERE s.team = ?
+     ORDER BY s.number`,
+    [teamCode]
+  );
+}
+
 export async function getStickerByCode(code: string): Promise<StickerWithStatus | null> {
   const db = getDb();
   return db.getFirstAsync<StickerWithStatus>(
