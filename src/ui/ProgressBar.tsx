@@ -9,7 +9,17 @@ import Svg, { Defs, LinearGradient, Stop, Rect } from "react-native-svg";
 
 const ARect = Animated.createAnimatedComponent(Rect);
 
-export function ProgressBar({ pct, height = 8 }: { pct: number; height?: number }) {
+export function ProgressBar({
+  pct,
+  height = 8,
+  from = "#7c5cff",
+  to = "#3b82f6"
+}: {
+  pct: number;
+  height?: number;
+  from?: string;
+  to?: string;
+}) {
   const clamped = Math.max(0, Math.min(1, pct));
   const w = useSharedValue(clamped);
 
@@ -26,8 +36,8 @@ export function ProgressBar({ pct, height = 8 }: { pct: number; height?: number 
       <Svg width="100%" height={height}>
         <Defs>
           <LinearGradient id="pb" x1="0" y1="0" x2="1" y2="0">
-            <Stop offset="0" stopColor="#7c5cff" />
-            <Stop offset="1" stopColor="#3b82f6" />
+            <Stop offset="0" stopColor={from} />
+            <Stop offset="1" stopColor={to} />
           </LinearGradient>
         </Defs>
         <Rect width="100%" height={height} rx={height / 2} fill="#0f0d24" />
