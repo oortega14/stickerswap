@@ -8,6 +8,7 @@ import { StatusBar } from "expo-status-bar";
 import NetInfo from "@react-native-community/netinfo";
 import { initSchema } from "@/data/schema";
 import { seedStickers, type StickerDataset } from "@/data/seed";
+import { ThemeProvider } from "@/theme/ThemeProvider";
 import { SessionProvider, useSession } from "@/auth/useSession";
 import { drainQueue, pullRemoteStatus } from "@/sync/worker";
 import { subscribeToFriendUpdates, unsubscribe } from "@/social/realtime";
@@ -178,11 +179,12 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider>
       <QueryClientProvider client={queryClient}>
         <SessionProvider />
         <SyncEngine />
         <FriendUpdatesBridge />
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
         <AuthGate>
           <Stack
             screenOptions={{
@@ -201,6 +203,7 @@ export default function RootLayout() {
           </Stack>
         </AuthGate>
       </QueryClientProvider>
+      </ThemeProvider>
     </GestureHandlerRootView>
   );
 }
