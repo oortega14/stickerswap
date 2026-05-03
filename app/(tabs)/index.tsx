@@ -10,6 +10,8 @@ import { SegmentedControl } from "@/ui/SegmentedControl";
 import { useProgress } from "@/hooks/useProgress";
 import { usePendingCount } from "@/hooks/usePendingCount";
 import { colors } from "@/theme/colors";
+import { progressColor } from "@/theme/progress";
+import { useTheme } from "@/theme/ThemeProvider";
 import type { SectionProgress } from "@/domain/types";
 
 type Sort = "alpha" | "most" | "least";
@@ -17,6 +19,7 @@ type Sort = "alpha" | "most" | "least";
 export default function Home() {
   const { data, isLoading } = useProgress();
   const { data: pending } = usePendingCount();
+  const { theme } = useTheme();
   const router = useRouter();
   const scrollY = useSharedValue(0);
   const onScroll = useAnimatedScrollHandler({
@@ -69,7 +72,11 @@ export default function Home() {
               <Text className="text-space-ink text-3xl font-extrabold mb-2">
                 {data.collected} / {data.total}
               </Text>
-              <ProgressBar pct={data.pct} />
+              <ProgressBar
+                pct={data.pct}
+                from={progressColor(data.pct, theme)}
+                to={progressColor(data.pct, theme)}
+              />
               <Text className="text-space-mute text-xs mt-2">
                 {data.duplicates > 0 ? `${data.duplicates} repetidas` : "Sin repetidas"}
               </Text>
@@ -121,6 +128,7 @@ export default function Home() {
 }
 
 function SectionRow({ s, onPress }: { s: SectionProgress; onPress: () => void }) {
+  const { theme } = useTheme();
   const interactive = !!s.teamCode;
   const Wrapper = interactive ? Pressable : View;
   return (
@@ -137,7 +145,12 @@ function SectionRow({ s, onPress }: { s: SectionProgress; onPress: () => void })
             {interactive ? " ›" : ""}
           </Text>
         </View>
-        <ProgressBar pct={s.pct} height={4} />
+        <ProgressBar
+          pct={s.pct}
+          height={4}
+          from={progressColor(s.pct, theme)}
+          to={progressColor(s.pct, theme)}
+        />
       </GlowCard>
     </Wrapper>
   );
