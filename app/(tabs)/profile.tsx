@@ -1,4 +1,4 @@
-import { ScrollView, View, Text, Pressable, Image, Alert } from "react-native";
+import { ScrollView, View, Text, Pressable, Image, Alert, Switch } from "react-native";
 import { useRouter } from "expo-router";
 import * as Clipboard from "expo-clipboard";
 import { haptics } from "@/lib/haptics";
@@ -31,6 +31,7 @@ function Initials({ name }: { name: string }) {
 export default function Profile() {
   const router = useRouter();
   const { user } = useSession();
+  const { theme, mode, setMode } = useTheme();
 
   if (!user) return null;
 
@@ -72,6 +73,23 @@ export default function Profile() {
             <Text className="text-space-violet text-xs">Copiar código</Text>
           </Pressable>
         </GlowCard>
+
+        <View className="mb-4">
+          <Text className="text-space-mute text-xs tracking-widest mb-2">APARIENCIA</Text>
+          <View
+            className="rounded-xl bg-space-dark px-4 py-3 flex-row items-center justify-between"
+            style={{ borderWidth: 1, borderColor: theme.border }}
+          >
+            <Text className="text-space-ink text-base">Tema oscuro</Text>
+            <Switch
+              value={mode === "dark"}
+              onValueChange={(v) => setMode(v ? "dark" : "light")}
+              trackColor={{ false: theme.border, true: theme.accent }}
+              thumbColor={theme.card}
+              accessibilityLabel="Tema oscuro"
+            />
+          </View>
+        </View>
 
         <Pressable
           onPress={() => router.push("/add-friend/scan" as never)}
