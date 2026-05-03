@@ -13,7 +13,10 @@ export function computeProgress(
 
   let collected = 0;
   let duplicates = 0;
-  const sectionTotals = new Map<string, { total: number; collected: number }>();
+  const sectionTotals = new Map<
+    string,
+    { total: number; collected: number; teamCode: string | null }
+  >();
 
   for (const s of stickers) {
     const count = statusMap.get(s.code) ?? 0;
@@ -21,10 +24,21 @@ export function computeProgress(
     if (has) collected += 1;
     if (count > 1) duplicates += count - 1;
 
-    const acc = sectionTotals.get(s.section) ?? { total: 0, collected: 0 };
-    acc.total += 1;
-    acc.collected += has;
-    sectionTotals.set(s.section, acc);
+    const existing = sectionTotals.get(s.section);
+    if (existing) {
+      existing.total += 1;
+      existing.collected += has;
+      // Si algún sticker tiene team null, la sección no se asocia a un equipo.
+      if (existing.teamCode !== null && s.team === null) {
+        existing.teamCode = null;
+      }
+    } else {
+      sectionTotals.set(s.section, {
+        total: 1,
+        collected: has,
+        teamCode: s.team ?? null
+      });
+    }
   }
 
   const bySection: SectionProgress[] = Array.from(sectionTotals.entries())
@@ -32,7 +46,8 @@ export function computeProgress(
       section,
       total: v.total,
       collected: v.collected,
-      pct: v.total === 0 ? 0 : v.collected / v.total
+      pct: v.total === 0 ? 0 : v.collected / v.total,
+      teamCode: v.teamCode
     }))
     .sort((a, b) => a.section.localeCompare(b.section));
 

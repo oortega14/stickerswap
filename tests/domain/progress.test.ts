@@ -32,7 +32,19 @@ describe("computeProgress", () => {
     ]);
     const argentina = r.bySection.find((s) => s.section === "Argentina");
     const francia = r.bySection.find((s) => s.section === "Francia");
-    expect(argentina).toEqual({ section: "Argentina", total: 2, collected: 1, pct: 0.5 });
-    expect(francia).toEqual({ section: "Francia", total: 1, collected: 0, pct: 0 });
+    expect(argentina).toEqual({
+      section: "Argentina",
+      total: 2,
+      collected: 1,
+      pct: 0.5,
+      teamCode: "ARG"
+    });
+    expect(francia).toEqual({
+      section: "Francia",
+      total: 1,
+      collected: 0,
+      pct: 0,
+      teamCode: "FRA"
+    });
   });
 });
