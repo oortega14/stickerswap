@@ -48,6 +48,11 @@ function ThemedStack() {
   );
 }
 
+function ThemedStatusBar() {
+  const { mode } = useTheme();
+  return <StatusBar style={mode === "dark" ? "light" : "dark"} />;
+}
+
 function SyncEngine() {
   const { user } = useSession();
 
@@ -214,7 +219,7 @@ export default function RootLayout() {
         <SessionProvider />
         <SyncEngine />
         <FriendUpdatesBridge />
-        <StatusBar style="dark" />
+        <ThemedStatusBar />
         <AuthGate>
           <ThemedStack />
         </AuthGate>
