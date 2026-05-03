@@ -5,10 +5,11 @@ import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useSession } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
-import { colors } from "@/theme/colors";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export default function EditProfile() {
   const router = useRouter();
+  const { theme } = useTheme();
   const { user } = useSession();
   const [name, setName] = useState(user?.display_name ?? "");
   const [saving, setSaving] = useState(false);
@@ -43,7 +44,7 @@ export default function EditProfile() {
             value={name}
             onChangeText={setName}
             placeholder="Tu nombre"
-            placeholderTextColor={colors.dim}
+            placeholderTextColor={theme.textMute}
             className="text-space-ink text-base bg-space-mid rounded-md px-3 py-2"
             maxLength={40}
           />

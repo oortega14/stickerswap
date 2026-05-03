@@ -5,11 +5,12 @@ import { GlowCard } from "@/ui/GlowCard";
 import { isValidUsername, isUsernameTaken } from "@/auth/username";
 import { useSession, useSessionStore } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
-import { colors } from "@/theme/colors";
+import { useTheme } from "@/theme/ThemeProvider";
 
 type CheckState = "idle" | "checking" | "valid" | "invalid" | "taken";
 
 export default function Onboarding() {
+  const { theme } = useTheme();
   const { user } = useSession();
   // Pre-llenamos con el username auto-generado (ej. `user_ec81`). El usuario
   // puede dejarlo o cambiarlo. La columna `onboarding_completed` en profiles
@@ -81,7 +82,7 @@ export default function Onboarding() {
             value={value}
             onChangeText={(s) => setValue(s.toLowerCase())}
             placeholder="oscar_panini"
-            placeholderTextColor={colors.dim}
+            placeholderTextColor={theme.textMute}
             autoCapitalize="none"
             autoCorrect={false}
             className="text-space-ink text-lg bg-space-mid rounded-md px-3 py-2"

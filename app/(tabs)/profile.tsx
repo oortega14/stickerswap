@@ -84,9 +84,11 @@ export default function Profile() {
             <Switch
               value={mode === "dark"}
               onValueChange={(v) => setMode(v ? "dark" : "light")}
-              trackColor={{ false: theme.border, true: theme.accent }}
+              trackColor={{ false: theme.textMute, true: theme.accent }}
               thumbColor={theme.card}
               accessibilityLabel="Tema oscuro"
+              accessibilityRole="switch"
+              accessibilityState={{ checked: mode === "dark" }}
             />
           </View>
         </View>

@@ -65,7 +65,7 @@ export default function Trades() {
                 <Switch
                   value={groupBySection}
                   onValueChange={setGroupBySection}
-                  trackColor={{ false: theme.border, true: theme.accent }}
+                  trackColor={{ false: theme.textMute, true: theme.accent }}
                   thumbColor={theme.card}
                 />
               </View>

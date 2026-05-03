@@ -5,7 +5,6 @@ import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useFindUser } from "@/hooks/useFindUser";
 import { requestFriendByUsername } from "@/social/friendships";
-import { colors } from "@/theme/colors";
 import { useTheme } from "@/theme/ThemeProvider";
 
 export default function SearchFriend() {
@@ -55,7 +54,7 @@ export default function SearchFriend() {
             value={q}
             onChangeText={setQ}
             placeholder="oscar_panini"
-            placeholderTextColor={colors.dim}
+            placeholderTextColor={theme.textMute}
             autoCapitalize="none"
             autoCorrect={false}
             className="text-space-ink text-base bg-space-mid rounded-md px-3 py-2"

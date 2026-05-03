@@ -10,12 +10,13 @@ import { SkeletonAlbumGrid } from "@/ui/SkeletonAlbumGrid";
 import { EmptyState } from "@/ui/EmptyState";
 import { useStickerList, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { useFilters } from "@/store/filters";
-import { colors } from "@/theme/colors";
+import { useTheme } from "@/theme/ThemeProvider";
 
 const COLUMNS = 4;
 
 export default function AlbumScreen() {
   const router = useRouter();
+  const { theme } = useTheme();
   const { query, mode, setQuery, setMode } = useFilters();
   const { data, isLoading } = useStickerList(query, mode);
   const inc = useIncrement();
@@ -44,7 +45,7 @@ export default function AlbumScreen() {
             value={query}
             onChangeText={setQuery}
             placeholder="Buscar por número, jugador o equipo"
-            placeholderTextColor={colors.dim}
+            placeholderTextColor={theme.textMute}
             className="bg-space-dark text-space-ink rounded-lg px-3 py-2 mb-3"
             autoCorrect={false}
           />

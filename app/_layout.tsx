@@ -192,38 +192,28 @@ export default function RootLayout() {
     })();
   }, []);
 
-  if (error) {
-    return (
-      <View className="flex-1 items-center justify-center bg-space-deep p-6">
-        <Text className="text-red-300 text-center">Error: {error}</Text>
-      </View>
-    );
-  }
-
-  if (!ready) {
-    return (
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <ThemeProvider>
-          <View className="flex-1 items-center justify-center bg-space-deep">
-            <ThemedLoader />
-          </View>
-        </ThemeProvider>
-      </GestureHandlerRootView>
-    );
-  }
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemeProvider>
-      <QueryClientProvider client={queryClient}>
-        <SessionProvider />
-        <SyncEngine />
-        <FriendUpdatesBridge />
-        <ThemedStatusBar />
-        <AuthGate>
-          <ThemedStack />
-        </AuthGate>
-      </QueryClientProvider>
+        {error ? (
+          <View className="flex-1 items-center justify-center bg-space-deep p-6">
+            <Text className="text-red-300 text-center">Error: {error}</Text>
+          </View>
+        ) : !ready ? (
+          <View className="flex-1 items-center justify-center bg-space-deep">
+            <ThemedLoader />
+          </View>
+        ) : (
+          <QueryClientProvider client={queryClient}>
+            <SessionProvider />
+            <SyncEngine />
+            <FriendUpdatesBridge />
+            <ThemedStatusBar />
+            <AuthGate>
+              <ThemedStack />
+            </AuthGate>
+          </QueryClientProvider>
+        )}
       </ThemeProvider>
     </GestureHandlerRootView>
   );

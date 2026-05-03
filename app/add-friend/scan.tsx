@@ -5,9 +5,11 @@ import { useRouter } from "expo-router";
 import { haptics } from "@/lib/haptics";
 import { useAddFriend } from "@/hooks/useAddFriend";
 import { isValidInviteCode, normalizeInviteCode } from "@/domain/inviteCode";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export default function ScanFriend() {
   const router = useRouter();
+  const { theme } = useTheme();
   const [permission, requestPermission] = useCameraPermissions();
   const [scanned, setScanned] = useState(false);
   const addFriend = useAddFriend();
@@ -42,7 +44,7 @@ export default function ScanFriend() {
   if (!permission) {
     return (
       <View className="flex-1 items-center justify-center bg-black">
-        <ActivityIndicator color="#7c5cff" />
+        <ActivityIndicator color={theme.accent} />
       </View>
     );
   }
@@ -77,7 +79,7 @@ export default function ScanFriend() {
           style={{
             width: 220,
             height: 220,
-            borderColor: "#7c5cff",
+            borderColor: theme.accent,
             borderWidth: 2,
             borderRadius: 24
           }}

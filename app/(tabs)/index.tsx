@@ -9,7 +9,6 @@ import { Skeleton } from "@/ui/Skeleton";
 import { SegmentedControl } from "@/ui/SegmentedControl";
 import { useProgress } from "@/hooks/useProgress";
 import { usePendingCount } from "@/hooks/usePendingCount";
-import { colors } from "@/theme/colors";
 import { progressColor } from "@/theme/progress";
 import { useTheme } from "@/theme/ThemeProvider";
 import type { SectionProgress } from "@/domain/types";
@@ -87,7 +86,7 @@ export default function Home() {
                 value={query}
                 onChangeText={setQuery}
                 placeholder="Buscar equipo o sección…"
-                placeholderTextColor={colors.dim}
+                placeholderTextColor={theme.textMute}
                 className="bg-space-dark text-space-ink rounded-lg px-3 py-2"
                 autoCorrect={false}
                 accessibilityLabel="Buscar equipo"
