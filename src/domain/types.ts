@@ -1,4 +1,4 @@
-export type StickerType = "player" | "team_badge" | "stadium" | "icon" | "special";
+export type StickerType = "player" | "team_badge" | "team_photo" | "stadium" | "icon" | "special";
 
 export interface Sticker {
   code: string;
