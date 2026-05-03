@@ -4415,7 +4415,7 @@
     {
       "code": "BEL-2",
       "number": 491,
-      "name": "Bélgica #1",
+      "name": "Thibaut Courtois",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4424,7 +4424,7 @@
     {
       "code": "BEL-3",
       "number": 492,
-      "name": "Bélgica #2",
+      "name": "Arthur Theate",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4433,7 +4433,7 @@
     {
       "code": "BEL-4",
       "number": 493,
-      "name": "Bélgica #3",
+      "name": "Timothy Castagne",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4442,7 +4442,7 @@
     {
       "code": "BEL-5",
       "number": 494,
-      "name": "Bélgica #4",
+      "name": "Zeno Debast",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4451,7 +4451,7 @@
     {
       "code": "BEL-6",
       "number": 495,
-      "name": "Bélgica #5",
+      "name": "Brandon Mechele",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4460,7 +4460,7 @@
     {
       "code": "BEL-7",
       "number": 496,
-      "name": "Bélgica #6",
+      "name": "Maxim De Cuyper",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4469,7 +4469,7 @@
     {
       "code": "BEL-8",
       "number": 497,
-      "name": "Bélgica #7",
+      "name": "Thomas Meunier",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4478,7 +4478,7 @@
     {
       "code": "BEL-9",
       "number": 498,
-      "name": "Bélgica #8",
+      "name": "Youri Tielemans",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4487,7 +4487,7 @@
     {
       "code": "BEL-10",
       "number": 499,
-      "name": "Bélgica #9",
+      "name": "Amadou Onana",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4496,7 +4496,7 @@
     {
       "code": "BEL-11",
       "number": 500,
-      "name": "Bélgica #10",
+      "name": "Nicolas Raskin",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4505,7 +4505,7 @@
     {
       "code": "BEL-12",
       "number": 501,
-      "name": "Bélgica #11",
+      "name": "Alexis Saelemaekers",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4523,7 +4523,7 @@
     {
       "code": "BEL-14",
       "number": 503,
-      "name": "Bélgica #12",
+      "name": "Hans Vanaken",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4532,7 +4532,7 @@
     {
       "code": "BEL-15",
       "number": 504,
-      "name": "Bélgica #13",
+      "name": "Kevin De Bruyne",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4541,7 +4541,7 @@
     {
       "code": "BEL-16",
       "number": 505,
-      "name": "Bélgica #14",
+      "name": "Jeremy Doku",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4550,7 +4550,7 @@
     {
       "code": "BEL-17",
       "number": 506,
-      "name": "Bélgica #15",
+      "name": "Charles De Ketelaere",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4559,7 +4559,7 @@
     {
       "code": "BEL-18",
       "number": 507,
-      "name": "Bélgica #16",
+      "name": "Leandro Trossard",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4568,7 +4568,7 @@
     {
       "code": "BEL-19",
       "number": 508,
-      "name": "Bélgica #17",
+      "name": "Lois Openda",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4577,7 +4577,7 @@
     {
       "code": "BEL-20",
       "number": 509,
-      "name": "Bélgica #18",
+      "name": "Romelu Lukaku",
       "team": "BEL",
       "section": "Bélgica",
       "type": "player",
@@ -4595,7 +4595,7 @@
     {
       "code": "EGY-2",
       "number": 511,
-      "name": "Egipto #1",
+      "name": "Mohamed El Shenawy",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4604,7 +4604,7 @@
     {
       "code": "EGY-3",
       "number": 512,
-      "name": "Egipto #2",
+      "name": "Mohamed Hany",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4613,7 +4613,7 @@
     {
       "code": "EGY-4",
       "number": 513,
-      "name": "Egipto #3",
+      "name": "Mohamed Hamdy",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4622,7 +4622,7 @@
     {
       "code": "EGY-5",
       "number": 514,
-      "name": "Egipto #4",
+      "name": "Yasser Ibrahim",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4631,7 +4631,7 @@
     {
       "code": "EGY-6",
       "number": 515,
-      "name": "Egipto #5",
+      "name": "Khaled Sobhi",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4640,7 +4640,7 @@
     {
       "code": "EGY-7",
       "number": 516,
-      "name": "Egipto #6",
+      "name": "Rami Rabia",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4649,7 +4649,7 @@
     {
       "code": "EGY-8",
       "number": 517,
-      "name": "Egipto #7",
+      "name": "Hossam Abdelmaguid",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4658,7 +4658,7 @@
     {
       "code": "EGY-9",
       "number": 518,
-      "name": "Egipto #8",
+      "name": "Ahmed Fatouh",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4667,7 +4667,7 @@
     {
       "code": "EGY-10",
       "number": 519,
-      "name": "Egipto #9",
+      "name": "Marwan Attia",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4676,7 +4676,7 @@
     {
       "code": "EGY-11",
       "number": 520,
-      "name": "Egipto #10",
+      "name": "Zizo",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4685,7 +4685,7 @@
     {
       "code": "EGY-12",
       "number": 521,
-      "name": "Egipto #11",
+      "name": "Hamdy Fathy",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4703,7 +4703,7 @@
     {
       "code": "EGY-14",
       "number": 523,
-      "name": "Egipto #12",
+      "name": "Mohanad Lasheen",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4712,7 +4712,7 @@
     {
       "code": "EGY-15",
       "number": 524,
-      "name": "Egipto #13",
+      "name": "Emam Ashour",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4721,7 +4721,7 @@
     {
       "code": "EGY-16",
       "number": 525,
-      "name": "Egipto #14",
+      "name": "Osama Faisal",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4730,7 +4730,7 @@
     {
       "code": "EGY-17",
       "number": 526,
-      "name": "Egipto #15",
+      "name": "Mohamed Salah",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4739,7 +4739,7 @@
     {
       "code": "EGY-18",
       "number": 527,
-      "name": "Egipto #16",
+      "name": "Mostafa Mohamed",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4748,7 +4748,7 @@
     {
       "code": "EGY-19",
       "number": 528,
-      "name": "Egipto #17",
+      "name": "Trezeguet",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4757,7 +4757,7 @@
     {
       "code": "EGY-20",
       "number": 529,
-      "name": "Egipto #18",
+      "name": "Omar Marmoush",
       "team": "EGY",
       "section": "Egipto",
       "type": "player",
@@ -4775,7 +4775,7 @@
     {
       "code": "IRN-2",
       "number": 531,
-      "name": "Irán #1",
+      "name": "Alireza Beiranvand",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4784,7 +4784,7 @@
     {
       "code": "IRN-3",
       "number": 532,
-      "name": "Irán #2",
+      "name": "Morteza Pouraliganji",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4793,7 +4793,7 @@
     {
       "code": "IRN-4",
       "number": 533,
-      "name": "Irán #3",
+      "name": "Ehsan Hajsafi",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4802,7 +4802,7 @@
     {
       "code": "IRN-5",
       "number": 534,
-      "name": "Irán #4",
+      "name": "Milad Mohammadi",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4811,7 +4811,7 @@
     {
       "code": "IRN-6",
       "number": 535,
-      "name": "Irán #5",
+      "name": "Shojae Khalilzadeh",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4820,7 +4820,7 @@
     {
       "code": "IRN-7",
       "number": 536,
-      "name": "Irán #6",
+      "name": "Ramin Rezaeian",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4829,7 +4829,7 @@
     {
       "code": "IRN-8",
       "number": 537,
-      "name": "Irán #7",
+      "name": "Hossein Kanaani",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4838,7 +4838,7 @@
     {
       "code": "IRN-9",
       "number": 538,
-      "name": "Irán #8",
+      "name": "Sadegh Moharrami",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4847,7 +4847,7 @@
     {
       "code": "IRN-10",
       "number": 539,
-      "name": "Irán #9",
+      "name": "Saleh Hardani",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4856,7 +4856,7 @@
     {
       "code": "IRN-11",
       "number": 540,
-      "name": "Irán #10",
+      "name": "Saeed Ezatolahi",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4865,7 +4865,7 @@
     {
       "code": "IRN-12",
       "number": 541,
-      "name": "Irán #11",
+      "name": "Saman Ghoddos",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4883,7 +4883,7 @@
     {
       "code": "IRN-14",
       "number": 543,
-      "name": "Irán #12",
+      "name": "Omid Noorafkan",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4892,7 +4892,7 @@
     {
       "code": "IRN-15",
       "number": 544,
-      "name": "Irán #13",
+      "name": "Roozbeh Cheshmi",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4901,7 +4901,7 @@
     {
       "code": "IRN-16",
       "number": 545,
-      "name": "Irán #14",
+      "name": "Mohammad Mohebi",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4910,7 +4910,7 @@
     {
       "code": "IRN-17",
       "number": 546,
-      "name": "Irán #15",
+      "name": "Sardar Azmoun",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4919,7 +4919,7 @@
     {
       "code": "IRN-18",
       "number": 547,
-      "name": "Irán #16",
+      "name": "Mehdi Taremi",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4928,7 +4928,7 @@
     {
       "code": "IRN-19",
       "number": 548,
-      "name": "Irán #17",
+      "name": "Alireza Jahanbakhsh",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4937,7 +4937,7 @@
     {
       "code": "IRN-20",
       "number": 549,
-      "name": "Irán #18",
+      "name": "Ali Gholizadeh",
       "team": "IRN",
       "section": "Irán",
       "type": "player",
@@ -4955,7 +4955,7 @@
     {
       "code": "NZL-2",
       "number": 551,
-      "name": "Nueva Zelanda #1",
+      "name": "Max Crocombe",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -4964,7 +4964,7 @@
     {
       "code": "NZL-3",
       "number": 552,
-      "name": "Nueva Zelanda #2",
+      "name": "Alex Paulsen",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -4973,7 +4973,7 @@
     {
       "code": "NZL-4",
       "number": 553,
-      "name": "Nueva Zelanda #3",
+      "name": "Michael Boxall",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -4982,7 +4982,7 @@
     {
       "code": "NZL-5",
       "number": 554,
-      "name": "Nueva Zelanda #4",
+      "name": "Liberato Cacace",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -4991,7 +4991,7 @@
     {
       "code": "NZL-6",
       "number": 555,
-      "name": "Nueva Zelanda #5",
+      "name": "Tim Payne",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5000,7 +5000,7 @@
     {
       "code": "NZL-7",
       "number": 556,
-      "name": "Nueva Zelanda #6",
+      "name": "Tyler Bindon",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5009,7 +5009,7 @@
     {
       "code": "NZL-8",
       "number": 557,
-      "name": "Nueva Zelanda #7",
+      "name": "Francis De Vries",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5018,7 +5018,7 @@
     {
       "code": "NZL-9",
       "number": 558,
-      "name": "Nueva Zelanda #8",
+      "name": "Finn Surman",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5027,7 +5027,7 @@
     {
       "code": "NZL-10",
       "number": 559,
-      "name": "Nueva Zelanda #9",
+      "name": "Jose Bell",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5036,7 +5036,7 @@
     {
       "code": "NZL-11",
       "number": 560,
-      "name": "Nueva Zelanda #10",
+      "name": "Sarpreet Singh",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5045,7 +5045,7 @@
     {
       "code": "NZL-12",
       "number": 561,
-      "name": "Nueva Zelanda #11",
+      "name": "Ryan Thomas",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5063,7 +5063,7 @@
     {
       "code": "NZL-14",
       "number": 563,
-      "name": "Nueva Zelanda #12",
+      "name": "Matthew Garbett",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5072,7 +5072,7 @@
     {
       "code": "NZL-15",
       "number": 564,
-      "name": "Nueva Zelanda #13",
+      "name": "Marko Stamenic",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5081,7 +5081,7 @@
     {
       "code": "NZL-16",
       "number": 565,
-      "name": "Nueva Zelanda #14",
+      "name": "Ben old",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5090,7 +5090,7 @@
     {
       "code": "NZL-17",
       "number": 566,
-      "name": "Nueva Zelanda #15",
+      "name": "Chris Wood",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5099,7 +5099,7 @@
     {
       "code": "NZL-18",
       "number": 567,
-      "name": "Nueva Zelanda #16",
+      "name": "Elijah Just",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5108,7 +5108,7 @@
     {
       "code": "NZL-19",
       "number": 568,
-      "name": "Nueva Zelanda #17",
+      "name": "Callum McCowatt",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5117,7 +5117,7 @@
     {
       "code": "NZL-20",
       "number": 569,
-      "name": "Nueva Zelanda #18",
+      "name": "Kosta Barbarouses",
       "team": "NZL",
       "section": "Nueva Zelanda",
       "type": "player",
@@ -5135,7 +5135,7 @@
     {
       "code": "ESP-2",
       "number": 571,
-      "name": "España #1",
+      "name": "Unai Simon",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5144,7 +5144,7 @@
     {
       "code": "ESP-3",
       "number": 572,
-      "name": "España #2",
+      "name": "Robin Le Normand",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5153,7 +5153,7 @@
     {
       "code": "ESP-4",
       "number": 573,
-      "name": "España #3",
+      "name": "Aymeric Laporte",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5162,7 +5162,7 @@
     {
       "code": "ESP-5",
       "number": 574,
-      "name": "España #4",
+      "name": "Dean Huijsen",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5171,7 +5171,7 @@
     {
       "code": "ESP-6",
       "number": 575,
-      "name": "España #5",
+      "name": "Pedro Porro",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5180,7 +5180,7 @@
     {
       "code": "ESP-7",
       "number": 576,
-      "name": "España #6",
+      "name": "Dani Carvajal",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5189,7 +5189,7 @@
     {
       "code": "ESP-8",
       "number": 577,
-      "name": "España #7",
+      "name": "Marc Cucurella",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5198,7 +5198,7 @@
     {
       "code": "ESP-9",
       "number": 578,
-      "name": "España #8",
+      "name": "Martin Zubimendi",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5207,7 +5207,7 @@
     {
       "code": "ESP-10",
       "number": 579,
-      "name": "España #9",
+      "name": "Rodri",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5216,7 +5216,7 @@
     {
       "code": "ESP-11",
       "number": 580,
-      "name": "España #10",
+      "name": "Pedri",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5225,7 +5225,7 @@
     {
       "code": "ESP-12",
       "number": 581,
-      "name": "España #11",
+      "name": "Fabian Ruiz",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5243,7 +5243,7 @@
     {
       "code": "ESP-14",
       "number": 583,
-      "name": "España #12",
+      "name": "Mikel Merino",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5252,7 +5252,7 @@
     {
       "code": "ESP-15",
       "number": 584,
-      "name": "España #13",
+      "name": "Lamine Yamal",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5261,7 +5261,7 @@
     {
       "code": "ESP-16",
       "number": 585,
-      "name": "España #14",
+      "name": "Dani Olmo",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5270,7 +5270,7 @@
     {
       "code": "ESP-17",
       "number": 586,
-      "name": "España #15",
+      "name": "Nico Williams",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5279,7 +5279,7 @@
     {
       "code": "ESP-18",
       "number": 587,
-      "name": "España #16",
+      "name": "Ferran Torres",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5288,7 +5288,7 @@
     {
       "code": "ESP-19",
       "number": 588,
-      "name": "España #17",
+      "name": "Alvaro Morata",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5297,7 +5297,7 @@
     {
       "code": "ESP-20",
       "number": 589,
-      "name": "España #18",
+      "name": "Mikel Oyarzabal",
       "team": "ESP",
       "section": "España",
       "type": "player",
@@ -5315,7 +5315,7 @@
     {
       "code": "CPV-2",
       "number": 591,
-      "name": "Cabo Verde #1",
+      "name": "Vozinha",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5324,7 +5324,7 @@
     {
       "code": "CPV-3",
       "number": 592,
-      "name": "Cabo Verde #2",
+      "name": "Logan Costa",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5333,7 +5333,7 @@
     {
       "code": "CPV-4",
       "number": 593,
-      "name": "Cabo Verde #3",
+      "name": "Pico",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5342,7 +5342,7 @@
     {
       "code": "CPV-5",
       "number": 594,
-      "name": "Cabo Verde #4",
+      "name": "Diney",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5351,7 +5351,7 @@
     {
       "code": "CPV-6",
       "number": 595,
-      "name": "Cabo Verde #5",
+      "name": "Steven Moreira",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5360,7 +5360,7 @@
     {
       "code": "CPV-7",
       "number": 596,
-      "name": "Cabo Verde #6",
+      "name": "Wagner Pina",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5369,7 +5369,7 @@
     {
       "code": "CPV-8",
       "number": 597,
-      "name": "Cabo Verde #7",
+      "name": "Joao Paulo",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5378,7 +5378,7 @@
     {
       "code": "CPV-9",
       "number": 598,
-      "name": "Cabo Verde #8",
+      "name": "Yannick Semedo",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5387,7 +5387,7 @@
     {
       "code": "CPV-10",
       "number": 599,
-      "name": "Cabo Verde #9",
+      "name": "Kevin Pina",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5396,7 +5396,7 @@
     {
       "code": "CPV-11",
       "number": 600,
-      "name": "Cabo Verde #10",
+      "name": "Patrick Andrade",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5405,7 +5405,7 @@
     {
       "code": "CPV-12",
       "number": 601,
-      "name": "Cabo Verde #11",
+      "name": "Jamiro Monteiro",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5423,7 +5423,7 @@
     {
       "code": "CPV-14",
       "number": 603,
-      "name": "Cabo Verde #12",
+      "name": "Deroy Duarte",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5432,7 +5432,7 @@
     {
       "code": "CPV-15",
       "number": 604,
-      "name": "Cabo Verde #13",
+      "name": "Garry Rodrigues",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5441,7 +5441,7 @@
     {
       "code": "CPV-16",
       "number": 605,
-      "name": "Cabo Verde #14",
+      "name": "Jovane Cabral",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5450,7 +5450,7 @@
     {
       "code": "CPV-17",
       "number": 606,
-      "name": "Cabo Verde #15",
+      "name": "Ryan Mendes",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5459,7 +5459,7 @@
     {
       "code": "CPV-18",
       "number": 607,
-      "name": "Cabo Verde #16",
+      "name": "Dailon Livramento",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5468,7 +5468,7 @@
     {
       "code": "CPV-19",
       "number": 608,
-      "name": "Cabo Verde #17",
+      "name": "Willy Semedo",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5477,7 +5477,7 @@
     {
       "code": "CPV-20",
       "number": 609,
-      "name": "Cabo Verde #18",
+      "name": "Bebe",
       "team": "CPV",
       "section": "Cabo Verde",
       "type": "player",
@@ -5495,7 +5495,7 @@
     {
       "code": "KSA-2",
       "number": 611,
-      "name": "Arabia Saudita #1",
+      "name": "Nawaf Al-Aqidi",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5504,7 +5504,7 @@
     {
       "code": "KSA-3",
       "number": 612,
-      "name": "Arabia Saudita #2",
+      "name": "Abdulrahman Al-Sanbi",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5513,7 +5513,7 @@
     {
       "code": "KSA-4",
       "number": 613,
-      "name": "Arabia Saudita #3",
+      "name": "Saud Abdulhamid",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5522,7 +5522,7 @@
     {
       "code": "KSA-5",
       "number": 614,
-      "name": "Arabia Saudita #4",
+      "name": "Nawaf Buwashl",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5531,7 +5531,7 @@
     {
       "code": "KSA-6",
       "number": 615,
-      "name": "Arabia Saudita #5",
+      "name": "Jehad Thikri",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5540,7 +5540,7 @@
     {
       "code": "KSA-7",
       "number": 616,
-      "name": "Arabia Saudita #6",
+      "name": "Moteb Al-Harbi",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5549,7 +5549,7 @@
     {
       "code": "KSA-8",
       "number": 617,
-      "name": "Arabia Saudita #7",
+      "name": "Hassan Al-Tambakti",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5558,7 +5558,7 @@
     {
       "code": "KSA-9",
       "number": 618,
-      "name": "Arabia Saudita #8",
+      "name": "Musab Al-Juwayr",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5567,7 +5567,7 @@
     {
       "code": "KSA-10",
       "number": 619,
-      "name": "Arabia Saudita #9",
+      "name": "Abdullah Alkhaibari",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5576,7 +5576,7 @@
     {
       "code": "KSA-11",
       "number": 620,
-      "name": "Arabia Saudita #10",
+      "name": "Nasser Al-Dawsari",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5585,7 +5585,7 @@
     {
       "code": "KSA-12",
       "number": 621,
-      "name": "Arabia Saudita #11",
+      "name": "Saleh Abu Al-Shamat",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5603,7 +5603,7 @@
     {
       "code": "KSA-14",
       "number": 623,
-      "name": "Arabia Saudita #12",
+      "name": "Marwan Al-Sahafi",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5612,7 +5612,7 @@
     {
       "code": "KSA-15",
       "number": 624,
-      "name": "Arabia Saudita #13",
+      "name": "Salem Al-Dawsari",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5621,7 +5621,7 @@
     {
       "code": "KSA-16",
       "number": 625,
-      "name": "Arabia Saudita #14",
+      "name": "Abdulrahman Alobud",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5630,7 +5630,7 @@
     {
       "code": "KSA-17",
       "number": 626,
-      "name": "Arabia Saudita #15",
+      "name": "Feras Al-Brikan",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5639,7 +5639,7 @@
     {
       "code": "KSA-18",
       "number": 627,
-      "name": "Arabia Saudita #16",
+      "name": "Saleh Al-Shehri",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5648,7 +5648,7 @@
     {
       "code": "KSA-19",
       "number": 628,
-      "name": "Arabia Saudita #17",
+      "name": "Abdullah Al-Hamdan",
       "team": "KSA",
       "section": "Arabia Saudita",
       "type": "player",
@@ -5675,7 +5675,7 @@
     {
       "code": "URU-2",
       "number": 631,
-      "name": "Uruguay #1",
+      "name": "Sergio Rochet",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5684,7 +5684,7 @@
     {
       "code": "URU-3",
       "number": 632,
-      "name": "Uruguay #2",
+      "name": "Santiago Mele",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5693,7 +5693,7 @@
     {
       "code": "URU-4",
       "number": 633,
-      "name": "Uruguay #3",
+      "name": "Ronald Araujo",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5702,7 +5702,7 @@
     {
       "code": "URU-5",
       "number": 634,
-      "name": "Uruguay #4",
+      "name": "Jose Maria Gimenez",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5711,7 +5711,7 @@
     {
       "code": "URU-6",
       "number": 635,
-      "name": "Uruguay #5",
+      "name": "Sebastian Caceres",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5720,7 +5720,7 @@
     {
       "code": "URU-7",
       "number": 636,
-      "name": "Uruguay #6",
+      "name": "Mathias Olivera",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5729,7 +5729,7 @@
     {
       "code": "URU-8",
       "number": 637,
-      "name": "Uruguay #7",
+      "name": "Guillermo Varela",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5738,7 +5738,7 @@
     {
       "code": "URU-9",
       "number": 638,
-      "name": "Uruguay #8",
+      "name": "Nahitan Nandez",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5747,7 +5747,7 @@
     {
       "code": "URU-10",
       "number": 639,
-      "name": "Uruguay #9",
+      "name": "Federico Valverde",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5756,7 +5756,7 @@
     {
       "code": "URU-11",
       "number": 640,
-      "name": "Uruguay #10",
+      "name": "Giorgian De Arrascaeta",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5765,7 +5765,7 @@
     {
       "code": "URU-12",
       "number": 641,
-      "name": "Uruguay #11",
+      "name": "Rodrigo Bentancur",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5783,7 +5783,7 @@
     {
       "code": "URU-14",
       "number": 643,
-      "name": "Uruguay #12",
+      "name": "Manuel Ugarte",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5792,7 +5792,7 @@
     {
       "code": "URU-15",
       "number": 644,
-      "name": "Uruguay #13",
+      "name": "Nicolas De La Cruz",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5801,7 +5801,7 @@
     {
       "code": "URU-16",
       "number": 645,
-      "name": "Uruguay #14",
+      "name": "Maxi Araujo",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5810,7 +5810,7 @@
     {
       "code": "URU-17",
       "number": 646,
-      "name": "Uruguay #15",
+      "name": "Darwin Nunez",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5819,7 +5819,7 @@
     {
       "code": "URU-18",
       "number": 647,
-      "name": "Uruguay #16",
+      "name": "Federico Vinas",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5828,7 +5828,7 @@
     {
       "code": "URU-19",
       "number": 648,
-      "name": "Uruguay #17",
+      "name": "Rodrigo Aguirre",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5837,7 +5837,7 @@
     {
       "code": "URU-20",
       "number": 649,
-      "name": "Uruguay #18",
+      "name": "Facundo Pellistri",
       "team": "URU",
       "section": "Uruguay",
       "type": "player",
@@ -5855,7 +5855,7 @@
     {
       "code": "FRA-2",
       "number": 651,
-      "name": "Francia #1",
+      "name": "Mike Maignan",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5864,7 +5864,7 @@
     {
       "code": "FRA-3",
       "number": 652,
-      "name": "Francia #2",
+      "name": "Theo Hernandez",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5873,7 +5873,7 @@
     {
       "code": "FRA-4",
       "number": 653,
-      "name": "Francia #3",
+      "name": "William Saliba",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5882,7 +5882,7 @@
     {
       "code": "FRA-5",
       "number": 654,
-      "name": "Francia #4",
+      "name": "Jules Kounde",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5891,7 +5891,7 @@
     {
       "code": "FRA-6",
       "number": 655,
-      "name": "Francia #5",
+      "name": "Ibrahima Konate",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5900,7 +5900,7 @@
     {
       "code": "FRA-7",
       "number": 656,
-      "name": "Francia #6",
+      "name": "Dayot Upamecano",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5909,7 +5909,7 @@
     {
       "code": "FRA-8",
       "number": 657,
-      "name": "Francia #7",
+      "name": "Lucas Digne",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5918,7 +5918,7 @@
     {
       "code": "FRA-9",
       "number": 658,
-      "name": "Francia #8",
+      "name": "Aurelien Tchouameni",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5927,7 +5927,7 @@
     {
       "code": "FRA-10",
       "number": 659,
-      "name": "Francia #9",
+      "name": "Eduardo Camavinga",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5936,7 +5936,7 @@
     {
       "code": "FRA-11",
       "number": 660,
-      "name": "Francia #10",
+      "name": "Manu Kone",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5945,7 +5945,7 @@
     {
       "code": "FRA-12",
       "number": 661,
-      "name": "Francia #11",
+      "name": "Adrien Rabiot",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5963,7 +5963,7 @@
     {
       "code": "FRA-14",
       "number": 663,
-      "name": "Francia #12",
+      "name": "Michael Olise",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5972,7 +5972,7 @@
     {
       "code": "FRA-15",
       "number": 664,
-      "name": "Francia #13",
+      "name": "Ousmane Dembele",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5981,7 +5981,7 @@
     {
       "code": "FRA-16",
       "number": 665,
-      "name": "Francia #14",
+      "name": "Bradley Barcola",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5990,7 +5990,7 @@
     {
       "code": "FRA-17",
       "number": 666,
-      "name": "Francia #15",
+      "name": "Desire Doue",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -5999,7 +5999,7 @@
     {
       "code": "FRA-18",
       "number": 667,
-      "name": "Francia #16",
+      "name": "Kingsley Coman",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -6008,7 +6008,7 @@
     {
       "code": "FRA-19",
       "number": 668,
-      "name": "Francia #17",
+      "name": "Hugo Ekitike",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -6017,7 +6017,7 @@
     {
       "code": "FRA-20",
       "number": 669,
-      "name": "Francia #18",
+      "name": "Kylian Mbappe",
       "team": "FRA",
       "section": "Francia",
       "type": "player",
@@ -6035,7 +6035,7 @@
     {
       "code": "SEN-2",
       "number": 671,
-      "name": "Senegal #1",
+      "name": "Edouard Mendy",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6044,7 +6044,7 @@
     {
       "code": "SEN-3",
       "number": 672,
-      "name": "Senegal #2",
+      "name": "Yehvann Diouf",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6053,7 +6053,7 @@
     {
       "code": "SEN-4",
       "number": 673,
-      "name": "Senegal #3",
+      "name": "Moussa Niakhaté",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6062,7 +6062,7 @@
     {
       "code": "SEN-5",
       "number": 674,
-      "name": "Senegal #4",
+      "name": "Abdoulaye Seck",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6071,7 +6071,7 @@
     {
       "code": "SEN-6",
       "number": 675,
-      "name": "Senegal #5",
+      "name": "Ismail Jakobs",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6080,7 +6080,7 @@
     {
       "code": "SEN-7",
       "number": 676,
-      "name": "Senegal #6",
+      "name": "El Hadji Malick Diouf",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6089,7 +6089,7 @@
     {
       "code": "SEN-8",
       "number": 677,
-      "name": "Senegal #7",
+      "name": "Kalidou Koulibaly",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6098,7 +6098,7 @@
     {
       "code": "SEN-9",
       "number": 678,
-      "name": "Senegal #8",
+      "name": "Idrissa Gueye",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6107,7 +6107,7 @@
     {
       "code": "SEN-10",
       "number": 679,
-      "name": "Senegal #9",
+      "name": "Pape Matar Sarr",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6116,7 +6116,7 @@
     {
       "code": "SEN-11",
       "number": 680,
-      "name": "Senegal #10",
+      "name": "Pape Gueye",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6125,7 +6125,7 @@
     {
       "code": "SEN-12",
       "number": 681,
-      "name": "Senegal #11",
+      "name": "Habib Diarra",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6143,7 +6143,7 @@
     {
       "code": "SEN-14",
       "number": 683,
-      "name": "Senegal #12",
+      "name": "Lamine Camara",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6152,7 +6152,7 @@
     {
       "code": "SEN-15",
       "number": 684,
-      "name": "Senegal #13",
+      "name": "Sadio Mané",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6161,7 +6161,7 @@
     {
       "code": "SEN-16",
       "number": 685,
-      "name": "Senegal #14",
+      "name": "Ismaila Sarr",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6170,7 +6170,7 @@
     {
       "code": "SEN-17",
       "number": 686,
-      "name": "Senegal #15",
+      "name": "Boulaye Dia",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6179,7 +6179,7 @@
     {
       "code": "SEN-18",
       "number": 687,
-      "name": "Senegal #16",
+      "name": "Iliman Ndiaye",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6188,7 +6188,7 @@
     {
       "code": "SEN-19",
       "number": 688,
-      "name": "Senegal #17",
+      "name": "Nicolas Jackson",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6197,7 +6197,7 @@
     {
       "code": "SEN-20",
       "number": 689,
-      "name": "Senegal #18",
+      "name": "Krepin Diatta",
       "team": "SEN",
       "section": "Senegal",
       "type": "player",
@@ -6215,7 +6215,7 @@
     {
       "code": "IRQ-2",
       "number": 691,
-      "name": "Irak #1",
+      "name": "Jalal Hassan",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6224,7 +6224,7 @@
     {
       "code": "IRQ-3",
       "number": 692,
-      "name": "Irak #2",
+      "name": "Rebin Sulaka",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6233,7 +6233,7 @@
     {
       "code": "IRQ-4",
       "number": 693,
-      "name": "Irak #3",
+      "name": "Hussein Ali",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6242,7 +6242,7 @@
     {
       "code": "IRQ-5",
       "number": 694,
-      "name": "Irak #4",
+      "name": "Akam Hashem",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6251,7 +6251,7 @@
     {
       "code": "IRQ-6",
       "number": 695,
-      "name": "Irak #5",
+      "name": "Merchas Doski",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6260,7 +6260,7 @@
     {
       "code": "IRQ-7",
       "number": 696,
-      "name": "Irak #6",
+      "name": "Zaid Tahseen",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6269,7 +6269,7 @@
     {
       "code": "IRQ-8",
       "number": 697,
-      "name": "Irak #7",
+      "name": "Manaf Younis",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6278,7 +6278,7 @@
     {
       "code": "IRQ-9",
       "number": 698,
-      "name": "Irak #8",
+      "name": "Zidane Iqbal",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6287,7 +6287,7 @@
     {
       "code": "IRQ-10",
       "number": 699,
-      "name": "Irak #9",
+      "name": "Amir Al-Ammari",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6296,7 +6296,7 @@
     {
       "code": "IRQ-11",
       "number": 700,
-      "name": "Irak #10",
+      "name": "Ibrahim Bayesh",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6305,7 +6305,7 @@
     {
       "code": "IRQ-12",
       "number": 701,
-      "name": "Irak #11",
+      "name": "Ali Jasim",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6323,7 +6323,7 @@
     {
       "code": "IRQ-14",
       "number": 703,
-      "name": "Irak #12",
+      "name": "Youssef Amyn",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6332,7 +6332,7 @@
     {
       "code": "IRQ-15",
       "number": 704,
-      "name": "Irak #13",
+      "name": "Aimar Sher",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6341,7 +6341,7 @@
     {
       "code": "IRQ-16",
       "number": 705,
-      "name": "Irak #14",
+      "name": "Marko Farji",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6350,7 +6350,7 @@
     {
       "code": "IRQ-17",
       "number": 706,
-      "name": "Irak #15",
+      "name": "Osama Rashid",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6359,7 +6359,7 @@
     {
       "code": "IRQ-18",
       "number": 707,
-      "name": "Irak #16",
+      "name": "Ali Al-Hamadi",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6368,7 +6368,7 @@
     {
       "code": "IRQ-19",
       "number": 708,
-      "name": "Irak #17",
+      "name": "Aymen Hussein",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6377,7 +6377,7 @@
     {
       "code": "IRQ-20",
       "number": 709,
-      "name": "Irak #18",
+      "name": "Mohanad Ali",
       "team": "IRQ",
       "section": "Irak",
       "type": "player",
@@ -6395,7 +6395,7 @@
     {
       "code": "NOR-2",
       "number": 711,
-      "name": "Noruega #1",
+      "name": "Orjan Nyland",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6404,7 +6404,7 @@
     {
       "code": "NOR-3",
       "number": 712,
-      "name": "Noruega #2",
+      "name": "Julian Ryerson",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6413,7 +6413,7 @@
     {
       "code": "NOR-4",
       "number": 713,
-      "name": "Noruega #3",
+      "name": "Leo Ostigard",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6422,7 +6422,7 @@
     {
       "code": "NOR-5",
       "number": 714,
-      "name": "Noruega #4",
+      "name": "Kristoffer Ajer",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6431,7 +6431,7 @@
     {
       "code": "NOR-6",
       "number": 715,
-      "name": "Noruega #5",
+      "name": "Marcus Holmgren Pedersen",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6440,7 +6440,7 @@
     {
       "code": "NOR-7",
       "number": 716,
-      "name": "Noruega #6",
+      "name": "David Moller Wolfe",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6449,7 +6449,7 @@
     {
       "code": "NOR-8",
       "number": 717,
-      "name": "Noruega #7",
+      "name": "Torbjorn Heggem",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6458,7 +6458,7 @@
     {
       "code": "NOR-9",
       "number": 718,
-      "name": "Noruega #8",
+      "name": "Morten Thorsby",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6467,7 +6467,7 @@
     {
       "code": "NOR-10",
       "number": 719,
-      "name": "Noruega #9",
+      "name": "Martin Odegaard",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6476,7 +6476,7 @@
     {
       "code": "NOR-11",
       "number": 720,
-      "name": "Noruega #10",
+      "name": "Sander Beger",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6485,7 +6485,7 @@
     {
       "code": "NOR-12",
       "number": 721,
-      "name": "Noruega #11",
+      "name": "Andreas Schjelderup",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6503,7 +6503,7 @@
     {
       "code": "NOR-14",
       "number": 723,
-      "name": "Noruega #12",
+      "name": "Patrick Berg",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6512,7 +6512,7 @@
     {
       "code": "NOR-15",
       "number": 724,
-      "name": "Noruega #13",
+      "name": "Erling Haaland",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6521,7 +6521,7 @@
     {
       "code": "NOR-16",
       "number": 725,
-      "name": "Noruega #14",
+      "name": "Alexander Sorloth",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6530,7 +6530,7 @@
     {
       "code": "NOR-17",
       "number": 726,
-      "name": "Noruega #15",
+      "name": "Aron Donnum",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6539,7 +6539,7 @@
     {
       "code": "NOR-18",
       "number": 727,
-      "name": "Noruega #16",
+      "name": "Jorgen Strand Larsen",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6548,7 +6548,7 @@
     {
       "code": "NOR-19",
       "number": 728,
-      "name": "Noruega #17",
+      "name": "Antonio Nusa",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6557,7 +6557,7 @@
     {
       "code": "NOR-20",
       "number": 729,
-      "name": "Noruega #18",
+      "name": "Oscar Bobb",
       "team": "NOR",
       "section": "Noruega",
       "type": "player",
@@ -6575,7 +6575,7 @@
     {
       "code": "ARG-2",
       "number": 731,
-      "name": "Argentina #1",
+      "name": "Emiliano Martinez",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6584,7 +6584,7 @@
     {
       "code": "ARG-3",
       "number": 732,
-      "name": "Argentina #2",
+      "name": "Nahuel Molina",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6593,7 +6593,7 @@
     {
       "code": "ARG-4",
       "number": 733,
-      "name": "Argentina #3",
+      "name": "Cristian Romero",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6602,7 +6602,7 @@
     {
       "code": "ARG-5",
       "number": 734,
-      "name": "Argentina #4",
+      "name": "Nicolas Otamendi",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6611,7 +6611,7 @@
     {
       "code": "ARG-6",
       "number": 735,
-      "name": "Argentina #5",
+      "name": "Nicolas Tagliafico",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6620,7 +6620,7 @@
     {
       "code": "ARG-7",
       "number": 736,
-      "name": "Argentina #6",
+      "name": "Leonardo Balerdi",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6629,7 +6629,7 @@
     {
       "code": "ARG-8",
       "number": 737,
-      "name": "Argentina #7",
+      "name": "Enzo Fernandez",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6638,7 +6638,7 @@
     {
       "code": "ARG-9",
       "number": 738,
-      "name": "Argentina #8",
+      "name": "Alexis Mac Allister",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6647,7 +6647,7 @@
     {
       "code": "ARG-10",
       "number": 739,
-      "name": "Argentina #9",
+      "name": "Rodrigo De Paul",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6656,7 +6656,7 @@
     {
       "code": "ARG-11",
       "number": 740,
-      "name": "Argentina #10",
+      "name": "Exequiel Palacios",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6665,7 +6665,7 @@
     {
       "code": "ARG-12",
       "number": 741,
-      "name": "Argentina #11",
+      "name": "Leandro Paredes",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6683,7 +6683,7 @@
     {
       "code": "ARG-14",
       "number": 743,
-      "name": "Argentina #12",
+      "name": "Nico Paz",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6692,7 +6692,7 @@
     {
       "code": "ARG-15",
       "number": 744,
-      "name": "Argentina #13",
+      "name": "Franco Mastantuono",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6701,7 +6701,7 @@
     {
       "code": "ARG-16",
       "number": 745,
-      "name": "Argentina #14",
+      "name": "Nico Gonzalez",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6710,7 +6710,7 @@
     {
       "code": "ARG-17",
       "number": 746,
-      "name": "Argentina #15",
+      "name": "Lionel Messi",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6719,7 +6719,7 @@
     {
       "code": "ARG-18",
       "number": 747,
-      "name": "Argentina #16",
+      "name": "Lautaro Martinez",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6728,7 +6728,7 @@
     {
       "code": "ARG-19",
       "number": 748,
-      "name": "Argentina #17",
+      "name": "Julian Alvarez",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6737,7 +6737,7 @@
     {
       "code": "ARG-20",
       "number": 749,
-      "name": "Argentina #18",
+      "name": "Giuliano Simeone",
       "team": "ARG",
       "section": "Argentina",
       "type": "player",
@@ -6755,7 +6755,7 @@
     {
       "code": "ALG-2",
       "number": 751,
-      "name": "Argelia #1",
+      "name": "Alexis Guendouzi",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6764,7 +6764,7 @@
     {
       "code": "ALG-3",
       "number": 752,
-      "name": "Argelia #2",
+      "name": "Ramy Bensebaini",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6773,7 +6773,7 @@
     {
       "code": "ALG-4",
       "number": 753,
-      "name": "Argelia #3",
+      "name": "Youcef Atal",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6782,7 +6782,7 @@
     {
       "code": "ALG-5",
       "number": 754,
-      "name": "Argelia #4",
+      "name": "Rayan Ait Nouri",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6791,7 +6791,7 @@
     {
       "code": "ALG-6",
       "number": 755,
-      "name": "Argelia #5",
+      "name": "Mohamed Amine Tougai",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6800,7 +6800,7 @@
     {
       "code": "ALG-7",
       "number": 756,
-      "name": "Argelia #6",
+      "name": "Aissa Mandi",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6809,7 +6809,7 @@
     {
       "code": "ALG-8",
       "number": 757,
-      "name": "Argelia #7",
+      "name": "Ismael Bennacer",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6818,7 +6818,7 @@
     {
       "code": "ALG-9",
       "number": 758,
-      "name": "Argelia #8",
+      "name": "Houssem Aouar",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6827,7 +6827,7 @@
     {
       "code": "ALG-10",
       "number": 759,
-      "name": "Argelia #9",
+      "name": "Hicham Boudaoui",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6836,7 +6836,7 @@
     {
       "code": "ALG-11",
       "number": 760,
-      "name": "Argelia #10",
+      "name": "Ramiz Zerrouki",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6845,7 +6845,7 @@
     {
       "code": "ALG-12",
       "number": 761,
-      "name": "Argelia #11",
+      "name": "Nabil Bentaleb",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6863,7 +6863,7 @@
     {
       "code": "ALG-14",
       "number": 763,
-      "name": "Argelia #12",
+      "name": "Fares Chaibi",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6872,7 +6872,7 @@
     {
       "code": "ALG-15",
       "number": 764,
-      "name": "Argelia #13",
+      "name": "Riyad Mahrez",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6881,7 +6881,7 @@
     {
       "code": "ALG-16",
       "number": 765,
-      "name": "Argelia #14",
+      "name": "Said Benrahma",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6890,7 +6890,7 @@
     {
       "code": "ALG-17",
       "number": 766,
-      "name": "Argelia #15",
+      "name": "Anis Hadj Moussa",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6899,7 +6899,7 @@
     {
       "code": "ALG-18",
       "number": 767,
-      "name": "Argelia #16",
+      "name": "Amine Gouiri",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6908,7 +6908,7 @@
     {
       "code": "ALG-19",
       "number": 768,
-      "name": "Argelia #17",
+      "name": "Baghdad Bounedjah",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6917,7 +6917,7 @@
     {
       "code": "ALG-20",
       "number": 769,
-      "name": "Argelia #18",
+      "name": "Mohammed Amoura",
       "team": "ALG",
       "section": "Argelia",
       "type": "player",
@@ -6935,7 +6935,7 @@
     {
       "code": "AUT-2",
       "number": 771,
-      "name": "Austria #1",
+      "name": "Alexander Schlager",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -6944,7 +6944,7 @@
     {
       "code": "AUT-3",
       "number": 772,
-      "name": "Austria #2",
+      "name": "Patrick Pentz",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -6953,7 +6953,7 @@
     {
       "code": "AUT-4",
       "number": 773,
-      "name": "Austria #3",
+      "name": "David Alaba",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -6962,7 +6962,7 @@
     {
       "code": "AUT-5",
       "number": 774,
-      "name": "Austria #4",
+      "name": "Kevin Danso",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -6971,7 +6971,7 @@
     {
       "code": "AUT-6",
       "number": 775,
-      "name": "Austria #5",
+      "name": "Philipp Lienhart",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -6980,7 +6980,7 @@
     {
       "code": "AUT-7",
       "number": 776,
-      "name": "Austria #6",
+      "name": "Stefan Posch",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -6989,7 +6989,7 @@
     {
       "code": "AUT-8",
       "number": 777,
-      "name": "Austria #7",
+      "name": "Phillipp Mwene",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -6998,7 +6998,7 @@
     {
       "code": "AUT-9",
       "number": 778,
-      "name": "Austria #8",
+      "name": "Alexander Prass",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7007,7 +7007,7 @@
     {
       "code": "AUT-10",
       "number": 779,
-      "name": "Austria #9",
+      "name": "Xaver Schlager",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7016,7 +7016,7 @@
     {
       "code": "AUT-11",
       "number": 780,
-      "name": "Austria #10",
+      "name": "Marcel Sabitzer",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7025,7 +7025,7 @@
     {
       "code": "AUT-12",
       "number": 781,
-      "name": "Austria #11",
+      "name": "Konrad Laimer",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7043,7 +7043,7 @@
     {
       "code": "AUT-14",
       "number": 783,
-      "name": "Austria #12",
+      "name": "Florian Grillitsch",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7052,7 +7052,7 @@
     {
       "code": "AUT-15",
       "number": 784,
-      "name": "Austria #13",
+      "name": "Nicolas Seiwald",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7061,7 +7061,7 @@
     {
       "code": "AUT-16",
       "number": 785,
-      "name": "Austria #14",
+      "name": "Romano Schmid",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7070,7 +7070,7 @@
     {
       "code": "AUT-17",
       "number": 786,
-      "name": "Austria #15",
+      "name": "Patrick Wimmer",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7079,7 +7079,7 @@
     {
       "code": "AUT-18",
       "number": 787,
-      "name": "Austria #16",
+      "name": "Christoph Baumgartner",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7088,7 +7088,7 @@
     {
       "code": "AUT-19",
       "number": 788,
-      "name": "Austria #17",
+      "name": "Michael Gregoritsch",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7097,7 +7097,7 @@
     {
       "code": "AUT-20",
       "number": 789,
-      "name": "Austria #18",
+      "name": "Marko Arnautovic",
       "team": "AUT",
       "section": "Austria",
       "type": "player",
@@ -7115,7 +7115,7 @@
     {
       "code": "JOR-2",
       "number": 791,
-      "name": "Jordania #1",
+      "name": "Yazeed Abulaila",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7124,7 +7124,7 @@
     {
       "code": "JOR-3",
       "number": 792,
-      "name": "Jordania #2",
+      "name": "Ihsan Haddad",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7133,7 +7133,7 @@
     {
       "code": "JOR-4",
       "number": 793,
-      "name": "Jordania #3",
+      "name": "Mohammad Abu Hashish",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7142,7 +7142,7 @@
     {
       "code": "JOR-5",
       "number": 794,
-      "name": "Jordania #4",
+      "name": "Yazan Al-Arab",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7151,7 +7151,7 @@
     {
       "code": "JOR-6",
       "number": 795,
-      "name": "Jordania #5",
+      "name": "Abdallah Nasib",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7160,7 +7160,7 @@
     {
       "code": "JOR-7",
       "number": 796,
-      "name": "Jordania #6",
+      "name": "Saleem Obaid",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7169,7 +7169,7 @@
     {
       "code": "JOR-8",
       "number": 797,
-      "name": "Jordania #7",
+      "name": "Mohammad Abualnadi",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7178,7 +7178,7 @@
     {
       "code": "JOR-9",
       "number": 798,
-      "name": "Jordania #8",
+      "name": "Ibrahim Saadeh",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7187,7 +7187,7 @@
     {
       "code": "JOR-10",
       "number": 799,
-      "name": "Jordania #9",
+      "name": "Nizar Al-Rashdan",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7196,7 +7196,7 @@
     {
       "code": "JOR-11",
       "number": 800,
-      "name": "Jordania #10",
+      "name": "Noor Al-Rawabdeh",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7205,7 +7205,7 @@
     {
       "code": "JOR-12",
       "number": 801,
-      "name": "Jordania #11",
+      "name": "Mohannad Abu Taha",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7223,7 +7223,7 @@
     {
       "code": "JOR-14",
       "number": 803,
-      "name": "Jordania #12",
+      "name": "Amer Jamous",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7232,7 +7232,7 @@
     {
       "code": "JOR-15",
       "number": 804,
-      "name": "Jordania #13",
+      "name": "Mousa Al-Taamari",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7241,7 +7241,7 @@
     {
       "code": "JOR-16",
       "number": 805,
-      "name": "Jordania #14",
+      "name": "Yazan Al-Naimat",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7250,7 +7250,7 @@
     {
       "code": "JOR-17",
       "number": 806,
-      "name": "Jordania #15",
+      "name": "Mahmoud Al-Mardi",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7259,7 +7259,7 @@
     {
       "code": "JOR-18",
       "number": 807,
-      "name": "Jordania #16",
+      "name": "Ali Olwan",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7268,7 +7268,7 @@
     {
       "code": "JOR-19",
       "number": 808,
-      "name": "Jordania #17",
+      "name": "Mohammad Abu Zravyq",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7277,7 +7277,7 @@
     {
       "code": "JOR-20",
       "number": 809,
-      "name": "Jordania #18",
+      "name": "Ibrahim Sabra",
       "team": "JOR",
       "section": "Jordania",
       "type": "player",
@@ -7295,7 +7295,7 @@
     {
       "code": "POR-2",
       "number": 811,
-      "name": "Portugal #1",
+      "name": "Diogo Costa",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7304,7 +7304,7 @@
     {
       "code": "POR-3",
       "number": 812,
-      "name": "Portugal #2",
+      "name": "Jose Sa",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7313,7 +7313,7 @@
     {
       "code": "POR-4",
       "number": 813,
-      "name": "Portugal #3",
+      "name": "Ruben Dias",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7322,7 +7322,7 @@
     {
       "code": "POR-5",
       "number": 814,
-      "name": "Portugal #4",
+      "name": "Joao Cancelo",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7331,7 +7331,7 @@
     {
       "code": "POR-6",
       "number": 815,
-      "name": "Portugal #5",
+      "name": "Diogo Dalot",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7340,7 +7340,7 @@
     {
       "code": "POR-7",
       "number": 816,
-      "name": "Portugal #6",
+      "name": "Nuno Mendes",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7349,7 +7349,7 @@
     {
       "code": "POR-8",
       "number": 817,
-      "name": "Portugal #7",
+      "name": "Goncalo Inacio",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7358,7 +7358,7 @@
     {
       "code": "POR-9",
       "number": 818,
-      "name": "Portugal #8",
+      "name": "Bernardo Silva",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7367,7 +7367,7 @@
     {
       "code": "POR-10",
       "number": 819,
-      "name": "Portugal #9",
+      "name": "Bruno Fernandes",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7376,7 +7376,7 @@
     {
       "code": "POR-11",
       "number": 820,
-      "name": "Portugal #10",
+      "name": "Ruben Neves",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7385,7 +7385,7 @@
     {
       "code": "POR-12",
       "number": 821,
-      "name": "Portugal #11",
+      "name": "Vitinha",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7403,7 +7403,7 @@
     {
       "code": "POR-14",
       "number": 823,
-      "name": "Portugal #12",
+      "name": "Joao Neves",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7412,7 +7412,7 @@
     {
       "code": "POR-15",
       "number": 824,
-      "name": "Portugal #13",
+      "name": "Cristiano Ronaldo",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7421,7 +7421,7 @@
     {
       "code": "POR-16",
       "number": 825,
-      "name": "Portugal #14",
+      "name": "Fransisco Trincao",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7430,7 +7430,7 @@
     {
       "code": "POR-17",
       "number": 826,
-      "name": "Portugal #15",
+      "name": "Joao Felix",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7439,7 +7439,7 @@
     {
       "code": "POR-18",
       "number": 827,
-      "name": "Portugal #16",
+      "name": "Goncalo Ramos",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7448,7 +7448,7 @@
     {
       "code": "POR-19",
       "number": 828,
-      "name": "Portugal #17",
+      "name": "Pedro Neto",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7457,7 +7457,7 @@
     {
       "code": "POR-20",
       "number": 829,
-      "name": "Portugal #18",
+      "name": "Rafael Leao",
       "team": "POR",
       "section": "Portugal",
       "type": "player",
@@ -7475,7 +7475,7 @@
     {
       "code": "COD-2",
       "number": 831,
-      "name": "RD Congo #1",
+      "name": "Lionel Mpasi",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7484,7 +7484,7 @@
     {
       "code": "COD-3",
       "number": 832,
-      "name": "RD Congo #2",
+      "name": "Aaron Wan-Bissaka",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7493,7 +7493,7 @@
     {
       "code": "COD-4",
       "number": 833,
-      "name": "RD Congo #3",
+      "name": "Axel Tuanzebe",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7502,7 +7502,7 @@
     {
       "code": "COD-5",
       "number": 834,
-      "name": "RD Congo #4",
+      "name": "Arthur Masuaku",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7511,7 +7511,7 @@
     {
       "code": "COD-6",
       "number": 835,
-      "name": "RD Congo #5",
+      "name": "Chancel Mbemba",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7520,7 +7520,7 @@
     {
       "code": "COD-7",
       "number": 836,
-      "name": "RD Congo #6",
+      "name": "Joris Kayembe",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7529,7 +7529,7 @@
     {
       "code": "COD-8",
       "number": 837,
-      "name": "RD Congo #7",
+      "name": "Charles Pickel",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7538,7 +7538,7 @@
     {
       "code": "COD-9",
       "number": 838,
-      "name": "RD Congo #8",
+      "name": "Ngalayel Mukau",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7547,7 +7547,7 @@
     {
       "code": "COD-10",
       "number": 839,
-      "name": "RD Congo #9",
+      "name": "Edo Kayembe",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7556,7 +7556,7 @@
     {
       "code": "COD-11",
       "number": 840,
-      "name": "RD Congo #10",
+      "name": "Samuel Moutoussamy",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7565,7 +7565,7 @@
     {
       "code": "COD-12",
       "number": 841,
-      "name": "RD Congo #11",
+      "name": "Noah Sadiki",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7583,7 +7583,7 @@
     {
       "code": "COD-14",
       "number": 843,
-      "name": "RD Congo #12",
+      "name": "Theo Bongonda",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7592,7 +7592,7 @@
     {
       "code": "COD-15",
       "number": 844,
-      "name": "RD Congo #13",
+      "name": "Meschack Elia",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7601,7 +7601,7 @@
     {
       "code": "COD-16",
       "number": 845,
-      "name": "RD Congo #14",
+      "name": "Yoane Wissa",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7610,7 +7610,7 @@
     {
       "code": "COD-17",
       "number": 846,
-      "name": "RD Congo #15",
+      "name": "Brian Cipenga",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7619,7 +7619,7 @@
     {
       "code": "COD-18",
       "number": 847,
-      "name": "RD Congo #16",
+      "name": "Fiston Mayele",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7628,7 +7628,7 @@
     {
       "code": "COD-19",
       "number": 848,
-      "name": "RD Congo #17",
+      "name": "Cedric Bakambu",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7637,7 +7637,7 @@
     {
       "code": "COD-20",
       "number": 849,
-      "name": "RD Congo #18",
+      "name": "Nathanael Mbuku",
       "team": "COD",
       "section": "RD Congo",
       "type": "player",
@@ -7655,7 +7655,7 @@
     {
       "code": "UZB-2",
       "number": 851,
-      "name": "Uzbekistán #1",
+      "name": "Utkir Yusupov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7664,7 +7664,7 @@
     {
       "code": "UZB-3",
       "number": 852,
-      "name": "Uzbekistán #2",
+      "name": "Farrukh Sayfiev",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7673,7 +7673,7 @@
     {
       "code": "UZB-4",
       "number": 853,
-      "name": "Uzbekistán #3",
+      "name": "Sherzod Nasrullaev",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7682,7 +7682,7 @@
     {
       "code": "UZB-5",
       "number": 854,
-      "name": "Uzbekistán #4",
+      "name": "Umar Eshmurodov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7691,7 +7691,7 @@
     {
       "code": "UZB-6",
       "number": 855,
-      "name": "Uzbekistán #5",
+      "name": "Husniddnin Aliqulov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7700,7 +7700,7 @@
     {
       "code": "UZB-7",
       "number": 856,
-      "name": "Uzbekistán #6",
+      "name": "Rustam Ashurmatov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7709,7 +7709,7 @@
     {
       "code": "UZB-8",
       "number": 857,
-      "name": "Uzbekistán #7",
+      "name": "Khojiakbar Alijonov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7718,7 +7718,7 @@
     {
       "code": "UZB-9",
       "number": 858,
-      "name": "Uzbekistán #8",
+      "name": "Abdukodir Khusanov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7727,7 +7727,7 @@
     {
       "code": "UZB-10",
       "number": 859,
-      "name": "Uzbekistán #9",
+      "name": "Odiljon Hamrobekov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7736,7 +7736,7 @@
     {
       "code": "UZB-11",
       "number": 860,
-      "name": "Uzbekistán #10",
+      "name": "Otabek Shukurov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7745,7 +7745,7 @@
     {
       "code": "UZB-12",
       "number": 861,
-      "name": "Uzbekistán #11",
+      "name": "Jamshid Iskanderov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7763,7 +7763,7 @@
     {
       "code": "UZB-14",
       "number": 863,
-      "name": "Uzbekistán #12",
+      "name": "Azizbek Turgunboev",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7772,7 +7772,7 @@
     {
       "code": "UZB-15",
       "number": 864,
-      "name": "Uzbekistán #13",
+      "name": "Khojimat Erkinov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7781,7 +7781,7 @@
     {
       "code": "UZB-16",
       "number": 865,
-      "name": "Uzbekistán #14",
+      "name": "Eldor Shomurodov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7790,7 +7790,7 @@
     {
       "code": "UZB-17",
       "number": 866,
-      "name": "Uzbekistán #15",
+      "name": "Oston Urunov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7799,7 +7799,7 @@
     {
       "code": "UZB-18",
       "number": 867,
-      "name": "Uzbekistán #16",
+      "name": "Jaloliddin Masharipov",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7808,7 +7808,7 @@
     {
       "code": "UZB-19",
       "number": 868,
-      "name": "Uzbekistán #17",
+      "name": "Igor Sergeev",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7817,7 +7817,7 @@
     {
       "code": "UZB-20",
       "number": 869,
-      "name": "Uzbekistán #18",
+      "name": "Abbosbek Fayzullaev",
       "team": "UZB",
       "section": "Uzbekistán",
       "type": "player",
@@ -7835,7 +7835,7 @@
     {
       "code": "COL-2",
       "number": 871,
-      "name": "Colombia #1",
+      "name": "Camilo Vargas",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7844,7 +7844,7 @@
     {
       "code": "COL-3",
       "number": 872,
-      "name": "Colombia #2",
+      "name": "David Ospina",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7853,7 +7853,7 @@
     {
       "code": "COL-4",
       "number": 873,
-      "name": "Colombia #3",
+      "name": "Davinson Sanchez",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7862,7 +7862,7 @@
     {
       "code": "COL-5",
       "number": 874,
-      "name": "Colombia #4",
+      "name": "Yerry Mina",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7871,7 +7871,7 @@
     {
       "code": "COL-6",
       "number": 875,
-      "name": "Colombia #5",
+      "name": "Daniel Munoz",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7880,7 +7880,7 @@
     {
       "code": "COL-7",
       "number": 876,
-      "name": "Colombia #6",
+      "name": "Johan Mojica",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7889,7 +7889,7 @@
     {
       "code": "COL-8",
       "number": 877,
-      "name": "Colombia #7",
+      "name": "Jhon Lucumi",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7898,7 +7898,7 @@
     {
       "code": "COL-9",
       "number": 878,
-      "name": "Colombia #8",
+      "name": "Santiago Arias",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7907,7 +7907,7 @@
     {
       "code": "COL-10",
       "number": 879,
-      "name": "Colombia #9",
+      "name": "Jefferson Lerma",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7916,7 +7916,7 @@
     {
       "code": "COL-11",
       "number": 880,
-      "name": "Colombia #10",
+      "name": "Kevin Castano",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7925,7 +7925,7 @@
     {
       "code": "COL-12",
       "number": 881,
-      "name": "Colombia #11",
+      "name": "Richard Rios",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7943,7 +7943,7 @@
     {
       "code": "COL-14",
       "number": 883,
-      "name": "Colombia #12",
+      "name": "James Rodriguez",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7952,7 +7952,7 @@
     {
       "code": "COL-15",
       "number": 884,
-      "name": "Colombia #13",
+      "name": "Juan Fernando Quintero",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7961,7 +7961,7 @@
     {
       "code": "COL-16",
       "number": 885,
-      "name": "Colombia #14",
+      "name": "Jorge Carrascal",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7970,7 +7970,7 @@
     {
       "code": "COL-17",
       "number": 886,
-      "name": "Colombia #15",
+      "name": "Jhon Arias",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7979,7 +7979,7 @@
     {
       "code": "COL-18",
       "number": 887,
-      "name": "Colombia #16",
+      "name": "Jhon Cordoba",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7988,7 +7988,7 @@
     {
       "code": "COL-19",
       "number": 888,
-      "name": "Colombia #17",
+      "name": "Luis Suarez",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -7997,7 +7997,7 @@
     {
       "code": "COL-20",
       "number": 889,
-      "name": "Colombia #18",
+      "name": "Luis Diaz",
       "team": "COL",
       "section": "Colombia",
       "type": "player",
@@ -8015,7 +8015,7 @@
     {
       "code": "ENG-2",
       "number": 891,
-      "name": "Inglaterra #1",
+      "name": "Jordan Pickford",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8024,7 +8024,7 @@
     {
       "code": "ENG-3",
       "number": 892,
-      "name": "Inglaterra #2",
+      "name": "John Stones",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8033,7 +8033,7 @@
     {
       "code": "ENG-4",
       "number": 893,
-      "name": "Inglaterra #3",
+      "name": "Marc Guehi",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8042,7 +8042,7 @@
     {
       "code": "ENG-5",
       "number": 894,
-      "name": "Inglaterra #4",
+      "name": "Ezri Konsa",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8051,7 +8051,7 @@
     {
       "code": "ENG-6",
       "number": 895,
-      "name": "Inglaterra #5",
+      "name": "Trent Alexander Arnold",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8060,7 +8060,7 @@
     {
       "code": "ENG-7",
       "number": 896,
-      "name": "Inglaterra #6",
+      "name": "Reece James",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8069,7 +8069,7 @@
     {
       "code": "ENG-8",
       "number": 897,
-      "name": "Inglaterra #7",
+      "name": "Dan Burn",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8078,7 +8078,7 @@
     {
       "code": "ENG-9",
       "number": 898,
-      "name": "Inglaterra #8",
+      "name": "Jordan Henderson",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8087,7 +8087,7 @@
     {
       "code": "ENG-10",
       "number": 899,
-      "name": "Inglaterra #9",
+      "name": "Declan Rice",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8096,7 +8096,7 @@
     {
       "code": "ENG-11",
       "number": 900,
-      "name": "Inglaterra #10",
+      "name": "Jude Bellingham",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8105,7 +8105,7 @@
     {
       "code": "ENG-12",
       "number": 901,
-      "name": "Inglaterra #11",
+      "name": "Cole Palmer",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8123,7 +8123,7 @@
     {
       "code": "ENG-14",
       "number": 903,
-      "name": "Inglaterra #12",
+      "name": "Morgan Rogers",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8132,7 +8132,7 @@
     {
       "code": "ENG-15",
       "number": 904,
-      "name": "Inglaterra #13",
+      "name": "Anthony Gordon",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8141,7 +8141,7 @@
     {
       "code": "ENG-16",
       "number": 905,
-      "name": "Inglaterra #14",
+      "name": "Phil Foden",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8150,7 +8150,7 @@
     {
       "code": "ENG-17",
       "number": 906,
-      "name": "Inglaterra #15",
+      "name": "Bukayo Saka",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8159,7 +8159,7 @@
     {
       "code": "ENG-18",
       "number": 907,
-      "name": "Inglaterra #16",
+      "name": "Harry Kane",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8168,7 +8168,7 @@
     {
       "code": "ENG-19",
       "number": 908,
-      "name": "Inglaterra #17",
+      "name": "Marcus Rashford",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8177,7 +8177,7 @@
     {
       "code": "ENG-20",
       "number": 909,
-      "name": "Inglaterra #18",
+      "name": "Ollie Watkins",
       "team": "ENG",
       "section": "Inglaterra",
       "type": "player",
@@ -8195,7 +8195,7 @@
     {
       "code": "CRO-2",
       "number": 911,
-      "name": "Croacia #1",
+      "name": "Dominik Livakovic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8204,7 +8204,7 @@
     {
       "code": "CRO-3",
       "number": 912,
-      "name": "Croacia #2",
+      "name": "Duje Caleta-Car",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8213,7 +8213,7 @@
     {
       "code": "CRO-4",
       "number": 913,
-      "name": "Croacia #3",
+      "name": "Josko Gvardiol",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8222,7 +8222,7 @@
     {
       "code": "CRO-5",
       "number": 914,
-      "name": "Croacia #4",
+      "name": "Josip Stanisic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8231,7 +8231,7 @@
     {
       "code": "CRO-6",
       "number": 915,
-      "name": "Croacia #5",
+      "name": "Luka Vuskovic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8240,7 +8240,7 @@
     {
       "code": "CRO-7",
       "number": 916,
-      "name": "Croacia #6",
+      "name": "Josip Sutalo",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8249,7 +8249,7 @@
     {
       "code": "CRO-8",
       "number": 917,
-      "name": "Croacia #7",
+      "name": "Kristijan Jakic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8258,7 +8258,7 @@
     {
       "code": "CRO-9",
       "number": 918,
-      "name": "Croacia #8",
+      "name": "Luka Modric",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8267,7 +8267,7 @@
     {
       "code": "CRO-10",
       "number": 919,
-      "name": "Croacia #9",
+      "name": "Mateo Kovacic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8276,7 +8276,7 @@
     {
       "code": "CRO-11",
       "number": 920,
-      "name": "Croacia #10",
+      "name": "Martin Baturina",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8285,7 +8285,7 @@
     {
       "code": "CRO-12",
       "number": 921,
-      "name": "Croacia #11",
+      "name": "Lovro Majer",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8303,7 +8303,7 @@
     {
       "code": "CRO-14",
       "number": 923,
-      "name": "Croacia #12",
+      "name": "Mario Pasalic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8312,7 +8312,7 @@
     {
       "code": "CRO-15",
       "number": 924,
-      "name": "Croacia #13",
+      "name": "Petar Sucic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8321,7 +8321,7 @@
     {
       "code": "CRO-16",
       "number": 925,
-      "name": "Croacia #14",
+      "name": "Ivan Perisic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8330,7 +8330,7 @@
     {
       "code": "CRO-17",
       "number": 926,
-      "name": "Croacia #15",
+      "name": "Marco Pasalic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8339,7 +8339,7 @@
     {
       "code": "CRO-18",
       "number": 927,
-      "name": "Croacia #16",
+      "name": "Ante Budimir",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8348,7 +8348,7 @@
     {
       "code": "CRO-19",
       "number": 928,
-      "name": "Croacia #17",
+      "name": "Andrej Kramaric",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8357,7 +8357,7 @@
     {
       "code": "CRO-20",
       "number": 929,
-      "name": "Croacia #18",
+      "name": "Franjo Ivanovic",
       "team": "CRO",
       "section": "Croacia",
       "type": "player",
@@ -8375,7 +8375,7 @@
     {
       "code": "GHA-2",
       "number": 931,
-      "name": "Ghana #1",
+      "name": "Lawrence Ati Zigi",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8384,7 +8384,7 @@
     {
       "code": "GHA-3",
       "number": 932,
-      "name": "Ghana #2",
+      "name": "Tariq Lamptey",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8393,7 +8393,7 @@
     {
       "code": "GHA-4",
       "number": 933,
-      "name": "Ghana #3",
+      "name": "Mohammed Salisu",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8402,7 +8402,7 @@
     {
       "code": "GHA-5",
       "number": 934,
-      "name": "Ghana #4",
+      "name": "Alidu Seidu",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8411,7 +8411,7 @@
     {
       "code": "GHA-6",
       "number": 935,
-      "name": "Ghana #5",
+      "name": "Alexander Djiku",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8420,7 +8420,7 @@
     {
       "code": "GHA-7",
       "number": 936,
-      "name": "Ghana #6",
+      "name": "Gideon Mensah",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8429,7 +8429,7 @@
     {
       "code": "GHA-8",
       "number": 937,
-      "name": "Ghana #7",
+      "name": "Caleb Yirenkyi",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8438,7 +8438,7 @@
     {
       "code": "GHA-9",
       "number": 938,
-      "name": "Ghana #8",
+      "name": "Abdul Issahaku Fatawu",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8447,7 +8447,7 @@
     {
       "code": "GHA-10",
       "number": 939,
-      "name": "Ghana #9",
+      "name": "Thomas Partey",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8456,7 +8456,7 @@
     {
       "code": "GHA-11",
       "number": 940,
-      "name": "Ghana #10",
+      "name": "Salis Abdul Samed",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8465,7 +8465,7 @@
     {
       "code": "GHA-12",
       "number": 941,
-      "name": "Ghana #11",
+      "name": "Kamaldeen Sulemana",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8483,7 +8483,7 @@
     {
       "code": "GHA-14",
       "number": 943,
-      "name": "Ghana #12",
+      "name": "Mohammed Kudus",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8492,7 +8492,7 @@
     {
       "code": "GHA-15",
       "number": 944,
-      "name": "Ghana #13",
+      "name": "Inaki Williams",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8501,7 +8501,7 @@
     {
       "code": "GHA-16",
       "number": 945,
-      "name": "Ghana #14",
+      "name": "Jordan Ayew",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8510,7 +8510,7 @@
     {
       "code": "GHA-17",
       "number": 946,
-      "name": "Ghana #15",
+      "name": "Andre Ayew",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8519,7 +8519,7 @@
     {
       "code": "GHA-18",
       "number": 947,
-      "name": "Ghana #16",
+      "name": "Joseph Paintsil",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8528,7 +8528,7 @@
     {
       "code": "GHA-19",
       "number": 948,
-      "name": "Ghana #17",
+      "name": "Osman Bukari",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8537,7 +8537,7 @@
     {
       "code": "GHA-20",
       "number": 949,
-      "name": "Ghana #18",
+      "name": "Antoine Semenyo",
       "team": "GHA",
       "section": "Ghana",
       "type": "player",
@@ -8555,7 +8555,7 @@
     {
       "code": "PAN-2",
       "number": 951,
-      "name": "Panamá #1",
+      "name": "Orlando Mosquera",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8564,7 +8564,7 @@
     {
       "code": "PAN-3",
       "number": 952,
-      "name": "Panamá #2",
+      "name": "Luis Mejia",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8573,7 +8573,7 @@
     {
       "code": "PAN-4",
       "number": 953,
-      "name": "Panamá #3",
+      "name": "Fidel Escobar",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8582,7 +8582,7 @@
     {
       "code": "PAN-5",
       "number": 954,
-      "name": "Panamá #4",
+      "name": "Andres Andrade",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8591,7 +8591,7 @@
     {
       "code": "PAN-6",
       "number": 955,
-      "name": "Panamá #5",
+      "name": "Michael Amir Murillo",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8600,7 +8600,7 @@
     {
       "code": "PAN-7",
       "number": 956,
-      "name": "Panamá #6",
+      "name": "Eric Davis",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8609,7 +8609,7 @@
     {
       "code": "PAN-8",
       "number": 957,
-      "name": "Panamá #7",
+      "name": "Jose Cordoba",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8618,7 +8618,7 @@
     {
       "code": "PAN-9",
       "number": 958,
-      "name": "Panamá #8",
+      "name": "Cesar Blackman",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8627,7 +8627,7 @@
     {
       "code": "PAN-10",
       "number": 959,
-      "name": "Panamá #9",
+      "name": "Cristian Martinez",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8636,7 +8636,7 @@
     {
       "code": "PAN-11",
       "number": 960,
-      "name": "Panamá #10",
+      "name": "Anibal Godoy",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8645,7 +8645,7 @@
     {
       "code": "PAN-12",
       "number": 961,
-      "name": "Panamá #11",
+      "name": "Adalberto Carrasquilla",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8663,7 +8663,7 @@
     {
       "code": "PAN-14",
       "number": 963,
-      "name": "Panamá #12",
+      "name": "Edgar Barcenas",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8672,7 +8672,7 @@
     {
       "code": "PAN-15",
       "number": 964,
-      "name": "Panamá #13",
+      "name": "Carlos Harvey",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8681,7 +8681,7 @@
     {
       "code": "PAN-16",
       "number": 965,
-      "name": "Panamá #14",
+      "name": "Ismael Diaz",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8690,7 +8690,7 @@
     {
       "code": "PAN-17",
       "number": 966,
-      "name": "Panamá #15",
+      "name": "Jose Fajardo",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8699,7 +8699,7 @@
     {
       "code": "PAN-18",
       "number": 967,
-      "name": "Panamá #16",
+      "name": "Cecilio Waterman",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8708,7 +8708,7 @@
     {
       "code": "PAN-19",
       "number": 968,
-      "name": "Panamá #17",
+      "name": "Jose Luis Rodrigues",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
@@ -8717,7 +8717,7 @@
     {
       "code": "PAN-20",
       "number": 969,
-      "name": "Panamá #18",
+      "name": "Alberto Quintero",
       "team": "PAN",
       "section": "Panamá",
       "type": "player",
