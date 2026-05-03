@@ -8,7 +8,6 @@ import Animated, {
   withSpring
 } from "react-native-reanimated";
 import type { StickerWithStatus } from "@/domain/types";
-import { colors } from "@/theme/colors";
 import { useTheme } from "@/theme/ThemeProvider";
 
 const APress = Animated.createAnimatedComponent(Pressable);
@@ -54,7 +53,7 @@ export function AnimatedStickerCell({
       <View
         className="aspect-square rounded-md items-center justify-center"
         style={{
-          backgroundColor: collected ? colors.purple : colors.dark,
+          backgroundColor: collected ? theme.accent : theme.card,
           borderWidth: collected ? 0 : 1,
           borderColor: collected ? theme.border : theme.textMute,
           borderStyle: collected ? "solid" : "dashed"
@@ -62,7 +61,7 @@ export function AnimatedStickerCell({
       >
         <Text
           className="font-bold"
-          style={{ color: collected ? "#fff" : colors.dim, fontSize: 12 }}
+          style={{ color: collected ? "#fff" : theme.textMute, fontSize: 12 }}
         >
           {s.number}
         </Text>
@@ -85,7 +84,7 @@ export function AnimatedStickerCell({
           accessibilityLabel={`Detalle de ${s.name}`}
           className="absolute top-0.5 right-0.5"
         >
-          <Text style={{ color: collected ? "#fff" : colors.dim, fontSize: 10 }}>ⓘ</Text>
+          <Text style={{ color: collected ? "#fff" : theme.textMute, fontSize: 10 }}>ⓘ</Text>
         </Pressable>
       </View>
     </APress>
