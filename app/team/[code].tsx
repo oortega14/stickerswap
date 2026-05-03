@@ -7,7 +7,11 @@ import { ProgressBar } from "@/ui/ProgressBar";
 import { useTeamStickers, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { haptics } from "@/lib/haptics";
 import { getTeamColors } from "@/theme/teamColors";
+import { withAlpha } from "@/theme/colors";
 import type { StickerWithStatus } from "@/domain/types";
+
+const FALTA_TEXT = "#e8e6ff";
+const FALTA_DIM = "#a59cdf";
 
 export default function TeamDetail() {
   const { code } = useLocalSearchParams<{ code: string }>();
@@ -35,7 +39,7 @@ export default function TeamDetail() {
     return (
       <StarryBackground>
         <View className="flex-1 items-center justify-center">
-          <ActivityIndicator color="#7c5cff" />
+          <ActivityIndicator color={colors.primary} />
         </View>
       </StarryBackground>
     );
@@ -64,7 +68,7 @@ export default function TeamDetail() {
               {summary.collected} / {summary.total}
             </Text>
             <View className="mt-2">
-              <ProgressBar pct={summary.pct} />
+              <ProgressBar pct={summary.pct} from={colors.primary} to={colors.accent} />
             </View>
             <Text style={{ color: colors.text, opacity: 0.7, fontSize: 11, marginTop: 6 }}>
               {summary.duplicates > 0 ? `${summary.duplicates} repetidas` : "Sin repetidas"}
@@ -72,32 +76,60 @@ export default function TeamDetail() {
           </View>
         </LinearGradient>
 
-        <View className="px-4 mt-4">
-          {/* Escudo + team_photo en una fila */}
-          {(badge || teamPhoto) && (
-            <View className="flex-row gap-2 mb-4">
-              {badge && <SpecialCard s={badge} label="ESCUDO" inc={inc} dec={dec} accent={colors.accent} />}
-              {teamPhoto && <SpecialCard s={teamPhoto} label="PLANTEL" inc={inc} dec={dec} accent={colors.accent} />}
-            </View>
-          )}
+        {/* Body con overlay sutil del color del equipo */}
+        <View style={{ backgroundColor: withAlpha(colors.primary, 0.1) }}>
+          <View className="px-4 pt-4">
+            {/* Escudo + team_photo en una fila */}
+            {(badge || teamPhoto) && (
+              <View className="flex-row gap-2 mb-4">
+                {badge && (
+                  <SpecialCard
+                    s={badge}
+                    label="ESCUDO"
+                    inc={inc}
+                    dec={dec}
+                    primary={colors.primary}
+                    text={colors.text}
+                  />
+                )}
+                {teamPhoto && (
+                  <SpecialCard
+                    s={teamPhoto}
+                    label="PLANTEL"
+                    inc={inc}
+                    dec={dec}
+                    primary={colors.primary}
+                    text={colors.text}
+                  />
+                )}
+              </View>
+            )}
 
-          {/* Lista de jugadores */}
-          <Text className="text-space-mute text-xs tracking-widest mb-2">JUGADORES ({players.length})</Text>
-          {players.map((s) => (
-            <PlayerRow
-              key={s.code}
-              s={s}
-              accent={colors.accent}
-              onTap={() => {
-                haptics.light();
-                inc.mutate(s.code);
-              }}
-              onLong={() => {
-                haptics.medium();
-                dec.mutate(s.code);
-              }}
-            />
-          ))}
+            {/* Lista de jugadores */}
+            <Text
+              className="text-xs tracking-widest mb-2"
+              style={{ color: colors.accent }}
+            >
+              JUGADORES ({players.length})
+            </Text>
+            {players.map((s) => (
+              <PlayerRow
+                key={s.code}
+                s={s}
+                primary={colors.primary}
+                accent={colors.accent}
+                text={colors.text}
+                onTap={() => {
+                  haptics.light();
+                  inc.mutate(s.code);
+                }}
+                onLong={() => {
+                  haptics.medium();
+                  dec.mutate(s.code);
+                }}
+              />
+            ))}
+          </View>
         </View>
       </ScrollView>
     </StarryBackground>
@@ -109,13 +141,15 @@ function SpecialCard({
   label,
   inc,
   dec,
-  accent
+  primary,
+  text
 }: {
   s: StickerWithStatus;
   label: string;
   inc: ReturnType<typeof useIncrement>;
   dec: ReturnType<typeof useDecrement>;
-  accent: string;
+  primary: string;
+  text: string;
 }) {
   const collected = s.count >= 1;
   return (
@@ -133,20 +167,29 @@ function SpecialCard({
       accessibilityRole="button"
       className="flex-1 rounded-xl p-3"
       style={{
-        backgroundColor: collected ? accent : "rgba(28,22,72,0.6)",
+        backgroundColor: collected ? primary : withAlpha(primary, 0.12),
         borderWidth: collected ? 0 : 1,
-        borderColor: "rgba(124,92,255,0.3)",
+        borderColor: withAlpha(primary, 0.35),
         borderStyle: collected ? "solid" : "dashed"
       }}
     >
-      <Text className="text-xs tracking-widest" style={{ color: collected ? "#fff" : "#a59cdf" }}>
-        #{s.number} · {label}
+      <Text
+        className="text-xs tracking-widest"
+        style={{ color: collected ? text : FALTA_DIM }}
+      >
+        {s.code} · {label}
       </Text>
-      <Text className="text-base font-semibold mt-1" style={{ color: collected ? "#fff" : "#e8e6ff" }}>
+      <Text
+        className="text-base font-semibold mt-1"
+        style={{ color: collected ? text : FALTA_TEXT }}
+      >
         {s.name}
       </Text>
       {s.count > 1 && (
-        <Text className="text-xs mt-1" style={{ color: collected ? "#fff" : "#a59cdf" }}>
+        <Text
+          className="text-xs mt-1"
+          style={{ color: collected ? text : FALTA_DIM }}
+        >
           ×{s.count}
         </Text>
       )}
@@ -156,12 +199,16 @@ function SpecialCard({
 
 function PlayerRow({
   s,
+  primary,
   accent,
+  text,
   onTap,
   onLong
 }: {
   s: StickerWithStatus;
+  primary: string;
   accent: string;
+  text: string;
   onTap: () => void;
   onLong: () => void;
 }) {
@@ -175,21 +222,24 @@ function PlayerRow({
       accessibilityRole="button"
       className="flex-row items-center justify-between rounded-lg mb-2 px-3 py-3"
       style={{
-        backgroundColor: collected ? accent : "rgba(28,22,72,0.5)",
+        backgroundColor: collected ? primary : withAlpha(primary, 0.1),
         borderWidth: collected ? 0 : 1,
-        borderColor: "rgba(124,92,255,0.2)"
+        borderColor: withAlpha(primary, 0.3)
       }}
     >
       <View className="flex-row items-center flex-1">
         <Text
           className="font-mono text-xs mr-3"
-          style={{ color: collected ? "rgba(255,255,255,0.7)" : "#8b86c4", minWidth: 32 }}
+          style={{
+            color: collected ? withAlpha(text, 0.7) : FALTA_DIM,
+            minWidth: 56
+          }}
         >
-          #{s.number}
+          {s.code}
         </Text>
         <Text
           className="text-base font-semibold flex-1"
-          style={{ color: collected ? "#fff" : "#e8e6ff" }}
+          style={{ color: collected ? text : FALTA_TEXT }}
         >
           {s.name}
         </Text>
@@ -197,14 +247,14 @@ function PlayerRow({
       {s.count > 1 ? (
         <View
           className="rounded-full px-2 py-0.5 ml-2"
-          style={{ backgroundColor: collected ? "rgba(255,255,255,0.2)" : "#3b82f6" }}
+          style={{ backgroundColor: accent }}
         >
-          <Text className="text-xs font-bold" style={{ color: "#fff" }}>×{s.count}</Text>
+          <Text className="text-xs font-bold" style={{ color: text }}>×{s.count}</Text>
         </View>
       ) : collected ? (
-        <Text className="text-xs ml-2" style={{ color: "rgba(255,255,255,0.7)" }}>✓</Text>
+        <Text className="text-xs ml-2" style={{ color: accent }}>✓</Text>
       ) : (
-        <Text className="text-xs ml-2" style={{ color: "#8b86c4" }}>·</Text>
+        <Text className="text-xs ml-2" style={{ color: FALTA_DIM }}>·</Text>
       )}
     </Pressable>
   );
