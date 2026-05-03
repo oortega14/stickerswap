@@ -1,6 +1,7 @@
 import React from "react";
 import { View, ViewProps } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export function GlowGradientCard({
   children,
@@ -8,11 +9,12 @@ export function GlowGradientCard({
   style,
   ...rest
 }: ViewProps & { className?: string }) {
+  const { theme } = useTheme();
   return (
     <View
       style={[
         {
-          shadowColor: "#3a2e1a",
+          shadowColor: theme.text,
           shadowOffset: { width: 0, height: 0 },
           shadowOpacity: 0.12,
           shadowRadius: 6,
@@ -23,7 +25,7 @@ export function GlowGradientCard({
       ]}
     >
       <LinearGradient
-        colors={["#6b4423", "#8b6f47"]}
+        colors={[theme.accent, theme.textMute]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={{ borderRadius: 16, padding: 1 }}

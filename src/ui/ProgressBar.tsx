@@ -6,20 +6,24 @@ import Animated, {
   withTiming
 } from "react-native-reanimated";
 import Svg, { Defs, LinearGradient, Stop, Rect } from "react-native-svg";
+import { useTheme } from "@/theme/ThemeProvider";
 
 const ARect = Animated.createAnimatedComponent(Rect);
 
 export function ProgressBar({
   pct,
   height = 8,
-  from = "#7c5cff",
-  to = "#3b82f6"
+  from,
+  to
 }: {
   pct: number;
   height?: number;
   from?: string;
   to?: string;
 }) {
+  const { theme } = useTheme();
+  const fromColor = from ?? theme.accent;
+  const toColor = to ?? theme.progressGreen;
   const clamped = Math.max(0, Math.min(1, pct));
   const w = useSharedValue(clamped);
 
@@ -36,11 +40,11 @@ export function ProgressBar({
       <Svg width="100%" height={height}>
         <Defs>
           <LinearGradient id="pb" x1="0" y1="0" x2="1" y2="0">
-            <Stop offset="0" stopColor={from} />
-            <Stop offset="1" stopColor={to} />
+            <Stop offset="0" stopColor={fromColor} />
+            <Stop offset="1" stopColor={toColor} />
           </LinearGradient>
         </Defs>
-        <Rect width="100%" height={height} rx={height / 2} fill="rgba(0,0,0,0.10)" />
+        <Rect width="100%" height={height} rx={height / 2} fill={theme.track} />
         <ARect
           animatedProps={props}
           height={height}

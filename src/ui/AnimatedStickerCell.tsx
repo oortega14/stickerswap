@@ -9,6 +9,7 @@ import Animated, {
 } from "react-native-reanimated";
 import type { StickerWithStatus } from "@/domain/types";
 import { colors } from "@/theme/colors";
+import { useTheme } from "@/theme/ThemeProvider";
 
 const APress = Animated.createAnimatedComponent(Pressable);
 
@@ -23,6 +24,7 @@ export function AnimatedStickerCell({
   onLong: () => void;
   onInfo: () => void;
 }) {
+  const { theme } = useTheme();
   const scale = useSharedValue(1);
   const collected = s.count >= 1;
 
@@ -54,7 +56,7 @@ export function AnimatedStickerCell({
         style={{
           backgroundColor: collected ? colors.purple : colors.dark,
           borderWidth: collected ? 0 : 1,
-          borderColor: collected ? "rgba(0,0,0,0.12)" : "rgba(0,0,0,0.18)",
+          borderColor: collected ? theme.border : theme.textMute,
           borderStyle: collected ? "solid" : "dashed"
         }}
       >
@@ -67,9 +69,9 @@ export function AnimatedStickerCell({
         {s.count > 1 && (
           <View
             className="absolute -bottom-1 -right-1 rounded-full items-center justify-center"
-            style={{ width: 18, height: 18, backgroundColor: colors.ink }}
+            style={{ width: 18, height: 18, backgroundColor: theme.text }}
           >
-            <Text className="text-white font-bold" style={{ fontSize: 10 }}>
+            <Text className="font-bold" style={{ fontSize: 10, color: theme.bg }}>
               {s.count}
             </Text>
           </View>

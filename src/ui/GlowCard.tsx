@@ -1,14 +1,18 @@
 import React from "react";
 import { View, ViewProps } from "react-native";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export function GlowCard({ children, className, style, ...rest }: ViewProps & { className?: string }) {
+  const { theme } = useTheme();
   return (
     <View
       {...rest}
-      className={`rounded-xl border border-space-purple/15 bg-space-dark p-4 ${className ?? ""}`}
+      className={`rounded-xl bg-space-dark p-4 ${className ?? ""}`}
       style={[
         {
-          shadowColor: "#3a2e1a",
+          borderWidth: 1,
+          borderColor: theme.border,
+          shadowColor: theme.text,
           shadowOffset: { width: 0, height: 1 },
           shadowOpacity: 0.06,
           shadowRadius: 4,

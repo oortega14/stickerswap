@@ -6,8 +6,10 @@ import Animated, {
   withRepeat,
   withTiming
 } from "react-native-reanimated";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export function Skeleton({ style }: { style?: ViewStyle }) {
+  const { theme } = useTheme();
   const opacity = useSharedValue(0.4);
   useEffect(() => {
     opacity.value = withRepeat(withTiming(0.8, { duration: 800 }), -1, true);
@@ -18,7 +20,7 @@ export function Skeleton({ style }: { style?: ViewStyle }) {
   return (
     <Animated.View
       style={[
-        { backgroundColor: "rgba(0,0,0,0.06)", borderRadius: 8 },
+        { backgroundColor: theme.track, borderRadius: 8 },
         anim,
         style
       ]}
