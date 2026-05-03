@@ -9,17 +9,17 @@ module.exports = {
     extend: {
       colors: {
         space: {
-          black: "#000000",
-          deep: "#fdf6e3",
-          dark: "#fffaf0",
-          mid: "#f5e8c8",
-          purple: "#6b4423",
-          violet: "#8b6f47",
-          blue: "#dc2626",
-          sky: "#16a34a",
-          ink: "#3a2e1a",
-          mute: "#8b6f47",
-          dim: "#a89472"
+          black: "rgb(var(--space-black) / <alpha-value>)",
+          deep: "rgb(var(--space-deep) / <alpha-value>)",
+          dark: "rgb(var(--space-dark) / <alpha-value>)",
+          mid: "rgb(var(--space-mid) / <alpha-value>)",
+          purple: "rgb(var(--space-purple) / <alpha-value>)",
+          violet: "rgb(var(--space-violet) / <alpha-value>)",
+          blue: "rgb(var(--space-blue) / <alpha-value>)",
+          sky: "rgb(var(--space-sky) / <alpha-value>)",
+          ink: "rgb(var(--space-ink) / <alpha-value>)",
+          mute: "rgb(var(--space-mute) / <alpha-value>)",
+          dim: "rgb(var(--space-dim) / <alpha-value>)"
         }
       },
       fontFamily: {
