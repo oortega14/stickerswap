@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "album": "FIFA World Cup 2026",
   "stickers": [
     {
@@ -8722,6 +8722,231 @@
       "section": "Panamá",
       "type": "player",
       "group": "L"
+    },
+    {
+      "code": "FWC-9",
+      "number": 970,
+      "name": "Italia 1934",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-10",
+      "number": 971,
+      "name": "Uruguay 1950",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-11",
+      "number": 972,
+      "name": "Alemania 1954",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-12",
+      "number": 973,
+      "name": "Brasil 1962",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-13",
+      "number": 974,
+      "name": "Alemania 1974",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-14",
+      "number": 975,
+      "name": "Argentina 1986",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-15",
+      "number": 976,
+      "name": "Brasil 1994",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-16",
+      "number": 977,
+      "name": "Brasil 2002",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-17",
+      "number": 978,
+      "name": "Italia 2006",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-18",
+      "number": 979,
+      "name": "Alemania 2014",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "FWC-19",
+      "number": 980,
+      "name": "Argentina 2022",
+      "team": null,
+      "section": "Extras",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC1",
+      "number": 981,
+      "name": "Lamine Yamal",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC2",
+      "number": 982,
+      "name": "Joshua Kimmich",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC3",
+      "number": 983,
+      "name": "Harry Kane",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC4",
+      "number": 984,
+      "name": "Santiago Gimenez",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC5",
+      "number": 985,
+      "name": "Josko Gvardiol",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC6",
+      "number": 986,
+      "name": "Federico Valverde",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC7",
+      "number": 987,
+      "name": "Jefferson Lerma",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC8",
+      "number": 988,
+      "name": "Enner Valencia",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC9",
+      "number": 989,
+      "name": "Gabriel Magalhaes",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC10",
+      "number": 990,
+      "name": "Virgil van Dijk",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC11",
+      "number": 991,
+      "name": "Alphonso Davies",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC12",
+      "number": 992,
+      "name": "Emiliano Martinez",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC13",
+      "number": 993,
+      "name": "Raul Jimenez",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
+    },
+    {
+      "code": "CC14",
+      "number": 994,
+      "name": "Lautaro Martinez",
+      "team": null,
+      "section": "Coca-Cola",
+      "type": "special",
+      "group": null
     }
   ]
 }

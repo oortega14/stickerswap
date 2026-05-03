@@ -1072,17 +1072,35 @@ const INTRO = [
   { code: "FWC-8", name: "Emblema Oficial - USA" }
 ];
 
-// Stickers FWC del final del álbum (después de los equipos). Usá los códigos
-// reales tal como aparecen en el album (ej. FWC-9, FWC-10, ...). Type "special".
 const EXTRAS = [
-  // { code: "FWC-9",  name: "Lo que diga el sticker" },
-  // { code: "FWC-10", name: "..." },
+  { code: "FWC-9",   name: "Italia 1934" },
+  { code: "FWC-10",   name: "Uruguay 1950" },
+  { code: "FWC-11",   name: "Alemania 1954" },
+  { code: "FWC-12",   name: "Brasil 1962" },
+  { code: "FWC-13",   name: "Alemania 1974" },
+  { code: "FWC-14",   name: "Argentina 1986" },
+  { code: "FWC-15",   name: "Brasil 1994" },
+  { code: "FWC-16",   name: "Brasil 2002" },
+  { code: "FWC-17",   name: "Italia 2006" },
+  { code: "FWC-18",   name: "Alemania 2014" },
+  { code: "FWC-19",   name: "Argentina 2022" },
 ];
 
-// Stickers patrocinador Coca-Cola (última página). Códigos CC1, CC2, ...
 const COCA_COLA = [
-  // { code: "CC1", name: "..." },
-  // { code: "CC2", name: "..." },
+  { code: "CC1", name: "Lamine Yamal" },
+  { code: "CC2", name: "Joshua Kimmich" },
+  { code: "CC3", name: "Harry Kane" },
+  { code: "CC4", name: "Santiago Gimenez" },
+  { code: "CC5", name: "Josko Gvardiol" },
+  { code: "CC6", name: "Federico Valverde" },
+  { code: "CC7", name: "Jefferson Lerma" },
+  { code: "CC8", name: "Enner Valencia" },
+  { code: "CC9", name: "Gabriel Magalhaes" },
+  { code: "CC10", name: "Virgil van Dijk" },
+  { code: "CC11", name: "Alphonso Davies" },
+  { code: "CC12", name: "Emiliano Martinez" },
+  { code: "CC13", name: "Raul Jimenez" },
+  { code: "CC14", name: "Lautaro Martinez" },
 ];
 
 const stickers = [];
@@ -1176,8 +1194,12 @@ for (const [groupLetter, teams] of GROUPS) {
   }
 }
 
+// === Extras FWC (final del álbum) y Coca-Cola (última página) ===
+emitSimpleSection(EXTRAS, "Extras", "special");
+emitSimpleSection(COCA_COLA, "Coca-Cola", "special");
+
 const dataset = {
-  version: 5,
+  version: 6,
   album: "FIFA World Cup 2026",
   stickers
 };
