@@ -4,8 +4,8 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { useTeamStickers, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { haptics } from "@/lib/haptics";
-import { getTeamColors } from "@/theme/teamColors";
-import { withAlpha, tonalShift } from "@/theme/colors";
+import { getTeamColors, type TeamColors } from "@/theme/teamColors";
+import { withAlpha } from "@/theme/colors";
 import type { StickerWithStatus } from "@/domain/types";
 
 export default function TeamDetail() {
@@ -16,7 +16,6 @@ export default function TeamDetail() {
   const dec = useDecrement();
 
   const colors = useMemo(() => getTeamColors(code), [code]);
-  const pegadaBg = useMemo(() => tonalShift(colors.primary, colors.text), [colors]);
 
   const summary = useMemo(() => {
     if (!data) return null;
@@ -33,33 +32,33 @@ export default function TeamDetail() {
 
   if (isLoading || !data || !summary) {
     return (
-      <View style={{ flex: 1, backgroundColor: colors.primary, alignItems: "center", justifyContent: "center" }}>
-        <ActivityIndicator color={colors.text} />
+      <View style={{ flex: 1, backgroundColor: colors.bg, alignItems: "center", justifyContent: "center" }}>
+        <ActivityIndicator color={colors.bgText} />
       </View>
     );
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.primary }}>
+    <View style={{ flex: 1, backgroundColor: colors.bg }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
-        {/* Header solid primary */}
+        {/* Header solid bg */}
         <View style={{ paddingTop: 56, paddingBottom: 24, paddingHorizontal: 16 }}>
           <Pressable onPress={() => router.back()} accessibilityLabel="Volver" accessibilityRole="button">
-            <Text style={{ color: colors.text, opacity: 0.85, marginBottom: 12 }}>‹ Volver</Text>
+            <Text style={{ color: colors.bgText, opacity: 0.85, marginBottom: 12 }}>‹ Volver</Text>
           </Pressable>
-          <Text style={{ color: colors.text, fontSize: 28, fontWeight: "800" }}>{teamName}</Text>
-          <Text style={{ color: colors.text, opacity: 0.75, fontSize: 12, letterSpacing: 1, marginTop: 4 }}>
+          <Text style={{ color: colors.bgText, fontSize: 28, fontWeight: "800" }}>{teamName}</Text>
+          <Text style={{ color: colors.bgText, opacity: 0.75, fontSize: 12, letterSpacing: 1, marginTop: 4 }}>
             {code}
           </Text>
           <View className="mt-4">
-            <Text style={{ color: colors.text, opacity: 0.75, fontSize: 11, letterSpacing: 2 }}>PROGRESO</Text>
-            <Text style={{ color: colors.text, fontSize: 24, fontWeight: "700", marginTop: 2 }}>
+            <Text style={{ color: colors.bgText, opacity: 0.75, fontSize: 11, letterSpacing: 2 }}>PROGRESO</Text>
+            <Text style={{ color: colors.bgText, fontSize: 24, fontWeight: "700", marginTop: 2 }}>
               {summary.collected} / {summary.total}
             </Text>
             <View className="mt-2">
-              <ProgressBar pct={summary.pct} from={pegadaBg} to={colors.accent} />
+              <ProgressBar pct={summary.pct} from={colors.surface} to={colors.accent} />
             </View>
-            <Text style={{ color: colors.text, opacity: 0.7, fontSize: 11, marginTop: 6 }}>
+            <Text style={{ color: colors.bgText, opacity: 0.7, fontSize: 11, marginTop: 6 }}>
               {summary.duplicates > 0 ? `${summary.duplicates} repetidas` : "Sin repetidas"}
             </Text>
           </View>
@@ -67,33 +66,17 @@ export default function TeamDetail() {
 
         {/* Body */}
         <View className="px-4">
-          {/* Escudo + team_photo en una fila */}
           {(badge || teamPhoto) && (
             <View className="flex-row gap-2 mb-4">
               {badge && (
-                <SpecialCard
-                  s={badge}
-                  label="ESCUDO"
-                  inc={inc}
-                  dec={dec}
-                  pegadaBg={pegadaBg}
-                  text={colors.text}
-                />
+                <SpecialCard s={badge} label="ESCUDO" inc={inc} dec={dec} colors={colors} />
               )}
               {teamPhoto && (
-                <SpecialCard
-                  s={teamPhoto}
-                  label="PLANTEL"
-                  inc={inc}
-                  dec={dec}
-                  pegadaBg={pegadaBg}
-                  text={colors.text}
-                />
+                <SpecialCard s={teamPhoto} label="PLANTEL" inc={inc} dec={dec} colors={colors} />
               )}
             </View>
           )}
 
-          {/* Lista de jugadores */}
           <Text
             className="text-xs tracking-widest mb-2"
             style={{ color: colors.accent }}
@@ -104,10 +87,7 @@ export default function TeamDetail() {
             <PlayerRow
               key={s.code}
               s={s}
-              pegadaBg={pegadaBg}
-              accent={colors.accent}
-              primary={colors.primary}
-              text={colors.text}
+              colors={colors}
               onTap={() => {
                 haptics.light();
                 inc.mutate(s.code);
@@ -129,17 +109,16 @@ function SpecialCard({
   label,
   inc,
   dec,
-  pegadaBg,
-  text
+  colors
 }: {
   s: StickerWithStatus;
   label: string;
   inc: ReturnType<typeof useIncrement>;
   dec: ReturnType<typeof useDecrement>;
-  pegadaBg: string;
-  text: string;
+  colors: TeamColors;
 }) {
   const collected = s.count >= 1;
+  const fg = collected ? colors.surfaceText : colors.bgText;
   return (
     <Pressable
       onPress={() => {
@@ -155,28 +134,19 @@ function SpecialCard({
       accessibilityRole="button"
       className="flex-1 rounded-xl p-3"
       style={{
-        backgroundColor: collected ? pegadaBg : "transparent",
+        backgroundColor: collected ? colors.surface : "transparent",
         borderWidth: 1,
-        borderColor: collected ? pegadaBg : withAlpha(text, 0.25)
+        borderColor: collected ? colors.surface : withAlpha(colors.bgText, 0.25)
       }}
     >
-      <Text
-        className="text-xs tracking-widest"
-        style={{ color: text, opacity: collected ? 0.85 : 0.7 }}
-      >
+      <Text className="text-xs tracking-widest" style={{ color: fg, opacity: collected ? 0.85 : 0.7 }}>
         {s.code} · {label}
       </Text>
-      <Text
-        className="text-base font-semibold mt-1"
-        style={{ color: text, opacity: collected ? 1 : 0.9 }}
-      >
+      <Text className="text-base font-semibold mt-1" style={{ color: fg, opacity: collected ? 1 : 0.9 }}>
         {s.name}
       </Text>
       {s.count > 1 && (
-        <Text
-          className="text-xs mt-1"
-          style={{ color: text, opacity: 0.7 }}
-        >
+        <Text className="text-xs mt-1" style={{ color: fg, opacity: 0.7 }}>
           ×{s.count}
         </Text>
       )}
@@ -186,22 +156,17 @@ function SpecialCard({
 
 function PlayerRow({
   s,
-  pegadaBg,
-  accent,
-  primary,
-  text,
+  colors,
   onTap,
   onLong
 }: {
   s: StickerWithStatus;
-  pegadaBg: string;
-  accent: string;
-  primary: string;
-  text: string;
+  colors: TeamColors;
   onTap: () => void;
   onLong: () => void;
 }) {
   const collected = s.count >= 1;
+  const fg = collected ? colors.surfaceText : colors.bgText;
   return (
     <Pressable
       onPress={onTap}
@@ -211,25 +176,21 @@ function PlayerRow({
       accessibilityRole="button"
       className="flex-row items-center justify-between rounded-lg mb-2 px-3 py-3"
       style={{
-        backgroundColor: collected ? pegadaBg : "transparent",
+        backgroundColor: collected ? colors.surface : "transparent",
         borderWidth: 1,
-        borderColor: collected ? pegadaBg : withAlpha(text, 0.25)
+        borderColor: collected ? colors.surface : withAlpha(colors.bgText, 0.25)
       }}
     >
       <View className="flex-row items-center flex-1">
         <Text
           className="font-mono text-xs mr-3"
-          style={{
-            color: text,
-            opacity: collected ? 0.7 : 0.6,
-            minWidth: 56
-          }}
+          style={{ color: fg, opacity: collected ? 0.7 : 0.6, minWidth: 56 }}
         >
           {s.code}
         </Text>
         <Text
           className="text-base font-semibold flex-1"
-          style={{ color: text, opacity: collected ? 1 : 0.85 }}
+          style={{ color: fg, opacity: collected ? 1 : 0.85 }}
         >
           {s.name}
         </Text>
@@ -237,14 +198,14 @@ function PlayerRow({
       {s.count > 1 ? (
         <View
           className="rounded-full px-2 py-0.5 ml-2"
-          style={{ backgroundColor: text }}
+          style={{ backgroundColor: colors.surfaceText }}
         >
-          <Text className="text-xs font-bold" style={{ color: primary }}>×{s.count}</Text>
+          <Text className="text-xs font-bold" style={{ color: colors.surface }}>×{s.count}</Text>
         </View>
       ) : collected ? (
-        <Text className="text-xs ml-2" style={{ color: accent }}>✓</Text>
+        <Text className="text-xs ml-2" style={{ color: colors.surfaceText }}>✓</Text>
       ) : (
-        <Text className="text-xs ml-2" style={{ color: text, opacity: 0.4 }}>·</Text>
+        <Text className="text-xs ml-2" style={{ color: colors.bgText, opacity: 0.4 }}>·</Text>
       )}
     </Pressable>
   );
