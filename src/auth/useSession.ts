@@ -10,6 +10,10 @@ export interface ProfileUser {
   avatar_url: string | null;
   invite_code: string;
   onboarding_completed: boolean;
+  country: string | null;
+  city_slug: string | null;
+  city_label: string | null;
+  discoverable: boolean;
 }
 
 interface SessionState {
@@ -73,13 +77,24 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     }
   })();
 
-  let data: { id: string; username: string; display_name: string | null; avatar_url: string | null; invite_code: string; onboarding_completed: boolean } | null = null;
+  let data: {
+    id: string;
+    username: string;
+    display_name: string | null;
+    avatar_url: string | null;
+    invite_code: string;
+    onboarding_completed: boolean;
+    country: string | null;
+    city_slug: string | null;
+    city_label: string | null;
+    discoverable: boolean;
+  } | null = null;
   let error: { message: string; code?: string } | null = null;
   try {
     const result = await withTimeout(
       supabase
         .from("profiles")
-        .select("id, username, display_name, avatar_url, invite_code, onboarding_completed")
+        .select("id, username, display_name, avatar_url, invite_code, onboarding_completed, country, city_slug, city_label, discoverable")
         .eq("id", userId)
         .maybeSingle(),
       5000,
@@ -110,7 +125,7 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
       username: fallbackUsername,
       invite_code: fallbackInvite
     })
-    .select("id, username, display_name, avatar_url, invite_code, onboarding_completed")
+    .select("id, username, display_name, avatar_url, invite_code, onboarding_completed, country, city_slug, city_label, discoverable")
     .single();
   console.log("[fetchProfile] insert returned:", { hasData: !!created, error: insertError?.message, code: insertError?.code });
   if (insertError) {
