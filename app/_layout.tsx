@@ -104,8 +104,14 @@ function FriendUpdatesBridge() {
 
   useEffect(() => {
     if (!user) return;
-    const channel = subscribeToFriendUpdates(() => {
-      qc.invalidateQueries({ queryKey: ["matches"] });
+    const channel = subscribeToFriendUpdates({
+      onStickerStatusChange: () => {
+        qc.invalidateQueries({ queryKey: ["matches"] });
+      },
+      onFriendshipChange: () => {
+        qc.invalidateQueries({ queryKey: ["pendingRequests"] });
+        qc.invalidateQueries({ queryKey: ["friends"] });
+      }
     });
     return () => unsubscribe(channel);
   }, [user, qc]);
@@ -159,7 +165,8 @@ function AuthGate({ children }: { children: React.ReactNode }) {
     }
 
     if (!user.onboarding_completed) {
-      if (segments.join("/") !== "(auth)/onboarding") {
+      const path = segments.join("/");
+      if (path !== "(auth)/onboarding" && path !== "(auth)/location") {
         console.log("[AuthGate] onboarding pending → /(auth)/onboarding");
         router.replace("/(auth)/onboarding" as never);
       }

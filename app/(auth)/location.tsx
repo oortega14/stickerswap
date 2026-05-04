@@ -5,6 +5,7 @@ import { GlowCard } from "@/ui/GlowCard";
 import { useSession, useSessionStore } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
 import { updateLocation } from "@/social/locationProfile";
+import { citySlug } from "@/lib/citySlug";
 import { useTheme } from "@/theme/ThemeProvider";
 
 const COUNTRIES: { code: string; label: string }[] = [
@@ -58,7 +59,7 @@ export default function LocationStep() {
         ...user,
         country: discoverable ? country : null,
         city_label: discoverable ? city.trim() : null,
-        city_slug: null,
+        city_slug: discoverable && city.trim().length > 0 ? citySlug(city.trim()) : null,
         discoverable,
         onboarding_completed: true
       });

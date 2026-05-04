@@ -1,4 +1,4 @@
-import { ScrollView, View, Text, Pressable, ActivityIndicator } from "react-native";
+import { ScrollView, View, Text, Pressable, ActivityIndicator, Alert } from "react-native";
 import { useRouter } from "expo-router";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
@@ -47,7 +47,17 @@ export default function RequestsInbox() {
               ) : null}
               <View className="flex-row mt-3" style={{ gap: 8 }}>
                 <Pressable
-                  onPress={() => accept.mutate(r.requesterId)}
+                  onPress={() => {
+                    accept.mutate(r.requesterId, {
+                      onError: (e: unknown) => {
+                        const msg = (e as Error).message;
+                        const human = msg.includes("request_not_found")
+                          ? "Esta solicitud ya no existe."
+                          : msg;
+                        Alert.alert("No se pudo aceptar", human);
+                      }
+                    });
+                  }}
                   disabled={accept.isPending || decline.isPending}
                   style={{
                     flex: 1,

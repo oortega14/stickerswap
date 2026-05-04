@@ -27,6 +27,11 @@ export function useAcceptRequest() {
       qc.invalidateQueries({ queryKey: ["friends"] });
       qc.invalidateQueries({ queryKey: ["matches"] });
       qc.invalidateQueries({ queryKey: ["nearbyMatches"] });
+    },
+    onError: () => {
+      // Si el row pending no existe o la operación falló, refrescamos para que
+      // el inbox se sincronice con el server-state real.
+      qc.invalidateQueries({ queryKey: ["pendingRequests"] });
     }
   });
 }
@@ -38,6 +43,9 @@ export function useDeclineRequest() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["pendingRequests"] });
       qc.invalidateQueries({ queryKey: ["nearbyMatches"] });
+    },
+    onError: () => {
+      qc.invalidateQueries({ queryKey: ["pendingRequests"] });
     }
   });
 }
