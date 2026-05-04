@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, Keyboard } from "react-native";
+import { useRouter } from "expo-router";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { isValidUsername, isUsernameTaken } from "@/auth/username";
@@ -11,6 +12,7 @@ type CheckState = "idle" | "checking" | "valid" | "invalid" | "taken";
 
 export default function Onboarding() {
   const { theme } = useTheme();
+  const router = useRouter();
   const { user } = useSession();
   // Pre-llenamos con el username auto-generado (ej. `user_ec81`). El usuario
   // puede dejarlo o cambiarlo. La columna `onboarding_completed` en profiles
@@ -43,20 +45,18 @@ export default function Onboarding() {
     setSaving(true);
     const { error } = await supabase
       .from("profiles")
-      .update({ username: value, onboarding_completed: true })
+      .update({ username: value })
       .eq("id", user.id);
     setSaving(false);
     if (error) {
       Alert.alert("No se pudo guardar", error.message);
       return;
     }
-    // Reflejar el cambio en el store local para que AuthGate vea
-    // onboarding_completed=true y despache a tabs.
     useSessionStore.getState().setProfile({
       ...user,
-      username: value,
-      onboarding_completed: true
+      username: value
     });
+    router.push("/(auth)/location" as never);
   };
 
   const hint =
