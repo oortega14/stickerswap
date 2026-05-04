@@ -53,7 +53,7 @@ export interface TradeFormatOptions {
 }
 
 export type FriendshipStatus = "pending" | "accepted" | "blocked";
-export type FriendshipSource = "qr_code" | "username_search";
+export type FriendshipSource = "qr_code" | "username_search" | "nearby_match";
 
 export interface Friend {
   id: string;
@@ -82,4 +82,27 @@ export interface FriendMatchSummary {
 export interface BidirectionalMatch {
   theyHaveYouNeed: FriendMatch[];
   youHaveTheyNeed: FriendMatch[];
+}
+
+export interface NearbyMatchRaw {
+  themId: string;
+  username: string;
+  displayName: string | null;
+  cityLabel: string;
+  theyHaveINeed: number;
+  iHaveTheyNeed: number;
+}
+
+export interface NearbyMatch extends NearbyMatchRaw {
+  score: number; // min(theyHaveINeed, iHaveTheyNeed)
+}
+
+export interface PendingRequest {
+  requesterId: string;
+  username: string;
+  displayName: string | null;
+  cityLabel: string | null;
+  message: string | null;
+  source: "qr_code" | "username_search" | "nearby_match";
+  createdAt: number;
 }
