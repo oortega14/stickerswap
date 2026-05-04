@@ -43,7 +43,7 @@ export default function RequestsInbox() {
                 {r.cityLabel ? <Text style={{ color: theme.textMute, fontSize: 12, fontWeight: "400" }}>  · {r.cityLabel}</Text> : null}
               </Text>
               {r.message ? (
-                <Text style={{ color: theme.text, fontSize: 14, marginTop: 6 }}>"{r.message}"</Text>
+                <Text style={{ color: theme.text, fontSize: 14, marginTop: 6 }}>«{r.message}»</Text>
               ) : null}
               <View className="flex-row mt-3" style={{ gap: 8 }}>
                 <Pressable

@@ -145,7 +145,7 @@ export default function EditProfile() {
             <View className="flex-1 pr-3">
               <Text className="text-space-ink text-base font-semibold">Que me encuentren</Text>
               <Text className="text-space-mute text-xs mt-1">
-                Si lo apagás, dejás de aparecer en "Cerca de mí" de otros. Tus matches con amigos siguen igual.
+                Si lo apagás, dejás de aparecer en «Cerca de mí» de otros. Tus matches con amigos siguen igual.
               </Text>
             </View>
             <Switch
