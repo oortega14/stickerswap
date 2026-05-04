@@ -7,12 +7,15 @@ import { GlowCard } from "@/ui/GlowCard";
 import { GlowGradientCard } from "@/ui/GlowGradientCard";
 import { EmptyState } from "@/ui/EmptyState";
 import { SegmentedControl } from "@/ui/SegmentedControl";
+import { ProgressBar } from "@/ui/ProgressBar";
 import { useMyList } from "@/hooks/useMyList";
 import { useMatches } from "@/hooks/useMatches";
+import { useNearbyMatches } from "@/hooks/useNearbyMatches";
 import { useTradePrefs } from "@/store/tradePreferences";
+import { useSession } from "@/auth/useSession";
 import { useTheme } from "@/theme/ThemeProvider";
 
-type Tab = "matches" | "mine";
+type Tab = "matches" | "mine" | "nearby";
 
 export default function Trades() {
   const [tab, setTab] = useState<Tab>("mine");
@@ -35,7 +38,8 @@ export default function Trades() {
           <SegmentedControl<Tab>
             options={[
               { value: "matches", label: "Matches" },
-              { value: "mine", label: "Mi lista" }
+              { value: "mine", label: "Mi lista" },
+              { value: "nearby", label: "Cerca de mí" }
             ]}
             value={tab}
             onChange={setTab}
@@ -44,6 +48,8 @@ export default function Trades() {
 
         {tab === "matches" ? (
           <MatchesView />
+        ) : tab === "nearby" ? (
+          <NearbyView />
         ) : isLoading || !data ? (
           <Text className="text-space-mute text-center mt-4">Cargando…</Text>
         ) : (
@@ -126,6 +132,55 @@ function MatchesView() {
           </GlowCard>
         </Pressable>
       ))}
+    </>
+  );
+}
+
+function NearbyView() {
+  const router = useRouter();
+  const { theme } = useTheme();
+  const { user } = useSession();
+  const { data, isLoading } = useNearbyMatches();
+
+  if (!user?.discoverable) {
+    return (
+      <EmptyState
+        variant="rocket"
+        title="Activá la discoverabilidad"
+        message="Andá a Perfil → Editar para activar 'Que me encuentren' y que personas de tu ciudad puedan contactarte."
+      />
+    );
+  }
+  if (isLoading) return <Text className="text-space-mute text-center mt-4">Cargando…</Text>;
+  if (!data || data.length === 0) {
+    return <EmptyState variant="rocket" title="Sin matches cerca todavía" message={`Nadie en ${user.city_label ?? "tu ciudad"} tiene complementarios con vos por ahora. Volvé después.`} />;
+  }
+
+  return (
+    <>
+      {data.map((m) => {
+        const maxScore = data[0]?.score ?? m.score;
+        const pct = maxScore > 0 ? m.score / maxScore : 0;
+        return (
+          <Pressable
+            key={m.themId}
+            onPress={() => router.push(`/nearby/${m.username}` as never)}
+            accessibilityLabel={`Ver match con @${m.username}, score ${m.score}`}
+            accessibilityRole="button"
+          >
+            <GlowCard className="mb-2">
+              <View className="flex-row items-center justify-between mb-1">
+                <Text className="text-space-ink font-semibold">@{m.username}</Text>
+                <Text style={{ color: theme.accent, fontWeight: "700" }}>score {m.score}</Text>
+              </View>
+              <Text className="text-space-mute text-xs mb-2">
+                necesitás {m.theyHaveINeed} · podés dar {m.iHaveTheyNeed}
+              </Text>
+              <ProgressBar pct={pct} height={3} from={theme.accent} to={theme.accent} />
+            </GlowCard>
+          </Pressable>
+        );
+      })}
     </>
   );
 }
