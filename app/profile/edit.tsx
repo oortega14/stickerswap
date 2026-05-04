@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, ScrollView, Switch } from "react-native";
 import { useRouter } from "expo-router";
 import { ThemedBackground } from "@/ui/ThemedBackground";
@@ -7,6 +7,7 @@ import { useSession, useSessionStore } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
 import { updateLocation } from "@/social/locationProfile";
 import { citySlug } from "@/lib/citySlug";
+import { useMyContacts, useUpdateMyContacts } from "@/hooks/useContacts";
 import { useTheme } from "@/theme/ThemeProvider";
 
 const COUNTRIES = [
@@ -34,11 +35,23 @@ export default function EditProfile() {
   const router = useRouter();
   const { theme } = useTheme();
   const { user } = useSession();
+  const { data: contacts } = useMyContacts();
+  const updateContacts = useUpdateMyContacts();
   const [name, setName] = useState(user?.display_name ?? "");
   const [country, setCountry] = useState<string | null>(user?.country ?? null);
   const [city, setCity] = useState(user?.city_label ?? "");
   const [discoverable, setDiscoverable] = useState(user?.discoverable ?? false);
+  const [whatsapp, setWhatsapp] = useState("");
+  const [instagram, setInstagram] = useState("");
   const [saving, setSaving] = useState(false);
+
+  // Hidratá los inputs de contacto cuando llegue la query
+  useEffect(() => {
+    if (contacts) {
+      setWhatsapp(contacts.whatsapp ?? "");
+      setInstagram(contacts.instagram ?? "");
+    }
+  }, [contacts]);
 
   if (!user) return null;
 
@@ -63,6 +76,11 @@ export default function EditProfile() {
         country: discoverable ? country : null,
         cityLabel: discoverable ? city.trim() : null,
         discoverable
+      });
+
+      await updateContacts.mutateAsync({
+        whatsapp: whatsapp.trim() || null,
+        instagram: instagram.trim() || null
       });
 
       useSessionStore.getState().setProfile({
@@ -157,6 +175,40 @@ export default function EditProfile() {
               accessibilityState={{ checked: discoverable }}
             />
           </View>
+        </GlowCard>
+
+        <Text className="text-space-mute text-xs tracking-widest mb-2 mt-2">CONTACTO</Text>
+        <Text className="text-space-mute text-xs mb-2">
+          Solo lo ven amigos que aceptaste. Sirve para coordinar el intercambio por fuera de la app.
+        </Text>
+
+        <GlowCard className="mb-3">
+          <Text className="text-space-mute text-xs mb-1">WhatsApp</Text>
+          <TextInput
+            value={whatsapp}
+            onChangeText={setWhatsapp}
+            placeholder="+57 300 123 4567"
+            placeholderTextColor={theme.textMute}
+            autoCapitalize="none"
+            autoCorrect={false}
+            keyboardType="phone-pad"
+            className="text-space-ink text-base bg-space-mid rounded-md px-3 py-2"
+            maxLength={30}
+          />
+        </GlowCard>
+
+        <GlowCard className="mb-6">
+          <Text className="text-space-mute text-xs mb-1">Instagram</Text>
+          <TextInput
+            value={instagram}
+            onChangeText={setInstagram}
+            placeholder="@tu_usuario"
+            placeholderTextColor={theme.textMute}
+            autoCapitalize="none"
+            autoCorrect={false}
+            className="text-space-ink text-base bg-space-mid rounded-md px-3 py-2"
+            maxLength={40}
+          />
         </GlowCard>
 
         <Pressable

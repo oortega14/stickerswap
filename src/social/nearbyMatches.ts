@@ -1,5 +1,5 @@
 import { supabase } from "@/auth/supabaseClient";
-import type { NearbyMatchRaw, PendingRequest, FriendshipSource } from "@/domain/types";
+import type { NearbyMatchRaw, PendingRequest, OutgoingRequest, FriendshipSource } from "@/domain/types";
 
 interface NearbyRow {
   me_id: string;
@@ -16,6 +16,17 @@ interface PendingRow {
   username: string;
   display_name: string | null;
   city_label: string | null;
+  message: string | null;
+  source: FriendshipSource;
+  created_at: string;
+}
+
+interface OutgoingRow {
+  recipient_id: string;
+  username: string;
+  display_name: string | null;
+  city_label: string | null;
+  status: "pending" | "rejected";
   message: string | null;
   source: FriendshipSource;
   created_at: string;
@@ -44,6 +55,19 @@ export function mapPendingRow(r: PendingRow): PendingRequest {
   };
 }
 
+export function mapOutgoingRow(r: OutgoingRow): OutgoingRequest {
+  return {
+    recipientId: r.recipient_id,
+    username: r.username,
+    displayName: r.display_name,
+    cityLabel: r.city_label,
+    status: r.status,
+    message: r.message,
+    source: r.source,
+    createdAt: Date.parse(r.created_at)
+  };
+}
+
 export async function fetchNearbyMatches(): Promise<NearbyMatchRaw[]> {
   const { data, error } = await supabase
     .from("v_nearby_matches")
@@ -58,6 +82,19 @@ export async function fetchPendingRequests(): Promise<PendingRequest[]> {
     .select("requester_id, username, display_name, city_label, message, source, created_at");
   if (error) throw error;
   return (data ?? []).map(mapPendingRow);
+}
+
+export async function fetchOutgoingRequests(): Promise<OutgoingRequest[]> {
+  const { data, error } = await supabase
+    .from("v_outgoing_requests")
+    .select("recipient_id, username, display_name, city_label, status, message, source, created_at");
+  if (error) throw error;
+  return (data ?? []).map(mapOutgoingRow);
+}
+
+export async function deleteMyOutgoingRequest(targetId: string): Promise<void> {
+  const { error } = await supabase.rpc("delete_my_outgoing_request", { target_id: targetId });
+  if (error) throw error;
 }
 
 export async function requestNearbyTrade(targetId: string, message: string | null): Promise<void> {

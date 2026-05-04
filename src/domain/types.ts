@@ -52,7 +52,7 @@ export interface TradeFormatOptions {
   username: string;
 }
 
-export type FriendshipStatus = "pending" | "accepted" | "blocked";
+export type FriendshipStatus = "pending" | "accepted" | "blocked" | "rejected";
 export type FriendshipSource = "qr_code" | "username_search" | "nearby_match";
 
 export interface Friend {
@@ -103,6 +103,17 @@ export interface PendingRequest {
   displayName: string | null;
   cityLabel: string | null;
   message: string | null;
-  source: "qr_code" | "username_search" | "nearby_match";
+  source: FriendshipSource;
+  createdAt: number;
+}
+
+export interface OutgoingRequest {
+  recipientId: string;
+  username: string;
+  displayName: string | null;
+  cityLabel: string | null;
+  status: "pending" | "rejected"; // accepted ones aparecen en Matches, no acá
+  message: string | null;
+  source: FriendshipSource;
   createdAt: number;
 }

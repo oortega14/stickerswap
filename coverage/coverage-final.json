@@ -1,0 +1,2 @@
+{"/Users/oscarortega/projects/panini-album/src/lib/citySlug.ts": {"path":"/Users/oscarortega/projects/panini-album/src/lib/citySlug.ts","statementMap":{"0":{"start":{"line":9,"column":2},"end":{"line":17,"column":27}}},"fnMap":{"0":{"name":"citySlug","decl":{"start":{"line":8,"column":16},"end":{"line":8,"column":24}},"loc":{"start":{"line":8,"column":48},"end":{"line":18,"column":1}},"line":8}},"branchMap":{},"s":{"0":7},"f":{"0":7},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"371d383a11f439ea1586562451fd2ed8aa459124"}
+}

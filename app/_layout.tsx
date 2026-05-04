@@ -110,6 +110,7 @@ function FriendUpdatesBridge() {
       },
       onFriendshipChange: () => {
         qc.invalidateQueries({ queryKey: ["pendingRequests"] });
+        qc.invalidateQueries({ queryKey: ["outgoingRequests"] });
         qc.invalidateQueries({ queryKey: ["friends"] });
       }
     });
