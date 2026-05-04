@@ -112,6 +112,15 @@ export default function Profile() {
         </Pressable>
 
         <Pressable
+          onPress={() => router.push("/profile/requests" as never)}
+          className="bg-space-mid rounded-xl py-3 items-center mb-2"
+          accessibilityLabel="Solicitudes"
+          accessibilityRole="button"
+        >
+          <Text className="text-space-ink font-semibold">📨 Solicitudes</Text>
+        </Pressable>
+
+        <Pressable
           onPress={() => router.push("/friends" as never)}
           className="bg-space-mid rounded-xl py-3 items-center mb-2"
           accessibilityLabel="Mis amigos"
