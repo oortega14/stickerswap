@@ -69,9 +69,7 @@ export function mapOutgoingRow(r: OutgoingRow): OutgoingRequest {
 }
 
 export async function fetchNearbyMatches(): Promise<NearbyMatchRaw[]> {
-  const { data, error } = await supabase
-    .from("v_nearby_matches")
-    .select("me_id, them_id, username, display_name, city_label, they_have_i_need, i_have_they_need");
+  const { data, error } = await supabase.rpc("get_nearby_matches");
   if (error) throw error;
   return (data ?? []).map(mapNearbyRow);
 }

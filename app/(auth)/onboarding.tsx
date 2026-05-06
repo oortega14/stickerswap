@@ -1,28 +1,29 @@
 import { useEffect, useState } from "react";
-import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, Keyboard } from "react-native";
+import { View, Text, TextInput, ActivityIndicator, Alert, Keyboard } from "react-native";
 import { useRouter } from "expo-router";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
+import { AuthToggleBar } from "@/ui/AuthToggleBar";
+import { PrimaryButton } from "@/ui/PrimaryButton";
 import { isValidUsername, isUsernameTaken } from "@/auth/username";
 import { useSession, useSessionStore } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
 import { useTheme } from "@/theme/ThemeProvider";
+import { useT } from "@/i18n/I18nProvider";
 
 type CheckState = "idle" | "checking" | "valid" | "invalid" | "taken";
 
 export default function Onboarding() {
   const { theme } = useTheme();
+  const t = useT();
   const router = useRouter();
   const { user } = useSession();
-  // Pre-llenamos con el username auto-generado (ej. `user_ec81`). El usuario
-  // puede dejarlo o cambiarlo. La columna `onboarding_completed` en profiles
-  // es la que marca que ya pasó por acá.
   const [value, setValue] = useState(user?.username ?? "");
   const [state, setState] = useState<CheckState>("idle");
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    if (!user?.id) return; // esperar a que cargue el profile antes de validar
+    if (!user?.id) return;
     if (!isValidUsername(value)) {
       setState(value.length === 0 ? "idle" : "invalid");
       return;
@@ -49,35 +50,39 @@ export default function Onboarding() {
       .eq("id", user.id);
     setSaving(false);
     if (error) {
-      Alert.alert("No se pudo guardar", error.message);
+      Alert.alert(t("username_save_error_title"), error.message);
       return;
     }
-    useSessionStore.getState().setProfile({
-      ...user,
-      username: value
-    });
+    useSessionStore.getState().setProfile({ ...user, username: value });
     router.push("/(auth)/location" as never);
   };
 
   const hint =
     state === "invalid"
-      ? "3-20 caracteres, solo a-z, 0-9 y _"
+      ? t("username_hint_invalid")
       : state === "taken"
-      ? "Ese username ya está tomado"
+      ? t("username_hint_taken")
       : state === "valid"
-      ? "Disponible ✓"
+      ? t("username_hint_valid")
       : state === "checking"
-      ? "Verificando…"
+      ? t("username_hint_checking")
       : " ";
 
   return (
     <ThemedBackground>
-      <View className="flex-1 px-6 pt-24">
-        <Text className="text-space-violet font-bold text-2xl mb-1">Elegí tu username</Text>
-        <Text className="text-space-mute mb-6">Así te encuentran tus amigos para cambios.</Text>
+      <AuthToggleBar />
+      <View className="flex-1 px-6 pt-32">
+        <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800", marginBottom: 6 }}>
+          {t("username_title")}
+        </Text>
+        <Text style={{ color: theme.textMute, marginBottom: 24 }}>
+          {t("username_subtitle")}
+        </Text>
 
-        <GlowCard className="mb-3">
-          <Text className="text-space-mute text-xs mb-1">@username</Text>
+        <GlowCard className="mb-4">
+          <Text style={{ color: theme.textMute, fontSize: 11, marginBottom: 4 }}>
+            {t("username_label")}
+          </Text>
           <TextInput
             value={value}
             onChangeText={(s) => setValue(s.toLowerCase())}
@@ -85,25 +90,28 @@ export default function Onboarding() {
             placeholderTextColor={theme.textMute}
             autoCapitalize="none"
             autoCorrect={false}
-            className="text-space-ink text-lg bg-space-mid rounded-md px-3 py-2"
+            style={{
+              color: theme.text,
+              backgroundColor: theme.bg,
+              borderRadius: 8,
+              paddingHorizontal: 12,
+              paddingVertical: 10,
+              fontSize: 18,
+              borderWidth: 1,
+              borderColor: theme.border
+            }}
             maxLength={20}
           />
-          <Text className="text-space-mute text-xs mt-2">{hint}</Text>
+          <Text style={{ color: theme.textMute, fontSize: 11, marginTop: 8 }}>{hint}</Text>
         </GlowCard>
 
-        <Pressable
-          disabled={state !== "valid" || saving}
+        <PrimaryButton
+          label={t("username_continue")}
           onPress={onSave}
-          className={`rounded-xl py-4 items-center ${state === "valid" ? "bg-space-purple" : "bg-space-mid"}`}
-          accessibilityLabel="Continuar"
-          accessibilityRole="button"
-        >
-          {saving ? (
-            <ActivityIndicator color="#fff" />
-          ) : (
-            <Text className="text-white font-semibold">Continuar</Text>
-          )}
-        </Pressable>
+          disabled={state !== "valid"}
+          loading={saving}
+          accessibilityLabel={t("username_continue")}
+        />
       </View>
     </ThemedBackground>
   );

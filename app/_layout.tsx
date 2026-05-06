@@ -9,6 +9,7 @@ import NetInfo from "@react-native-community/netinfo";
 import { initSchema } from "@/data/schema";
 import { seedStickers, type StickerDataset } from "@/data/seed";
 import { ThemeProvider, useTheme } from "@/theme/ThemeProvider";
+import { I18nProvider } from "@/i18n/I18nProvider";
 import { SessionProvider, useSession } from "@/auth/useSession";
 import { drainQueue, pullRemoteStatus } from "@/sync/worker";
 import { subscribeToFriendUpdates, unsubscribe } from "@/social/realtime";
@@ -203,6 +204,7 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemeProvider>
+        <I18nProvider>
         {error ? (
           <View className="flex-1 items-center justify-center bg-space-deep p-6">
             <Text className="text-red-300 text-center">Error: {error}</Text>
@@ -222,6 +224,7 @@ export default function RootLayout() {
             </AuthGate>
           </QueryClientProvider>
         )}
+        </I18nProvider>
       </ThemeProvider>
     </GestureHandlerRootView>
   );

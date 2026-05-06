@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, Switch, ScrollView } from "react-native";
+import { View, Text, TextInput, Pressable, Alert, Switch, ScrollView } from "react-native";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
+import { AuthToggleBar } from "@/ui/AuthToggleBar";
+import { PrimaryButton } from "@/ui/PrimaryButton";
 import { useSession, useSessionStore } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
 import { updateLocation } from "@/social/locationProfile";
 import { citySlug } from "@/lib/citySlug";
 import { useTheme } from "@/theme/ThemeProvider";
+import { useT } from "@/i18n/I18nProvider";
 
 const COUNTRIES: { code: string; label: string }[] = [
   { code: "AR", label: "Argentina" },
@@ -32,6 +35,7 @@ const COUNTRIES: { code: string; label: string }[] = [
 export default function LocationStep() {
   const { user } = useSession();
   const { theme } = useTheme();
+  const t = useT();
   const [country, setCountry] = useState<string | null>("CO");
   const [city, setCity] = useState("");
   const [discoverable, setDiscoverable] = useState(true);
@@ -64,7 +68,7 @@ export default function LocationStep() {
         onboarding_completed: true
       });
     } catch (e: unknown) {
-      Alert.alert("No se pudo guardar", (e as Error).message);
+      Alert.alert(t("location_save_error_title"), (e as Error).message);
     } finally {
       setSaving(false);
     }
@@ -72,14 +76,19 @@ export default function LocationStep() {
 
   return (
     <ThemedBackground>
-      <ScrollView className="flex-1 px-6 pt-24" keyboardShouldPersistTaps="handled">
-        <Text className="text-space-violet font-bold text-2xl mb-1">¿Dónde estás?</Text>
-        <Text className="text-space-mute mb-6">
-          Para que personas de tu ciudad puedan proponerte intercambios.
+      <AuthToggleBar />
+      <ScrollView className="flex-1 px-6 pt-32" keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingBottom: 32 }}>
+        <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800", marginBottom: 6 }}>
+          {t("location_title")}
+        </Text>
+        <Text style={{ color: theme.textMute, marginBottom: 24 }}>
+          {t("location_subtitle")}
         </Text>
 
         <GlowCard className="mb-3">
-          <Text className="text-space-mute text-xs mb-2">País</Text>
+          <Text style={{ color: theme.textMute, fontSize: 11, marginBottom: 8 }}>
+            {t("location_country")}
+          </Text>
           <View className="flex-row flex-wrap" style={{ gap: 6 }}>
             {COUNTRIES.map((c) => (
               <Pressable
@@ -89,15 +98,15 @@ export default function LocationStep() {
                   paddingHorizontal: 12,
                   paddingVertical: 6,
                   borderRadius: 999,
-                  backgroundColor: country === c.code ? theme.accent : theme.card,
+                  backgroundColor: country === c.code ? theme.text : theme.bg,
                   borderWidth: 1,
-                  borderColor: theme.border
+                  borderColor: country === c.code ? theme.text : theme.border
                 }}
                 accessibilityRole="button"
-                accessibilityLabel={`País ${c.label}`}
+                accessibilityLabel={c.label}
                 accessibilityState={{ selected: country === c.code }}
               >
-                <Text style={{ color: country === c.code ? "#fff" : theme.text, fontSize: 13 }}>
+                <Text style={{ color: country === c.code ? theme.bg : theme.text, fontSize: 13 }}>
                   {c.label}
                 </Text>
               </Pressable>
@@ -106,15 +115,26 @@ export default function LocationStep() {
         </GlowCard>
 
         <GlowCard className="mb-3">
-          <Text className="text-space-mute text-xs mb-1">Ciudad</Text>
+          <Text style={{ color: theme.textMute, fontSize: 11, marginBottom: 4 }}>
+            {t("location_city")}
+          </Text>
           <TextInput
             value={city}
             onChangeText={setCity}
-            placeholder="Armenia"
+            placeholder={t("location_city_placeholder")}
             placeholderTextColor={theme.textMute}
             autoCapitalize="words"
             autoCorrect={false}
-            className="text-space-ink text-base bg-space-mid rounded-md px-3 py-2"
+            style={{
+              color: theme.text,
+              backgroundColor: theme.bg,
+              borderRadius: 8,
+              paddingHorizontal: 12,
+              paddingVertical: 10,
+              fontSize: 16,
+              borderWidth: 1,
+              borderColor: theme.border
+            }}
             maxLength={50}
           />
         </GlowCard>
@@ -122,11 +142,11 @@ export default function LocationStep() {
         <GlowCard className="mb-6">
           <View className="flex-row items-center justify-between">
             <View className="flex-1 pr-3">
-              <Text className="text-space-ink text-base font-semibold">
-                Que me encuentren para intercambiar
+              <Text style={{ color: theme.text, fontSize: 15, fontWeight: "600" }}>
+                {t("location_discoverable_title")}
               </Text>
-              <Text className="text-space-mute text-xs mt-1">
-                Personas de tu ciudad podrán mandarte solicitudes. Lo apagás cuando quieras desde Perfil.
+              <Text style={{ color: theme.textMute, fontSize: 12, marginTop: 4 }}>
+                {t("location_discoverable_subtitle")}
               </Text>
             </View>
             <Switch
@@ -135,21 +155,18 @@ export default function LocationStep() {
               trackColor={{ false: theme.textMute, true: theme.accent }}
               thumbColor={theme.card}
               accessibilityRole="switch"
-              accessibilityLabel="Discoverable"
               accessibilityState={{ checked: discoverable }}
             />
           </View>
         </GlowCard>
 
-        <Pressable
-          disabled={!canContinue || saving}
+        <PrimaryButton
+          label={t("location_continue")}
           onPress={onSave}
-          className={`rounded-xl py-4 items-center ${canContinue ? "bg-space-purple" : "bg-space-mid"}`}
-          accessibilityLabel="Continuar"
-          accessibilityRole="button"
-        >
-          {saving ? <ActivityIndicator color="#fff" /> : <Text className="text-white font-semibold">Continuar</Text>}
-        </Pressable>
+          disabled={!canContinue}
+          loading={saving}
+          accessibilityLabel={t("location_continue")}
+        />
       </ScrollView>
     </ThemedBackground>
   );

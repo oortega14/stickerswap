@@ -1,33 +1,31 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { View, Text, Pressable } from "react-native";
+import { View, Text } from "react-native";
 import { ThemedBackground } from "@/ui/ThemedBackground";
-import { GlowGradientCard } from "@/ui/GlowGradientCard";
+import { AuthToggleBar } from "@/ui/AuthToggleBar";
+import { PrimaryButton } from "@/ui/PrimaryButton";
+import { useTheme } from "@/theme/ThemeProvider";
+import { useT } from "@/i18n/I18nProvider";
 import { markOnboardingSeen } from "@/lib/onboarding";
+import type { StringKey } from "@/i18n/strings";
 
-const STEPS: Record<string, { title: string; body: string; cta: string; next: string }> = {
-  "1": {
-    title: "Tu álbum, en tu bolsillo",
-    body: "Tracking de las 670 figuritas del Mundial 2026.",
-    cta: "Siguiente",
-    next: "/onboarding/2"
-  },
-  "2": {
-    title: "Tap = pegada · Long-press = quitar",
-    body: "Marcá rápido. Las repetidas las cuenta solas.",
-    cta: "Siguiente",
-    next: "/onboarding/3"
-  },
-  "3": {
-    title: "Cambios con amigos",
-    body: "Agregá amigos por código y la app te muestra qué tiene cada uno que vos necesitás.",
-    cta: "Empezar",
-    next: "(tabs)"
-  }
+interface StepData {
+  titleKey: StringKey;
+  bodyKey: StringKey;
+  ctaKey: StringKey;
+  next: string;
+}
+
+const STEPS: Record<string, StepData> = {
+  "1": { titleKey: "onb1_title", bodyKey: "onb1_body", ctaKey: "onb1_cta", next: "/onboarding/2" },
+  "2": { titleKey: "onb2_title", bodyKey: "onb2_body", ctaKey: "onb2_cta", next: "/onboarding/3" },
+  "3": { titleKey: "onb3_title", bodyKey: "onb3_body", ctaKey: "onb3_cta", next: "(tabs)" }
 };
 
 export default function OnboardingStep() {
   const { step } = useLocalSearchParams<{ step: string }>();
   const router = useRouter();
+  const { theme } = useTheme();
+  const t = useT();
   const data = STEPS[step ?? "1"] ?? STEPS["1"];
 
   const onNext = async () => {
@@ -41,22 +39,30 @@ export default function OnboardingStep() {
 
   return (
     <ThemedBackground>
+      <AuthToggleBar />
       <View className="flex-1 px-6 justify-center">
-        <Text className="text-space-violet text-xs tracking-widest mb-2">
-          {step}/3
+        <Text
+          style={{
+            color: theme.accent,
+            fontSize: 11,
+            fontWeight: "700",
+            letterSpacing: 2,
+            marginBottom: 12
+          }}
+        >
+          {t("onb_step")} {step}/3
         </Text>
-        <Text className="text-space-ink text-3xl font-bold mb-3">{data.title}</Text>
-        <Text className="text-space-mute text-base mb-10">{data.body}</Text>
-        <GlowGradientCard>
-          <Pressable
-            onPress={onNext}
-            className="py-3 items-center"
-            accessibilityLabel={data.cta}
-            accessibilityRole="button"
-          >
-            <Text className="text-white font-semibold">{data.cta}</Text>
-          </Pressable>
-        </GlowGradientCard>
+        <Text style={{ color: theme.text, fontSize: 30, fontWeight: "800", marginBottom: 16, lineHeight: 36 }}>
+          {t(data.titleKey)}
+        </Text>
+        <Text style={{ color: theme.textMute, fontSize: 16, lineHeight: 24, marginBottom: 40 }}>
+          {t(data.bodyKey)}
+        </Text>
+        <PrimaryButton
+          label={t(data.ctaKey)}
+          onPress={onNext}
+          accessibilityLabel={t(data.ctaKey)}
+        />
       </View>
     </ThemedBackground>
   );
