@@ -1,6 +1,6 @@
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
 import { getStickersWithStatus, getStickerByCode, getStickersByTeam } from "@/data/stickers";
-import { incrementStatus, decrementStatus } from "@/data/stickerStatus";
+import { incrementStatus, decrementStatus, bulkSetOwnedForTeam } from "@/data/stickerStatus";
 import type { FilterMode } from "@/store/filters";
 
 const KEY = {
@@ -46,6 +46,16 @@ export function useDecrement() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (code: string) => decrementStatus(code),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["stickers"] });
+    }
+  });
+}
+
+export function useBulkMarkTeam() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (teamCode: string) => bulkSetOwnedForTeam(teamCode),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["stickers"] });
     }
