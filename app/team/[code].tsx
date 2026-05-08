@@ -1,9 +1,9 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { ScrollView, View, Text, Pressable, ActivityIndicator } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { ProgressBar } from "@/ui/ProgressBar";
-import { useTeamStickers, useIncrement, useDecrement } from "@/hooks/useStickers";
+import { useTeamStickers, useIncrement, useDecrement, useBulkMarkTeam } from "@/hooks/useStickers";
 import { haptics } from "@/lib/haptics";
 import { getTeamColors, type TeamColors } from "@/theme/teamColors";
 import { getTeamFlag } from "@/theme/teamFlags";
@@ -12,6 +12,7 @@ import { withAlpha } from "@/theme/colors";
 import { useViewMode } from "@/lib/viewMode";
 import { ViewToggle } from "@/ui/ViewToggle";
 import type { StickerWithStatus } from "@/domain/types";
+import { DestildarBanner } from "@/ui/DestildarBanner";
 
 // Elige el color más representativo de la bandera para tintar el fondo;
 // evita blancos y negros porque tintarlos no comunica identidad.
@@ -29,6 +30,8 @@ export default function TeamDetail() {
   const { data, isLoading } = useTeamStickers(code ?? "");
   const inc = useIncrement();
   const dec = useDecrement();
+  const bulkMark = useBulkMarkTeam();
+  const [destildarMode, setDestildarMode] = useState(false);
 
   const teamColors = useMemo(() => getTeamColors(code), [code]);
   const tint = useMemo(() => pickTint(teamColors), [teamColors]);
@@ -54,6 +57,23 @@ export default function TeamDetail() {
   const teamName = data[0]?.section ?? code ?? "";
   const sorted = [...data].sort((a, b) => a.number - b.number);
 
+  const handleTap = (stickerCode: string) => {
+    haptics.light();
+    if (destildarMode) {
+      dec.mutate(stickerCode);
+    } else {
+      inc.mutate(stickerCode);
+    }
+  };
+  const handleLong = (stickerCode: string) => {
+    haptics.medium();
+    if (destildarMode) {
+      inc.mutate(stickerCode);
+    } else {
+      dec.mutate(stickerCode);
+    }
+  };
+
   return (
     <View style={{ flex: 1, backgroundColor: theme.bg }}>
       {/* Tint sutil del color del equipo, gradient arriba → fade abajo */}
@@ -70,6 +90,10 @@ export default function TeamDetail() {
           pointerEvents: "none"
         }}
       />
+
+      {destildarMode && (
+        <DestildarBanner accent={tint} onDone={() => setDestildarMode(false)} />
+      )}
 
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
         {/* Header */}
@@ -110,6 +134,34 @@ export default function TeamDetail() {
           <View className="mt-4">
             <ProgressBar pct={summary.pct} height={3} from={tint} to={tint} />
           </View>
+
+          {/* Bulk-mark: marca todos los faltantes del equipo como pegados */}
+          <Pressable
+            onPress={() => {
+              haptics.medium();
+              bulkMark.mutate(code ?? "", {
+                onSuccess: () => setDestildarMode(true)
+              });
+            }}
+            disabled={bulkMark.isPending}
+            accessibilityRole="button"
+            accessibilityLabel="Marcar todo el equipo como pegado"
+            style={{
+              marginTop: 16,
+              backgroundColor: tint,
+              paddingVertical: 12,
+              paddingHorizontal: 16,
+              borderRadius: 12,
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              opacity: bulkMark.isPending ? 0.6 : 1
+            }}
+          >
+            <Text style={{ color: "#fff", fontSize: 14, fontWeight: "700" }}>
+              ✓  Pegar equipo entero
+            </Text>
+          </Pressable>
         </View>
 
         {/* Grid o lista según view */}
@@ -120,14 +172,8 @@ export default function TeamDetail() {
                 key={s.code}
                 s={s}
                 accent={tint}
-                onTap={() => {
-                  haptics.light();
-                  inc.mutate(s.code);
-                }}
-                onLong={() => {
-                  haptics.medium();
-                  dec.mutate(s.code);
-                }}
+                onTap={() => handleTap(s.code)}
+                onLong={() => handleLong(s.code)}
               />
             ))}
           </View>
@@ -138,14 +184,8 @@ export default function TeamDetail() {
                 key={s.code}
                 s={s}
                 accent={tint}
-                onTap={() => {
-                  haptics.light();
-                  inc.mutate(s.code);
-                }}
-                onLong={() => {
-                  haptics.medium();
-                  dec.mutate(s.code);
-                }}
+                onTap={() => handleTap(s.code)}
+                onLong={() => handleLong(s.code)}
               />
             ))}
           </View>
