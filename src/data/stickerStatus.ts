@@ -61,6 +61,36 @@ export async function decrementStatus(code: string): Promise<void> {
   await enqueue(code, newCount);
 }
 
+export async function bulkSetOwnedForTeam(teamCode: string): Promise<number> {
+  const db = getDb();
+  // Cromos del equipo donde no hay row o count = 0
+  const rows = await db.getAllAsync<{ code: string }>(
+    `SELECT s.code FROM stickers s
+     LEFT JOIN sticker_status ss ON ss.sticker_code = s.code
+     WHERE s.team = ? AND (ss.count IS NULL OR ss.count = 0)`,
+    [teamCode]
+  );
+  if (rows.length === 0) return 0;
+
+  const now = Date.now();
+  await db.execAsync("BEGIN TRANSACTION");
+  try {
+    for (const { code } of rows) {
+      await db.runAsync(
+        `INSERT INTO sticker_status (sticker_code, count, updated_at) VALUES (?, 1, ?)
+         ON CONFLICT(sticker_code) DO UPDATE SET count = 1, updated_at = excluded.updated_at`,
+        [code, now]
+      );
+      await enqueue(code, 1);
+    }
+    await db.execAsync("COMMIT");
+  } catch (e) {
+    await db.execAsync("ROLLBACK");
+    throw e;
+  }
+  return rows.length;
+}
+
 // Aplicado por el sync worker — NO encola.
 export async function applyRemoteStatus(
   code: string,
