@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concept 1: Panini-style sticker. Red base + soccer ball + "26" -->
+  <rect width="1024" height="1024" fill="#E20613"/>
+
+  <!-- Subtle inner border like a real sticker -->
+  <rect x="60" y="60" width="904" height="904" rx="40" fill="none" stroke="#FAF6F0" stroke-width="6" stroke-dasharray="14 14" opacity="0.35"/>
+
+  <!-- Soccer ball -->
+  <g transform="translate(512 420)">
+    <circle r="200" fill="#FAF6F0"/>
+    <!-- Central pentagon -->
+    <polygon points="0,-110 105,-34 65,90 -65,90 -105,-34" fill="#1a1410"/>
+    <!-- Surrounding seams -->
+    <line x1="0" y1="-110" x2="0" y2="-200" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="105" y1="-34" x2="190" y2="-62" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="65" y1="90" x2="118" y2="170" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="-65" y1="90" x2="-118" y2="170" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="-105" y1="-34" x2="-190" y2="-62" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <!-- "26" wordmark -->
+  <text x="512" y="880" font-family="Impact, 'Arial Black', sans-serif" font-size="220" font-weight="900" letter-spacing="-4" text-anchor="middle" fill="#FAF6F0">26</text>
+</svg>

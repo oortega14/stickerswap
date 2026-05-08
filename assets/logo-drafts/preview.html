@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Panini Album — Logo drafts</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, system-ui, sans-serif;
+    background: #f5efe6;
+    color: #2d1810;
+    margin: 0;
+    padding: 32px;
+  }
+  h1 { margin: 0 0 8px; font-size: 22px; }
+  p.lead { margin: 0 0 32px; opacity: 0.7; font-size: 14px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .card h2 { margin: 0 0 4px; font-size: 16px; }
+  .card .desc { font-size: 13px; opacity: 0.7; margin: 0 0 16px; }
+  .sizes { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .sizes .size { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .sizes label { font-size: 11px; opacity: 0.6; }
+  .sizes img {
+    border-radius: 22.37%;          /* iOS app icon radius */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background: white;
+  }
+  .big { width: 220px; height: 220px; }
+  .med { width: 120px; height: 120px; }
+  .sm  { width: 60px;  height: 60px; }   /* iOS home-screen size */
+  body.dark { background: #1a1410; color: #f5efe6; }
+  body.dark .card { background: #2d1810; }
+  .toggle {
+    position: fixed; top: 16px; right: 16px;
+    padding: 8px 14px; border-radius: 8px; border: none;
+    background: #2d1810; color: #f5efe6; cursor: pointer; font-size: 13px;
+  }
+  body.dark .toggle { background: #f5efe6; color: #2d1810; }
+</style>
+</head>
+<body>
+<button class="toggle" onclick="document.body.classList.toggle('dark')">toggle bg</button>
+
+<h1>Panini Album — Logo drafts</h1>
+<p class="lead">5 conceptos. Esquina superior-izquierda muestra cómo se ve a tamaño real (60×60, equivalente al app drawer de iOS).</p>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>1 · Sticker</h2>
+    <p class="desc">Cromo Panini clásico. Rojo + balón + "26". Más obvio para "álbum de figuritas".</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="01-sticker.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="01-sticker.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="01-sticker.svg"><label>220</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2 · Ball</h2>
+    <p class="desc">Balón clásico, "26" rojo en el pentágono central. Más fútbol que álbum.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="02-ball.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="02-ball.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="02-ball.svg"><label>220</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3 · Album</h2>
+    <p class="desc">Página de álbum con grid 2×2: pegado / extra / vacío / completo. Conceptual.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="03-album.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="03-album.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="03-album.svg"><label>220</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4 · Big number</h2>
+    <p class="desc">"26" enorme — la rosca del 6 es el balón. Tipográfico, moderno.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04-bignumber.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04-bignumber.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04-bignumber.svg"><label>220</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>5 · Trophy</h2>
+    <p class="desc">Trofeo FIFA dorado sobre rojo Panini. Premium / institucional.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="05-trophy.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="05-trophy.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="05-trophy.svg"><label>220</label></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

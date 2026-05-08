@@ -1,0 +1,21 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concept 2: Iconic soccer ball with "26" in center pentagon. Cream bg. -->
+  <rect width="1024" height="1024" fill="#F5EFE6"/>
+
+  <g transform="translate(512 512)">
+    <circle r="380" fill="#FAF6F0" stroke="#1a1410" stroke-width="14"/>
+
+    <!-- Central pentagon (filled) -->
+    <polygon points="0,-200 190,-62 118,160 -118,160 -190,-62" fill="#1a1410"/>
+
+    <!-- Outer pentagons (outlined) -->
+    <polygon points="0,-200 0,-340 130,-260 190,-62" fill="none" stroke="#1a1410" stroke-width="12" stroke-linejoin="round"/>
+    <polygon points="190,-62 340,-100 330,80 118,160" fill="none" stroke="#1a1410" stroke-width="12" stroke-linejoin="round"/>
+    <polygon points="118,160 200,300 0,340 -200,300 -118,160" fill="none" stroke="#1a1410" stroke-width="12" stroke-linejoin="round"/>
+    <polygon points="-190,-62 -340,-100 -330,80 -118,160" fill="none" stroke="#1a1410" stroke-width="12" stroke-linejoin="round"/>
+    <polygon points="0,-200 0,-340 -130,-260 -190,-62" fill="none" stroke="#1a1410" stroke-width="12" stroke-linejoin="round"/>
+
+    <!-- "26" inside pentagon -->
+    <text x="0" y="60" font-family="Impact, 'Arial Black', sans-serif" font-size="180" font-weight="900" letter-spacing="-4" text-anchor="middle" fill="#E20613">26</text>
+  </g>
+</svg>

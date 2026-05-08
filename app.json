@@ -1,36 +1,40 @@
 {
   "expo": {
-    "name": "Panini Album",
-    "slug": "panini-album",
+    "name": "StickerSwap",
+    "slug": "stickerswap",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "panini",
+    "scheme": "stickerswap",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0a0820"
+      "backgroundColor": "#1a1410"
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "app.panini.mundial2026",
+      "bundleIdentifier": "app.stickerswap",
       "buildNumber": "1",
       "config": {
         "usesNonExemptEncryption": false
       },
       "entitlements": {
         "keychain-access-groups": [
-          "$(AppIdentifierPrefix)app.panini.mundial2026"
+          "$(AppIdentifierPrefix)app.stickerswap"
         ]
       }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0a0820"
+        "backgroundColor": "#1a1410"
       },
-      "package": "app.panini.mundial2026",
-      "versionCode": 1
+      "package": "app.stickerswap",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -51,6 +55,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7f4acc0f-72ca-439a-93a3-e5e2c02e5eeb"
+      }
+    },
+    "owner": "oortega14"
   }
 }

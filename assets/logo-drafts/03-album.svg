@@ -1,0 +1,29 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concept 3: Album page with stickers — represents the collecting mechanic -->
+  <rect width="1024" height="1024" fill="#2D1810"/>
+
+  <!-- Album page -->
+  <rect x="152" y="180" width="720" height="664" rx="32" fill="#FAF6F0"/>
+  <rect x="152" y="180" width="720" height="664" rx="32" fill="none" stroke="#8B6F47" stroke-width="6"/>
+
+  <!-- Spine shadow on left edge -->
+  <rect x="152" y="180" width="40" height="664" fill="#8B6F47" opacity="0.18"/>
+
+  <!-- 2x2 grid of sticker slots -->
+  <!-- Top-left: filled with ball -->
+  <rect x="232" y="260" width="280" height="240" rx="20" fill="#E20613"/>
+  <circle cx="372" cy="380" r="80" fill="#FAF6F0"/>
+  <polygon points="372,335 416,367 400,418 344,418 328,367" fill="#1a1410"/>
+
+  <!-- Top-right: filled with star (FWC extra) -->
+  <rect x="532" y="260" width="280" height="240" rx="20" fill="#D4A24C"/>
+  <polygon points="672,310 692,376 762,376 705,418 727,484 672,442 617,484 639,418 582,376 652,376" fill="#FAF6F0"/>
+
+  <!-- Bottom-left: empty slot (dashed) -->
+  <rect x="232" y="528" width="280" height="240" rx="20" fill="none" stroke="#C0B5A6" stroke-width="6" stroke-dasharray="14 10"/>
+  <text x="372" y="675" font-family="Impact, 'Arial Black', sans-serif" font-size="120" font-weight="900" text-anchor="middle" fill="#C0B5A6">?</text>
+
+  <!-- Bottom-right: filled with check -->
+  <rect x="532" y="528" width="280" height="240" rx="20" fill="#166534"/>
+  <path d="M 612 648 L 660 696 L 740 600" fill="none" stroke="#FAF6F0" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

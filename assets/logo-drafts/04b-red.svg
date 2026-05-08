@@ -1,0 +1,19 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- 4b: Panini red — la versión más "Panini" -->
+  <rect width="1024" height="1024" fill="#E20613"/>
+
+  <!-- "2" -->
+  <text x="320" y="780" font-family="Impact, 'Arial Black', sans-serif" font-size="820" font-weight="900" letter-spacing="-20" text-anchor="middle" fill="#FAF6F0">2</text>
+
+  <!-- "6" — stem + ball -->
+  <g transform="translate(700 540)">
+    <path d="M 80 -290 Q -160 -200 -200 60" fill="none" stroke="#FAF6F0" stroke-width="92" stroke-linecap="round"/>
+    <circle r="200" fill="#FAF6F0"/>
+    <polygon points="0,-110 105,-34 65,90 -65,90 -105,-34" fill="#1a1410"/>
+    <line x1="0" y1="-110" x2="0" y2="-200" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="105" y1="-34" x2="190" y2="-62" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="65" y1="90" x2="118" y2="170" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="-65" y1="90" x2="-118" y2="170" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+    <line x1="-105" y1="-34" x2="-190" y2="-62" stroke="#1a1410" stroke-width="14" stroke-linecap="round"/>
+  </g>
+</svg>

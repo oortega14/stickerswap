@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concept 4: Bold "26" with the "0" of "26"... wait, 26 has no 0. -->
+  <!-- Use the "6" loop as the soccer ball. Espresso bg, cream "2", ball-as-6. -->
+  <rect width="1024" height="1024" fill="#1a1410"/>
+
+  <!-- Subtle gold band at the bottom for "Mundial" feel -->
+  <rect x="0" y="940" width="1024" height="84" fill="#D4A24C"/>
+
+  <!-- "2" -->
+  <text x="280" y="720" font-family="Impact, 'Arial Black', sans-serif" font-size="780" font-weight="900" letter-spacing="-20" text-anchor="middle" fill="#FAF6F0">2</text>
+
+  <!-- The "6" replaced by a soccer ball -->
+  <g transform="translate(680 480)">
+    <!-- Stem of the 6 -->
+    <path d="M -50 -260 Q -180 -120 -180 60" fill="none" stroke="#FAF6F0" stroke-width="80" stroke-linecap="round"/>
+    <!-- Ball as the loop -->
+    <circle r="180" fill="#FAF6F0"/>
+    <polygon points="0,-100 95,-31 60,82 -60,82 -95,-31" fill="#1a1410"/>
+    <line x1="0" y1="-100" x2="0" y2="-180" stroke="#1a1410" stroke-width="12" stroke-linecap="round"/>
+    <line x1="95" y1="-31" x2="170" y2="-58" stroke="#1a1410" stroke-width="12" stroke-linecap="round"/>
+    <line x1="60" y1="82" x2="106" y2="155" stroke="#1a1410" stroke-width="12" stroke-linecap="round"/>
+    <line x1="-60" y1="82" x2="-106" y2="155" stroke="#1a1410" stroke-width="12" stroke-linecap="round"/>
+    <line x1="-95" y1="-31" x2="-170" y2="-58" stroke="#1a1410" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <!-- "MUNDIAL" microtext on the gold band -->
+  <text x="512" y="998" font-family="Impact, 'Arial Black', sans-serif" font-size="48" letter-spacing="20" text-anchor="middle" fill="#1a1410">MUNDIAL</text>
+</svg>

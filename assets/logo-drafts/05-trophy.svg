@@ -1,0 +1,24 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concept 5: World Cup trophy silhouette over Panini red. Iconic. -->
+  <rect width="1024" height="1024" fill="#E20613"/>
+
+  <!-- Trophy globe top -->
+  <g transform="translate(512 512)" fill="#D4A24C" stroke="#8B5A1A" stroke-width="6" stroke-linejoin="round">
+    <!-- Top globe sphere -->
+    <ellipse cx="0" cy="-180" rx="120" ry="110"/>
+    <!-- Globe band lines -->
+    <ellipse cx="0" cy="-180" rx="120" ry="40" fill="none" stroke="#8B5A1A" stroke-width="6"/>
+    <line x1="0" y1="-290" x2="0" y2="-70" stroke="#8B5A1A" stroke-width="6"/>
+
+    <!-- Twisted body of trophy: two curved ribbons forming the iconic FIFA shape -->
+    <path d="M -120 -80 C -160 0 -100 80 -50 140 L -50 220 L 50 220 L 50 140 C 100 80 160 0 120 -80 C 80 -40 60 -20 0 -10 C -60 -20 -80 -40 -120 -80 Z"/>
+
+    <!-- Base disc -->
+    <ellipse cx="0" cy="240" rx="160" ry="30"/>
+    <rect x="-180" y="240" width="360" height="50" rx="6"/>
+    <ellipse cx="0" cy="290" rx="180" ry="34"/>
+  </g>
+
+  <!-- "26" below trophy -->
+  <text x="512" y="930" font-family="Impact, 'Arial Black', sans-serif" font-size="160" font-weight="900" letter-spacing="-4" text-anchor="middle" fill="#FAF6F0">'26</text>
+</svg>

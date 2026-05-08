@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Variantes #4</title>
+<style>
+  body {
+    font-family: -apple-system, system-ui, sans-serif;
+    background: #f5efe6;
+    color: #2d1810;
+    margin: 0;
+    padding: 32px;
+  }
+  h1 { margin: 0 0 8px; font-size: 22px; }
+  p.lead { margin: 0 0 32px; opacity: 0.7; font-size: 14px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .card h2 { margin: 0 0 4px; font-size: 16px; }
+  .card .desc { font-size: 13px; opacity: 0.7; margin: 0 0 16px; }
+  .sizes { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .sizes .size { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .sizes label { font-size: 11px; opacity: 0.6; }
+  .sizes img {
+    border-radius: 22.37%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background: white;
+  }
+  .big { width: 240px; height: 240px; }
+  .med { width: 120px; height: 120px; }
+  .sm  { width: 60px;  height: 60px; }
+  body.dark { background: #1a1410; color: #f5efe6; }
+  body.dark .card { background: #2d1810; }
+  .toggle {
+    position: fixed; top: 16px; right: 16px;
+    padding: 8px 14px; border-radius: 8px; border: none;
+    background: #2d1810; color: #f5efe6; cursor: pointer; font-size: 13px;
+  }
+  body.dark .toggle { background: #f5efe6; color: #2d1810; }
+</style>
+</head>
+<body>
+<button class="toggle" onclick="document.body.classList.toggle('dark')">toggle bg</button>
+
+<h1>Variantes del #4 — "26" con balón</h1>
+<p class="lead">Mismo concepto, distintas paletas. Tamaños 60/120/240px.</p>
+
+<div class="grid">
+  <div class="card">
+    <h2>4a · Espresso minimal</h2>
+    <p class="desc">Negro café + crema. La versión más limpia, sin banda dorada.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04a-espresso.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04a-espresso.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04a-espresso.svg"><label>240</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4b · Panini red</h2>
+    <p class="desc">Rojo Panini. La más "marca" — leerías Panini al instante.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04b-red.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04b-red.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04b-red.svg"><label>240</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4c · Cream</h2>
+    <p class="desc">Crema con tinta espresso. Alineado al tema light de la app.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04c-cream.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04c-cream.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04c-cream.svg"><label>240</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4d · Gold + rojo (original)</h2>
+    <p class="desc">Espresso + oro + pentágono rojo. Mundial-feel.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04d-gold.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04d-gold.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04d-gold.svg"><label>240</label></div>
+    </div>
+  </div>
+</div>
+
+<h1 style="margin-top:48px">Variantes oro · sin rojo</h1>
+<p class="lead">Mismo concepto, dorado pero limpio (pentágono espresso = balón clásico b&amp;w).</p>
+<div class="grid">
+  <div class="card">
+    <h2>4e · Gold clean</h2>
+    <p class="desc">Solo oro + cream + balón clásico. La opción más limpia.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04e-gold-clean.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04e-gold-clean.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04e-gold-clean.svg"><label>240</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4f · Gold + banda MUNDIAL grande</h2>
+    <p class="desc">Banda dorada con "MUNDIAL" legible (92px). Más "etiqueta de cromo".</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04f-gold-band.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04f-gold-band.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04f-gold-band.svg"><label>240</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4g · Gold + marco</h2>
+    <p class="desc">Marco dorado tipo placa/medalla. Premium.</p>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04g-gold-frame.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04g-gold-frame.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04g-gold-frame.svg"><label>240</label></div>
+    </div>
+  </div>
+</div>
+
+<h1 style="margin-top:48px">Original (referencia)</h1>
+<div class="grid">
+  <div class="card">
+    <h2>04 · Original con banda MUNDIAL</h2>
+    <div class="sizes">
+      <div class="size"><img class="sm"  src="04-bignumber.svg"><label>60</label></div>
+      <div class="size"><img class="med" src="04-bignumber.svg"><label>120</label></div>
+      <div class="size"><img class="big" src="04-bignumber.svg"><label>240</label></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
