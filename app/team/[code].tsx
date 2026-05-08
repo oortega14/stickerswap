@@ -138,8 +138,9 @@ export default function TeamDetail() {
           {/* Bulk-mark: marca todos los faltantes del equipo como pegados */}
           <Pressable
             onPress={() => {
+              if (!code) return;
               haptics.medium();
-              bulkMark.mutate(code ?? "", {
+              bulkMark.mutate(code, {
                 onSuccess: () => setDestildarMode(true)
               });
             }}
@@ -152,7 +153,6 @@ export default function TeamDetail() {
               paddingVertical: 12,
               paddingHorizontal: 16,
               borderRadius: 12,
-              flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
               opacity: bulkMark.isPending ? 0.6 : 1
@@ -174,6 +174,7 @@ export default function TeamDetail() {
                 accent={tint}
                 onTap={() => handleTap(s.code)}
                 onLong={() => handleLong(s.code)}
+                destildarMode={destildarMode}
               />
             ))}
           </View>
@@ -186,6 +187,7 @@ export default function TeamDetail() {
                 accent={tint}
                 onTap={() => handleTap(s.code)}
                 onLong={() => handleLong(s.code)}
+                destildarMode={destildarMode}
               />
             ))}
           </View>
@@ -199,12 +201,14 @@ function StickerRow({
   s,
   accent,
   onTap,
-  onLong
+  onLong,
+  destildarMode = false
 }: {
   s: StickerWithStatus;
   accent: string;
   onTap: () => void;
   onLong: () => void;
+  destildarMode?: boolean;
 }) {
   const { theme } = useTheme();
   const collected = s.count >= 1;
@@ -215,7 +219,11 @@ function StickerRow({
       onLongPress={onLong}
       delayLongPress={350}
       accessibilityRole="button"
-      accessibilityLabel={`${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para sumar, mantené para restar.`}
+      accessibilityLabel={
+        destildarMode
+          ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para restar, mantené para sumar.`
+          : `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para sumar, mantené para restar.`
+      }
       style={{
         flexDirection: "row",
         alignItems: "center",
@@ -273,12 +281,14 @@ function StickerCard({
   s,
   accent,
   onTap,
-  onLong
+  onLong,
+  destildarMode = false
 }: {
   s: StickerWithStatus;
   accent: string;
   onTap: () => void;
   onLong: () => void;
+  destildarMode?: boolean;
 }) {
   const { theme } = useTheme();
   const collected = s.count >= 1;
@@ -290,7 +300,11 @@ function StickerCard({
         onLongPress={onLong}
         delayLongPress={350}
         accessibilityRole="button"
-        accessibilityLabel={`${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para sumar, mantené para restar.`}
+        accessibilityLabel={
+          destildarMode
+            ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para restar, mantené para sumar.`
+            : `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para sumar, mantené para restar.`
+        }
         style={{
           borderRadius: 12,
           backgroundColor: theme.card,
