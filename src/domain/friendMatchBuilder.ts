@@ -30,27 +30,39 @@ export function buildBidirectional(
   return { theyHaveYouNeed, youHaveTheyNeed };
 }
 
+export interface BidirectionalMatchPayload {
+  theyHaveYouNeed: FriendMatch[];
+  youHaveTheyNeed: FriendMatch[];
+}
+
 export function summarizeMatches(
-  matches: FriendMatch[],
+  matches: BidirectionalMatchPayload,
   friends: Map<string, { username: string; displayName: string | null }>
 ): FriendMatchSummary[] {
-  const grouped = new Map<string, FriendMatch[]>();
-  for (const m of matches) {
-    const arr = grouped.get(m.friendId) ?? [];
-    arr.push(m);
-    grouped.set(m.friendId, arr);
+  const codes = new Map<string, { they: string[]; you: string[] }>();
+  for (const m of matches.theyHaveYouNeed) {
+    const e = codes.get(m.friendId) ?? { they: [], you: [] };
+    e.they.push(m.stickerCode);
+    codes.set(m.friendId, e);
+  }
+  for (const m of matches.youHaveTheyNeed) {
+    const e = codes.get(m.friendId) ?? { they: [], you: [] };
+    e.you.push(m.stickerCode);
+    codes.set(m.friendId, e);
   }
 
   const out: FriendMatchSummary[] = [];
-  for (const [friendId, ms] of grouped) {
+  for (const [friendId, { they, you }] of codes) {
     const meta = friends.get(friendId);
     if (!meta) continue;
     out.push({
       friendId,
       username: meta.username,
       displayName: meta.displayName,
-      matchCount: ms.length,
-      sample: ms.slice(0, 3).map((m) => m.stickerCode)
+      theyHaveYouNeed: they,
+      youHaveTheyNeed: you,
+      matchCount: they.length,
+      sample: they.slice(0, 3)
     });
   }
   out.sort((a, b) => b.matchCount - a.matchCount);
