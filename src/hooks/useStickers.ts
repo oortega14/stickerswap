@@ -1,20 +1,11 @@
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
-import { getStickersWithStatus, getStickerByCode, getStickersByTeam } from "@/data/stickers";
+import { getStickerByCode, getStickersByTeam } from "@/data/stickers";
 import { incrementStatus, decrementStatus, bulkSetOwnedForTeam } from "@/data/stickerStatus";
-import type { FilterMode } from "@/store/filters";
 
 const KEY = {
-  list: (q: string, m: FilterMode) => ["stickers", "list", q, m] as const,
   detail: (code: string) => ["stickers", "detail", code] as const,
   progress: () => ["stickers", "progress"] as const
 };
-
-export function useStickerList(query: string, mode: FilterMode) {
-  return useQuery({
-    queryKey: KEY.list(query, mode),
-    queryFn: () => getStickersWithStatus({ q: query, mode })
-  });
-}
 
 export function useStickerDetail(code: string) {
   return useQuery({
