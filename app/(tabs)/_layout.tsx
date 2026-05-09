@@ -31,10 +31,6 @@ export default function TabsLayout() {
         options={{ title: "Home", tabBarIcon: ({ focused }) => <TabIcon icon="⌂" focused={focused} active={theme.accent} inactive={theme.textMute} /> }}
       />
       <Tabs.Screen
-        name="album"
-        options={{ title: "Álbum", tabBarIcon: ({ focused }) => <TabIcon icon="▦" focused={focused} active={theme.accent} inactive={theme.textMute} /> }}
-      />
-      <Tabs.Screen
         name="trades"
         options={{
           title: "Cambios",
