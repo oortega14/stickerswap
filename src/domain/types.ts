@@ -75,6 +75,11 @@ export interface FriendMatchSummary {
   friendId: string;
   username: string;
   displayName: string | null;
+  // Lado: ellos tienen, vos necesitás (lo que buscás)
+  theyHaveYouNeed: string[];
+  // Lado: vos tenés repe, ellos necesitan (lo que ofreces)
+  youHaveTheyNeed: string[];
+  // Compat: matchCount = theyHaveYouNeed.length, sample = primeros 3
   matchCount: number;
   sample: string[];
 }
@@ -116,4 +121,65 @@ export interface OutgoingRequest {
   message: string | null;
   source: FriendshipSource;
   createdAt: number;
+}
+
+// ────────────────────────────────────────────────────────────
+// Trades
+// ────────────────────────────────────────────────────────────
+
+export type TradeStatus =
+  | "pending"
+  | "accepted"
+  | "declined"
+  | "cancelled"
+  | "completed";
+
+export interface Trade {
+  id: string;
+  proposerId: string;
+  recipientId: string;
+  proposerGives: string[];   // sticker codes
+  proposerGets: string[];    // sticker codes
+  status: TradeStatus;
+  proposerConfirmedAt: number | null;
+  recipientConfirmedAt: number | null;
+  message: string | null;
+  createdAt: number;
+  updatedAt: number;
+  completedAt: number | null;
+}
+
+export type TradeRole = "proposer" | "recipient";
+
+export type TradeEvent =
+  | "accept"
+  | "decline"
+  | "cancel"
+  | "confirm"
+  | "unconfirm";
+
+export interface TradeProposalDraft {
+  recipientId: string;
+  proposerGives: string[];
+  proposerGets: string[];
+  message: string;
+  isValid: boolean;
+  invalidReason: "no_gives" | "no_gets" | null;
+}
+
+// CTA contextual a mostrar para un trade en una pantalla
+export type TradeCtaKind =
+  | "none"             // no se muestra
+  | "waiting"          // proposer espera al recipient
+  | "respond"          // recipient debe Aceptar/Rechazar
+  | "mark_done"        // ambos: marcar como hecho
+  | "awaiting_other"   // ya marqué; espero al otro
+  | "confirm"          // el otro marcó; tengo que confirmar
+  | "completed";       // banner verde 24h
+
+export interface TradeCta {
+  kind: TradeCtaKind;
+  label: string;
+  primaryAction?: TradeEvent;
+  secondaryAction?: TradeEvent;
 }
