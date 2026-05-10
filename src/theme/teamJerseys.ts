@@ -334,6 +334,15 @@ const JERSEYS: Record<string, JerseyDesign> = {
       layout: "side-vertical",
       colors: ["#FCD116"]
     }
+  },
+  RSA: {
+    body: "#FFB81C",
+    sleeves: "#FFB81C",
+    initialsColor: "#007749",
+    stripes: {
+      layout: "side-vertical",
+      colors: ["#007749"]
+    }
   }
 };
 
