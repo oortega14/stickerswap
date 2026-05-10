@@ -13,6 +13,7 @@ import { I18nProvider } from "@/i18n/I18nProvider";
 import { SessionProvider, useSession } from "@/auth/useSession";
 import { drainQueue, pullRemoteStatus } from "@/sync/worker";
 import { subscribeToFriendUpdates, unsubscribe } from "@/social/realtime";
+import { Snackbar, showSnackbar } from "@/ui/Snackbar";
 import { useHydrateOnboarding, useOnboardingSeen } from "@/lib/onboarding";
 import datasetJson from "../assets/stickers.json";
 
@@ -109,17 +110,58 @@ function FriendUpdatesBridge() {
     const channel = subscribeToFriendUpdates({
       onStickerStatusChange: () => {
         qc.invalidateQueries({ queryKey: ["matches"] });
+        qc.invalidateQueries({ queryKey: ["progress"] });
       },
       onFriendshipChange: () => {
         qc.invalidateQueries({ queryKey: ["pendingRequests"] });
         qc.invalidateQueries({ queryKey: ["outgoingRequests"] });
         qc.invalidateQueries({ queryKey: ["friends"] });
+      },
+      onTradeChange: (payload) => {
+        qc.invalidateQueries({ queryKey: ["trades"] });
+        const newStatus = payload?.new?.status as string | undefined;
+        const oldStatus = payload?.old?.status as string | undefined;
+        if (newStatus && newStatus !== oldStatus) {
+          announceTradeChange(payload, user.id);
+        }
       }
     });
     return () => unsubscribe(channel);
   }, [user, qc]);
 
   return null;
+}
+
+function announceTradeChange(payload: any, meId: string) {
+  const newStatus = payload?.new?.status as string | undefined;
+  const oldStatus = payload?.old?.status as string | undefined;
+  const proposerId = payload?.new?.proposer_id as string | undefined;
+  const recipientId = payload?.new?.recipient_id as string | undefined;
+  const otherIsProposer = proposerId !== meId;
+
+  let msg: string | null = null;
+  if (oldStatus === "pending" && newStatus === "accepted") {
+    msg = otherIsProposer ? "Aceptaste un cambio" : "Tu propuesta fue aceptada";
+  } else if (oldStatus === "pending" && newStatus === "declined") {
+    msg = otherIsProposer ? "Rechazaste un cambio" : "Tu propuesta fue rechazada";
+  } else if (newStatus === "completed") {
+    msg = "Trade completado ✓";
+  } else if (
+    oldStatus === "accepted" &&
+    newStatus === "accepted" &&
+    payload?.new?.proposer_confirmed_at !== payload?.old?.proposer_confirmed_at &&
+    proposerId !== meId
+  ) {
+    msg = "Tu contraparte marcó como hecho — confirmá";
+  } else if (
+    oldStatus === "accepted" &&
+    newStatus === "accepted" &&
+    payload?.new?.recipient_confirmed_at !== payload?.old?.recipient_confirmed_at &&
+    recipientId !== meId
+  ) {
+    msg = "Tu contraparte marcó como hecho — confirmá";
+  }
+  if (msg) showSnackbar(msg);
 }
 
 function AuthGate({ children }: { children: React.ReactNode }) {
@@ -223,6 +265,7 @@ export default function RootLayout() {
             <AuthGate>
               <ThemedStack />
             </AuthGate>
+            <Snackbar />
           </QueryClientProvider>
         )}
         </I18nProvider>
