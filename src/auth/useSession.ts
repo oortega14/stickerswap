@@ -47,36 +47,6 @@ function withTimeout<T>(promise: PromiseLike<T>, ms: number, label: string): Pro
 }
 
 async function fetchProfile(userId: string): Promise<ProfileUser | null> {
-  console.log("[fetchProfile] start userId:", userId);
-
-  // DIAGNÓSTICO: probamos fetch directo en paralelo al cliente JS para ver
-  // si es el cliente o la red en general lo que cuelga.
-  (async () => {
-    try {
-      const url = process.env.EXPO_PUBLIC_SUPABASE_URL!;
-      const anon = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!;
-      const session = (await supabase.auth.getSession()).data.session;
-      const accessToken = session?.access_token;
-      console.log("[direct-fetch] starting; hasAccessToken:", !!accessToken);
-      const t0 = Date.now();
-      const res = await fetch(
-        `${url}/rest/v1/profiles?id=eq.${userId}&select=id,username`,
-        {
-          headers: {
-            apikey: anon,
-            Authorization: accessToken ? `Bearer ${accessToken}` : `Bearer ${anon}`,
-            Accept: "application/json"
-          }
-        }
-      );
-      const ms = Date.now() - t0;
-      const text = await res.text();
-      console.log(`[direct-fetch] status=${res.status} took=${ms}ms body=${text.slice(0, 200)}`);
-    } catch (e) {
-      console.warn("[direct-fetch] threw:", (e as Error).message);
-    }
-  })();
-
   let data: {
     id: string;
     username: string;
@@ -106,7 +76,6 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     console.warn("[fetchProfile] select threw:", (e as Error).message);
     error = { message: (e as Error).message };
   }
-  console.log("[fetchProfile] select returned:", { hasData: !!data, error: error?.message });
   if (error) {
     console.warn("fetchProfile error", error.message);
     return null;
@@ -127,7 +96,6 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     })
     .select("id, username, display_name, avatar_url, invite_code, onboarding_completed, country, city_slug, city_label, discoverable")
     .single();
-  console.log("[fetchProfile] insert returned:", { hasData: !!created, error: insertError?.message, code: insertError?.code });
   if (insertError) {
     console.warn("fallback profile insert failed:", insertError.message);
     // FK violation a auth.users → el user fue borrado del servidor pero el
@@ -139,7 +107,6 @@ async function fetchProfile(userId: string): Promise<ProfileUser | null> {
     }
     return null;
   }
-  console.log("[fetchProfile] fallback created OK");
   return created as ProfileUser;
 }
 
@@ -159,8 +126,7 @@ export function SessionProvider() {
       setLoading(false);
     })();
 
-    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
-      console.log("[onAuthStateChange]", event, "hasSession:", !!session);
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
       // IMPORTANTE: las queries Supabase NO pueden correr en este callback.
       // El cliente toma un lock interno y cualquier `from(...).select(...)`
@@ -171,7 +137,6 @@ export function SessionProvider() {
       if (userId) {
         setTimeout(async () => {
           const profile = await fetchProfile(userId);
-          console.log("[onAuthStateChange] profile loaded:", !!profile);
           setProfile(profile);
         }, 0);
       } else {

@@ -48,13 +48,10 @@ async function createSessionFromUrl(url: string) {
   }
   const { error } = await supabase.auth.setSession({ access_token, refresh_token });
   if (error) throw error;
-  console.log("session creada OK");
 }
 
 export async function signInWithGoogle(): Promise<void> {
   const redirectTo = Linking.createURL("/");
-  console.log("=== GOOGLE OAUTH DEBUG ===");
-  console.log("redirectTo:", redirectTo);
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
@@ -65,10 +62,8 @@ export async function signInWithGoogle(): Promise<void> {
   });
   if (error) throw error;
   if (!data?.url) throw new Error("No OAuth URL returned by Supabase");
-  console.log("supabase OAuth URL:", data.url);
 
   const result = await WebBrowser.openAuthSessionAsync(data.url, redirectTo);
-  console.log("WebBrowser result:", result);
 
   if (result.type === "success") {
     await createSessionFromUrl(result.url);

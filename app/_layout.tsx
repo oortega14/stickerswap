@@ -213,55 +213,32 @@ function AuthGate({ children }: { children: React.ReactNode }) {
   const segments = useSegments() as string[];
 
   useEffect(() => {
-    console.log("[AuthGate]", {
-      isLoading,
-      onboardedIntro,
-      hasSession: !!session,
-      hasUser: !!user,
-      username: user?.username,
-      segments
-    });
-    if (isLoading || onboardedIntro === null) {
-      console.log("[AuthGate] waiting (isLoading or onboardedIntro=null)");
-      return;
-    }
+    if (isLoading || onboardedIntro === null) return;
+
     const inAuth = segments[0] === "(auth)";
     const inOnboardingIntro = segments[0] === "onboarding";
 
     if (!onboardedIntro) {
-      if (!inOnboardingIntro) {
-        console.log("[AuthGate] → /onboarding/1");
-        router.replace("/onboarding/1" as never);
-      }
+      if (!inOnboardingIntro) router.replace("/onboarding/1" as never);
       return;
     }
 
     if (!session) {
-      if (!inAuth) {
-        console.log("[AuthGate] no session → /(auth)/sign-in");
-        router.replace("/(auth)/sign-in" as never);
-      } else {
-        console.log("[AuthGate] no session, already in auth");
-      }
+      if (!inAuth) router.replace("/(auth)/sign-in" as never);
       return;
     }
 
-    if (!user) {
-      console.log("[AuthGate] session ok, waiting for profile");
-      return;
-    }
+    if (!user) return;
 
     if (!user.onboarding_completed) {
       const path = segments.join("/");
       if (path !== "(auth)/onboarding" && path !== "(auth)/location") {
-        console.log("[AuthGate] onboarding pending → /(auth)/onboarding");
         router.replace("/(auth)/onboarding" as never);
       }
       return;
     }
 
     if (inAuth || inOnboardingIntro) {
-      console.log("[AuthGate] real username → /(tabs)");
       router.replace("/(tabs)" as never);
     }
   }, [isLoading, session, user, segments, router, onboardedIntro]);
