@@ -115,6 +115,16 @@ const JERSEYS: Record<string, JerseyDesign> = {
     body: "#FF8200",
     sleeves: "#009E60",
     initialsColor: "#FFFFFF"
+  },
+  CRO: {
+    body: "#FFFFFF",
+    sleeves: "#FF0000",
+    initialsColor: "#171796",
+    initialsXOffset: 6,
+    stripes: {
+      layout: "side-vertical",
+      colors: ["#FF0000", "#FFFFFF", "#171796"]
+    }
   }
 };
 
