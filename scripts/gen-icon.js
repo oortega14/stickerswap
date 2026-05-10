@@ -5,7 +5,7 @@ const path = require("path");
 const sharp = require("sharp");
 
 const out = path.join(__dirname, "..", "assets");
-const SVG_SOURCE = path.join(out, "logo-drafts", "04f-gold-band.svg");
+const SVG_SOURCE = path.join(out, "logo-drafts", "05-stickerswap.svg");
 const BG = "#1a1410"; // espresso, tiene que matchear el fondo del SVG
 
 async function main() {
@@ -15,7 +15,7 @@ async function main() {
   await sharp(svg).resize(1024, 1024).png().toFile(path.join(out, "icon.png"));
 
   // Android adaptive icon: 432×432, foreground se masquea por el OS.
-  // Safe zone es ~66% del centro — la banda MUNDIAL puede recortarse según el shape.
+  // Safe zone es ~66% del centro — el wordmark puede recortarse según el shape.
   await sharp(svg).resize(432, 432).png().toFile(path.join(out, "adaptive-icon.png"));
 
   // Splash: 1242×2436 (iPhone X), ícono centrado sobre fondo espresso

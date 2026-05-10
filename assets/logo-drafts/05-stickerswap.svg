@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- StickerSwap: balón clásico + wordmark camelCase -->
+  <rect width="1024" height="1024" fill="#1a1410"/>
+
+  <!-- Soccer ball: cream con paneles negros -->
+  <g transform="translate(512 400)">
+    <circle r="240" fill="#FAF6F0" stroke="#1a1410" stroke-width="10"/>
+
+    <!-- Pentágono central relleno -->
+    <polygon points="0,-126 120,-39 74,101 -74,101 -120,-39" fill="#1a1410"/>
+
+    <!-- Pentágonos exteriores: 5 hexágonos en outline para sugerir paneles -->
+    <polygon points="0,-126 0,-214 82,-164 120,-39"
+             fill="none" stroke="#1a1410" stroke-width="9" stroke-linejoin="round"/>
+    <polygon points="120,-39 214,-63 208,50 74,101"
+             fill="none" stroke="#1a1410" stroke-width="9" stroke-linejoin="round"/>
+    <polygon points="74,101 126,189 0,214 -126,189 -74,101"
+             fill="none" stroke="#1a1410" stroke-width="9" stroke-linejoin="round"/>
+    <polygon points="-120,-39 -214,-63 -208,50 -74,101"
+             fill="none" stroke="#1a1410" stroke-width="9" stroke-linejoin="round"/>
+    <polygon points="0,-126 0,-214 -82,-164 -120,-39"
+             fill="none" stroke="#1a1410" stroke-width="9" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark "stickerSwap" en camelCase -->
+  <!-- Renderizamos en dos tspans para acentuar la S de Swap en dorado -->
+  <text x="512" y="760" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="118" font-weight="800" letter-spacing="-3" text-anchor="middle">
+    <tspan fill="#FAF6F0">sticker</tspan><tspan fill="#D4A24C">S</tspan><tspan fill="#FAF6F0">wap</tspan>
+  </text>
+</svg>
