@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ScrollView, View, Text, Pressable, ActivityIndicator, Linking, Alert } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { ThemedBackground } from "@/ui/ThemedBackground";
-import { GlowCard } from "@/ui/GlowCard";
+import { StickerMiniThumb } from "@/ui/StickerMiniThumb";
+import { ActiveTradeBanner } from "@/ui/ActiveTradeBanner";
 import { supabase } from "@/auth/supabaseClient";
 import { useFriends } from "@/hooks/useFriends";
 import { useFriendContacts } from "@/hooks/useContacts";
+import { useTradeForFriend } from "@/hooks/useTradeForFriend";
 import { whatsappUrl, instagramUrl } from "@/social/contacts";
 import { listStatuses } from "@/data/stickerStatus";
+import { listStickers } from "@/data/stickers";
 import { buildBidirectional } from "@/domain/friendMatchBuilder";
-import type { BidirectionalMatch, StickerStatus } from "@/domain/types";
+import type { BidirectionalMatch, StickerStatus, Sticker } from "@/domain/types";
 import { useTheme } from "@/theme/ThemeProvider";
 
 export default function FriendDetail() {
@@ -19,7 +22,10 @@ export default function FriendDetail() {
   const { data: friends } = useFriends();
   const friend = friends?.find((f) => f.username === username);
   const { data: contacts } = useFriendContacts(friend?.id);
+  const trade = useTradeForFriend(friend?.id ?? "");
+
   const [match, setMatch] = useState<BidirectionalMatch | null>(null);
+  const [stickersBySection, setStickersBySection] = useState<Map<string, Sticker>>(new Map());
   const [loading, setLoading] = useState(true);
 
   const wa = whatsappUrl(contacts?.whatsapp);
@@ -38,6 +44,9 @@ export default function FriendDetail() {
     if (!friend) return;
     (async () => {
       setLoading(true);
+      const allStickers = await listStickers();
+      const map = new Map(allStickers.map((s) => [s.code, s]));
+      setStickersBySection(map);
       const { data } = await supabase
         .from("sticker_status")
         .select("sticker_code, count, updated_at")
@@ -53,11 +62,30 @@ export default function FriendDetail() {
     })();
   }, [friend?.id]);
 
+  const grouped = useMemo(() => {
+    if (!match) return null;
+    const groupCodes = (codes: string[]) => {
+      const out = new Map<string, string[]>();
+      for (const code of codes) {
+        const sticker = stickersBySection.get(code);
+        const section = sticker?.section ?? "OTROS";
+        const arr = out.get(section) ?? [];
+        arr.push(code);
+        out.set(section, arr);
+      }
+      return Array.from(out.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+    };
+    return {
+      need: groupCodes(match.theyHaveYouNeed.map((m) => m.stickerCode)),
+      give: groupCodes(match.youHaveTheyNeed.map((m) => m.stickerCode))
+    };
+  }, [match, stickersBySection]);
+
   if (!friend) {
     return (
       <ThemedBackground>
         <View className="flex-1 items-center justify-center px-6">
-          <Text className="text-space-mute mb-4">Amigo no encontrado.</Text>
+          <Text style={{ color: theme.textMute, marginBottom: 16 }}>Amigo no encontrado.</Text>
           <Pressable
             onPress={() => router.back()}
             accessibilityRole="button"
@@ -78,9 +106,12 @@ export default function FriendDetail() {
     );
   }
 
+  const canPropose =
+    !trade && match && match.theyHaveYouNeed.length > 0 && match.youHaveTheyNeed.length > 0;
+
   return (
     <ThemedBackground>
-      <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 120 }}>
         <View className="flex-row items-center mb-4">
           <Pressable
             onPress={() => router.back()}
@@ -101,14 +132,16 @@ export default function FriendDetail() {
             <Text style={{ color: theme.text, fontSize: 16 }}>‹</Text>
           </Pressable>
           <View className="flex-1">
-            <Text className="text-space-violet font-bold tracking-widest text-xs">
+            <Text style={{ color: theme.accent, fontWeight: "700", fontSize: 11, letterSpacing: 1 }}>
               @{friend.username}
             </Text>
-            <Text className="text-space-ink text-xl font-bold">
+            <Text style={{ color: theme.text, fontSize: 20, fontWeight: "700" }}>
               {friend.displayName ?? friend.username}
             </Text>
           </View>
         </View>
+
+        {trade ? <ActiveTradeBanner trade={trade} /> : null}
 
         {(wa || ig) && (
           <View className="flex-row mb-4" style={{ gap: 8 }}>
@@ -117,13 +150,7 @@ export default function FriendDetail() {
                 onPress={() => openLink(wa)}
                 accessibilityRole="button"
                 accessibilityLabel="Abrir WhatsApp"
-                style={{
-                  flex: 1,
-                  paddingVertical: 12,
-                  borderRadius: 10,
-                  backgroundColor: "#25D366",
-                  alignItems: "center"
-                }}
+                style={{ flex: 1, paddingVertical: 12, borderRadius: 10, backgroundColor: "#25D366", alignItems: "center" }}
               >
                 <Text style={{ color: "#fff", fontWeight: "700" }}>WhatsApp</Text>
               </Pressable>
@@ -133,13 +160,7 @@ export default function FriendDetail() {
                 onPress={() => openLink(ig)}
                 accessibilityRole="button"
                 accessibilityLabel="Abrir Instagram"
-                style={{
-                  flex: 1,
-                  paddingVertical: 12,
-                  borderRadius: 10,
-                  backgroundColor: "#E1306C",
-                  alignItems: "center"
-                }}
+                style={{ flex: 1, paddingVertical: 12, borderRadius: 10, backgroundColor: "#E1306C", alignItems: "center" }}
               >
                 <Text style={{ color: "#fff", fontWeight: "700" }}>Instagram</Text>
               </Pressable>
@@ -148,39 +169,105 @@ export default function FriendDetail() {
         )}
 
         {!wa && !ig && (
-          <Text className="text-space-mute text-xs mb-4 text-center">
-            {friend.displayName ?? friend.username} no compartió contacto. Pueden coordinar el intercambio en persona o pedirle que active WhatsApp/Instagram en su Perfil → Editar.
+          <Text style={{ color: theme.textMute, fontSize: 12, textAlign: "center", marginBottom: 12 }}>
+            {friend.displayName ?? friend.username} no compartió contacto.
           </Text>
         )}
 
-        {loading ? (
+        {loading || !match || !grouped ? (
           <ActivityIndicator color={theme.accent} />
-        ) : match ? (
+        ) : (
           <>
-            <GlowCard className="mb-3">
-              <Text className="text-space-mute text-xs mb-1">TIENE QUE NECESITÁS</Text>
-              <Text className="text-space-ink text-2xl font-bold">
-                {match.theyHaveYouNeed.length}
-              </Text>
-              <Text className="text-space-mute text-xs mt-1">
-                {match.theyHaveYouNeed.slice(0, 10).map((m) => m.stickerCode).join(", ")}
-                {match.theyHaveYouNeed.length > 10 ? "…" : ""}
-              </Text>
-            </GlowCard>
-
-            <GlowCard className="mb-3">
-              <Text className="text-space-mute text-xs mb-1">TENÉS QUE NECESITA</Text>
-              <Text className="text-space-ink text-2xl font-bold">
-                {match.youHaveTheyNeed.length}
-              </Text>
-              <Text className="text-space-mute text-xs mt-1">
-                {match.youHaveTheyNeed.slice(0, 10).map((m) => m.stickerCode).join(", ")}
-                {match.youHaveTheyNeed.length > 10 ? "…" : ""}
-              </Text>
-            </GlowCard>
+            <BidirectionalSection
+              title={`ÉL TIENE QUE NECESITÁS · ${match.theyHaveYouNeed.length}`}
+              groups={grouped.need}
+              stickers={stickersBySection}
+              onTeamPress={(code) => router.push(`/team/${code}` as never)}
+              onThumbPress={(code) => router.push(`/sticker/${code}` as never)}
+            />
+            <BidirectionalSection
+              title={`TENÉS QUE LE NECESITA · ${match.youHaveTheyNeed.length}`}
+              groups={grouped.give}
+              stickers={stickersBySection}
+              onTeamPress={(code) => router.push(`/team/${code}` as never)}
+              onThumbPress={(code) => router.push(`/sticker/${code}` as never)}
+            />
           </>
-        ) : null}
+        )}
       </ScrollView>
+
+      {canPropose && (
+        <View style={{ position: "absolute", bottom: 16, left: 16, right: 16 }}>
+          <Pressable
+            onPress={() => router.push(`/trades/propose/${friend.username}` as never)}
+            accessibilityRole="button"
+            accessibilityLabel={`Proponer cambio a ${friend.username}`}
+            style={{
+              paddingVertical: 14,
+              borderRadius: 10,
+              backgroundColor: theme.accent,
+              alignItems: "center"
+            }}
+          >
+            <Text style={{ color: "#fff", fontWeight: "700" }}>Proponer cambio</Text>
+          </Pressable>
+        </View>
+      )}
     </ThemedBackground>
+  );
+}
+
+function BidirectionalSection({
+  title,
+  groups,
+  stickers,
+  onTeamPress,
+  onThumbPress
+}: {
+  title: string;
+  groups: [string, string[]][];
+  stickers: Map<string, Sticker>;
+  onTeamPress: (teamCode: string) => void;
+  onThumbPress: (code: string) => void;
+}) {
+  const { theme } = useTheme();
+  if (groups.length === 0) {
+    return (
+      <View style={{ marginBottom: 16 }}>
+        <Text style={{ color: theme.textMute, fontSize: 11, fontWeight: "700", letterSpacing: 1, marginBottom: 6 }}>
+          {title}
+        </Text>
+        <Text style={{ color: theme.textMute, fontSize: 13 }}>(nada por ahora)</Text>
+      </View>
+    );
+  }
+  return (
+    <View style={{ marginBottom: 16 }}>
+      <Text style={{ color: theme.textMute, fontSize: 11, fontWeight: "700", letterSpacing: 1, marginBottom: 8 }}>
+        {title}
+      </Text>
+      {groups.map(([section, codes]) => {
+        const teamCode = stickers.get(codes[0])?.team ?? null;
+        return (
+          <View key={section} style={{ marginBottom: 10 }}>
+            <Pressable
+              onPress={() => teamCode && onTeamPress(teamCode)}
+              disabled={!teamCode}
+              accessibilityRole={teamCode ? "button" : undefined}
+              accessibilityLabel={teamCode ? `Abrir equipo ${section}` : undefined}
+            >
+              <Text style={{ color: theme.text, fontSize: 12, fontWeight: "700", marginBottom: 4 }}>
+                {section} ({codes.length}){teamCode ? " ›" : ""}
+              </Text>
+            </Pressable>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              {codes.map((c) => (
+                <StickerMiniThumb key={c} code={c} onPress={() => onThumbPress(c)} />
+              ))}
+            </View>
+          </View>
+        );
+      })}
+    </View>
   );
 }

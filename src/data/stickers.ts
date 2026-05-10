@@ -9,6 +9,9 @@ export async function getAllStickers(): Promise<Sticker[]> {
   );
 }
 
+/** Alias de getAllStickers para compatibilidad con imports que usan listStickers */
+export const listStickers = getAllStickers;
+
 export async function getStickersWithStatus(filter: {
   q?: string;
   mode: "all" | "missing" | "duplicates";
