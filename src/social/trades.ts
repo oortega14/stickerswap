@@ -1,6 +1,7 @@
 import { supabase } from "@/auth/supabaseClient";
 import { upsertTrade, listActiveTrades as listLocal } from "@/data/trades";
 import type { Trade, TradeStatus } from "@/domain/types";
+import { pullRemoteStatus } from "@/sync/worker";
 
 interface RemoteRow {
   id: string;
@@ -74,10 +75,16 @@ export async function cancelTrade(tradeId: string): Promise<void> {
   await refreshTradeFromRemote(tradeId);
 }
 
-export async function confirmTrade(tradeId: string): Promise<"completed" | "awaiting_other"> {
+export async function confirmTrade(
+  tradeId: string,
+  userId: string
+): Promise<"completed" | "awaiting_other"> {
   const { data, error } = await supabase.rpc("trade_confirm", { p_trade: tradeId });
   if (error) throw error;
   await refreshTradeFromRemote(tradeId);
+  if (data === "completed") {
+    await pullRemoteStatus(userId);
+  }
   return (data as "completed" | "awaiting_other");
 }
 
