@@ -50,6 +50,16 @@ const JERSEYS: Record<string, JerseyDesign> = {
       layout: "side-vertical",
       colors: ["#FFFFFF", "#006233", "#D21034"]
     }
+  },
+  ARG: {
+    body: "#FFFFFF",
+    sleeves: "#75AADB",
+    initialsColor: "#0A2240",
+    initialsXOffset: 6,
+    stripes: {
+      layout: "side-vertical",
+      colors: ["#FFFFFF", "#75AADB", "#0A2240"]
+    }
   }
 };
 
