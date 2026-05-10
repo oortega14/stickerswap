@@ -29,8 +29,11 @@ export default function SignIn() {
     <ThemedBackground>
       <AuthToggleBar />
       <View className="flex-1 items-center justify-center px-6">
-        <Text style={{ color: theme.accent, fontSize: 32, fontWeight: "800", marginBottom: 6 }}>
-          🪐 Panini
+        <Text style={{ fontSize: 56, marginBottom: 4 }}>⚽</Text>
+        <Text style={{ fontSize: 32, fontWeight: "800", marginBottom: 6 }}>
+          <Text style={{ color: theme.text }}>sticker</Text>
+          <Text style={{ color: theme.accent }}>S</Text>
+          <Text style={{ color: theme.text }}>wap</Text>
         </Text>
         <Text style={{ color: theme.textMute, textAlign: "center", marginBottom: 40 }}>
           {t("signIn_subtitle")}
