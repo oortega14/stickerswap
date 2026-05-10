@@ -194,12 +194,15 @@ function ShieldVisual({ code, colors }: { code: string; colors: TeamColors }) {
 }
 
 // Visual genérico para tipos icon/special (Intro/Extras/Coca-Cola) que no
-// tienen equipo. Círculo con el código del sticker centrado en color accent.
-function GenericVisual({ code, colors }: { code: string; colors: TeamColors }) {
+// tienen equipo. Círculo café acorde a la paleta cream/espresso de la app.
+const GENERIC_BG = "#6F4E37";
+const GENERIC_TEXT = "#FAF6F0";
+
+function GenericVisual({ code }: { code: string }) {
   const fontSize = code.length > 4 ? 14 : 20;
   return (
     <Svg viewBox="0 0 100 100" width="100%" height="100%">
-      <Circle cx="50" cy="52" r="36" fill={colors.bg} />
+      <Circle cx="50" cy="52" r="36" fill={GENERIC_BG} />
       <SvgText
         x="50"
         y={52 + fontSize / 3}
@@ -208,7 +211,7 @@ function GenericVisual({ code, colors }: { code: string; colors: TeamColors }) {
         fontWeight="900"
         fontFamily="Impact, Arial Black, sans-serif"
         letterSpacing="1"
-        fill={colors.bgText}
+        fill={GENERIC_TEXT}
       >
         {code}
       </SvgText>
@@ -271,7 +274,7 @@ export function StickerCardVisual({ sticker, cardBgColor }: Props) {
       return <SquadGridVisual colors={colors} override={override} />;
     case "icon":
     case "special":
-      return <GenericVisual code={sticker.code} colors={colors} />;
+      return <GenericVisual code={sticker.code} />;
     default:
       return null;
   }
