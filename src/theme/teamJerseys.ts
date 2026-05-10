@@ -144,6 +144,15 @@ const JERSEYS: Record<string, JerseyDesign> = {
       layout: "side-vertical",
       colors: ["#003893", "#CE1126", "#003893"]
     }
+  },
+  SCO: {
+    body: "#002B5C",
+    sleeves: "#002B5C",
+    initialsColor: "#FFFFFF",
+    stripes: {
+      layout: "side-vertical",
+      colors: ["#FFFFFF"]
+    }
   }
 };
 
