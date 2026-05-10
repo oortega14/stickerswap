@@ -13,6 +13,7 @@ import { useViewMode } from "@/lib/viewMode";
 import { ViewToggle } from "@/ui/ViewToggle";
 import type { StickerWithStatus } from "@/domain/types";
 import { DestildarBanner } from "@/ui/DestildarBanner";
+import { StickerCardVisual } from "@/ui/StickerCardVisual";
 
 // Elige el color más representativo de la bandera para tintar el fondo;
 // evita blancos y negros porque tintarlos no comunica identidad.
@@ -327,9 +328,12 @@ function StickerCard({
             justifyContent: "center"
           }}
         >
-          <Text style={{ fontSize: 36, color: withAlpha(theme.textMute, 0.5) }}>
-            {s.type === "team_photo" ? "▦" : "⛊"}
-          </Text>
+          <View style={{ width: "78%", height: "78%" }}>
+            <StickerCardVisual
+              sticker={s}
+              cardBgColor={collected ? withAlpha(accent, 0.12) : theme.bg}
+            />
+          </View>
           {/* Badge esquina: ✓ si pegado, ×N si repetido */}
           {collected && (
             <View
