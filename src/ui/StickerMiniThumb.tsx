@@ -21,10 +21,11 @@ export function StickerMiniThumb({ code, onPress }: Props) {
     <Wrapper
       onPress={onPress}
       accessibilityRole={onPress ? "button" : undefined}
-      accessibilityLabel={`Cromo ${sticker?.number ?? code}`}
+      accessibilityLabel={`Cromo ${code}`}
       style={{
-        width: 32,
+        minWidth: 44,
         height: 40,
+        paddingHorizontal: 4,
         borderRadius: 4,
         backgroundColor: bg,
         alignItems: "center",
@@ -35,8 +36,13 @@ export function StickerMiniThumb({ code, onPress }: Props) {
         borderColor: theme.border
       }}
     >
-      <Text style={{ color: fg, fontWeight: "700", fontSize: 13 }}>
-        {sticker?.number ?? "?"}
+      <Text
+        numberOfLines={1}
+        adjustsFontSizeToFit
+        minimumFontScale={0.7}
+        style={{ color: fg, fontWeight: "700", fontSize: 11 }}
+      >
+        {code}
       </Text>
     </Wrapper>
   );
