@@ -31,10 +31,10 @@ export default function TabsLayout() {
         options={{ title: "Home", tabBarIcon: ({ focused }) => <TabIcon icon="⌂" focused={focused} active={theme.accent} inactive={theme.textMute} /> }}
       />
       <Tabs.Screen
-        name="trades"
+        name="friends"
         options={{
-          title: "Cambios",
-          tabBarIcon: ({ focused }) => <TabIcon icon="↔" focused={focused} active={theme.accent} inactive={theme.textMute} />,
+          title: "Amigos",
+          tabBarIcon: ({ focused }) => <TabIcon icon="◍" focused={focused} active={theme.accent} inactive={theme.textMute} />,
           tabBarBadge: pendingCount > 0 ? pendingCount : undefined
         }}
       />
