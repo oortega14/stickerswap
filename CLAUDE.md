@@ -23,7 +23,7 @@ Versión actual: `1.0.0-beta.1`. Stack alineado a SDK 54 (después de un upgrade
 ## Estructura
 
 ```
-panini-album/
+stickerswap/
 ├── app/                        # Rutas Expo Router
 │   ├── _layout.tsx             # Auth gate, providers, sync engine, realtime bridge
 │   ├── (auth)/                 # sign-in, onboarding (elegir username)
