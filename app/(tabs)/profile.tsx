@@ -1,5 +1,6 @@
+import { useCallback, useState } from "react";
 import { ScrollView, View, Text, Pressable, Image, Alert, Switch } from "react-native";
-import { useRouter } from "expo-router";
+import { useRouter, useFocusEffect } from "expo-router";
 import * as Clipboard from "expo-clipboard";
 import { haptics } from "@/lib/haptics";
 import QRCode from "react-native-qrcode-svg";
@@ -32,6 +33,16 @@ export default function Profile() {
   const router = useRouter();
   const { user } = useSession();
   const { theme, mode, setMode } = useTheme();
+
+  // Tras varios detach/reattach de react-native-screens, el árbol nativo de
+  // esta pantalla se queda en blanco si nunca re-rendea. Forzamos un re-render
+  // en cada focus para que React repinte y el layout se reconstruya.
+  const [, bumpOnFocus] = useState(0);
+  useFocusEffect(
+    useCallback(() => {
+      bumpOnFocus((n) => n + 1);
+    }, [])
+  );
 
   if (!user) return null;
 
