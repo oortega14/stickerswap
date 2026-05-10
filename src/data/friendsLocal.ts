@@ -92,4 +92,63 @@ export async function removeFriend(friendId: string): Promise<void> {
   const db = getDb();
   await db.runAsync(`DELETE FROM friends_cache WHERE friend_id = ?`, [friendId]);
   await db.runAsync(`DELETE FROM friend_matches_cache WHERE friend_id = ?`, [friendId]);
+  await db.runAsync(`DELETE FROM friend_matches_bidi_cache WHERE friend_id = ?`, [friendId]);
+}
+
+type Direction = "they_have_you_need" | "you_have_they_need";
+
+export async function cacheBidirectionalMatches(
+  friendId: string,
+  theyHaveYouNeed: FriendMatch[],
+  youHaveTheyNeed: FriendMatch[]
+): Promise<void> {
+  const db = getDb();
+  const now = Date.now();
+  await db.runAsync(
+    `DELETE FROM friend_matches_bidi_cache WHERE friend_id = ?`,
+    [friendId]
+  );
+  for (const m of theyHaveYouNeed) {
+    await db.runAsync(
+      `INSERT INTO friend_matches_bidi_cache (friend_id, sticker_code, extras, direction, fetched_at)
+       VALUES (?, ?, ?, 'they_have_you_need', ?)`,
+      [m.friendId, m.stickerCode, m.extras, now]
+    );
+  }
+  for (const m of youHaveTheyNeed) {
+    await db.runAsync(
+      `INSERT INTO friend_matches_bidi_cache (friend_id, sticker_code, extras, direction, fetched_at)
+       VALUES (?, ?, ?, 'you_have_they_need', ?)`,
+      [m.friendId, m.stickerCode, m.extras, now]
+    );
+  }
+}
+
+export interface CachedBidirectionalMatches {
+  theyHaveYouNeed: FriendMatch[];
+  youHaveTheyNeed: FriendMatch[];
+}
+
+export async function listAllCachedBidirectionalMatches(): Promise<CachedBidirectionalMatches> {
+  const db = getDb();
+  const rows = await db.getAllAsync<{
+    friend_id: string;
+    sticker_code: string;
+    extras: number;
+    direction: Direction;
+  }>(
+    `SELECT friend_id, sticker_code, extras, direction FROM friend_matches_bidi_cache`
+  );
+  const theyHaveYouNeed: FriendMatch[] = [];
+  const youHaveTheyNeed: FriendMatch[] = [];
+  for (const r of rows) {
+    const m: FriendMatch = {
+      friendId: r.friend_id,
+      stickerCode: r.sticker_code,
+      extras: r.extras
+    };
+    if (r.direction === "they_have_you_need") theyHaveYouNeed.push(m);
+    else youHaveTheyNeed.push(m);
+  }
+  return { theyHaveYouNeed, youHaveTheyNeed };
 }

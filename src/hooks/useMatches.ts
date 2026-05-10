@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchMatches } from "@/social/friendships";
-import { listAllCachedMatches } from "@/data/friendsLocal";
+import { listAllCachedBidirectionalMatches } from "@/data/friendsLocal";
 import { summarizeMatches } from "@/domain/friendMatchBuilder";
 import { useFriends } from "./useFriends";
 
@@ -12,7 +12,7 @@ export function useMatches() {
       try {
         return await fetchMatches();
       } catch {
-        return await listAllCachedMatches();
+        return await listAllCachedBidirectionalMatches();
       }
     }
   });
@@ -21,7 +21,12 @@ export function useMatches() {
     friends.data && matches.data
       ? summarizeMatches(
           matches.data,
-          new Map(friends.data.map((f) => [f.id, { username: f.username, displayName: f.displayName }]))
+          new Map(
+            friends.data.map((f) => [
+              f.id,
+              { username: f.username, displayName: f.displayName }
+            ])
+          )
         )
       : [];
 

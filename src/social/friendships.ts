@@ -1,6 +1,7 @@
 import { supabase } from "@/auth/supabaseClient";
-import { cacheFriends, cacheMatches } from "@/data/friendsLocal";
+import { cacheFriends, cacheBidirectionalMatches } from "@/data/friendsLocal";
 import type { Friend, FriendMatch } from "@/domain/types";
+import type { BidirectionalMatchPayload } from "@/domain/friendMatchBuilder";
 
 interface FriendshipRow {
   friend_id: string;
@@ -70,27 +71,41 @@ export async function requestFriendByUsername(targetId: string): Promise<void> {
   if (error) throw error;
 }
 
-export async function fetchMatches(): Promise<FriendMatch[]> {
+export async function fetchMatches(): Promise<BidirectionalMatchPayload> {
   const { data, error } = await supabase
-    .from("v_friend_matches")
-    .select("friend_id, sticker_code, extras");
+    .from("v_friend_matches_bidirectional")
+    .select("friend_id, sticker_code, extras, direction");
   if (error) throw error;
-  const matches = (data ?? []).map((r) => ({
-    friendId: r.friend_id as string,
-    stickerCode: r.sticker_code as string,
-    extras: r.extras as number
-  }));
 
-  // Recachear local agrupando por friend_id
-  const grouped = new Map<string, FriendMatch[]>();
-  for (const m of matches) {
-    const arr = grouped.get(m.friendId) ?? [];
-    arr.push(m);
-    grouped.set(m.friendId, arr);
+  const theyHaveYouNeed: FriendMatch[] = [];
+  const youHaveTheyNeed: FriendMatch[] = [];
+  for (const r of data ?? []) {
+    const m: FriendMatch = {
+      friendId: r.friend_id as string,
+      stickerCode: r.sticker_code as string,
+      extras: r.extras as number
+    };
+    if (r.direction === "they_have_you_need") theyHaveYouNeed.push(m);
+    else youHaveTheyNeed.push(m);
   }
-  for (const [fid, ms] of grouped) await cacheMatches(fid, ms);
 
-  return matches;
+  // Recachear local
+  const grouped = new Map<string, { they: FriendMatch[]; you: FriendMatch[] }>();
+  for (const m of theyHaveYouNeed) {
+    const e = grouped.get(m.friendId) ?? { they: [], you: [] };
+    e.they.push(m);
+    grouped.set(m.friendId, e);
+  }
+  for (const m of youHaveTheyNeed) {
+    const e = grouped.get(m.friendId) ?? { they: [], you: [] };
+    e.you.push(m);
+    grouped.set(m.friendId, e);
+  }
+  for (const [fid, { they, you }] of grouped) {
+    await cacheBidirectionalMatches(fid, they, you);
+  }
+
+  return { theyHaveYouNeed, youHaveTheyNeed };
 }
 
 export async function unfriend(friendId: string): Promise<void> {
