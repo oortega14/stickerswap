@@ -12,6 +12,7 @@ import { ThemeProvider, useTheme } from "@/theme/ThemeProvider";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { SessionProvider, useSession } from "@/auth/useSession";
 import { drainQueue, pullRemoteStatus } from "@/sync/worker";
+import { fetchActiveTrades } from "@/social/trades";
 import { subscribeToFriendUpdates, unsubscribe } from "@/social/realtime";
 import { Snackbar, showSnackbar } from "@/ui/Snackbar";
 import { useHydrateOnboarding, useOnboardingSeen } from "@/lib/onboarding";
@@ -78,6 +79,11 @@ function SyncEngine() {
         await pullRemoteStatus(user.id);
       } catch (e) {
         console.warn("pull error", e);
+      }
+      try {
+        await fetchActiveTrades();
+      } catch (e) {
+        console.warn("trades pull error", e);
       }
       await tick();
       timer = setInterval(tick, 30_000);
