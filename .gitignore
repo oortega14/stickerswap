@@ -38,6 +38,9 @@ yarn-error.*
 # brainstorm session artifacts
 .superpowers/
 
+# local design scratch
+assets/card-drafts/
+
 # editors
 .vscode/
 .idea/
