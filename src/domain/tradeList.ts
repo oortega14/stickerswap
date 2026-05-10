@@ -34,7 +34,7 @@ function groupBy<T>(items: T[], key: (x: T) => string): Map<string, T[]> {
 
 export function formatTradeListAsText(list: TradeList, opts: TradeFormatOptions): string {
   const lines: string[] = [];
-  lines.push(`Panini Mundial 2026 — @${opts.username}`);
+  lines.push(`stickerSwap · Mundial 2026 — @${opts.username}`);
   lines.push("");
 
   if (list.needed.length > 0) {

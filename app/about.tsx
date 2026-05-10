@@ -4,8 +4,8 @@ import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { APP_VERSION, BUILD_NUMBER } from "@/lib/version";
 
-const PRIVACY_URL = "https://example.com/panini/privacy";
-const TERMS_URL = "https://example.com/panini/terms";
+const PRIVACY_URL = "https://example.com/stickerswap/privacy";
+const TERMS_URL = "https://example.com/stickerswap/terms";
 
 export default function About() {
   const router = useRouter();
@@ -16,7 +16,11 @@ export default function About() {
           ACERCA DE
         </Text>
         <GlowCard className="mb-3">
-          <Text className="text-space-ink font-bold text-lg">Panini Album</Text>
+          <Text className="text-space-ink font-bold text-lg">
+            <Text>sticker</Text>
+            <Text className="text-space-violet">S</Text>
+            <Text>wap</Text>
+          </Text>
           <Text className="text-space-mute">Versión {APP_VERSION} (build {BUILD_NUMBER})</Text>
         </GlowCard>
 

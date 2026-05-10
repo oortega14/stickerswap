@@ -48,7 +48,7 @@ describe("formatTradeListAsText", () => {
 
   it("groups by section when groupBySection=true", () => {
     const text = formatTradeListAsText(list, { groupBySection: true, username: "oscar" });
-    expect(text).toContain("Panini Mundial 2026 — @oscar");
+    expect(text).toContain("stickerSwap · Mundial 2026 — @oscar");
     expect(text).toContain("NECESITO (3)");
     expect(text).toMatch(/Argentina:.*101.*102/);
     expect(text).toContain("Estadios: 5");
