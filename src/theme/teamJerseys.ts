@@ -105,6 +105,11 @@ const JERSEYS: Record<string, JerseyDesign> = {
       layout: "side-vertical",
       colors: ["#FCD116", "#003893", "#CE1126"]
     }
+  },
+  KOR: {
+    body: "#6B3FA0",
+    sleeves: "#6B3FA0",
+    initialsColor: "#FFFFFF"
   }
 };
 
