@@ -133,6 +133,15 @@ function FriendUpdatesBridge() {
         if (newStatus && newStatus !== oldStatus) {
           announceTradeChange(payload, user.id);
         }
+        if (newStatus === "completed" && oldStatus !== "completed") {
+          pullRemoteStatus(user.id)
+            .then(() => {
+              qc.invalidateQueries({ queryKey: ["stickers"] });
+              qc.invalidateQueries({ queryKey: ["matches"] });
+              qc.invalidateQueries({ queryKey: ["progress"] });
+            })
+            .catch((e) => console.warn("pullRemoteStatus on trade completion failed", e));
+        }
       }
     });
     return () => unsubscribe(channel);
