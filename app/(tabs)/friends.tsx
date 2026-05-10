@@ -2,11 +2,11 @@ import { useState } from "react";
 import { ScrollView, View, Text, Pressable, RefreshControl, Alert } from "react-native";
 import { useRouter } from "expo-router";
 import { useQueryClient } from "@tanstack/react-query";
+import { useSession } from "@/auth/useSession";
 import { haptics } from "@/lib/haptics";
-import { ThemedBackground } from "@/ui/ThemedBackground";
-import { GlowCard } from "@/ui/GlowCard";
-import { EmptyState } from "@/ui/EmptyState";
-import { SegmentedControl } from "@/ui/SegmentedControl";
+import type { Trade, TradeStatus } from "@/domain/types";
+import { useCancelTrade } from "@/hooks/useCancelTrade";
+import { useConfirmTrade } from "@/hooks/useConfirmTrade";
 import { useFriends } from "@/hooks/useFriends";
 import { useMatches } from "@/hooks/useMatches";
 import {
@@ -16,6 +16,13 @@ import {
   useDeclineRequest,
   useDeleteMyOutgoingRequest
 } from "@/hooks/usePendingRequests";
+import { useRespondTrade } from "@/hooks/useRespondTrade";
+import { useTradesByStatus } from "@/hooks/useTrades";
+import { useUnconfirmTrade } from "@/hooks/useUnconfirmTrade";
+import { ThemedBackground } from "@/ui/ThemedBackground";
+import { GlowCard } from "@/ui/GlowCard";
+import { EmptyState } from "@/ui/EmptyState";
+import { SegmentedControl } from "@/ui/SegmentedControl";
 import { useTheme } from "@/theme/ThemeProvider";
 
 type Subtab = "amigos" | "trueques" | "cerca";
@@ -238,8 +245,230 @@ function AmigosView() {
   );
 }
 
+type TradeFilter = Extract<TradeStatus, "pending" | "accepted" | "completed">;
+
 function TruequesView() {
-  return null;
+  const { theme } = useTheme();
+  const [filter, setFilter] = useState<TradeFilter>("pending");
+  const { data: trades, isLoading } = useTradesByStatus(filter);
+  const { data: friends } = useFriends();
+  const { user } = useSession();
+  const friendMap = new Map((friends ?? []).map((f) => [f.id, f]));
+
+  if (!user) return null;
+
+  return (
+    <View>
+      <View className="flex-row mb-4" style={{ gap: 8 }}>
+        {(["pending", "accepted", "completed"] as TradeFilter[]).map((f) => {
+          const active = f === filter;
+          const label = f === "pending" ? "Pendientes" : f === "accepted" ? "En curso" : "Completados";
+          return (
+            <Pressable
+              key={f}
+              onPress={() => setFilter(f)}
+              accessibilityRole="button"
+              accessibilityLabel={`Filtrar ${label}`}
+              accessibilityState={{ selected: active }}
+              style={{
+                paddingHorizontal: 12,
+                paddingVertical: 6,
+                borderRadius: 999,
+                backgroundColor: active ? theme.accent : theme.card,
+                borderWidth: 1,
+                borderColor: active ? theme.accent : theme.border
+              }}
+            >
+              <Text
+                style={{
+                  color: active ? "#fff" : theme.textMute,
+                  fontSize: 12,
+                  fontWeight: "600"
+                }}
+              >
+                {label}
+              </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+
+      {isLoading ? (
+        <Text style={{ color: theme.textMute, textAlign: "center", marginTop: 16 }}>Cargando…</Text>
+      ) : !trades || trades.length === 0 ? (
+        <EmptyState
+          variant="rocket"
+          title={
+            filter === "pending"
+              ? "Sin trueques pendientes"
+              : filter === "accepted"
+                ? "Sin trueques en curso"
+                : "Sin trueques completados"
+          }
+          message="Cuando inicies o recibas un trueque, aparecerá acá."
+        />
+      ) : (
+        trades.map((trade) => (
+          <TradeCard
+            key={trade.id}
+            trade={trade}
+            meId={user.id}
+            counterpartyUsername={
+              friendMap.get(trade.proposerId === user.id ? trade.recipientId : trade.proposerId)
+                ?.username ?? "amigo"
+            }
+          />
+        ))
+      )}
+    </View>
+  );
+}
+
+function TradeCard({
+  trade,
+  meId,
+  counterpartyUsername
+}: {
+  trade: Trade;
+  meId: string;
+  counterpartyUsername: string;
+}) {
+  const { theme } = useTheme();
+  const respond = useRespondTrade();
+  const cancel = useCancelTrade();
+  const confirm = useConfirmTrade();
+  const unconfirm = useUnconfirmTrade();
+
+  const iAmProposer = trade.proposerId === meId;
+  const iGave = iAmProposer ? trade.proposerGives : trade.proposerGets;
+  const iGot = iAmProposer ? trade.proposerGets : trade.proposerGives;
+  const iConfirmed = iAmProposer ? trade.proposerConfirmedAt !== null : trade.recipientConfirmedAt !== null;
+  const otherConfirmed = iAmProposer ? trade.recipientConfirmedAt !== null : trade.proposerConfirmedAt !== null;
+
+  const dateLabel =
+    trade.status === "completed" && trade.completedAt
+      ? new Date(trade.completedAt).toLocaleDateString()
+      : new Date(trade.updatedAt).toLocaleDateString();
+
+  return (
+    <GlowCard className="mb-3">
+      <View className="flex-row items-center justify-between mb-2">
+        <Text style={{ color: theme.text, fontSize: 16, fontWeight: "700" }}>
+          @{counterpartyUsername}
+        </Text>
+        <Text style={{ color: theme.textMute, fontSize: 12 }}>{dateLabel}</Text>
+      </View>
+      <Text style={{ color: theme.textMute, fontSize: 12, marginBottom: 2 }}>
+        Le diste: {iGave.join(", ")}
+      </Text>
+      <Text style={{ color: theme.textMute, fontSize: 12, marginBottom: 8 }}>
+        Te dio: {iGot.join(", ")}
+      </Text>
+
+      {trade.status === "pending" && iAmProposer && (
+        <Pressable
+          onPress={() => cancel.mutate(trade.id)}
+          disabled={cancel.isPending}
+          style={{
+            paddingVertical: 8,
+            borderRadius: 8,
+            backgroundColor: theme.card,
+            borderWidth: 1,
+            borderColor: theme.border,
+            alignItems: "center"
+          }}
+          accessibilityRole="button"
+          accessibilityLabel="Cancelar trueque"
+        >
+          <Text style={{ color: theme.textMute, fontWeight: "600" }}>Cancelar</Text>
+        </Pressable>
+      )}
+
+      {trade.status === "pending" && !iAmProposer && (
+        <View className="flex-row" style={{ gap: 8 }}>
+          <Pressable
+            onPress={() => respond.mutate({ tradeId: trade.id, accept: true })}
+            disabled={respond.isPending}
+            style={{
+              flex: 1,
+              paddingVertical: 8,
+              borderRadius: 8,
+              backgroundColor: theme.accent,
+              alignItems: "center"
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Aceptar trueque"
+          >
+            <Text style={{ color: "#fff", fontWeight: "700" }}>Aceptar</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => respond.mutate({ tradeId: trade.id, accept: false })}
+            disabled={respond.isPending}
+            style={{
+              flex: 1,
+              paddingVertical: 8,
+              borderRadius: 8,
+              backgroundColor: theme.card,
+              borderWidth: 1,
+              borderColor: theme.border,
+              alignItems: "center"
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Rechazar trueque"
+          >
+            <Text style={{ color: theme.textMute, fontWeight: "600" }}>Rechazar</Text>
+          </Pressable>
+        </View>
+      )}
+
+      {trade.status === "accepted" && !iConfirmed && (
+        <Pressable
+          onPress={() => confirm.mutate(trade.id)}
+          disabled={confirm.isPending}
+          style={{
+            paddingVertical: 8,
+            borderRadius: 8,
+            backgroundColor: theme.accent,
+            alignItems: "center"
+          }}
+          accessibilityRole="button"
+          accessibilityLabel="Confirmar trueque"
+        >
+          <Text style={{ color: "#fff", fontWeight: "700" }}>Confirmar</Text>
+        </Pressable>
+      )}
+
+      {trade.status === "accepted" && iConfirmed && !otherConfirmed && (
+        <View>
+          <Text style={{ color: theme.textMute, fontSize: 13, marginBottom: 6 }}>
+            Esperás confirmación de @{counterpartyUsername}
+          </Text>
+          <Pressable
+            onPress={() => unconfirm.mutate(trade.id)}
+            disabled={unconfirm.isPending}
+            style={{
+              paddingVertical: 8,
+              borderRadius: 8,
+              backgroundColor: theme.card,
+              borderWidth: 1,
+              borderColor: theme.border,
+              alignItems: "center"
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Deshacer confirmación"
+          >
+            <Text style={{ color: theme.textMute, fontWeight: "600" }}>Deshacer</Text>
+          </Pressable>
+        </View>
+      )}
+
+      {trade.status === "completed" && (
+        <Text style={{ color: theme.accent, fontSize: 13, fontWeight: "600" }}>
+          ✓ Completado · {dateLabel}
+        </Text>
+      )}
+    </GlowCard>
+  );
 }
 
 function CercaView() {
