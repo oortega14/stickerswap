@@ -1,7 +1,13 @@
 import { supabase } from "@/auth/supabaseClient";
 import { cacheFriends, cacheBidirectionalMatches } from "@/data/friendsLocal";
+import { markScanned } from "@/social/recentScans";
 import type { Friend, FriendMatch } from "@/domain/types";
 import type { BidirectionalMatchPayload } from "@/domain/friendMatchBuilder";
+
+export interface AddFriendResult {
+  id: string;
+  username: string;
+}
 
 interface FriendshipRow {
   friend_id: string;
@@ -43,11 +49,27 @@ export async function fetchFriends(): Promise<Friend[]> {
   return friends;
 }
 
-export async function addFriendByCode(code: string): Promise<string> {
+export async function addFriendByCode(code: string): Promise<AddFriendResult> {
   const { data, error } = await supabase.rpc("accept_invite_code", { code });
   if (error) throw error;
-  await fetchFriends();
-  return data as string;
+  const targetId = data as string;
+  // Marcar inmediatamente (sincrónico, antes de cualquier await) para suprimir
+  // el snackbar "te escanearon" que va a llegar por realtime para nuestro propio
+  // scan. Microtasks drenan antes de eventos macrotask de realtime.
+  markScanned(targetId);
+
+  const friends = await fetchFriends();
+  const found = friends.find((f) => f.id === targetId);
+  if (found) return { id: targetId, username: found.username };
+
+  // Fallback: si por algún motivo no quedó en el listado (RLS, cache),
+  // resolvemos el username directo contra profiles.
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("username")
+    .eq("id", targetId)
+    .maybeSingle();
+  return { id: targetId, username: (profile?.username as string) ?? "" };
 }
 
 export interface UserSearchResult {

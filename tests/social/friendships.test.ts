@@ -4,9 +4,19 @@
 jest.mock("expo-sqlite", () => require("../setup-sqlite-mock").createSqliteMock());
 
 const mockRpc = jest.fn();
-const mockFrom = jest.fn((_table: string) => ({
-  select: () => ({ eq: () => Promise.resolve({ data: [], error: null }) })
-}));
+const mockFrom = jest.fn((table: string) => {
+  if (table === "profiles") {
+    return {
+      select: () => ({
+        eq: () => ({
+          maybeSingle: () =>
+            Promise.resolve({ data: { username: "alice" }, error: null })
+        })
+      })
+    };
+  }
+  return { select: () => ({ eq: () => Promise.resolve({ data: [], error: null }) }) };
+});
 
 jest.mock("@/auth/supabaseClient", () => ({
   supabase: {
@@ -16,6 +26,7 @@ jest.mock("@/auth/supabaseClient", () => ({
 }));
 
 import { addFriendByCode, findUserByUsername } from "@/social/friendships";
+import { _resetForTest as resetRecentScans } from "@/social/recentScans";
 import "../setup-sqlite-mock";
 import { initSchema } from "@/data/schema";
 import { _resetDb } from "@/data/db";
@@ -24,13 +35,14 @@ beforeEach(async () => {
   _resetDb();
   await initSchema();
   mockRpc.mockReset();
+  resetRecentScans();
 });
 
-it("addFriendByCode calls accept_invite_code RPC", async () => {
+it("addFriendByCode calls accept_invite_code RPC y resuelve username", async () => {
   mockRpc.mockResolvedValueOnce({ data: "user-uuid", error: null });
-  const id = await addFriendByCode("AB12CD34");
+  const result = await addFriendByCode("AB12CD34");
   expect(mockRpc).toHaveBeenCalledWith("accept_invite_code", { code: "AB12CD34" });
-  expect(id).toBe("user-uuid");
+  expect(result).toEqual({ id: "user-uuid", username: "alice" });
 });
 
 it("findUserByUsername returns first match", async () => {

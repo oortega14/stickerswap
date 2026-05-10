@@ -6,6 +6,7 @@ import { haptics } from "@/lib/haptics";
 import { useAddFriend } from "@/hooks/useAddFriend";
 import { isValidInviteCode, normalizeInviteCode } from "@/domain/inviteCode";
 import { useTheme } from "@/theme/ThemeProvider";
+import { showSnackbar } from "@/ui/Snackbar";
 
 export default function ScanFriend() {
   const router = useRouter();
@@ -29,11 +30,15 @@ export default function ScanFriend() {
       return;
     }
     try {
-      await addFriend.mutateAsync(code);
+      const result = await addFriend.mutateAsync(code);
       await haptics.success();
-      Alert.alert("¡Amigo agregado!", "Ya pueden ver matches.", [
-        { text: "Listo", onPress: () => router.back() }
-      ]);
+      const handle = result.username || "amigo";
+      showSnackbar(`@${handle} ya es tu amigo`);
+      if (result.username) {
+        router.replace(`/friends/${result.username}` as never);
+      } else {
+        router.back();
+      }
     } catch (e) {
       Alert.alert("Error", String((e as Error).message ?? e), [
         { text: "Reintentar", onPress: () => setScanned(false) }
@@ -85,7 +90,7 @@ export default function ScanFriend() {
           }}
         />
         <Text className="text-white mt-4 text-center px-6">
-          Apuntá al QR del código de tu amigo.
+          Apunta al QR del código de tu amigo.
         </Text>
       </View>
       <Pressable

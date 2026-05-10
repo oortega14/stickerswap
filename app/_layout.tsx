@@ -14,6 +14,8 @@ import { SessionProvider, useSession } from "@/auth/useSession";
 import { drainQueue, pullRemoteStatus } from "@/sync/worker";
 import { fetchActiveTrades } from "@/social/trades";
 import { subscribeToFriendUpdates, unsubscribe } from "@/social/realtime";
+import { justScanned } from "@/social/recentScans";
+import { supabase } from "@/auth/supabaseClient";
 import { Snackbar, showSnackbar } from "@/ui/Snackbar";
 import { useHydrateOnboarding, useOnboardingSeen } from "@/lib/onboarding";
 import datasetJson from "../assets/stickers.json";
@@ -118,10 +120,11 @@ function FriendUpdatesBridge() {
         qc.invalidateQueries({ queryKey: ["matches"] });
         qc.invalidateQueries({ queryKey: ["stickers"] });
       },
-      onFriendshipChange: () => {
+      onFriendshipChange: (payload) => {
         qc.invalidateQueries({ queryKey: ["pendingRequests"] });
         qc.invalidateQueries({ queryKey: ["outgoingRequests"] });
         qc.invalidateQueries({ queryKey: ["friends"] });
+        announceFriendshipChange(payload, user.id);
       },
       onTradeChange: (payload) => {
         qc.invalidateQueries({ queryKey: ["trades"] });
@@ -138,6 +141,30 @@ function FriendUpdatesBridge() {
   return null;
 }
 
+async function announceFriendshipChange(payload: any, meId: string) {
+  if (payload?.eventType !== "INSERT") return;
+  const row = payload.new;
+  if (
+    row?.friend_id !== meId ||
+    row?.source !== "qr_code" ||
+    row?.status !== "accepted"
+  ) {
+    return;
+  }
+  const scannerId = row.user_id as string;
+  if (justScanned(scannerId)) return; // es el echo de mi propio scan
+
+  const { data } = await supabase
+    .from("profiles")
+    .select("username")
+    .eq("id", scannerId)
+    .maybeSingle();
+  const username = (data as { username?: string } | null)?.username;
+  if (username) {
+    showSnackbar(`@${username} escaneó tu QR · ya son amigos`);
+  }
+}
+
 function announceTradeChange(payload: any, meId: string) {
   const newStatus = payload?.new?.status as string | undefined;
   const oldStatus = payload?.old?.status as string | undefined;
@@ -151,21 +178,21 @@ function announceTradeChange(payload: any, meId: string) {
   } else if (oldStatus === "pending" && newStatus === "declined") {
     msg = otherIsProposer ? "Rechazaste un cambio" : "Tu propuesta fue rechazada";
   } else if (newStatus === "completed") {
-    msg = "Trade completado ✓";
+    msg = "Cambio completado ✓";
   } else if (
     oldStatus === "accepted" &&
     newStatus === "accepted" &&
     payload?.new?.proposer_confirmed_at !== payload?.old?.proposer_confirmed_at &&
     proposerId !== meId
   ) {
-    msg = "Tu contraparte marcó como hecho — confirmá";
+    msg = "Tu contraparte marcó como hecho — confirma";
   } else if (
     oldStatus === "accepted" &&
     newStatus === "accepted" &&
     payload?.new?.recipient_confirmed_at !== payload?.old?.recipient_confirmed_at &&
     recipientId !== meId
   ) {
-    msg = "Tu contraparte marcó como hecho — confirmá";
+    msg = "Tu contraparte marcó como hecho — confirma";
   }
   if (msg) showSnackbar(msg);
 }

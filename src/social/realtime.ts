@@ -1,9 +1,11 @@
 import { supabase } from "@/auth/supabaseClient";
 import type { RealtimeChannel } from "@supabase/supabase-js";
 
+type FriendshipPayload = { eventType: string; new: any; old: any };
+
 interface RealtimeCallbacks {
   onStickerStatusChange: () => void;
-  onFriendshipChange: () => void;
+  onFriendshipChange: (payload: FriendshipPayload) => void;
   onTradeChange: (payload: { eventType: string; new: any; old: any }) => void;
 }
 
@@ -23,12 +25,12 @@ export function subscribeToFriendUpdates(cb: RealtimeCallbacks): RealtimeChannel
     .on(
       "postgres_changes",
       { event: "INSERT", schema: "public", table: "friendships" },
-      () => cb.onFriendshipChange()
+      (payload) => cb.onFriendshipChange(payload as any)
     )
     .on(
       "postgres_changes",
       { event: "UPDATE", schema: "public", table: "friendships" },
-      () => cb.onFriendshipChange()
+      (payload) => cb.onFriendshipChange(payload as any)
     )
     .on(
       "postgres_changes",
