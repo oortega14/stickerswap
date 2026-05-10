@@ -91,7 +91,7 @@ describe("data/trades", () => {
       t({ id: "c1", status: "completed", completedAt: 1000, createdAt: 50, updatedAt: 1000 })
     );
     await upsertTrade(
-      t({ id: "c2", status: "completed", completedAt: 2000, createdAt: 60, updatedAt: 2000 })
+      t({ id: "c2", status: "completed", completedAt: 2000, createdAt: 10, updatedAt: 2000 })
     );
 
     const pending = await listLocalTradesByStatus("pending");
