@@ -10,7 +10,7 @@
 // teamColors via pickSleeveColor.
 
 import React from "react";
-import Svg, { Path, G, Defs, ClipPath, Rect, Text as SvgText } from "react-native-svg";
+import Svg, { Path, G, Defs, ClipPath, Rect, Circle, Text as SvgText } from "react-native-svg";
 import type { Sticker } from "@/domain/types";
 import { getTeamColors, type TeamColors } from "@/theme/teamColors";
 import { darkenHex, luminance } from "@/theme/colorUtils";
@@ -193,6 +193,29 @@ function ShieldVisual({ code, colors }: { code: string; colors: TeamColors }) {
   );
 }
 
+// Visual genérico para tipos icon/special (Intro/Extras/Coca-Cola) que no
+// tienen equipo. Círculo con el código del sticker centrado en color accent.
+function GenericVisual({ code, colors }: { code: string; colors: TeamColors }) {
+  const fontSize = code.length > 4 ? 14 : 20;
+  return (
+    <Svg viewBox="0 0 100 100" width="100%" height="100%">
+      <Circle cx="50" cy="52" r="36" fill={colors.bg} />
+      <SvgText
+        x="50"
+        y={52 + fontSize / 3}
+        textAnchor="middle"
+        fontSize={fontSize}
+        fontWeight="900"
+        fontFamily="Impact, Arial Black, sans-serif"
+        letterSpacing="1"
+        fill={colors.bgText}
+      >
+        {code}
+      </SvgText>
+    </Svg>
+  );
+}
+
 // 9 mini-camisetas SIN cuello (no haría falta a ese tamaño). Las franjas se
 // omiten porque a 18% de escala son básicamente invisibles.
 function SquadGridVisual({
@@ -246,6 +269,9 @@ export function StickerCardVisual({ sticker, cardBgColor }: Props) {
       return <ShieldVisual code={teamCode || "?"} colors={colors} />;
     case "team_photo":
       return <SquadGridVisual colors={colors} override={override} />;
+    case "icon":
+    case "special":
+      return <GenericVisual code={sticker.code} colors={colors} />;
     default:
       return null;
   }

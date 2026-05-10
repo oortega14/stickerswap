@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
-import { getStickerByCode, getStickersByTeam } from "@/data/stickers";
+import { getStickerByCode, getStickersByTeam, getStickersBySection } from "@/data/stickers";
 import { incrementStatus, decrementStatus, bulkSetOwnedForTeam } from "@/data/stickerStatus";
 
 const KEY = {
@@ -20,6 +20,14 @@ export function useTeamStickers(teamCode: string) {
     queryKey: ["stickers", "team", teamCode],
     queryFn: () => getStickersByTeam(teamCode),
     enabled: !!teamCode
+  });
+}
+
+export function useSectionStickers(sectionName: string) {
+  return useQuery({
+    queryKey: ["stickers", "section", sectionName],
+    queryFn: () => getStickersBySection(sectionName),
+    enabled: !!sectionName
   });
 }
 

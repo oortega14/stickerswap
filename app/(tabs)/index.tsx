@@ -177,7 +177,11 @@ export default function Home() {
                 key={s.section}
                 s={s}
                 onPress={() => {
-                  if (s.teamCode) router.push(`/team/${s.teamCode}` as never);
+                  if (s.teamCode) {
+                    router.push(`/team/${s.teamCode}` as never);
+                  } else {
+                    router.push(`/section/${encodeURIComponent(s.section)}` as never);
+                  }
                 }}
               />
             ))}
@@ -189,7 +193,11 @@ export default function Home() {
                 key={s.section}
                 s={s}
                 onPress={() => {
-                  if (s.teamCode) router.push(`/team/${s.teamCode}` as never);
+                  if (s.teamCode) {
+                    router.push(`/team/${s.teamCode}` as never);
+                  } else {
+                    router.push(`/section/${encodeURIComponent(s.section)}` as never);
+                  }
                 }}
               />
             ))}
@@ -204,7 +212,7 @@ function CountryRow({ s, onPress }: { s: SectionProgress; onPress: () => void })
   const { theme } = useTheme();
   const teamColors = s.teamCode ? getTeamColors(s.teamCode) : null;
   const flag = s.teamCode ? getTeamFlag(s.teamCode) : "✦";
-  const interactive = !!s.teamCode;
+  const interactive = true;
   const Wrapper = interactive ? Pressable : View;
   const bandColor = teamColors?.bg ?? theme.accent;
 
@@ -257,7 +265,7 @@ function CountryCard({ s, onPress }: { s: SectionProgress; onPress: () => void }
   const { theme } = useTheme();
   const teamColors = s.teamCode ? getTeamColors(s.teamCode) : null;
   const flag = s.teamCode ? getTeamFlag(s.teamCode) : "✦";
-  const interactive = !!s.teamCode;
+  const interactive = true;
   const Wrapper = interactive ? Pressable : View;
 
   // Banda superior: para equipos usamos su color primario; para especiales,

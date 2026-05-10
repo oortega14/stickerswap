@@ -47,6 +47,7 @@ function ThemedStack() {
       <Stack.Screen name="onboarding" />
       <Stack.Screen name="sticker/[code]" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
       <Stack.Screen name="team/[code]" options={{ animation: "slide_from_right" }} />
+      <Stack.Screen name="section/[name]" options={{ animation: "slide_from_right" }} />
       <Stack.Screen name="profile/edit" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
       <Stack.Screen name="about" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
       <Stack.Screen name="trades/propose/[username]" options={{ presentation: "modal", animation: "fade_from_bottom" }} />
