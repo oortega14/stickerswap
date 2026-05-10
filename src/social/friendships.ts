@@ -23,13 +23,16 @@ interface FriendshipRow {
 }
 
 export async function fetchFriends(): Promise<Friend[]> {
+  const meId = (await supabase.auth.getSession()).data.session?.user?.id;
+  if (!meId) throw new Error("not_authenticated");
   const { data, error } = await supabase
     .from("friendships")
     .select(`
       friend_id, status, source, created_at,
       profiles:friend_id (id, username, display_name, avatar_url)
     `)
-    .eq("status", "accepted");
+    .eq("status", "accepted")
+    .eq("user_id", meId);
   if (error) throw error;
 
   const friends: Friend[] = (data ?? []).map((r: unknown) => {

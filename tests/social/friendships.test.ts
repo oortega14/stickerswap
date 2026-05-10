@@ -15,13 +15,23 @@ const mockFrom = jest.fn((table: string) => {
       })
     };
   }
-  return { select: () => ({ eq: () => Promise.resolve({ data: [], error: null }) }) };
+  // friendships: select(...).eq("status").eq("user_id") → Promise
+  const friendshipsResult = Promise.resolve({ data: [], error: null });
+  return {
+    select: () => ({
+      eq: () => ({ eq: () => friendshipsResult })
+    })
+  };
 });
 
 jest.mock("@/auth/supabaseClient", () => ({
   supabase: {
     rpc: (name: string, params?: unknown) => mockRpc(name, params),
-    from: (table: string) => mockFrom(table)
+    from: (table: string) => mockFrom(table),
+    auth: {
+      getSession: () =>
+        Promise.resolve({ data: { session: { user: { id: "me-uuid" } } } })
+    }
   } as unknown
 }));
 
