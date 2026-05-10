@@ -34,7 +34,7 @@ export default function FriendDetail() {
   const openLink = async (url: string) => {
     const can = await Linking.canOpenURL(url);
     if (!can) {
-      Alert.alert("No se pudo abrir", "Tu device no tiene una app que maneje este enlace.");
+      Alert.alert("No se pudo abrir", "Tu dispositivo no tiene una app que abra este enlace.");
       return;
     }
     await Linking.openURL(url);
@@ -179,14 +179,14 @@ export default function FriendDetail() {
         ) : (
           <>
             <BidirectionalSection
-              title={`ÉL TIENE QUE NECESITÁS · ${match.theyHaveYouNeed.length}`}
+              title={`TIENE LO QUE NECESITAS · ${match.theyHaveYouNeed.length}`}
               groups={grouped.need}
               stickers={stickersBySection}
               onTeamPress={(code) => router.push(`/team/${code}` as never)}
               onThumbPress={(code) => router.push(`/sticker/${code}` as never)}
             />
             <BidirectionalSection
-              title={`TENÉS QUE LE NECESITA · ${match.youHaveTheyNeed.length}`}
+              title={`TIENES LO QUE NECESITA · ${match.youHaveTheyNeed.length}`}
               groups={grouped.give}
               stickers={stickersBySection}
               onTeamPress={(code) => router.push(`/team/${code}` as never)}

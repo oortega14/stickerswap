@@ -31,7 +31,7 @@ export function DestildarBanner({ onDone, accent }: Props) {
       }}
     >
       <Text style={{ color: "#fff", fontSize: 13, fontWeight: "600", flex: 1, marginRight: 12 }}>
-        Modo destildar · tocá las que te falten
+        Modo destildar · toca las que te falten
       </Text>
       <Pressable
         onPress={onDone}

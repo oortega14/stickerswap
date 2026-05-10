@@ -27,7 +27,7 @@ export function ctaFor(
 
   if (trade.status === "completed") {
     if (trade.completedAt && now - trade.completedAt < COMPLETED_BANNER_MS) {
-      return { kind: "completed", label: "Trade completado ✓" };
+      return { kind: "completed", label: "Cambio completado ✓" };
     }
     return { kind: "none", label: "" };
   }
@@ -68,5 +68,5 @@ export function ctaFor(
     return { kind: "confirm", label: "Confirmar", primaryAction: "confirm" };
   }
   // both marked → la RPC ya transicionó a 'completed'; defensivo:
-  return { kind: "completed", label: "Trade completado ✓" };
+  return { kind: "completed", label: "Cambio completado ✓" };
 }

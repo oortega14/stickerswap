@@ -87,7 +87,7 @@ function MatchesView() {
   if (summary.length === 0) {
     return (
       <>
-        <EmptyState variant="rocket" title="Sin matches todavía" message="Sumá amigos desde Perfil." />
+        <EmptyState variant="rocket" title="Sin matches todavía" message="Agrega amigos desde Perfil." />
         <Pressable
           onPress={() => router.push("/profile" as never)}
           accessibilityRole="button"
@@ -102,7 +102,7 @@ function MatchesView() {
             alignItems: "center"
           }}
         >
-          <Text style={{ color: theme.text, fontWeight: "600" }}>Compartí tu lista</Text>
+          <Text style={{ color: theme.text, fontWeight: "600" }}>Comparte tu lista</Text>
         </Pressable>
       </>
     );
@@ -132,8 +132,8 @@ function NearbyView() {
     return (
       <EmptyState
         variant="rocket"
-        title="Activá la discoverabilidad"
-        message="Andá a Perfil → Editar para activar «Que me encuentren» y que personas de tu ciudad puedan contactarte."
+        title="Permite que te encuentren"
+        message="Ve a Perfil → Editar para activar «Que me encuentren» y que personas de tu ciudad puedan contactarte."
       />
     );
   }
@@ -175,7 +175,7 @@ function NearbyView() {
         <EmptyState
           variant="rocket"
           title="Sin matches cerca todavía"
-          message={`Nadie en ${user.city_label ?? "tu ciudad"} tiene complementarios con vos por ahora. Tocá Actualizar o volvé después.`}
+          message={`Nadie en ${user.city_label ?? "tu ciudad"} tiene complementarios contigo por ahora. Toca Actualizar o vuelve después.`}
         />
       ) : (
         data.map((m) => {
@@ -194,7 +194,7 @@ function NearbyView() {
                   <Text style={{ color: theme.accent, fontWeight: "700" }}>score {m.score}</Text>
                 </View>
                 <Text className="text-space-mute text-xs mb-2">
-                  necesitás {m.theyHaveINeed} · podés dar {m.iHaveTheyNeed}
+                  necesitas {m.theyHaveINeed} · puedes dar {m.iHaveTheyNeed}
                 </Text>
                 <ProgressBar pct={pct} height={3} from={theme.accent} to={theme.accent} />
               </GlowCard>
@@ -224,7 +224,7 @@ function RequestsView() {
       <EmptyState
         variant="rocket"
         title="Sin solicitudes"
-        message="Las solicitudes que recibís y las que enviás aparecen acá."
+        message="Las solicitudes que recibes y las que envías aparecen aquí."
       />
     );
   }

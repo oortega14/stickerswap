@@ -57,11 +57,11 @@ export default function EditProfile() {
 
   const onSave = async () => {
     if (name.trim().length < 1) {
-      Alert.alert("Nombre vacío", "Poné al menos un caracter.");
+      Alert.alert("Nombre vacío", "Pon al menos un carácter.");
       return;
     }
     if (discoverable && (!country || city.trim().length === 0)) {
-      Alert.alert("Faltan datos", "Si querés ser discoverable, necesitás país y ciudad.");
+      Alert.alert("Faltan datos", "Si quieres que te encuentren, necesitas país y ciudad.");
       return;
     }
     setSaving(true);
@@ -163,7 +163,7 @@ export default function EditProfile() {
             <View className="flex-1 pr-3">
               <Text className="text-space-ink text-base font-semibold">Que me encuentren</Text>
               <Text className="text-space-mute text-xs mt-1">
-                Si lo apagás, dejás de aparecer en «Cerca de mí» de otros. Tus matches con amigos siguen igual.
+                Si lo apagas, dejas de aparecer en «Cerca de mí» de otros. Tus matches con amigos siguen igual.
               </Text>
             </View>
             <Switch

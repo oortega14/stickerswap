@@ -56,7 +56,7 @@ export default function Home() {
             <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800" }}>Mi Álbum</Text>
             {data && (
               <Text style={{ color: theme.textMute, fontSize: 13, marginTop: 2 }}>
-                {data.collected} / {data.total} cromos · {data.duplicates} repes
+                {data.collected} / {data.total} láminas · {data.duplicates} repes
                 {pending && pending > 0 ? ` · ${pending} pend.` : ""}
               </Text>
             )}

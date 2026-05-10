@@ -67,7 +67,7 @@ export function ActiveTradeBanner({ trade }: Props) {
           marginBottom: 6
         }}
       >
-        {isCompleted ? "TRADE COMPLETADO" : "TRADE ACTIVO"}
+        {isCompleted ? "CAMBIO COMPLETADO" : "CAMBIO ACTIVO"}
       </Text>
       <Text style={{ color: theme.text, fontSize: 14, fontWeight: "600", marginBottom: 8 }}>
         {cta.label}

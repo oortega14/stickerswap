@@ -20,7 +20,7 @@ export default function FriendsList() {
           data={friends ?? []}
           keyExtractor={(f) => f.id}
           ListEmptyComponent={
-            <EmptyState variant="planet" title="Sin amigos" message="Compartí tu código en Perfil." />
+            <EmptyState variant="planet" title="Sin amigos" message="Comparte tu código en Perfil." />
           }
           renderItem={({ item }) => {
             const count = matchMap.get(item.id) ?? 0;
@@ -37,7 +37,7 @@ export default function FriendsList() {
                   <Text className="text-space-mute text-xs">@{item.username}</Text>
                   {count > 0 && (
                     <Text className="text-space-violet text-xs mt-1">
-                      {count} match{count === 1 ? "" : "es"} con vos
+                      {count} match{count === 1 ? "" : "es"} contigo
                     </Text>
                   )}
                 </GlowCard>

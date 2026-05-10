@@ -144,7 +144,7 @@ export default function ProposeTradeScreen() {
             }}
           >
             <Text style={{ color: theme.text, fontSize: 13 }}>
-              Ya tenés un cambio en curso con @{friend.username}. Resolvelo desde Cambios o desde su perfil.
+              Ya tienes un cambio en curso con @{friend.username}. Resuélvelo desde Cambios o desde su perfil.
             </Text>
           </View>
         )}
@@ -260,7 +260,7 @@ function Section({
       </Text>
       {codes.length === 0 ? (
         <Text style={{ color: theme.textMute, fontSize: 13 }}>
-          (no hay cromos en este lado)
+          (no hay láminas en este lado)
         </Text>
       ) : (
         <View style={{ flexDirection: "row", flexWrap: "wrap" }}>

@@ -34,7 +34,7 @@ export default function SearchFriend() {
     if (!result) return;
     try {
       await requestFriendByUsername(result.id);
-      Alert.alert("Solicitud enviada", `Le mandaste solicitud a @${result.username}.`, [
+      Alert.alert("Solicitud enviada", `Le enviaste solicitud a @${result.username}.`, [
         { text: "OK", onPress: () => router.back() }
       ]);
     } catch (e) {

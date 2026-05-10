@@ -42,7 +42,7 @@ export function MatchCard({ summary }: Props) {
         <View style={{ flexDirection: "row", marginTop: 10, gap: 16 }}>
           <View style={{ flex: 1 }}>
             <Text style={{ color: theme.textMute, fontSize: 11, fontWeight: "700", marginBottom: 6 }}>
-              QUERÉS · {summary.theyHaveYouNeed.length}
+              QUIERES · {summary.theyHaveYouNeed.length}
             </Text>
             <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
               {youNeedSample.map((code) => (

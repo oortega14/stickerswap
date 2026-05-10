@@ -221,8 +221,8 @@ function StickerRow({
       accessibilityRole="button"
       accessibilityLabel={
         destildarMode
-          ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para restar, mantené para sumar.`
-          : `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para sumar, mantené para restar.`
+          ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para restar, mantén para sumar.`
+          : `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para sumar, mantén para restar.`
       }
       style={{
         flexDirection: "row",
@@ -302,8 +302,8 @@ function StickerCard({
         accessibilityRole="button"
         accessibilityLabel={
           destildarMode
-            ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para restar, mantené para sumar.`
-            : `${collected ? "Pegado" : "Falta"}: ${s.name}. Tocá para sumar, mantené para restar.`
+            ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para restar, mantén para sumar.`
+            : `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para sumar, mantén para restar.`
         }
         style={{
           borderRadius: 12,

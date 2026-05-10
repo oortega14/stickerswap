@@ -7,9 +7,9 @@
 export const es = {
   signIn_subtitle: "Tu álbum del Mundial 2026 en la nube.",
   signIn_googleCta: "Continuar con Google",
-  signIn_terms: "Al continuar aceptás los términos y la política de privacidad.",
+  signIn_terms: "Al continuar aceptas los términos y la política de privacidad.",
 
-  username_title: "Elegí tu username",
+  username_title: "Elige tu username",
   username_subtitle: "Así te encuentran tus amigos para intercambiar.",
   username_label: "@username",
   username_hint_invalid: "3-20 caracteres, solo a-z, 0-9 y _",
@@ -26,21 +26,21 @@ export const es = {
   location_city_placeholder: "Armenia",
   location_discoverable_title: "Que me encuentren para intercambiar",
   location_discoverable_subtitle:
-    "Personas de tu ciudad podrán mandarte solicitudes. Lo apagás cuando quieras desde Perfil.",
+    "Personas de tu ciudad podrán enviarte solicitudes. Lo apagas cuando quieras desde Perfil.",
   location_continue: "Continuar",
   location_save_error_title: "No se pudo guardar",
 
   onb1_title: "Bienvenido a tu álbum",
   onb1_body:
-    "Llevá control de las 994 figuritas del Mundial 2026: las que ya pegaste, las que te faltan y las repetidas. Todo se sincroniza entre tus dispositivos.",
+    "Lleva el control de las 994 láminas del Mundial 2026: las que ya pegaste, las que te faltan y las repetidas. Todo se sincroniza entre tus dispositivos.",
   onb1_cta: "Siguiente",
-  onb2_title: "Marcá rápido",
+  onb2_title: "Marca rápido",
   onb2_body:
-    "Tocá una figurita para marcarla como pegada. Si tocás de nuevo, queda como repetida. Mantené presionado para restar. Las cuentas se actualizan solas.",
+    "Toca una lámina para marcarla como pegada. Si tocas de nuevo, queda como repetida. Mantén presionado para restar. Las cuentas se actualizan solas.",
   onb2_cta: "Siguiente",
-  onb3_title: "Intercambiá con amigos",
+  onb3_title: "Intercambia con amigos",
   onb3_body:
-    "Encontrá personas de tu ciudad en «Cerca de mí» o agregá amigos por código. La app te dice exactamente qué cromos podés intercambiar con cada uno.",
+    "Encuentra personas de tu ciudad en «Cerca de mí» o agrega amigos por código. La app te dice exactamente qué láminas puedes intercambiar con cada uno.",
   onb3_cta: "Empezar",
   onb_step: "Paso",
 

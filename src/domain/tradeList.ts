@@ -79,7 +79,7 @@ export function formatTradeListAsText(list: TradeList, opts: TradeFormatOptions)
   }
 
   if (list.needed.length > 0 || list.duplicates.length > 0) {
-    lines.push("Coordinemos por acá 👋");
+    lines.push("Hablemos por aquí 👋");
   }
 
   return lines.join("\n").trim();

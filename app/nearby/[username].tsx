@@ -28,7 +28,7 @@ export default function NearbyDetail() {
     onError: (e: unknown) => {
       const msg = (e as Error).message;
       const human =
-        msg.includes("too_many_requests") ? "Llegaste al límite de 5 solicitudes pending por día. Esperá a que respondan."
+        msg.includes("too_many_requests") ? "Llegaste al límite de 5 solicitudes pendientes por día. Espera a que respondan."
         : msg.includes("not_in_same_city") ? "Esta persona ya no está en tu ciudad o se desactivó."
         : msg.includes("message_too_long") ? "El mensaje no puede tener más de 280 caracteres."
         : msg;
@@ -64,12 +64,12 @@ export default function NearbyDetail() {
         </Text>
 
         <GlowCard className="mb-3">
-          <Text className="text-space-mute text-xs tracking-widest mb-1">ELLOS TIENEN, VOS NECESITÁS</Text>
+          <Text className="text-space-mute text-xs tracking-widest mb-1">ELLOS TIENEN, TÚ NECESITAS</Text>
           <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800" }}>{match.theyHaveINeed}</Text>
         </GlowCard>
 
         <GlowCard className="mb-4">
-          <Text className="text-space-mute text-xs tracking-widest mb-1">VOS TENÉS, ELLOS NECESITAN</Text>
+          <Text className="text-space-mute text-xs tracking-widest mb-1">TÚ TIENES, ELLOS NECESITAN</Text>
           <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800" }}>{match.iHaveTheyNeed}</Text>
         </GlowCard>
 
@@ -78,7 +78,7 @@ export default function NearbyDetail() {
           <TextInput
             value={msg}
             onChangeText={setMsg}
-            placeholder="vi que tenés Messi argentino…"
+            placeholder="vi que tienes a Messi…"
             placeholderTextColor={theme.textMute}
             multiline
             maxLength={280}
@@ -101,9 +101,9 @@ export default function NearbyDetail() {
           disabled={send.isPending}
           className="bg-space-purple rounded-xl py-4 items-center"
           accessibilityRole="button"
-          accessibilityLabel="Solicitar trade"
+          accessibilityLabel="Solicitar cambio"
         >
-          {send.isPending ? <ActivityIndicator color="#fff" /> : <Text className="text-white font-semibold">Solicitar trade</Text>}
+          {send.isPending ? <ActivityIndicator color="#fff" /> : <Text className="text-white font-semibold">Solicitar cambio</Text>}
         </Pressable>
       </ScrollView>
     </ThemedBackground>
