@@ -153,6 +153,11 @@ const JERSEYS: Record<string, JerseyDesign> = {
       layout: "side-vertical",
       colors: ["#FFFFFF"]
     }
+  },
+  ESP: {
+    body: "#AA151B",
+    sleeves: "#002868",
+    initialsColor: "#F1BF00"
   }
 };
 
