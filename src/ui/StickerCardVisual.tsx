@@ -4,12 +4,22 @@
 // Switch por sticker.type: player → camiseta con iniciales, team_badge →
 // escudo heater con código FIFA, team_photo → grilla 3×3 de mini-camisetas.
 // Otros tipos (icon/special) no aparecen en team page → render null.
+//
+// Cada equipo puede tener un diseño de camiseta custom en teamJerseys.ts
+// (body, sleeves, iniciales, franjas). Si no está registrado, derivamos del
+// teamColors via pickSleeveColor.
 
 import React from "react";
-import Svg, { Path, G, Text as SvgText } from "react-native-svg";
+import Svg, { Path, G, Defs, ClipPath, Rect, Text as SvgText } from "react-native-svg";
 import type { Sticker } from "@/domain/types";
 import { getTeamColors, type TeamColors } from "@/theme/teamColors";
 import { darkenHex, luminance } from "@/theme/colorUtils";
+import {
+  getTeamJersey,
+  type JerseyDesign,
+  type JerseyStripes,
+  type JerseyStripesLayout
+} from "@/theme/teamJerseys";
 import { getInitials } from "@/domain/playerInitials";
 
 interface Props {
@@ -29,24 +39,77 @@ function pickShieldDarkColor(colors: TeamColors): string {
   return dark === colors.bg ? colors.accent : dark;
 }
 
-// Body + sleeves + neck cutout. viewBox 0..100.
+const BODY_PATH =
+  "M 28,18 Q 38,12 50,16 Q 62,12 72,18 L 78,28 L 78,90 Q 78,94 74,94 L 26,94 Q 22,94 22,90 L 22,28 Z";
+
+interface StripeRect {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  fill: string;
+}
+
+function stripesToRects(layout: JerseyStripesLayout, colors: string[]): StripeRect[] {
+  switch (layout) {
+    case "side-vertical": {
+      const stripeW = 4;
+      return colors.map((c, i) => ({ x: 22 + i * stripeW, y: 18, w: stripeW, h: 76, fill: c }));
+    }
+    case "chest-horizontal": {
+      const stripeH = 6;
+      return colors.map((c, i) => ({ x: 0, y: 22 + i * stripeH, w: 100, h: stripeH, fill: c }));
+    }
+    case "full-horizontal": {
+      const stripeH = 9;
+      return colors.map((c, i) => ({ x: 0, y: 32 + i * stripeH, w: 100, h: stripeH, fill: c }));
+    }
+    case "full-vertical": {
+      const totalW = 56;
+      const stripeW = totalW / colors.length;
+      return colors.map((c, i) => ({ x: 22 + i * stripeW, y: 18, w: stripeW, h: 76, fill: c }));
+    }
+  }
+}
+
+function StripesOverlay({ stripes, clipId }: { stripes: JerseyStripes; clipId: string }) {
+  const rects = stripesToRects(stripes.layout, stripes.colors);
+  return (
+    <>
+      <Defs>
+        <ClipPath id={clipId}>
+          <Path d={BODY_PATH} />
+        </ClipPath>
+      </Defs>
+      <G clipPath={`url(#${clipId})`}>
+        {rects.map((r, i) => (
+          <Rect key={i} x={r.x} y={r.y} width={r.w} height={r.h} fill={r.fill} />
+        ))}
+      </G>
+    </>
+  );
+}
+
+// Body + sleeves + (optional stripes) + neck cutout. viewBox 0..100.
 function JerseyShape({
   body,
   sleeves,
-  neck
+  neck,
+  stripes,
+  clipId
 }: {
   body: string;
   sleeves: string;
   neck: string;
+  stripes?: JerseyStripes;
+  clipId?: string;
 }) {
   return (
     <>
       <Path d="M 8,28 L 28,18 L 32,40 L 18,42 Z" fill={sleeves} />
       <Path d="M 92,28 L 72,18 L 68,40 L 82,42 Z" fill={sleeves} />
-      <Path
-        d="M 28,18 Q 38,12 50,16 Q 62,12 72,18 L 78,28 L 78,90 Q 78,94 74,94 L 26,94 Q 22,94 22,90 L 22,28 Z"
-        fill={body}
-      />
+      <Path d={BODY_PATH} fill={body} />
+      {stripes && clipId && <StripesOverlay stripes={stripes} clipId={clipId} />}
       <Path d="M 38,15 Q 50,22 62,15 L 60,12 Q 50,18 40,12 Z" fill={neck} />
     </>
   );
@@ -55,25 +118,38 @@ function JerseyShape({
 function JerseyVisual({
   initials,
   colors,
-  cardBgColor
+  cardBgColor,
+  override,
+  clipId
 }: {
   initials: string;
   colors: TeamColors;
   cardBgColor: string;
+  override: JerseyDesign | null;
+  clipId: string;
 }) {
-  const sleeves = pickSleeveColor(colors);
+  const body = override?.body ?? colors.bg;
+  const sleeves = override?.sleeves ?? pickSleeveColor(colors);
+  const initialsColor = override?.initialsColor ?? colors.bgText;
+  const initialsX = 50 + (override?.initialsXOffset ?? 0);
   return (
     <Svg viewBox="0 0 100 100" width="100%" height="100%">
-      <JerseyShape body={colors.bg} sleeves={sleeves} neck={cardBgColor} />
+      <JerseyShape
+        body={body}
+        sleeves={sleeves}
+        neck={cardBgColor}
+        stripes={override?.stripes}
+        clipId={clipId}
+      />
       <SvgText
-        x="50"
+        x={initialsX}
         y="62"
         textAnchor="middle"
         fontSize="22"
         fontWeight="900"
         fontFamily="Impact, Arial Black, sans-serif"
         letterSpacing="3"
-        fill={colors.bgText}
+        fill={initialsColor}
       >
         {initials}
       </SvgText>
@@ -85,16 +161,13 @@ function ShieldVisual({ code, colors }: { code: string; colors: TeamColors }) {
   const dark = pickShieldDarkColor(colors);
   return (
     <Svg viewBox="0 0 100 100" width="100%" height="100%">
-      {/* Heater shield body */}
       <Path
         d="M 22,18 L 78,18 L 78,55 Q 78,82 50,92 Q 22,82 22,55 Z"
         fill={colors.bg}
         stroke={dark}
         strokeWidth="2.5"
       />
-      {/* Top dark band */}
       <Path d="M 22,18 L 78,18 L 78,30 L 22,30 Z" fill={dark} opacity="0.85" />
-      {/* 3 stars on band */}
       <SvgText x="32" y="27" fontSize="10" fill={colors.accent}>
         ★
       </SvgText>
@@ -104,7 +177,6 @@ function ShieldVisual({ code, colors }: { code: string; colors: TeamColors }) {
       <SvgText x="68" y="27" fontSize="10" fill={colors.accent} textAnchor="end">
         ★
       </SvgText>
-      {/* FIFA code */}
       <SvgText
         x="50"
         y="65"
@@ -121,10 +193,17 @@ function ShieldVisual({ code, colors }: { code: string; colors: TeamColors }) {
   );
 }
 
-// 9 mini-camisetas SIN cuello (no haría falta a ese tamaño). Usa el mismo
-// JerseyShape pero con neck=sleeves para que el cutout no sea visible.
-function SquadGridVisual({ colors }: { colors: TeamColors }) {
-  const sleeves = pickSleeveColor(colors);
+// 9 mini-camisetas SIN cuello (no haría falta a ese tamaño). Las franjas se
+// omiten porque a 18% de escala son básicamente invisibles.
+function SquadGridVisual({
+  colors,
+  override
+}: {
+  colors: TeamColors;
+  override: JerseyDesign | null;
+}) {
+  const body = override?.body ?? colors.bg;
+  const sleeves = override?.sleeves ?? pickSleeveColor(colors);
   const positions: Array<[number, number]> = [
     [14, 14],
     [38, 14],
@@ -140,7 +219,7 @@ function SquadGridVisual({ colors }: { colors: TeamColors }) {
     <Svg viewBox="0 0 100 100" width="100%" height="100%">
       {positions.map(([x, y]) => (
         <G key={`${x}-${y}`} transform={`translate(${x}, ${y}) scale(0.18)`}>
-          <JerseyShape body={colors.bg} sleeves={sleeves} neck={sleeves} />
+          <JerseyShape body={body} sleeves={sleeves} neck={sleeves} />
         </G>
       ))}
     </Svg>
@@ -150,6 +229,7 @@ function SquadGridVisual({ colors }: { colors: TeamColors }) {
 export function StickerCardVisual({ sticker, cardBgColor }: Props) {
   const teamCode = sticker.team ?? "";
   const colors = getTeamColors(teamCode);
+  const override = getTeamJersey(teamCode);
 
   switch (sticker.type) {
     case "player":
@@ -158,12 +238,14 @@ export function StickerCardVisual({ sticker, cardBgColor }: Props) {
           initials={getInitials(sticker.name)}
           colors={colors}
           cardBgColor={cardBgColor}
+          override={override}
+          clipId={`bc-${sticker.code}`}
         />
       );
     case "team_badge":
       return <ShieldVisual code={teamCode || "?"} colors={colors} />;
     case "team_photo":
-      return <SquadGridVisual colors={colors} />;
+      return <SquadGridVisual colors={colors} override={override} />;
     default:
       return null;
   }
