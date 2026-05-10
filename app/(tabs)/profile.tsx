@@ -112,15 +112,6 @@ export default function Profile() {
         </Pressable>
 
         <Pressable
-          onPress={() => router.push("/friends" as never)}
-          className="bg-space-mid rounded-xl py-3 items-center mb-2"
-          accessibilityLabel="Mis amigos"
-          accessibilityRole="button"
-        >
-          <Text className="text-space-ink font-semibold">👥 Mis amigos</Text>
-        </Pressable>
-
-        <Pressable
           onPress={() => router.push("/profile/edit" as never)}
           className="bg-space-mid rounded-xl py-3 items-center mb-2"
           accessibilityLabel="Editar perfil"
