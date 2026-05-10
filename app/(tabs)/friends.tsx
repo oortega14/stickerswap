@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollView, View, Text, Pressable, RefreshControl, Alert } from "react-native";
+import { ScrollView, View, Text, Pressable, RefreshControl, Alert, ActivityIndicator } from "react-native";
 import { useRouter } from "expo-router";
 import { useQueryClient } from "@tanstack/react-query";
 import { useSession } from "@/auth/useSession";
@@ -19,10 +19,12 @@ import {
 import { useRespondTrade } from "@/hooks/useRespondTrade";
 import { useTradesByStatus } from "@/hooks/useTrades";
 import { useUnconfirmTrade } from "@/hooks/useUnconfirmTrade";
+import { useNearbyMatches } from "@/hooks/useNearbyMatches";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { EmptyState } from "@/ui/EmptyState";
 import { SegmentedControl } from "@/ui/SegmentedControl";
+import { ProgressBar } from "@/ui/ProgressBar";
 import { useTheme } from "@/theme/ThemeProvider";
 
 type Subtab = "amigos" | "trueques" | "cerca";
@@ -472,5 +474,90 @@ function TradeCard({
 }
 
 function CercaView() {
-  return null;
+  const router = useRouter();
+  const { theme } = useTheme();
+  const { user } = useSession();
+  const { data, isLoading, isFetching, refetch } = useNearbyMatches();
+
+  const onReload = async () => {
+    await haptics.light();
+    await refetch();
+  };
+
+  if (!user?.discoverable) {
+    return (
+      <EmptyState
+        variant="rocket"
+        title="Permite que te encuentren"
+        message="Ve a Perfil → Editar para activar «Que me encuentren» y que personas de tu ciudad puedan contactarte."
+      />
+    );
+  }
+
+  return (
+    <View>
+      <View className="flex-row items-center justify-between mb-2">
+        <Text className="text-space-mute text-xs tracking-widest">
+          {user.city_label ?? "TU CIUDAD"}
+        </Text>
+        <Pressable
+          onPress={onReload}
+          disabled={isFetching}
+          accessibilityRole="button"
+          accessibilityLabel="Actualizar matches cercanos"
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            paddingHorizontal: 10,
+            paddingVertical: 6,
+            borderRadius: 999,
+            backgroundColor: theme.card,
+            borderWidth: 1,
+            borderColor: theme.border,
+            opacity: isFetching ? 0.6 : 1
+          }}
+        >
+          {isFetching ? (
+            <ActivityIndicator size="small" color={theme.text} />
+          ) : (
+            <Text style={{ color: theme.text, fontSize: 12, fontWeight: "600" }}>↻ Actualizar</Text>
+          )}
+        </Pressable>
+      </View>
+
+      {isLoading ? (
+        <Text className="text-space-mute text-center mt-4">Cargando…</Text>
+      ) : !data || data.length === 0 ? (
+        <EmptyState
+          variant="rocket"
+          title="Sin matches cerca todavía"
+          message={`Nadie en ${user.city_label ?? "tu ciudad"} tiene complementarios contigo por ahora. Toca Actualizar o vuelve después.`}
+        />
+      ) : (
+        data.map((m) => {
+          const maxScore = data[0]?.score ?? m.score;
+          const pct = maxScore > 0 ? m.score / maxScore : 0;
+          return (
+            <Pressable
+              key={m.themId}
+              onPress={() => router.push(`/nearby/${m.username}` as never)}
+              accessibilityLabel={`Ver match con @${m.username}, score ${m.score}`}
+              accessibilityRole="button"
+            >
+              <GlowCard className="mb-2">
+                <View className="flex-row items-center justify-between mb-1">
+                  <Text className="text-space-ink font-semibold">@{m.username}</Text>
+                  <Text style={{ color: theme.accent, fontWeight: "700" }}>score {m.score}</Text>
+                </View>
+                <Text className="text-space-mute text-xs mb-2">
+                  necesitas {m.theyHaveINeed} · puedes dar {m.iHaveTheyNeed}
+                </Text>
+                <ProgressBar pct={pct} height={3} from={theme.accent} to={theme.accent} />
+              </GlowCard>
+            </Pressable>
+          );
+        })
+      )}
+    </View>
+  );
 }
