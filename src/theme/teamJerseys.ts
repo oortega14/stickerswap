@@ -233,6 +233,11 @@ const JERSEYS: Record<string, JerseyDesign> = {
     body: "#FFFFFF",
     sleeves: "#CE1126",
     initialsColor: "#CE1126"
+  },
+  MAR: {
+    body: "#C1272D",
+    sleeves: "#006233",
+    initialsColor: "#FFFFFF"
   }
 };
 
