@@ -198,6 +198,16 @@ const JERSEYS: Record<string, JerseyDesign> = {
       layout: "side-vertical",
       colors: ["#CE1124", "#002868"]
     }
+  },
+  IRQ: {
+    body: "#007A3D",
+    sleeves: "#007A3D",
+    initialsColor: "#FFFFFF",
+    initialsXOffset: 6,
+    stripes: {
+      layout: "side-vertical",
+      colors: ["#007A3D", "#CE1126", "#FFFFFF"]
+    }
   }
 };
 
