@@ -288,6 +288,16 @@ const JERSEYS: Record<string, JerseyDesign> = {
       layout: "side-vertical",
       colors: ["#FFFFFF", "#005AA7", "#DA121A"]
     }
+  },
+  PAR: {
+    body: "#FFFFFF",
+    sleeves: "#D52B1E",
+    initialsColor: "#D52B1E",
+    initialsXOffset: 6,
+    stripes: {
+      layout: "side-vertical",
+      colors: ["#0038A8", "#D52B1E", "#FFFFFF"]
+    }
   }
 };
 
