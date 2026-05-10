@@ -19,6 +19,7 @@ import {
 } from "@/hooks/usePendingRequests";
 import { useSession } from "@/auth/useSession";
 import { useTheme } from "@/theme/ThemeProvider";
+import { MatchCard } from "@/ui/MatchCard";
 
 type Tab = "matches" | "nearby" | "requests";
 
@@ -78,33 +79,39 @@ export default function Trades() {
 
 function MatchesView() {
   const router = useRouter();
+  const { theme } = useTheme();
   const { summary, isLoading } = useMatches();
 
-  if (isLoading) return <Text className="text-space-mute text-center mt-4">Cargando…</Text>;
+  if (isLoading) return <Text style={{ color: theme.textMute, textAlign: "center", marginTop: 16 }}>Cargando…</Text>;
+
   if (summary.length === 0) {
-    return <EmptyState variant="rocket" title="Sin matches todavía" message="Sumá amigos desde Perfil." />;
+    return (
+      <>
+        <EmptyState variant="rocket" title="Sin matches todavía" message="Sumá amigos desde Perfil." />
+        <Pressable
+          onPress={() => router.push("/profile" as never)}
+          accessibilityRole="button"
+          accessibilityLabel="Compartir tu lista"
+          style={{
+            marginTop: 12,
+            paddingVertical: 10,
+            borderRadius: 8,
+            backgroundColor: theme.card,
+            borderWidth: 1,
+            borderColor: theme.border,
+            alignItems: "center"
+          }}
+        >
+          <Text style={{ color: theme.text, fontWeight: "600" }}>Compartí tu lista</Text>
+        </Pressable>
+      </>
+    );
   }
 
   return (
     <>
       {summary.map((s) => (
-        <Pressable
-          key={s.friendId}
-          onPress={() => router.push(`/friends/${s.username}` as never)}
-          accessibilityLabel={`Ver matches con @${s.username}`}
-          accessibilityRole="button"
-        >
-          <GlowCard className="mb-2">
-            <Text className="text-space-ink font-semibold">@{s.username}</Text>
-            <Text className="text-space-mute text-xs mt-1">
-              {s.matchCount} {s.matchCount === 1 ? "que te falta" : "que te faltan"}
-            </Text>
-            <Text className="text-space-violet text-xs mt-1">
-              {s.sample.join(" · ")}
-              {s.matchCount > 3 ? " · …" : ""}
-            </Text>
-          </GlowCard>
-        </Pressable>
+        <MatchCard key={s.friendId} summary={s} />
       ))}
     </>
   );
