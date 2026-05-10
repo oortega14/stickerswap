@@ -122,3 +122,21 @@ export async function removeTrade(id: string): Promise<void> {
   const db = getDb();
   await db.runAsync(`DELETE FROM trades_cache WHERE id = ?`, [id]);
 }
+
+export async function listLocalTradesByStatus(
+  status: TradeStatus
+): Promise<Trade[]> {
+  const db = getDb();
+  const orderCol = status === "completed" ? "completed_at" : "created_at";
+  const rows = await db.getAllAsync<Row>(
+    `SELECT id, proposer_id, recipient_id, proposer_gives, proposer_gets,
+            status, proposer_confirmed_at, recipient_confirmed_at, message,
+            created_at, updated_at, completed_at
+       FROM trades_cache
+      WHERE status = ?
+      ORDER BY ${orderCol} DESC
+      LIMIT 50`,
+    [status]
+  );
+  return rows.map(rowToTrade);
+}

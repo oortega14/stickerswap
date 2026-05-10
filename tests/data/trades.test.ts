@@ -8,7 +8,8 @@ import {
   listActiveTrades,
   getActiveTradeForFriend,
   getTradeById,
-  removeTrade
+  removeTrade,
+  listLocalTradesByStatus
 } from "@/data/trades";
 import { initSchema } from "@/data/schema";
 import { _resetDb } from "@/data/db";
@@ -80,5 +81,26 @@ describe("data/trades", () => {
     await upsertTrade(t({}));
     await removeTrade("t1");
     expect(await getTradeById("t1")).toBeNull();
+  });
+
+  it("listLocalTradesByStatus filters and orders correctly", async () => {
+    await upsertTrade(t({ id: "p1", status: "pending", createdAt: 100, updatedAt: 100 }));
+    await upsertTrade(t({ id: "p2", status: "pending", createdAt: 200, updatedAt: 200 }));
+    await upsertTrade(t({ id: "a1", status: "accepted", createdAt: 300, updatedAt: 300 }));
+    await upsertTrade(
+      t({ id: "c1", status: "completed", completedAt: 1000, createdAt: 50, updatedAt: 1000 })
+    );
+    await upsertTrade(
+      t({ id: "c2", status: "completed", completedAt: 2000, createdAt: 60, updatedAt: 2000 })
+    );
+
+    const pending = await listLocalTradesByStatus("pending");
+    expect(pending.map((x) => x.id)).toEqual(["p2", "p1"]); // por created_at desc
+
+    const accepted = await listLocalTradesByStatus("accepted");
+    expect(accepted.map((x) => x.id)).toEqual(["a1"]);
+
+    const completed = await listLocalTradesByStatus("completed");
+    expect(completed.map((x) => x.id)).toEqual(["c2", "c1"]); // por completed_at desc
   });
 });
