@@ -85,12 +85,16 @@ export async function getTradeById(id: string): Promise<Trade | null> {
 
 export async function listActiveTrades(): Promise<Trade[]> {
   const db = getDb();
+  const cutoff = Date.now() - 24 * 60 * 60 * 1000;
   const rows = await db.getAllAsync<Row>(
     `SELECT id, proposer_id, recipient_id, proposer_gives, proposer_gets,
             status, proposer_confirmed_at, recipient_confirmed_at, message,
             created_at, updated_at, completed_at
-       FROM trades_cache WHERE status IN ('pending', 'accepted')
-       ORDER BY updated_at DESC`
+       FROM trades_cache
+      WHERE status IN ('pending', 'accepted')
+         OR (status = 'completed' AND completed_at >= ?)
+      ORDER BY updated_at DESC`,
+    [cutoff]
   );
   return rows.map(rowToTrade);
 }

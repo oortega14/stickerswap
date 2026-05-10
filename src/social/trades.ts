@@ -88,14 +88,18 @@ export async function unconfirmTrade(tradeId: string): Promise<void> {
 }
 
 export async function fetchActiveTrades(): Promise<Trade[]> {
-  const { data, error } = await supabase
-    .from("trades")
-    .select("*")
-    .in("status", ["pending", "accepted"]);
-  if (error) {
+  const cutoff = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+
+  const [activeRes, completedRes] = await Promise.all([
+    supabase.from("trades").select("*").in("status", ["pending", "accepted"]),
+    supabase.from("trades").select("*").eq("status", "completed").gte("completed_at", cutoff)
+  ]);
+
+  if (activeRes.error || completedRes.error) {
     return listLocal();
   }
-  const rows = (data ?? []) as RemoteRow[];
+
+  const rows = ([...(activeRes.data ?? []), ...(completedRes.data ?? [])]) as RemoteRow[];
   const trades = rows.map(remoteToTrade);
   for (const t of trades) await upsertTrade(t);
   return trades;

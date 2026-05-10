@@ -8,7 +8,7 @@ export function useConfirmTrade() {
     onSuccess: (result) => {
       qc.invalidateQueries({ queryKey: ["trades"] });
       if (result === "completed") {
-        qc.invalidateQueries({ queryKey: ["progress"] });
+        qc.invalidateQueries({ queryKey: ["stickers"] });
         qc.invalidateQueries({ queryKey: ["matches"] });
       }
     }

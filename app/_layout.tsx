@@ -116,7 +116,7 @@ function FriendUpdatesBridge() {
     const channel = subscribeToFriendUpdates({
       onStickerStatusChange: () => {
         qc.invalidateQueries({ queryKey: ["matches"] });
-        qc.invalidateQueries({ queryKey: ["progress"] });
+        qc.invalidateQueries({ queryKey: ["stickers"] });
       },
       onFriendshipChange: () => {
         qc.invalidateQueries({ queryKey: ["pendingRequests"] });
