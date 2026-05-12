@@ -66,19 +66,11 @@ export default function TeamDetail() {
 
   const handleTap = (stickerCode: string) => {
     haptics.light();
-    if (destildarMode) {
-      dec.mutate(stickerCode);
-    } else {
-      inc.mutate(stickerCode);
-    }
+    inc.mutate(stickerCode);
   };
   const handleLong = (stickerCode: string) => {
     haptics.medium();
-    if (destildarMode) {
-      inc.mutate(stickerCode);
-    } else {
-      dec.mutate(stickerCode);
-    }
+    dec.mutate(stickerCode);
   };
 
   return (
@@ -181,7 +173,6 @@ export default function TeamDetail() {
                 accent={tint}
                 onTap={() => handleTap(s.code)}
                 onLong={() => handleLong(s.code)}
-                destildarMode={destildarMode}
               />
             ))}
           </View>
@@ -194,7 +185,6 @@ export default function TeamDetail() {
                 accent={tint}
                 onTap={() => handleTap(s.code)}
                 onLong={() => handleLong(s.code)}
-                destildarMode={destildarMode}
               />
             ))}
           </View>
@@ -208,14 +198,12 @@ function StickerRow({
   s,
   accent,
   onTap,
-  onLong,
-  destildarMode = false
+  onLong
 }: {
   s: StickerWithStatus;
   accent: string;
   onTap: () => void;
   onLong: () => void;
-  destildarMode?: boolean;
 }) {
   const { theme } = useTheme();
   const collected = s.count >= 1;
@@ -226,11 +214,7 @@ function StickerRow({
       onLongPress={onLong}
       delayLongPress={350}
       accessibilityRole="button"
-      accessibilityLabel={
-        destildarMode
-          ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para restar, mantén para sumar.`
-          : `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para sumar, mantén para restar.`
-      }
+      accessibilityLabel={`${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para sumar, mantén para restar.`}
       style={{
         flexDirection: "row",
         alignItems: "center",
@@ -288,14 +272,12 @@ function StickerCard({
   s,
   accent,
   onTap,
-  onLong,
-  destildarMode = false
+  onLong
 }: {
   s: StickerWithStatus;
   accent: string;
   onTap: () => void;
   onLong: () => void;
-  destildarMode?: boolean;
 }) {
   const { theme } = useTheme();
   const collected = s.count >= 1;
@@ -307,11 +289,7 @@ function StickerCard({
         onLongPress={onLong}
         delayLongPress={350}
         accessibilityRole="button"
-        accessibilityLabel={
-          destildarMode
-            ? `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para restar, mantén para sumar.`
-            : `${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para sumar, mantén para restar.`
-        }
+        accessibilityLabel={`${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para sumar, mantén para restar.`}
         style={{
           borderRadius: 12,
           backgroundColor: theme.card,

@@ -31,12 +31,12 @@ export function DestildarBanner({ onDone, accent }: Props) {
       }}
     >
       <Text style={{ color: "#fff", fontSize: 13, fontWeight: "600", flex: 1, marginRight: 12 }}>
-        Modo destildar · toca las que te falten
+        Equipo marcado · mantén presionado las que te falten
       </Text>
       <Pressable
         onPress={onDone}
         accessibilityRole="button"
-        accessibilityLabel="Salir del modo destildar"
+        accessibilityLabel="Cerrar aviso"
         hitSlop={8}
         style={{
           backgroundColor: "rgba(255,255,255,0.22)",

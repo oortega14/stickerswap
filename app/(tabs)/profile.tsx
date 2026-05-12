@@ -9,6 +9,7 @@ import { GlowCard } from "@/ui/GlowCard";
 import { useSession } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
 import { useTheme } from "@/theme/ThemeProvider";
+import { clearUserLocalData } from "@/data/localReset";
 
 function Initials({ name }: { name: string }) {
   const { theme } = useTheme();
@@ -170,6 +171,7 @@ export default function Profile() {
                       Alert.alert("Error", error.message);
                       return;
                     }
+                    await clearUserLocalData();
                     await supabase.auth.signOut();
                   }
                 }
