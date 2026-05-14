@@ -58,13 +58,7 @@ export default function TeamDetail() {
   }
 
   const teamName = data[0]?.section ?? code ?? "";
-  const typeOrder = (t: typeof data[number]["type"]): number =>
-    t === "team_badge" ? 0 : t === "team_photo" ? 1 : 2;
-  const sorted = [...data].sort((a, b) => {
-    const tDiff = typeOrder(a.type) - typeOrder(b.type);
-    if (tDiff !== 0) return tDiff;
-    return a.number - b.number;
-  });
+  const sorted = [...data].sort((a, b) => a.number - b.number);
 
   const handleTap = (stickerCode: string) => {
     haptics.light();
