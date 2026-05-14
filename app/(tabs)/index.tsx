@@ -37,11 +37,9 @@ export default function Home() {
       list = list.filter((s) => s.section.toLowerCase().includes(q));
     }
     if (sort === "album") {
-      // Equipos en orden de álbum (ya vienen ordenados desde computeProgress);
-      // especiales (Intro/Extras/Coca-Cola) al final para que la grilla arranque con equipos.
-      const teams = list.filter((s) => s.teamCode);
-      const specials = list.filter((s) => !s.teamCode);
-      return [...teams, ...specials];
+      // Orden de álbum tal cual viene de computeProgress: Intro primero,
+      // después equipos por grupo (A→L), y Extras/Coca-Cola al final.
+      return list;
     }
     if (sort === "most") return list.sort((a, b) => b.pct - a.pct);
     return list.sort((a, b) => a.pct - b.pct);
