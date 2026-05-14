@@ -1,4 +1,5 @@
 import { View, Text, Pressable } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTheme } from "@/theme/ThemeProvider";
 import { useI18n } from "@/i18n/I18nProvider";
 
@@ -10,12 +11,13 @@ import { useI18n } from "@/i18n/I18nProvider";
 export function AuthToggleBar() {
   const { theme, mode, setMode } = useTheme();
   const { lang, setLang } = useI18n();
+  const insets = useSafeAreaInsets();
 
   return (
     <View
       style={{
         position: "absolute",
-        top: 56,
+        top: insets.top + 12,
         right: 16,
         flexDirection: "row",
         gap: 8,

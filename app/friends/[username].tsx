@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ScrollView, View, Text, Pressable, ActivityIndicator, Linking, Alert } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { StickerMiniThumb } from "@/ui/StickerMiniThumb";
 import { ActiveTradeBanner } from "@/ui/ActiveTradeBanner";
@@ -27,6 +28,7 @@ export default function FriendDetail() {
   const [match, setMatch] = useState<BidirectionalMatch | null>(null);
   const [stickersBySection, setStickersBySection] = useState<Map<string, Sticker>>(new Map());
   const [loading, setLoading] = useState(true);
+  const insets = useSafeAreaInsets();
 
   const wa = whatsappUrl(contacts?.whatsapp);
   const ig = instagramUrl(contacts?.instagram);
@@ -119,7 +121,7 @@ export default function FriendDetail() {
 
   return (
     <ThemedBackground>
-      <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 120 }}>
+      <ScrollView className="flex-1 px-4" contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: insets.bottom + 120 }}>
         <View className="flex-row items-center mb-4">
           <Pressable
             onPress={() => router.back()}
@@ -205,7 +207,7 @@ export default function FriendDetail() {
       </ScrollView>
 
       {canPropose && (
-        <View style={{ position: "absolute", bottom: 16, left: 16, right: 16 }}>
+        <View style={{ position: "absolute", bottom: insets.bottom + 16, left: 16, right: 16 }}>
           <Pressable
             onPress={() => router.push(`/trades/propose/${friend.username}` as never)}
             accessibilityRole="button"

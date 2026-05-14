@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { ScrollView, View, Text, Pressable, ActivityIndicator } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { useTeamStickers, useIncrement, useDecrement, useBulkMarkTeam } from "@/hooks/useStickers";
 import { haptics } from "@/lib/haptics";
@@ -38,6 +39,7 @@ export default function TeamDetail() {
   const tint = useMemo(() => pickTint(teamColors), [teamColors]);
   const tintAlpha = mode === "dark" ? 0.22 : 0.14;
   const [view, setView] = useViewMode("team", "grid");
+  const insets = useSafeAreaInsets();
 
   const summary = useMemo(() => {
     if (!data) return null;
@@ -94,9 +96,9 @@ export default function TeamDetail() {
         <DestildarBanner accent={tint} onDone={() => setDestildarMode(false)} />
       )}
 
-      <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}>
         {/* Header */}
-        <View style={{ paddingTop: 56, paddingHorizontal: 16, paddingBottom: 16 }}>
+        <View style={{ paddingTop: insets.top + 12, paddingHorizontal: 16, paddingBottom: 16 }}>
           <View className="flex-row items-center justify-between mb-4">
             <Pressable
               onPress={() => router.back()}

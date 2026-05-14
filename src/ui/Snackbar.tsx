@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Animated, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTheme } from "@/theme/ThemeProvider";
 
 type Listener = (msg: string) => void;
@@ -11,6 +12,7 @@ export function showSnackbar(msg: string) {
 
 export function Snackbar() {
   const { theme } = useTheme();
+  const insets = useSafeAreaInsets();
   const [msg, setMsg] = useState<string | null>(null);
   const opacity = useRef(new Animated.Value(0)).current;
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -39,7 +41,7 @@ export function Snackbar() {
       pointerEvents="none"
       style={{
         position: "absolute",
-        top: 60,
+        top: insets.top + 16,
         left: 16,
         right: 16,
         opacity,

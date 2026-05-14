@@ -8,9 +8,10 @@ import { useTheme } from "@/theme/ThemeProvider";
  *
  * Incluye un overlay sólido del color del theme sobre la safe-area top
  * (`statusBarBackdrop`, default true) que tapa contenido en scroll para
- * que no se mezcle con los iconos del status bar de iOS. Las pantallas
- * que necesiten contenido visible bajo el status bar (ej. cámara) lo
- * pueden desactivar con la prop `statusBarBackdrop={false}`.
+ * que no se mezcle con los iconos del status bar. El contenido en cada
+ * pantalla aplica `paddingTop: insets.top + N` para arrancar debajo del
+ * backdrop. Las pantallas con cámara/contenido full-bleed lo apagan con
+ * `statusBarBackdrop={false}`.
  */
 export function ThemedBackground({
   children,
@@ -21,10 +22,6 @@ export function ThemedBackground({
 }) {
   const { theme } = useTheme();
   const insets = useSafeAreaInsets();
-  // Cubre solo la zona del status bar de iOS (iconos) sin invadir el área
-  // del título. Resta 16pt de la safe-area-top para dejar respiro antes
-  // del contenido. Floor a 20pt para iPhones sin notch.
-  const backdropHeight = Math.max(insets.top - 16, 20);
   return (
     <View style={{ flex: 1, backgroundColor: theme.bg }}>
       {children}
@@ -36,7 +33,7 @@ export function ThemedBackground({
             top: 0,
             left: 0,
             right: 0,
-            height: backdropHeight,
+            height: insets.top,
             backgroundColor: theme.bg,
             zIndex: 10
           }}

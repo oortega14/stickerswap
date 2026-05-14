@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { ScrollView, View, Text, Pressable, Image, Alert, Switch } from "react-native";
 import { useRouter, useFocusEffect } from "expo-router";
 import * as Clipboard from "expo-clipboard";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { haptics } from "@/lib/haptics";
 import QRCode from "react-native-qrcode-svg";
 import { ThemedBackground } from "@/ui/ThemedBackground";
@@ -34,6 +35,7 @@ export default function Profile() {
   const router = useRouter();
   const { user } = useSession();
   const { theme, mode, setMode } = useTheme();
+  const insets = useSafeAreaInsets();
 
   // Tras varios detach/reattach de react-native-screens, el árbol nativo de
   // esta pantalla se queda en blanco si nunca re-rendea. Forzamos un re-render
@@ -55,7 +57,7 @@ export default function Profile() {
 
   return (
     <ThemedBackground>
-      <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView className="flex-1 px-4" contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: 32 }}>
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">PERFIL</Text>
 
         <GlowCard className="items-center mb-4">

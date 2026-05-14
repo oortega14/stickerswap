@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, TextInput, ActivityIndicator, Alert, Keyboard } from "react-native";
 import { useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { AuthToggleBar } from "@/ui/AuthToggleBar";
@@ -21,6 +22,7 @@ export default function Onboarding() {
   const [value, setValue] = useState(user?.username ?? "");
   const [state, setState] = useState<CheckState>("idle");
   const [saving, setSaving] = useState(false);
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     if (!user?.id) return;
@@ -71,7 +73,7 @@ export default function Onboarding() {
   return (
     <ThemedBackground>
       <AuthToggleBar />
-      <View className="flex-1 px-6 pt-32">
+      <View className="flex-1 px-6" style={{ paddingTop: insets.top + 64 }}>
         <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800", marginBottom: 6 }}>
           {t("username_title")}
         </Text>

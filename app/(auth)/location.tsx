@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { View, Text, TextInput, Pressable, Alert, Switch, ScrollView } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { AuthToggleBar } from "@/ui/AuthToggleBar";
@@ -40,6 +41,7 @@ export default function LocationStep() {
   const [city, setCity] = useState("");
   const [discoverable, setDiscoverable] = useState(true);
   const [saving, setSaving] = useState(false);
+  const insets = useSafeAreaInsets();
 
   if (!user) return null;
 
@@ -77,7 +79,7 @@ export default function LocationStep() {
   return (
     <ThemedBackground>
       <AuthToggleBar />
-      <ScrollView className="flex-1 px-6 pt-32" keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView className="flex-1 px-6" keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingTop: insets.top + 64, paddingBottom: insets.bottom + 24 }}>
         <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800", marginBottom: 6 }}>
           {t("location_title")}
         </Text>

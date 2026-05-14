@@ -1,5 +1,6 @@
 import { ScrollView, View, Text, Pressable, Linking } from "react-native";
 import { useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { APP_VERSION, BUILD_NUMBER } from "@/lib/version";
@@ -9,9 +10,10 @@ const TERMS_URL = "https://example.com/stickerswap/terms";
 
 export default function About() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   return (
     <ThemedBackground>
-      <ScrollView className="flex-1 px-4 pt-14">
+      <ScrollView className="flex-1 px-4" contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: insets.bottom + 24 }}>
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">
           ACERCA DE
         </Text>

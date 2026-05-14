@@ -7,6 +7,7 @@
 import { useMemo } from "react";
 import { ScrollView, View, Text, Pressable, ActivityIndicator } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { useSectionStickers, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { haptics } from "@/lib/haptics";
@@ -23,6 +24,7 @@ export default function SectionDetail() {
   const { data, isLoading } = useSectionStickers(decodedName);
   const inc = useIncrement();
   const dec = useDecrement();
+  const insets = useSafeAreaInsets();
 
   const summary = useMemo(() => {
     if (!data) return null;
@@ -54,9 +56,9 @@ export default function SectionDetail() {
 
   return (
     <View style={{ flex: 1, backgroundColor: theme.bg }}>
-      <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}>
         {/* Header */}
-        <View style={{ paddingTop: 56, paddingHorizontal: 16, paddingBottom: 16 }}>
+        <View style={{ paddingTop: insets.top + 12, paddingHorizontal: 16, paddingBottom: 16 }}>
           <View className="flex-row items-center justify-between mb-4">
             <Pressable
               onPress={() => router.back()}

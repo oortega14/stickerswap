@@ -1,4 +1,5 @@
 import { View, Text, Pressable } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTheme } from "@/theme/ThemeProvider";
 
 interface Props {
@@ -8,11 +9,12 @@ interface Props {
 
 export function DestildarBanner({ onDone, accent }: Props) {
   const { theme } = useTheme();
+  const insets = useSafeAreaInsets();
   return (
     <View
       style={{
         position: "absolute",
-        top: 100,
+        top: insets.top + 56,
         left: 16,
         right: 16,
         backgroundColor: accent,

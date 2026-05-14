@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { ScrollView, View, Text, TextInput, Pressable, ActivityIndicator, Alert } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useNearbyMatches } from "@/hooks/useNearbyMatches";
@@ -15,6 +16,7 @@ export default function NearbyDetail() {
   const qc = useQueryClient();
   const { data } = useNearbyMatches();
   const [msg, setMsg] = useState("");
+  const insets = useSafeAreaInsets();
 
   const match = useMemo(() => data?.find((m) => m.username === username) ?? null, [data, username]);
 
@@ -51,7 +53,7 @@ export default function NearbyDetail() {
 
   return (
     <ThemedBackground>
-      <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView className="flex-1 px-4" contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: insets.bottom + 24 }}>
         <View className="flex-row items-center justify-between mb-4">
           <Text style={{ color: theme.text, fontSize: 22, fontWeight: "800" }}>@{match.username}</Text>
           <Pressable onPress={() => router.back()} accessibilityLabel="Cerrar" accessibilityRole="button">

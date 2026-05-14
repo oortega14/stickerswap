@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ScrollView, View, Text, Pressable, TextInput, ActivityIndicator, Alert } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { StickerMiniThumb } from "@/ui/StickerMiniThumb";
 import { showSnackbar } from "@/ui/Snackbar";
@@ -29,6 +30,7 @@ export default function ProposeTradeScreen() {
   const [givesSet, setGivesSet] = useState<Set<string>>(new Set());
   const [getsSet, setGetsSet] = useState<Set<string>>(new Set());
   const [message, setMessage] = useState("");
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     if (!friend) return;
@@ -105,8 +107,8 @@ export default function ProposeTradeScreen() {
   return (
     <ThemedBackground>
       <ScrollView
-        className="flex-1 px-4 pt-14"
-        contentContainerStyle={{ paddingBottom: 120 }}
+        className="flex-1 px-4"
+        contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: insets.bottom + 120 }}
       >
         <View className="flex-row items-center mb-4">
           <Pressable
@@ -201,7 +203,7 @@ export default function ProposeTradeScreen() {
       <View
         style={{
           position: "absolute",
-          bottom: 16,
+          bottom: insets.bottom + 16,
           left: 16,
           right: 16
         }}

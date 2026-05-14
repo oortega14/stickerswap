@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ScrollView, View, Text, Pressable, RefreshControl, Alert, ActivityIndicator } from "react-native";
 import { useRouter } from "expo-router";
 import { useQueryClient } from "@tanstack/react-query";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useSession } from "@/auth/useSession";
 import { haptics } from "@/lib/haptics";
 import type { Trade, TradeStatus } from "@/domain/types";
@@ -34,6 +35,7 @@ export default function Friends() {
   const { theme } = useTheme();
   const qc = useQueryClient();
   const [refreshing, setRefreshing] = useState(false);
+  const insets = useSafeAreaInsets();
 
   const onRefresh = async () => {
     setRefreshing(true);
@@ -52,8 +54,8 @@ export default function Friends() {
   return (
     <ThemedBackground>
       <ScrollView
-        className="flex-1 px-4 pt-14"
-        contentContainerStyle={{ paddingBottom: 32 }}
+        className="flex-1 px-4"
+        contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: 32 }}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={theme.accent} />
         }

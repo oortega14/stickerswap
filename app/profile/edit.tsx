@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, ScrollView, Switch } from "react-native";
 import { useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useSession, useSessionStore } from "@/auth/useSession";
@@ -44,6 +45,7 @@ export default function EditProfile() {
   const [whatsapp, setWhatsapp] = useState("");
   const [instagram, setInstagram] = useState("");
   const [saving, setSaving] = useState(false);
+  const insets = useSafeAreaInsets();
 
   // Hidratá los inputs de contacto cuando llegue la query
   useEffect(() => {
@@ -101,7 +103,7 @@ export default function EditProfile() {
 
   return (
     <ThemedBackground>
-      <ScrollView className="flex-1 px-4 pt-14" contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView className="flex-1 px-4" contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: insets.bottom + 24 }}>
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">EDITAR</Text>
 
         <GlowCard className="mb-4">

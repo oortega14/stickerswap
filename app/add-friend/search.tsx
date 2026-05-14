@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert } from "react-native";
 import { useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useFindUser } from "@/hooks/useFindUser";
@@ -13,6 +14,7 @@ export default function SearchFriend() {
   const [q, setQ] = useState("");
   const find = useFindUser();
   const [result, setResult] = useState<typeof find.data>(undefined);
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     if (q.length < 3) {
@@ -44,7 +46,7 @@ export default function SearchFriend() {
 
   return (
     <ThemedBackground>
-      <View className="flex-1 px-4 pt-14">
+      <View className="flex-1 px-4" style={{ paddingTop: insets.top + 12 }}>
         <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">
           BUSCAR AMIGO
         </Text>

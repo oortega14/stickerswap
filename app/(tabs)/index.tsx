@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { View, Text, Pressable, ScrollView, TextInput } from "react-native";
 import { useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { Skeleton } from "@/ui/Skeleton";
@@ -22,6 +23,7 @@ export default function Home() {
   const { data: pending } = usePendingCount();
   const { theme, mode, setMode } = useTheme();
   const router = useRouter();
+  const insets = useSafeAreaInsets();
 
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<Sort>("album");
@@ -48,7 +50,7 @@ export default function Home() {
   return (
     <ThemedBackground>
       <ScrollView
-        contentContainerStyle={{ paddingTop: 56, paddingHorizontal: 16, paddingBottom: 32 }}
+        contentContainerStyle={{ paddingTop: insets.top + 12, paddingHorizontal: 16, paddingBottom: 32 }}
         keyboardShouldPersistTaps="handled"
       >
         {/* Header */}
