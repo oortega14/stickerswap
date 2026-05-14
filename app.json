@@ -62,6 +62,12 @@
         "projectId": "7f4acc0f-72ca-439a-93a3-e5e2c02e5eeb"
       }
     },
-    "owner": "oortega14"
+    "owner": "oortega14",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7f4acc0f-72ca-439a-93a3-e5e2c02e5eeb"
+    }
   }
 }
