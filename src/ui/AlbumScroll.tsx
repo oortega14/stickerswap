@@ -14,6 +14,7 @@ import {
 import { haptics } from "@/lib/haptics";
 import { getTeamColors, type TeamColors } from "@/theme/teamColors";
 import { getTeamFlag } from "@/theme/teamFlags";
+import { getTeamGroup } from "@/theme/teamGroups";
 import { useTheme } from "@/theme/ThemeProvider";
 import { withAlpha } from "@/theme/colors";
 import { findSectionIndex, type AlbumSection } from "@/domain/albumOrder";
@@ -274,6 +275,8 @@ function SectionHeader({
   const { theme } = useTheme();
   const tint = section.teamCode ? pickTint(getTeamColors(section.teamCode)) : theme.accent;
   const flag = section.teamCode ? getTeamFlag(section.teamCode) : "✦";
+  const group = section.teamCode ? getTeamGroup(section.teamCode) : null;
+  const chipLabel = group ? `GRUPO ${group}` : "ESPECIAL";
 
   const total = section.stickers.length;
   const collected = section.stickers.filter((s) => s.count >= 1).length;
@@ -284,8 +287,35 @@ function SectionHeader({
   const pct = total === 0 ? 0 : collected / total;
 
   return (
-    <View style={{ paddingHorizontal: 16, paddingTop: 20, paddingBottom: 14 }}>
-      <View style={{ height: 6, backgroundColor: tint, borderRadius: 3, marginBottom: 14 }} />
+    <View style={{ paddingHorizontal: 16, paddingTop: 32, paddingBottom: 14 }}>
+      {/* Chip de grupo / sección — reemplaza la barrita que se confundía con la progress bar */}
+      <View
+        style={{
+          alignSelf: "flex-start",
+          flexDirection: "row",
+          alignItems: "center",
+          backgroundColor: withAlpha(tint, 0.16),
+          borderColor: withAlpha(tint, 0.4),
+          borderWidth: 1,
+          paddingHorizontal: 10,
+          paddingVertical: 4,
+          borderRadius: 999,
+          marginBottom: 12
+        }}
+      >
+        <View
+          style={{
+            width: 6,
+            height: 6,
+            borderRadius: 3,
+            backgroundColor: tint,
+            marginRight: 6
+          }}
+        />
+        <Text style={{ color: tint, fontSize: 11, fontWeight: "800", letterSpacing: 1 }}>
+          {chipLabel}
+        </Text>
+      </View>
 
       <View className="flex-row items-center mb-1">
         <Text style={{ fontSize: 32, marginRight: 10 }}>{flag}</Text>
