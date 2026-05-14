@@ -15,7 +15,7 @@ export function computeProgress(
   let duplicates = 0;
   const sectionTotals = new Map<
     string,
-    { total: number; collected: number; teamCode: string | null }
+    { total: number; collected: number; teamCode: string | null; minNumber: number }
   >();
 
   for (const s of stickers) {
@@ -32,24 +32,28 @@ export function computeProgress(
       if (existing.teamCode !== null && s.team === null) {
         existing.teamCode = null;
       }
+      if (s.number < existing.minNumber) existing.minNumber = s.number;
     } else {
       sectionTotals.set(s.section, {
         total: 1,
         collected: has,
-        teamCode: s.team ?? null
+        teamCode: s.team ?? null,
+        minNumber: s.number
       });
     }
   }
 
+  // Orden de álbum: el menor `number` de cada sección representa su posición
+  // canónica en el álbum (el dataset enumera n=1..994 en orden de páginas).
   const bySection: SectionProgress[] = Array.from(sectionTotals.entries())
+    .sort(([, a], [, b]) => a.minNumber - b.minNumber)
     .map(([section, v]) => ({
       section,
       total: v.total,
       collected: v.collected,
       pct: v.total === 0 ? 0 : v.collected / v.total,
       teamCode: v.teamCode
-    }))
-    .sort((a, b) => a.section.localeCompare(b.section));
+    }));
 
   return {
     total: stickers.length,

@@ -41,7 +41,9 @@ export function formatTradeListAsText(list: TradeList, opts: TradeFormatOptions)
     lines.push(`NECESITO (${list.needed.length}):`);
     if (opts.groupBySection) {
       const grouped = groupBy(list.needed, (e) => e.section);
-      const sections = Array.from(grouped.keys()).sort();
+      const sections = Array.from(grouped.keys()).sort(
+        (a, b) => grouped.get(a)![0].number - grouped.get(b)![0].number
+      );
       for (const sec of sections) {
         const nums = grouped.get(sec)!.map((e) => e.number).join(", ");
         lines.push(`• ${sec}: ${nums}`);
@@ -60,7 +62,9 @@ export function formatTradeListAsText(list: TradeList, opts: TradeFormatOptions)
     lines.push(`TENGO REPETIDAS (${list.duplicates.length}):`);
     if (opts.groupBySection) {
       const grouped = groupBy(list.duplicates, (e) => e.section);
-      const sections = Array.from(grouped.keys()).sort();
+      const sections = Array.from(grouped.keys()).sort(
+        (a, b) => grouped.get(a)![0].number - grouped.get(b)![0].number
+      );
       for (const sec of sections) {
         const items = grouped
           .get(sec)!

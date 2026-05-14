@@ -64,6 +64,11 @@ export default function FriendDetail() {
 
   const grouped = useMemo(() => {
     if (!match) return null;
+    const minNumberFor = (codes: string[]) =>
+      codes.reduce((min, c) => {
+        const n = stickersBySection.get(c)?.number ?? Number.MAX_SAFE_INTEGER;
+        return n < min ? n : min;
+      }, Number.MAX_SAFE_INTEGER);
     const groupCodes = (codes: string[]) => {
       const out = new Map<string, string[]>();
       for (const code of codes) {
@@ -73,7 +78,10 @@ export default function FriendDetail() {
         arr.push(code);
         out.set(section, arr);
       }
-      return Array.from(out.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+      // Orden de álbum: el menor sticker number de cada sección.
+      return Array.from(out.entries()).sort(
+        (a, b) => minNumberFor(a[1]) - minNumberFor(b[1])
+      );
     };
     return {
       need: groupCodes(match.theyHaveYouNeed.map((m) => m.stickerCode)),

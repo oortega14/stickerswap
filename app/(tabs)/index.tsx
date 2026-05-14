@@ -15,7 +15,7 @@ import { useViewMode } from "@/lib/viewMode";
 import { ViewToggle } from "@/ui/ViewToggle";
 import type { SectionProgress } from "@/domain/types";
 
-type Sort = "alpha" | "most" | "least";
+type Sort = "album" | "most" | "least";
 
 export default function Home() {
   const { data, isLoading } = useProgress();
@@ -24,7 +24,7 @@ export default function Home() {
   const router = useRouter();
 
   const [query, setQuery] = useState("");
-  const [sort, setSort] = useState<Sort>("alpha");
+  const [sort, setSort] = useState<Sort>("album");
   const [view, setView] = useViewMode("home", "grid");
 
   const sections = useMemo(() => {
@@ -34,10 +34,11 @@ export default function Home() {
       const q = query.trim().toLowerCase();
       list = list.filter((s) => s.section.toLowerCase().includes(q));
     }
-    if (sort === "alpha") {
-      // Equipos primero alfabéticos, especiales al final.
-      const teams = list.filter((s) => s.teamCode).sort((a, b) => a.section.localeCompare(b.section));
-      const specials = list.filter((s) => !s.teamCode).sort((a, b) => a.section.localeCompare(b.section));
+    if (sort === "album") {
+      // Equipos en orden de álbum (ya vienen ordenados desde computeProgress);
+      // especiales (Intro/Extras/Coca-Cola) al final para que la grilla arranque con equipos.
+      const teams = list.filter((s) => s.teamCode);
+      const specials = list.filter((s) => !s.teamCode);
       return [...teams, ...specials];
     }
     if (sort === "most") return list.sort((a, b) => b.pct - a.pct);
@@ -140,7 +141,7 @@ export default function Home() {
         <View className="mb-3">
           <SegmentedControl<Sort>
             options={[
-              { value: "alpha", label: "A-Z" },
+              { value: "album", label: "Álbum" },
               { value: "most", label: "Más pegados" },
               { value: "least", label: "Menos pegados" }
             ]}
