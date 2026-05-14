@@ -192,14 +192,14 @@ export default function FriendDetail() {
               title={`TIENE LO QUE NECESITAS · ${match.theyHaveYouNeed.length}`}
               groups={grouped.need}
               stickers={stickersBySection}
-              onTeamPress={(code) => router.push(`/team/${code}` as never)}
+              onTeamPress={(code) => router.push(`/album/${code}` as never)}
               onThumbPress={(code) => router.push(`/sticker/${code}` as never)}
             />
             <BidirectionalSection
               title={`TIENES LO QUE NECESITA · ${match.youHaveTheyNeed.length}`}
               groups={grouped.give}
               stickers={stickersBySection}
-              onTeamPress={(code) => router.push(`/team/${code}` as never)}
+              onTeamPress={(code) => router.push(`/album/${code}` as never)}
               onThumbPress={(code) => router.push(`/sticker/${code}` as never)}
             />
           </>

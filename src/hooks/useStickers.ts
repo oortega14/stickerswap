@@ -1,6 +1,13 @@
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
-import { getStickerByCode, getStickersByTeam, getStickersBySection } from "@/data/stickers";
+import {
+  getStickerByCode,
+  getStickersByTeam,
+  getStickersBySection,
+  getStickersWithStatus
+} from "@/data/stickers";
 import { incrementStatus, decrementStatus, bulkSetOwnedForTeam } from "@/data/stickerStatus";
+import { buildAlbumOrder, type AlbumSection } from "@/domain/albumOrder";
+import type { StickerWithStatus } from "@/domain/types";
 
 const KEY = {
   detail: (code: string) => ["stickers", "detail", code] as const,
@@ -28,6 +35,21 @@ export function useSectionStickers(sectionName: string) {
     queryKey: ["stickers", "section", sectionName],
     queryFn: () => getStickersBySection(sectionName),
     enabled: !!sectionName
+  });
+}
+
+/**
+ * Carga todos los stickers + counts y los devuelve agrupados por sección
+ * en orden de álbum (Intro → equipos A-L → Extras → Coca-Cola). Usado por
+ * la vista /album/[id] para el scroll continuo.
+ */
+export function useAlbumStickers() {
+  return useQuery<AlbumSection<StickerWithStatus>[]>({
+    queryKey: ["stickers", "album"],
+    queryFn: async () => {
+      const stickers = await getStickersWithStatus({ mode: "all" });
+      return buildAlbumOrder(stickers);
+    }
   });
 }
 

@@ -180,11 +180,8 @@ export default function Home() {
                 key={s.section}
                 s={s}
                 onPress={() => {
-                  if (s.teamCode) {
-                    router.push(`/team/${s.teamCode}` as never);
-                  } else {
-                    router.push(`/section/${encodeURIComponent(s.section)}` as never);
-                  }
+                  const id = s.teamCode ?? s.section;
+                  router.push(`/album/${encodeURIComponent(id)}` as never);
                 }}
               />
             ))}
@@ -196,11 +193,8 @@ export default function Home() {
                 key={s.section}
                 s={s}
                 onPress={() => {
-                  if (s.teamCode) {
-                    router.push(`/team/${s.teamCode}` as never);
-                  } else {
-                    router.push(`/section/${encodeURIComponent(s.section)}` as never);
-                  }
+                  const id = s.teamCode ?? s.section;
+                  router.push(`/album/${encodeURIComponent(id)}` as never);
                 }}
               />
             ))}
