@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1024 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Feature graphic Play Store: 1024×500, sin alpha ni esquinas redondeadas -->
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2a1f17"/>
+      <stop offset="100%" stop-color="#1a1410"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1024" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Acento dorado superior izquierdo -->
+  <rect x="0" y="0" width="320" height="6" fill="#D4A24C"/>
+
+  <!-- Balón clásico a la izquierda -->
+  <g transform="translate(220 250)">
+    <circle r="150" fill="#FAF6F0" stroke="#1a1410" stroke-width="7"/>
+
+    <!-- Pentágono central -->
+    <polygon points="0,-79 75,-25 46,63 -46,63 -75,-25" fill="#1a1410"/>
+
+    <!-- Paneles exteriores -->
+    <polygon points="0,-79 0,-134 51,-103 75,-25"
+             fill="none" stroke="#1a1410" stroke-width="6" stroke-linejoin="round"/>
+    <polygon points="75,-25 134,-39 130,31 46,63"
+             fill="none" stroke="#1a1410" stroke-width="6" stroke-linejoin="round"/>
+    <polygon points="46,63 79,118 0,134 -79,118 -46,63"
+             fill="none" stroke="#1a1410" stroke-width="6" stroke-linejoin="round"/>
+    <polygon points="-75,-25 -134,-39 -130,31 -46,63"
+             fill="none" stroke="#1a1410" stroke-width="6" stroke-linejoin="round"/>
+    <polygon points="0,-79 0,-134 -51,-103 -75,-25"
+             fill="none" stroke="#1a1410" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark a la derecha -->
+  <text x="430" y="200" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="92" font-weight="800" letter-spacing="-3">
+    <tspan fill="#FAF6F0">sticker</tspan><tspan fill="#D4A24C">S</tspan><tspan fill="#FAF6F0">wap</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="430" y="260" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="32" font-weight="600" fill="#D4A24C" letter-spacing="2">
+    MUNDIAL 2026
+  </text>
+
+  <!-- Sub-tagline -->
+  <text x="430" y="320" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="400" fill="#FAF6F0" opacity="0.85" letter-spacing="0.5">
+    Marcá figuritas · Encontrá repetidas
+  </text>
+  <text x="430" y="352" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="400" fill="#FAF6F0" opacity="0.85" letter-spacing="0.5">
+    Intercambiá con amigos
+  </text>
+
+  <!-- Acento dorado inferior derecho -->
+  <rect x="704" y="494" width="320" height="6" fill="#D4A24C"/>
+
+  <!-- Línea sutil divisoria entre balón y texto -->
+  <line x1="395" y1="120" x2="395" y2="380" stroke="#D4A24C" stroke-width="2" opacity="0.4"/>
+</svg>
