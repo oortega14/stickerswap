@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { memo, useCallback, useMemo, useRef, useState } from "react";
 import { View, Text, Pressable, ActivityIndicator } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -156,8 +156,8 @@ export function AlbumScroll({ startId }: { startId: string }) {
               key={s.code}
               s={s}
               accent={accent}
-              onTap={() => handleTap(s.code)}
-              onLong={() => handleLong(s.code)}
+              onTap={handleTap}
+              onLong={handleLong}
             />
           ))}
           {Array.from({ length: STICKERS_PER_ROW - item.stickers.length }).map((_, i) => (
@@ -330,25 +330,24 @@ function SectionHeader({
   );
 }
 
-function StickerCard({
-  s,
-  accent,
-  onTap,
-  onLong
-}: {
+interface StickerCardProps {
   s: StickerWithStatus;
   accent: string;
-  onTap: () => void;
-  onLong: () => void;
-}) {
+  onTap: (code: string) => void;
+  onLong: (code: string) => void;
+}
+
+function StickerCardImpl({ s, accent, onTap, onLong }: StickerCardProps) {
   const { theme } = useTheme();
   const collected = s.count >= 1;
+  const handlePress = useCallback(() => onTap(s.code), [onTap, s.code]);
+  const handleLong = useCallback(() => onLong(s.code), [onLong, s.code]);
 
   return (
     <View style={{ width: "33.333%", padding: 4 }}>
       <Pressable
-        onPress={onTap}
-        onLongPress={onLong}
+        onPress={handlePress}
+        onLongPress={handleLong}
         delayLongPress={350}
         accessibilityRole="button"
         accessibilityLabel={`${collected ? "Pegado" : "Falta"}: ${s.name}. Toca para sumar, mantén para restar.`}
@@ -416,3 +415,18 @@ function StickerCard({
     </View>
   );
 }
+
+/**
+ * Memoizado: FlashList recicla muy seguido durante scroll, y cada card
+ * adentro tiene un SVG caro. Solo re-renderizamos cuando cambia el code
+ * del sticker, su count (afecta el badge) o el accent del equipo.
+ */
+const StickerCard = memo(
+  StickerCardImpl,
+  (prev, next) =>
+    prev.s.code === next.s.code &&
+    prev.s.count === next.s.count &&
+    prev.accent === next.accent &&
+    prev.onTap === next.onTap &&
+    prev.onLong === next.onLong
+);

@@ -252,7 +252,7 @@ function SquadGridVisual({
   );
 }
 
-export function StickerCardVisual({ sticker, cardBgColor }: Props) {
+function StickerCardVisualImpl({ sticker, cardBgColor }: Props) {
   const teamCode = sticker.team ?? "";
   const colors = getTeamColors(teamCode);
   const override = getTeamJersey(teamCode);
@@ -279,3 +279,15 @@ export function StickerCardVisual({ sticker, cardBgColor }: Props) {
       return null;
   }
 }
+
+/**
+ * Memoizado: el árbol SVG es caro y los stickers no cambian de identidad.
+ * Compara por code + cardBgColor — alcanza porque sticker.type y sticker.team
+ * son función de code, y las otras props no afectan el render.
+ */
+export const StickerCardVisual = React.memo(
+  StickerCardVisualImpl,
+  (prev, next) =>
+    prev.sticker.code === next.sticker.code &&
+    prev.cardBgColor === next.cardBgColor
+);
