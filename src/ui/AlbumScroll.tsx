@@ -276,6 +276,13 @@ export function AlbumScroll({ startId }: { startId: string }) {
           </Text>
         </Pressable>
       )}
+
+      {onlyMissing && (
+        <ShowAllFab
+          onPress={() => setOnlyMissing(false)}
+          raised={showBackToTop}
+        />
+      )}
     </View>
   );
 }
@@ -561,5 +568,46 @@ function CompletedNotice({ section }: { section: AlbumSection<StickerWithStatus>
         </Text>
       </View>
     </View>
+  );
+}
+
+function ShowAllFab({
+  onPress,
+  raised
+}: {
+  onPress: () => void;
+  raised: boolean;
+}) {
+  const { theme } = useTheme();
+  const insets = useSafeAreaInsets();
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel="Mostrar todas las figuritas"
+      style={{
+        position: "absolute",
+        bottom: insets.bottom + (raised ? 72 : 16),
+        alignSelf: "center",
+        backgroundColor: theme.card,
+        borderColor: theme.border,
+        borderWidth: 1,
+        borderRadius: 999,
+        paddingVertical: 10,
+        paddingHorizontal: 16,
+        flexDirection: "row",
+        alignItems: "center",
+        shadowColor: theme.text,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.18,
+        shadowRadius: 10,
+        elevation: 6
+      }}
+    >
+      <Text style={{ color: theme.text, fontSize: 13, marginRight: 6 }}>✕</Text>
+      <Text style={{ color: theme.text, fontSize: 13, fontWeight: "700" }}>
+        Mostrar todos
+      </Text>
+    </Pressable>
   );
 }
