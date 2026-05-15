@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ScrollView, View, Text, Pressable, RefreshControl, Alert, ActivityIndicator } from "react-native";
 import { useRouter } from "expo-router";
 import { useQueryClient } from "@tanstack/react-query";
@@ -274,7 +274,7 @@ function AmigosView() {
 
       <Text className="text-space-mute text-xs tracking-widest mb-2">MIS AMIGOS</Text>
       {!friends || friends.length === 0 ? (
-        <EmptyState variant="planet" title="Sin amigos" message="Comparte tu código en Perfil." />
+        <EmptyState variant="planet" title="Sin amigos" message="Compartí tu código (arriba) para que te agreguen." />
       ) : (
         friends.map((item) => {
           const count = matchMap.get(item.id) ?? 0;
@@ -312,14 +312,30 @@ function TruequesView() {
   const { data: trades, isLoading } = useTradesByStatus(filter);
   const { data: friends } = useFriends();
   const { user } = useSession();
-  const friendMap = new Map((friends ?? []).map((f) => [f.id, f]));
 
   const friendsRaw = useFriends().data ?? [];
-  const outgoingMap = new Map(
-    (useOutgoingRequests().data ?? []).map((r) => [r.recipientId, r.status] as const)
+  const outgoingRequests = useOutgoingRequests().data ?? [];
+  const incomingRequests = usePendingRequests().data ?? [];
+
+  const outgoingMap = useMemo(
+    () => new Map(outgoingRequests.map((r) => [r.recipientId, r.status] as const)),
+    [outgoingRequests]
   );
-  const incomingMap = new Map(
-    (usePendingRequests().data ?? []).map((r) => [r.requesterId, "pending"] as const)
+  const outgoingUsernames = useMemo(
+    () => new Map(outgoingRequests.map((r) => [r.recipientId, r.username] as const)),
+    [outgoingRequests]
+  );
+  const incomingMap = useMemo(
+    () => new Map(incomingRequests.map((r) => [r.requesterId, "pending"] as const)),
+    [incomingRequests]
+  );
+  const incomingUsernames = useMemo(
+    () => new Map(incomingRequests.map((r) => [r.requesterId, r.username] as const)),
+    [incomingRequests]
+  );
+  const friendMap = useMemo(
+    () => new Map((friends ?? []).map((f) => [f.id, f] as const)),
+    [friends]
   );
 
   if (!user) return null;
@@ -381,15 +397,17 @@ function TruequesView() {
           const status: "pending" | "accepted" | "blocked" | "rejected" | null =
             isFriend ? "accepted"
             : outgoingMap.get(counterpartyId) ?? incomingMap.get(counterpartyId) ?? null;
+          const counterpartyUsername =
+            friendMap.get(counterpartyId)?.username ??
+            outgoingUsernames.get(counterpartyId) ??
+            incomingUsernames.get(counterpartyId) ??
+            "amigo";
           return (
             <TradeCard
               key={trade.id}
               trade={trade}
               meId={user.id}
-              counterpartyUsername={
-                friendMap.get(trade.proposerId === user.id ? trade.recipientId : trade.proposerId)
-                  ?.username ?? "amigo"
-              }
+              counterpartyUsername={counterpartyUsername}
               counterpartyFriendshipStatus={status}
             />
           );
