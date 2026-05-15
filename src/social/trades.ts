@@ -60,6 +60,21 @@ export async function proposeTrade(input: ProposeTradeInput): Promise<Trade> {
   return trade;
 }
 
+export async function proposeTradeCombo(input: ProposeTradeInput): Promise<string> {
+  const { data, error } = await supabase.rpc("trade_propose_combo", {
+    p_recipient_id: input.recipientId,
+    p_gives: input.proposerGives,
+    p_gets: input.proposerGets,
+    p_message: input.message ?? null
+  });
+  if (error) throw error;
+  const tradeId = data as string;
+  // El insert directo en proposeTrade hace upsertTrade desde el row. Acá
+  // el RPC solo devuelve el id; tiramos un refresh para hidratar el cache.
+  await refreshTradeFromRemote(tradeId);
+  return tradeId;
+}
+
 export async function respondTrade(tradeId: string, accept: boolean): Promise<void> {
   const { error } = await supabase.rpc("trade_respond", {
     p_trade: tradeId,
