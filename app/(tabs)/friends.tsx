@@ -27,6 +27,8 @@ import { EmptyState } from "@/ui/EmptyState";
 import { SegmentedControl } from "@/ui/SegmentedControl";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { useTheme } from "@/theme/ThemeProvider";
+import { MyCodeChip } from "@/ui/MyCodeChip";
+import { AddFriendChip } from "@/ui/AddFriendChip";
 
 type Subtab = "amigos" | "trueques" | "cerca";
 
@@ -104,6 +106,11 @@ function AmigosView() {
 
   return (
     <View>
+      <View style={{ flexDirection: "row", gap: 8, marginBottom: 16 }}>
+        <MyCodeChip />
+        <AddFriendChip />
+      </View>
+
       {hasRequests && (
         <View className="mb-6">
           <Text className="text-space-mute text-xs tracking-widest mb-2">SOLICITUDES</Text>
