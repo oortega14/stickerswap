@@ -1,4 +1,5 @@
 import type { Sticker, StickerStatus, TradeList, TradeListEntry, TradeFormatOptions } from "./types";
+import { flagFor } from "./teamFlags";
 
 export function buildTradeList(stickers: Sticker[], statuses: StickerStatus[]): TradeList {
   const statusMap = new Map(statuses.map((s) => [s.stickerCode, s.count]));
@@ -88,4 +89,72 @@ export function formatTradeListAsText(list: TradeList, opts: TradeFormatOptions)
   }
 
   return lines.join("\n").trim();
+}
+
+const NON_TEAM_SECTION_ORDER = ["Intro", "Extras", "Coca-Cola"] as const;
+
+export function formatTradeListByTeam(
+  list: TradeList,
+  opts: { username: string | null }
+): string {
+  if (list.needed.length === 0 && list.duplicates.length === 0) {
+    return "Tu álbum está completo 🎉";
+  }
+  const header = opts.username
+    ? `stickerSwap · Mundial 2026 — @${opts.username}`
+    : "stickerSwap · Mundial 2026";
+  const lines: string[] = [header, ""];
+
+  if (list.needed.length > 0) {
+    lines.push("Me faltan*");
+    lines.push(...renderBlock(list.needed, "needed"));
+  }
+  if (list.duplicates.length > 0) {
+    if (list.needed.length > 0) lines.push("");
+    lines.push("Tengo repes*");
+    lines.push(...renderBlock(list.duplicates, "duplicates"));
+  }
+  return lines.join("\n").trim();
+}
+
+function renderBlock(entries: TradeListEntry[], mode: "needed" | "duplicates"): string[] {
+  const withTeam = entries.filter((e) => e.team != null);
+  const withoutTeam = entries.filter((e) => e.team == null);
+
+  const teamGroups = new Map<string, TradeListEntry[]>();
+  for (const e of withTeam) {
+    const key = e.team as string;
+    if (!teamGroups.has(key)) teamGroups.set(key, []);
+    teamGroups.get(key)!.push(e);
+  }
+  const teamCodes = Array.from(teamGroups.keys()).sort();
+
+  const sectionGroups = new Map<string, TradeListEntry[]>();
+  for (const e of withoutTeam) {
+    if (!sectionGroups.has(e.section)) sectionGroups.set(e.section, []);
+    sectionGroups.get(e.section)!.push(e);
+  }
+
+  const out: string[] = [];
+  for (const code of teamCodes) {
+    const items = teamGroups.get(code)!.slice().sort((a, b) => a.number - b.number);
+    const right = items.map((e) => formatItem(e, mode)).join(", ");
+    const flag = flagFor(code);
+    const prefix = flag ? `${code} ${flag}` : code;
+    out.push(`${prefix}: ${right}`);
+  }
+  for (const section of NON_TEAM_SECTION_ORDER) {
+    const items = sectionGroups.get(section);
+    if (!items || items.length === 0) continue;
+    const sorted = items.slice().sort((a, b) => a.number - b.number);
+    const right = sorted.map((e) => formatItem(e, mode)).join(", ");
+    out.push(`${section}: ${right}`);
+  }
+  return out;
+}
+
+function formatItem(e: TradeListEntry, mode: "needed" | "duplicates"): string {
+  if (mode === "needed") return String(e.number);
+  const extras = e.count - 1;
+  return `${e.number} ×${extras}`;
 }
