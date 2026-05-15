@@ -153,6 +153,26 @@ function AmigosView() {
                     </Text>
                   ) : null}
                 </Text>
+                {r.source === "trade_combo" && (
+                  <View
+                    style={{
+                      alignSelf: "flex-start",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      backgroundColor: theme.card,
+                      borderColor: theme.accent,
+                      borderWidth: 1,
+                      paddingHorizontal: 8,
+                      paddingVertical: 3,
+                      borderRadius: 999,
+                      marginTop: 4
+                    }}
+                  >
+                    <Text style={{ color: theme.accent, fontSize: 10, fontWeight: "800", letterSpacing: 0.5 }}>
+                      🔄 TRUEQUE PENDIENTE
+                    </Text>
+                  </View>
+                )}
                 {r.message ? (
                   <Text style={{ color: theme.text, fontSize: 14, marginTop: 6 }}>«{r.message}»</Text>
                 ) : null}

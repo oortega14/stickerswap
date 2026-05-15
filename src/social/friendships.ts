@@ -12,7 +12,7 @@ export interface AddFriendResult {
 interface FriendshipRow {
   friend_id: string;
   status: "pending" | "accepted" | "blocked";
-  source: "qr_code" | "username_search";
+  source: "qr_code" | "username_search" | "nearby_match" | "trade_combo";
   created_at: string;
   profiles: {
     id: string;

@@ -53,7 +53,7 @@ export interface TradeFormatOptions {
 }
 
 export type FriendshipStatus = "pending" | "accepted" | "blocked" | "rejected";
-export type FriendshipSource = "qr_code" | "username_search" | "nearby_match";
+export type FriendshipSource = "qr_code" | "username_search" | "nearby_match" | "trade_combo";
 
 export interface Friend {
   id: string;
