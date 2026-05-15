@@ -64,24 +64,6 @@ export default function Home() {
           </View>
           <View className="flex-row items-center gap-2">
             <Pressable
-              onPress={() => router.push("/(tabs)/trades" as never)}
-              accessibilityRole="button"
-              accessibilityLabel="Intercambios"
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                paddingHorizontal: 12,
-                paddingVertical: 8,
-                borderRadius: 999,
-                backgroundColor: theme.card,
-                borderWidth: 1,
-                borderColor: theme.border
-              }}
-            >
-              <Text style={{ color: theme.text, fontSize: 13, marginRight: 6 }}>⇄</Text>
-              <Text style={{ color: theme.text, fontSize: 13, fontWeight: "600" }}>Intercambios</Text>
-            </Pressable>
-            <Pressable
               onPress={() => setMode(mode === "dark" ? "light" : "dark")}
               accessibilityRole="button"
               accessibilityLabel="Cambiar tema"
