@@ -1,4 +1,4 @@
-import { buildTradeList, formatTradeListAsText, formatTradeListByTeam } from "@/domain/tradeList";
+import { buildTradeList, formatTradeListByTeam } from "@/domain/tradeList";
 import type { TradeList } from "@/domain/types";
 import type { Sticker, StickerStatus } from "@/domain/types";
 
@@ -38,42 +38,6 @@ describe("buildTradeList", () => {
   });
 });
 
-describe("formatTradeListAsText", () => {
-  const list = {
-    needed: [
-      { code: "ARG-2", number: 101, section: "Argentina", count: 0 },
-      { code: "ARG-3", number: 102, section: "Argentina", count: 0 },
-      { code: "STAD-1", number: 5, section: "Estadios", count: 0 }
-    ],
-    duplicates: [
-      { code: "ARG-1", number: 100, section: "Argentina", count: 3 }
-    ]
-  };
-
-  it("groups by section when groupBySection=true", () => {
-    const text = formatTradeListAsText(list, { groupBySection: true, username: "oscar" });
-    expect(text).toContain("stickerSwap · Mundial 2026 — @oscar");
-    expect(text).toContain("NECESITO (3)");
-    expect(text).toMatch(/Argentina:.*101.*102/);
-    expect(text).toContain("Estadios: 5");
-    expect(text).toContain("TENGO REPETIDAS (1)");
-    expect(text).toMatch(/Argentina: 100 \(×2\)/);
-  });
-
-  it("flat list when groupBySection=false", () => {
-    const text = formatTradeListAsText(list, { groupBySection: false, username: "oscar" });
-    expect(text).toContain("NECESITO: 5, 101, 102");
-    expect(text).toContain("TENGO REPE: 100 (×2)");
-  });
-
-  it("hides empty sections cleanly", () => {
-    const empty = { needed: [], duplicates: [] };
-    const text = formatTradeListAsText(empty, { groupBySection: true, username: "x" });
-    expect(text).toContain("@x");
-    expect(text).not.toContain("NECESITO");
-    expect(text).not.toContain("TENGO REPE");
-  });
-});
 
 describe("formatTradeListByTeam", () => {
   it("devuelve mensaje de álbum completo cuando no hay faltantes ni repes", () => {

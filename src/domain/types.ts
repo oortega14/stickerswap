@@ -48,10 +48,6 @@ export interface TradeList {
   duplicates: TradeListEntry[]; // count > 1 — tengo repetidas (extras = count - 1)
 }
 
-export interface TradeFormatOptions {
-  groupBySection: boolean;
-  username: string;
-}
 
 export type FriendshipStatus = "pending" | "accepted" | "blocked" | "rejected";
 export type FriendshipSource = "qr_code" | "username_search" | "nearby_match" | "trade_combo";
