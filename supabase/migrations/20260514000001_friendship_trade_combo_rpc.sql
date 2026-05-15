@@ -1,12 +1,11 @@
--- supabase/migrations/20260514000000_friendship_trade_combo.sql
+-- supabase/migrations/20260514000001_friendship_trade_combo_rpc.sql
 --
--- Combo amistad+trueque: nuevo enum value + RPC para proponer trueque a
--- desconocidos enviando solicitud de amistad pendiente atómicamente.
+-- Combo amistad+trueque (parte 2): RPC + triggers. El enum value
+-- 'trade_combo' se agregó en la migración anterior (_enum) — separadas
+-- porque Postgres no permite uso del enum value nuevo en la misma
+-- transacción donde se agrega.
 
--- 1. Extender enum
-alter type public.friendship_source add value if not exists 'trade_combo';
-
--- 2. RPC: propone trueque + crea friendship pending si no existe
+-- 1. RPC: propone trueque + crea friendship pending si no existe
 create or replace function public.trade_propose_combo(
   p_recipient_id uuid,
   p_gives        text[],
@@ -67,7 +66,7 @@ $$;
 
 grant execute on function public.trade_propose_combo(uuid, text[], text[], text) to authenticated;
 
--- 3a. Trigger: cuando se BORRA una friendship (proposer cancels via DELETE)
+-- 2a. Trigger: cuando se BORRA una friendship (proposer cancels via DELETE)
 --     cancela todos los trades pendientes entre los dos usuarios.
 create or replace function public._cancel_combo_trades_on_friendship_delete()
 returns trigger
@@ -94,7 +93,7 @@ create trigger trg_cancel_combo_trades
   for each row
   execute function public._cancel_combo_trades_on_friendship_delete();
 
--- 3b. Trigger: cuando se ACTUALIZA una friendship a rejected (recipient declines via UPDATE)
+-- 2b. Trigger: cuando se ACTUALIZA una friendship a rejected (recipient declines via UPDATE)
 --     cancela todos los trades pendientes entre los dos usuarios.
 create or replace function public._cancel_combo_trades_on_friendship_reject()
 returns trigger
