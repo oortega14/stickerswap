@@ -39,6 +39,7 @@ export interface TradeListEntry {
   code: string;
   number: number;
   section: string;
+  team: string | null;
   count: number;     // 0 si falta, >1 si es repetida
 }
 

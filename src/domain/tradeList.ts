@@ -11,6 +11,7 @@ export function buildTradeList(stickers: Sticker[], statuses: StickerStatus[]): 
       code: s.code,
       number: s.number,
       section: s.section,
+      team: s.team,
       count
     };
     if (count === 0) needed.push(entry);

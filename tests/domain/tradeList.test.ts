@@ -16,7 +16,7 @@ describe("buildTradeList", () => {
     expect(r.duplicates).toHaveLength(0);
   });
 
-  it("classifies as duplicates when count > 1", () => {
+  it("classifies as duplicates when count > 1 and propagates team", () => {
     const statuses: StickerStatus[] = [
       { stickerCode: "ARG-1", count: 2, updatedAt: 1 },
       { stickerCode: "ARG-2", count: 1, updatedAt: 1 }
@@ -25,6 +25,9 @@ describe("buildTradeList", () => {
     expect(r.needed.map((e) => e.code).sort()).toEqual(["ARG-3", "BRA-1", "STAD-1"]);
     expect(r.duplicates.map((e) => e.code)).toEqual(["ARG-1"]);
     expect(r.duplicates[0].count).toBe(2);
+    expect(r.duplicates[0].team).toBe("ARG");
+    const stad = r.needed.find((e) => e.code === "STAD-1")!;
+    expect(stad.team).toBeNull();
   });
 
   it("sorts needed and duplicates by number ascending", () => {
