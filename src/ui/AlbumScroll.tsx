@@ -74,15 +74,22 @@ export function AlbumScroll({ startId }: { startId: string }) {
     for (const section of data) {
       headerIdx.set(section.id, flat.length);
       flat.push({ kind: "header", section });
-      for (const [rowIndex, stickers] of chunk(section.stickers, STICKERS_PER_ROW).entries()) {
-        flat.push({ kind: "stickerRow", section, stickers, rowIndex });
+      const visible = onlyMissing
+        ? section.stickers.filter((s) => s.count === 0)
+        : section.stickers;
+      if (onlyMissing && visible.length === 0) {
+        flat.push({ kind: "completedNotice", section });
+      } else {
+        for (const [rowIndex, stickers] of chunk(visible, STICKERS_PER_ROW).entries()) {
+          flat.push({ kind: "stickerRow", section, stickers, rowIndex });
+        }
       }
     }
     const startIdx = findSectionIndex(data, startId);
     const startSection = startIdx >= 0 ? data[startIdx] : null;
     const initial = startSection ? headerIdx.get(startSection.id) ?? 0 : 0;
     return { rows: flat, headerIndices: headerIdx, initialIndex: initial };
-  }, [data, startId]);
+  }, [data, startId, onlyMissing]);
 
   const onViewable = useCallback(
     ({ viewableItems }: { viewableItems: ViewToken<Row>[] }) => {
