@@ -38,6 +38,7 @@ export default function Friends() {
   const qc = useQueryClient();
   const [refreshing, setRefreshing] = useState(false);
   const insets = useSafeAreaInsets();
+  const router = useRouter();
 
   const onRefresh = async () => {
     setRefreshing(true);
@@ -84,6 +85,33 @@ export default function Friends() {
           <CercaView />
         )}
       </ScrollView>
+
+      {tab === "trueques" && (
+        <Pressable
+          onPress={() => router.push("/trades/new" as never)}
+          accessibilityRole="button"
+          accessibilityLabel="Nuevo trueque"
+          style={{
+            position: "absolute",
+            right: 20,
+            bottom: insets.bottom + 24,
+            width: 56,
+            height: 56,
+            borderRadius: 28,
+            backgroundColor: theme.accent,
+            alignItems: "center",
+            justifyContent: "center",
+            shadowColor: theme.text,
+            shadowOffset: { width: 0, height: 4 },
+            shadowOpacity: 0.2,
+            shadowRadius: 8,
+            elevation: 6,
+            zIndex: 20
+          }}
+        >
+          <Text style={{ color: "#fff", fontSize: 28, fontWeight: "700", lineHeight: 30 }}>+</Text>
+        </Pressable>
+      )}
     </ThemedBackground>
   );
 }
