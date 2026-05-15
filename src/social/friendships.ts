@@ -142,3 +142,20 @@ export async function unfriend(friendId: string): Promise<void> {
     .eq("friend_id", friendId);
   if (error) throw error;
 }
+
+export async function findFriendshipStatusByUserId(
+  otherUserId: string
+): Promise<{ status: "pending" | "accepted" | "blocked" | "rejected" } | null> {
+  const meId = (await supabase.auth.getSession()).data.session?.user?.id;
+  if (!meId) throw new Error("not_authenticated");
+  const { data, error } = await supabase
+    .from("friendships")
+    .select("status")
+    .or(
+      `and(user_id.eq.${meId},friend_id.eq.${otherUserId}),and(user_id.eq.${otherUserId},friend_id.eq.${meId})`
+    )
+    .limit(1)
+    .maybeSingle();
+  if (error) throw error;
+  return data ? { status: data.status } : null;
+}
