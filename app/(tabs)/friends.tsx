@@ -314,6 +314,14 @@ function TruequesView() {
   const { user } = useSession();
   const friendMap = new Map((friends ?? []).map((f) => [f.id, f]));
 
+  const friendsRaw = useFriends().data ?? [];
+  const outgoingMap = new Map(
+    (useOutgoingRequests().data ?? []).map((r) => [r.recipientId, r.status] as const)
+  );
+  const incomingMap = new Map(
+    (usePendingRequests().data ?? []).map((r) => [r.requesterId, "pending"] as const)
+  );
+
   if (!user) return null;
 
   return (
@@ -367,17 +375,25 @@ function TruequesView() {
           message="Cuando inicies o recibas un trueque, aparecerá acá."
         />
       ) : (
-        trades.map((trade) => (
-          <TradeCard
-            key={trade.id}
-            trade={trade}
-            meId={user.id}
-            counterpartyUsername={
-              friendMap.get(trade.proposerId === user.id ? trade.recipientId : trade.proposerId)
-                ?.username ?? "amigo"
-            }
-          />
-        ))
+        trades.map((trade) => {
+          const counterpartyId = trade.proposerId === user.id ? trade.recipientId : trade.proposerId;
+          const isFriend = friendsRaw.some((f) => f.id === counterpartyId);
+          const status: "pending" | "accepted" | "blocked" | "rejected" | null =
+            isFriend ? "accepted"
+            : outgoingMap.get(counterpartyId) ?? incomingMap.get(counterpartyId) ?? null;
+          return (
+            <TradeCard
+              key={trade.id}
+              trade={trade}
+              meId={user.id}
+              counterpartyUsername={
+                friendMap.get(trade.proposerId === user.id ? trade.recipientId : trade.proposerId)
+                  ?.username ?? "amigo"
+              }
+              counterpartyFriendshipStatus={status}
+            />
+          );
+        })
       )}
     </View>
   );
@@ -386,11 +402,13 @@ function TruequesView() {
 function TradeCard({
   trade,
   meId,
-  counterpartyUsername
+  counterpartyUsername,
+  counterpartyFriendshipStatus
 }: {
   trade: Trade;
   meId: string;
   counterpartyUsername: string;
+  counterpartyFriendshipStatus: "pending" | "accepted" | "blocked" | "rejected" | null;
 }) {
   const { theme } = useTheme();
   const respond = useRespondTrade();
@@ -403,6 +421,11 @@ function TradeCard({
   const iGot = iAmProposer ? trade.proposerGets : trade.proposerGives;
   const iConfirmed = iAmProposer ? trade.proposerConfirmedAt !== null : trade.recipientConfirmedAt !== null;
   const otherConfirmed = iAmProposer ? trade.recipientConfirmedAt !== null : trade.proposerConfirmedAt !== null;
+
+  const waitingForFriendship = counterpartyFriendshipStatus === "pending";
+  const disclaimer = iAmProposer
+    ? `⏳ Esperando que @${counterpartyUsername} acepte la solicitud de amistad`
+    : `⏳ Aceptá la amistad de @${counterpartyUsername} para responder este trueque`;
 
   const dateLabel =
     trade.status === "completed" && trade.completedAt
@@ -424,7 +447,23 @@ function TradeCard({
         Te dio: {iGot.join(", ")}
       </Text>
 
-      {trade.status === "pending" && iAmProposer && (
+      {waitingForFriendship && (
+        <View
+          style={{
+            backgroundColor: theme.card,
+            borderColor: theme.border,
+            borderWidth: 1,
+            borderRadius: 8,
+            paddingHorizontal: 10,
+            paddingVertical: 6,
+            marginBottom: 8
+          }}
+        >
+          <Text style={{ color: theme.textMute, fontSize: 12 }}>{disclaimer}</Text>
+        </View>
+      )}
+
+      {trade.status === "pending" && iAmProposer && !waitingForFriendship && (
         <Pressable
           onPress={() => cancel.mutate(trade.id)}
           disabled={cancel.isPending}
@@ -443,7 +482,7 @@ function TradeCard({
         </Pressable>
       )}
 
-      {trade.status === "pending" && !iAmProposer && (
+      {trade.status === "pending" && !iAmProposer && !waitingForFriendship && (
         <View className="flex-row" style={{ gap: 8 }}>
           <Pressable
             onPress={() => respond.mutate({ tradeId: trade.id, accept: true })}
