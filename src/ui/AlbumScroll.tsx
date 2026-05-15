@@ -157,7 +157,7 @@ export function AlbumScroll({ startId }: { startId: string }) {
         );
       }
       if (item.kind === "completedNotice") {
-        return null; // reemplazado en Task 3 por el componente real
+        return <CompletedNotice section={item.section} />;
       }
       const accent = item.section.teamCode
         ? pickTint(getTeamColors(item.section.teamCode))
@@ -472,3 +472,31 @@ const StickerCard = memo(
     prev.onTap === next.onTap &&
     prev.onLong === next.onLong
 );
+
+function CompletedNotice({ section }: { section: AlbumSection<StickerWithStatus> }) {
+  const { theme } = useTheme();
+  const tint = section.teamCode ? pickTint(getTeamColors(section.teamCode)) : theme.accent;
+  const total = section.stickers.length;
+  return (
+    <View style={{ paddingHorizontal: 16, paddingTop: 8, paddingBottom: 24 }}>
+      <View
+        style={{
+          borderRadius: 14,
+          borderWidth: 1,
+          borderColor: withAlpha(tint, 0.4),
+          backgroundColor: withAlpha(tint, 0.1),
+          paddingVertical: 22,
+          paddingHorizontal: 16,
+          alignItems: "center"
+        }}
+      >
+        <Text style={{ color: tint, fontSize: 20, fontWeight: "800", marginBottom: 4 }}>
+          ¡Completo!
+        </Text>
+        <Text style={{ color: theme.textMute, fontSize: 13 }}>
+          {total} {total === 1 ? "lámina pegada" : "láminas pegadas"}
+        </Text>
+      </View>
+    </View>
+  );
+}
