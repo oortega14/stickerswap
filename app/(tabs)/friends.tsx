@@ -29,6 +29,9 @@ import { ProgressBar } from "@/ui/ProgressBar";
 import { useTheme } from "@/theme/ThemeProvider";
 import { MyCodeChip } from "@/ui/MyCodeChip";
 import { AddFriendChip } from "@/ui/AddFriendChip";
+import { ShareListFab } from "@/ui/ShareListFab";
+import { ShareListModal } from "@/ui/ShareListModal";
+import { useShareList } from "@/hooks/useShareList";
 
 type Subtab = "amigos" | "trueques" | "cerca";
 
@@ -39,6 +42,8 @@ export default function Friends() {
   const [refreshing, setRefreshing] = useState(false);
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const [shareOpen, setShareOpen] = useState(false);
+  const { text: shareText } = useShareList();
 
   const onRefresh = async () => {
     setRefreshing(true);
@@ -86,6 +91,8 @@ export default function Friends() {
         )}
       </ScrollView>
 
+      <ShareListModal visible={shareOpen} onClose={() => setShareOpen(false)} text={shareText} />
+
       {tab === "trueques" && (
         <Pressable
           onPress={() => router.push("/trades/new" as never)}
@@ -111,6 +118,10 @@ export default function Friends() {
         >
           <Text style={{ color: "#fff", fontSize: 28, fontWeight: "700", lineHeight: 30 }}>+</Text>
         </Pressable>
+      )}
+
+      {tab === "amigos" && (
+        <ShareListFab onPress={() => setShareOpen(true)} />
       )}
     </ThemedBackground>
   );
