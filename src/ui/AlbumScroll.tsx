@@ -24,6 +24,7 @@ const STICKERS_PER_ROW = 3;
 
 type Row =
   | { kind: "header"; section: AlbumSection<StickerWithStatus> }
+  | { kind: "completedNotice"; section: AlbumSection<StickerWithStatus> }
   | {
       kind: "stickerRow";
       section: AlbumSection<StickerWithStatus>;
@@ -58,6 +59,7 @@ export function AlbumScroll({ startId }: { startId: string }) {
   const listRef = useRef<FlashListRef<Row>>(null);
   const visibleIdRef = useRef<string | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [onlyMissing, setOnlyMissing] = useState(false);
 
   const { rows, headerIndices, initialIndex } = useMemo(() => {
     if (!data) {
@@ -147,6 +149,9 @@ export function AlbumScroll({ startId }: { startId: string }) {
           />
         );
       }
+      if (item.kind === "completedNotice") {
+        return null; // reemplazado en Task 3 por el componente real
+      }
       const accent = item.section.teamCode
         ? pickTint(getTeamColors(item.section.teamCode))
         : theme.accent;
@@ -186,11 +191,11 @@ export function AlbumScroll({ startId }: { startId: string }) {
         ref={listRef}
         data={rows}
         renderItem={renderItem}
-        keyExtractor={(item) =>
-          item.kind === "header"
-            ? `h-${item.section.id}`
-            : `r-${item.section.id}-${item.rowIndex}`
-        }
+        keyExtractor={(item) => {
+          if (item.kind === "header") return `h-${item.section.id}`;
+          if (item.kind === "completedNotice") return `c-${item.section.id}`;
+          return `r-${item.section.id}-${item.rowIndex}`;
+        }}
         getItemType={(item) => item.kind}
         initialScrollIndex={initialIndex}
         contentContainerStyle={{
