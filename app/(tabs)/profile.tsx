@@ -1,10 +1,7 @@
 import { useCallback, useState } from "react";
 import { ScrollView, View, Text, Pressable, Image, Alert, Switch } from "react-native";
 import { useRouter, useFocusEffect } from "expo-router";
-import * as Clipboard from "expo-clipboard";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { haptics } from "@/lib/haptics";
-import QRCode from "react-native-qrcode-svg";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { useSession } from "@/auth/useSession";
@@ -49,12 +46,6 @@ export default function Profile() {
 
   if (!user) return null;
 
-  const onCopyCode = async () => {
-    await Clipboard.setStringAsync(user.invite_code);
-    await haptics.success();
-    Alert.alert("Copiado", `Tu código ${user.invite_code} está en el portapapeles.`);
-  };
-
   return (
     <ThemedBackground>
       <ScrollView className="flex-1 px-4" contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: 32 }}>
@@ -68,24 +59,6 @@ export default function Profile() {
           )}
           <Text className="text-space-ink text-lg font-bold mt-3">{user.display_name ?? user.username}</Text>
           <Text className="text-space-mute text-sm">@{user.username}</Text>
-        </GlowCard>
-
-        <GlowCard className="items-center mb-4">
-          <Text className="text-space-mute text-xs tracking-widest mb-2">TU CÓDIGO</Text>
-          <View className="bg-white p-3 rounded-lg mb-3">
-            <QRCode value={user.invite_code} size={120} backgroundColor="#fff" color="#000" />
-          </View>
-          <Text className="text-space-ink text-2xl font-mono font-bold tracking-widest">
-            {user.invite_code}
-          </Text>
-          <Pressable
-            onPress={onCopyCode}
-            className="mt-2"
-            accessibilityLabel="Copiar código"
-            accessibilityRole="button"
-          >
-            <Text className="text-space-violet text-xs">Copiar código</Text>
-          </Pressable>
         </GlowCard>
 
         <View className="mb-4">
@@ -106,24 +79,6 @@ export default function Profile() {
             />
           </View>
         </View>
-
-        <Pressable
-          onPress={() => router.push("/add-friend/scan" as never)}
-          className="bg-space-purple rounded-xl py-3 items-center mb-2"
-          accessibilityLabel="Escanear código de amigo"
-          accessibilityRole="button"
-        >
-          <Text className="text-white font-semibold">📷 Escanear código de amigo</Text>
-        </Pressable>
-
-        <Pressable
-          onPress={() => router.push("/add-friend/search" as never)}
-          className="bg-space-mid rounded-xl py-3 items-center mb-2"
-          accessibilityLabel="Buscar por username"
-          accessibilityRole="button"
-        >
-          <Text className="text-space-ink font-semibold">⌕ Buscar por @username</Text>
-        </Pressable>
 
         <Pressable
           onPress={() => router.push("/profile/edit" as never)}
