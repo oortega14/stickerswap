@@ -1,26 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAllStickers } from "@/data/stickers";
 import { listStatuses } from "@/data/stickerStatus";
-import { buildTradeList, formatTradeListAsText } from "@/domain/tradeList";
+import { buildTradeList, formatTradeListByTeam } from "@/domain/tradeList";
 import { useSession } from "@/auth/useSession";
-import { useTradePrefs } from "@/store/tradePreferences";
 
-export function useMyList() {
+export function useShareList() {
   const session = useSession();
-  const { groupBySection } = useTradePrefs();
-  const username = session.user?.username ?? "yo";
-
   const query = useQuery({
-    queryKey: ["myList"],
+    queryKey: ["shareList"],
     queryFn: async () => {
       const [stickers, statuses] = await Promise.all([getAllStickers(), listStatuses()]);
       return buildTradeList(stickers, statuses);
     }
   });
-
   const text = query.data
-    ? formatTradeListAsText(query.data, { groupBySection, username })
+    ? formatTradeListByTeam(query.data, { username: session.user?.username ?? null })
     : "";
-
   return { ...query, text };
 }
