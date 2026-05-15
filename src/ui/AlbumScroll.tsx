@@ -240,6 +240,11 @@ export function AlbumScroll({ startId }: { startId: string }) {
         <Text style={{ color: theme.text, fontSize: 18 }}>‹</Text>
       </Pressable>
 
+      <MissingFilterChip
+        active={onlyMissing}
+        onToggle={() => setOnlyMissing((v) => !v)}
+      />
+
       {/* Botón flotante "volver arriba" — al inicio de la sección actual */}
       {showBackToTop && (
         <Pressable
@@ -472,6 +477,64 @@ const StickerCard = memo(
     prev.onTap === next.onTap &&
     prev.onLong === next.onLong
 );
+
+function MissingFilterChip({
+  active,
+  onToggle
+}: {
+  active: boolean;
+  onToggle: () => void;
+}) {
+  const { theme } = useTheme();
+  const insets = useSafeAreaInsets();
+  return (
+    <Pressable
+      onPress={onToggle}
+      accessibilityRole="button"
+      accessibilityState={{ selected: active }}
+      accessibilityLabel={active ? "Mostrar todas las figuritas" : "Filtrar solo las que faltan"}
+      style={{
+        position: "absolute",
+        top: insets.top + 12,
+        right: 16,
+        zIndex: 20,
+        height: 36,
+        paddingHorizontal: 14,
+        borderRadius: 18,
+        backgroundColor: active ? theme.accent : theme.card,
+        borderWidth: active ? 0 : 1,
+        borderColor: theme.border,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        shadowColor: theme.text,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.12,
+        shadowRadius: 4,
+        elevation: 3
+      }}
+    >
+      <View
+        style={{
+          width: 6,
+          height: 6,
+          borderRadius: 3,
+          backgroundColor: active ? "#fff" : theme.accent,
+          marginRight: 8
+        }}
+      />
+      <Text
+        style={{
+          color: active ? "#fff" : theme.text,
+          fontSize: 13,
+          fontWeight: "700"
+        }}
+      >
+        Me faltan
+      </Text>
+    </Pressable>
+  );
+}
 
 function CompletedNotice({ section }: { section: AlbumSection<StickerWithStatus> }) {
   const { theme } = useTheme();
