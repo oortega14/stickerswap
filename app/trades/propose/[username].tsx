@@ -23,7 +23,33 @@ export default function ProposeTradeScreen() {
   const { data: friends } = useFriends();
   const friend = friends?.find((f) => f.username === username);
   const propose = useProposeTrade();
-  const existing = useTradeForFriend(friend?.id ?? "");
+
+  const [resolvedRecipient, setResolvedRecipient] = useState<{ id: string; username: string } | null>(null);
+
+  useEffect(() => {
+    if (friend) {
+      setResolvedRecipient({ id: friend.id, username: friend.username });
+      return;
+    }
+    if (!username) return;
+    let cancelled = false;
+    (async () => {
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("id, username")
+        .eq("username", username)
+        .maybeSingle();
+      if (cancelled || error || !data) return;
+      setResolvedRecipient({ id: data.id, username: data.username });
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [friend, username]);
+
+  const isExistingFriend = !!friend;
+
+  const existing = useTradeForFriend(resolvedRecipient?.id ?? "");
 
   const [bidi, setBidi] = useState<BidirectionalMatch | null>(null);
   const [loading, setLoading] = useState(true);
@@ -33,7 +59,10 @@ export default function ProposeTradeScreen() {
   const insets = useSafeAreaInsets();
 
   useEffect(() => {
-    if (!friend) return;
+    if (!friend) {
+      setLoading(false);
+      return;
+    }
     let cancelled = false;
     (async () => {
       setLoading(true);
@@ -61,27 +90,36 @@ export default function ProposeTradeScreen() {
   }, [friend?.id]);
 
   const canSubmit = useMemo(
-    () => givesSet.size > 0 && getsSet.size > 0 && !existing && !propose.isPending,
-    [givesSet, getsSet, existing, propose.isPending]
+    () => !!resolvedRecipient && givesSet.size > 0 && getsSet.size > 0 && !existing && !propose.isPending,
+    [resolvedRecipient, givesSet, getsSet, existing, propose.isPending]
   );
 
   const onSubmit = async () => {
-    if (!friend || !canSubmit) return;
+    if (!resolvedRecipient || !canSubmit) return;
     await haptics.medium();
     propose.mutate(
       {
-        recipientId: friend.id,
+        recipientId: resolvedRecipient.id,
         proposerGives: Array.from(givesSet),
         proposerGets: Array.from(getsSet),
         message: message.trim() || undefined
       },
       {
         onSuccess: () => {
-          showSnackbar("Propuesta enviada · esperando respuesta");
+          showSnackbar(isExistingFriend ? "Trueque enviado" : "Trueque + solicitud enviados");
+          // Si venimos del wizard, doble back para volver a Trueques.
+          router.back();
           router.back();
         },
         onError: (e: unknown) => {
-          Alert.alert("No se pudo enviar", (e as Error).message);
+          const msg = (e as Error).message;
+          const human =
+            msg.includes("friendship_blocked") ? "No podés contactar a esta persona."
+            : msg.includes("cannot_trade_with_self") ? "No podés intercambiar contigo mismo."
+            : msg.includes("invalid_sticker_list") ? "Necesitás seleccionar al menos un sticker en cada lista."
+            : msg.includes("message_too_long") ? "El mensaje es demasiado largo (máx 280)."
+            : msg;
+          Alert.alert("No se pudo enviar", human);
         }
       }
     );
@@ -94,15 +132,7 @@ export default function ProposeTradeScreen() {
     setSet(next);
   };
 
-  if (!friend) {
-    return (
-      <ThemedBackground>
-        <View className="flex-1 items-center justify-center px-6">
-          <Text style={{ color: theme.textMute }}>Amigo no encontrado.</Text>
-        </View>
-      </ThemedBackground>
-    );
-  }
+  const displayUsername = resolvedRecipient?.username ?? username ?? "";
 
   return (
     <ThemedBackground>
@@ -130,7 +160,7 @@ export default function ProposeTradeScreen() {
             <Text style={{ color: theme.text }}>✕</Text>
           </Pressable>
           <Text style={{ color: theme.text, fontSize: 18, fontWeight: "700", flex: 1 }}>
-            Proponer cambio a @{friend.username}
+            Proponer cambio a @{displayUsername}
           </Text>
         </View>
 
@@ -146,14 +176,52 @@ export default function ProposeTradeScreen() {
             }}
           >
             <Text style={{ color: theme.text, fontSize: 13 }}>
-              Ya tienes un cambio en curso con @{friend.username}. Resuélvelo desde Cambios o desde su perfil.
+              Ya tienes un cambio en curso con @{displayUsername}. Resuélvelo desde Cambios o desde su perfil.
             </Text>
           </View>
         )}
 
-        {loading || !bidi ? (
+        {!isExistingFriend && resolvedRecipient && (
+          <View
+            style={{
+              backgroundColor: theme.card,
+              borderColor: theme.accent,
+              borderWidth: 1,
+              borderRadius: 10,
+              padding: 12,
+              marginBottom: 12
+            }}
+          >
+            <Text style={{ color: theme.text, fontSize: 13, fontWeight: "700", marginBottom: 4 }}>
+              🔄  Solicitud de amistad incluida
+            </Text>
+            <Text style={{ color: theme.textMute, fontSize: 12 }}>
+              Al enviar, también se manda solicitud de amistad a @{resolvedRecipient.username}.
+              Solo van a poder concretar el trueque si acepta.
+            </Text>
+          </View>
+        )}
+
+        {!isExistingFriend && !resolvedRecipient && !loading && (
+          <View
+            style={{
+              backgroundColor: theme.card,
+              borderColor: theme.border,
+              borderWidth: 1,
+              borderRadius: 10,
+              padding: 12,
+              marginBottom: 12
+            }}
+          >
+            <Text style={{ color: theme.textMute, fontSize: 13 }}>
+              No se encontró @{username} en stickerSwap.
+            </Text>
+          </View>
+        )}
+
+        {isExistingFriend && (loading || !bidi) ? (
           <ActivityIndicator color={theme.accent} />
-        ) : (
+        ) : isExistingFriend && bidi ? (
           <>
             <Section
               title={`LE DOY (${givesSet.size})`}
@@ -197,7 +265,67 @@ export default function ProposeTradeScreen() {
               }}
             />
           </>
-        )}
+        ) : !isExistingFriend && resolvedRecipient ? (
+          <>
+            <Text
+              style={{
+                color: theme.textMute,
+                fontSize: 11,
+                fontWeight: "700",
+                marginBottom: 6,
+                letterSpacing: 1
+              }}
+            >
+              LE DOY ({givesSet.size})
+            </Text>
+            <Text style={{ color: theme.textMute, fontSize: 13, marginBottom: 16 }}>
+              Ingresá los stickers que querés ofrecer manualmente.
+            </Text>
+            <Text
+              style={{
+                color: theme.textMute,
+                fontSize: 11,
+                fontWeight: "700",
+                marginBottom: 6,
+                letterSpacing: 1
+              }}
+            >
+              LE PIDO ({getsSet.size})
+            </Text>
+            <Text style={{ color: theme.textMute, fontSize: 13, marginBottom: 16 }}>
+              Ingresá los stickers que querés pedir manualmente.
+            </Text>
+            <Text
+              style={{
+                color: theme.textMute,
+                fontSize: 11,
+                fontWeight: "700",
+                marginTop: 14,
+                marginBottom: 6,
+                letterSpacing: 1
+              }}
+            >
+              MENSAJE OPCIONAL ({message.length}/280)
+            </Text>
+            <TextInput
+              value={message}
+              onChangeText={(v) => setMessage(v.slice(0, 280))}
+              placeholder="Hola, ¿cambiamos?"
+              placeholderTextColor={theme.textMute}
+              multiline
+              style={{
+                backgroundColor: theme.card,
+                color: theme.text,
+                borderColor: theme.border,
+                borderWidth: 1,
+                borderRadius: 10,
+                padding: 10,
+                minHeight: 70,
+                fontSize: 14
+              }}
+            />
+          </>
+        ) : null}
       </ScrollView>
 
       <View
