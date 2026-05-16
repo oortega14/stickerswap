@@ -36,7 +36,7 @@ export function ShareListModal({ visible, onClose, list, username }: Props) {
   const hasNeeded = (list?.needed.length ?? 0) > 0;
   const hasDuplicates = (list?.duplicates.length ?? 0) > 0;
   const bothOff = !showNeeded && !showDuplicates;
-  const showToggles = !isComplete && list != null && (hasNeeded || hasDuplicates);
+  const showToggles = !isComplete && (hasNeeded || hasDuplicates);
 
   const text = useMemo(() => {
     if (!list) return "";
