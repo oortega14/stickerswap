@@ -30,7 +30,7 @@
         "backgroundColor": "#1a1410"
       },
       "package": "app.stickerswap",
-      "versionCode": 6,
+      "versionCode": 7,
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO"
