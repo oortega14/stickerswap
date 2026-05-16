@@ -42,8 +42,9 @@ export default function Friends() {
   const [refreshing, setRefreshing] = useState(false);
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { user } = useSession();
   const [shareOpen, setShareOpen] = useState(false);
-  const { text: shareText } = useShareList();
+  const { list: shareListData } = useShareList();
 
   const onRefresh = async () => {
     setRefreshing(true);
@@ -91,7 +92,12 @@ export default function Friends() {
         )}
       </ScrollView>
 
-      <ShareListModal visible={shareOpen} onClose={() => setShareOpen(false)} text={shareText} />
+      <ShareListModal
+        visible={shareOpen}
+        onClose={() => setShareOpen(false)}
+        list={shareListData}
+        username={user?.username ?? null}
+      />
 
       {tab === "trueques" && (
         <Pressable
