@@ -1,6 +1,5 @@
 import { buildTradeList, formatTradeListByTeam } from "@/domain/tradeList";
-import type { TradeList } from "@/domain/types";
-import type { Sticker, StickerStatus } from "@/domain/types";
+import type { Sticker, StickerStatus, TradeList } from "@/domain/types";
 
 const stickers: Sticker[] = [
   { code: "ARG-1", number: 100, name: "Crest", team: "ARG", section: "Argentina", type: "team_badge" },
@@ -163,6 +162,20 @@ describe("formatTradeListByTeam", () => {
     expect(text).toContain("KOR 🇰🇷: KOR-5");
     expect(text).not.toContain("Tengo repes*");
     expect(text).not.toContain("ARG");
+  });
+
+  it("retorna string vacío cuando la sección incluida está vacía y la otra está excluida", () => {
+    const list: TradeList = {
+      needed: [],
+      duplicates: [
+        { code: "ARG-6", number: 6, section: "Argentina", team: "ARG", count: 2 }
+      ]
+    };
+    const text = formatTradeListByTeam(list, {
+      username: "oscar",
+      include: { needed: true, duplicates: false }
+    });
+    expect(text).toBe("");
   });
 
   it("retorna string vacío cuando include excluye todo pero la lista no está vacía", () => {

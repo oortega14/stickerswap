@@ -39,15 +39,15 @@ export function formatTradeListByTeam(
   }
   const includeNeeded = opts.include?.needed ?? true;
   const includeDuplicates = opts.include?.duplicates ?? true;
-  if (!includeNeeded && !includeDuplicates) return "";
+
+  const renderedNeeded = includeNeeded && list.needed.length > 0;
+  const renderedDuplicates = includeDuplicates && list.duplicates.length > 0;
+  if (!renderedNeeded && !renderedDuplicates) return "";
 
   const header = opts.username
     ? `stickerSwap · Mundial 2026 — @${opts.username}`
     : "stickerSwap · Mundial 2026";
   const lines: string[] = [header, ""];
-
-  const renderedNeeded = includeNeeded && list.needed.length > 0;
-  const renderedDuplicates = includeDuplicates && list.duplicates.length > 0;
 
   if (renderedNeeded) {
     lines.push("Me faltan*");
