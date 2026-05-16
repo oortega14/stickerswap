@@ -29,22 +29,32 @@ const NON_TEAM_SECTION_ORDER = ["Intro", "Extras", "Coca-Cola"] as const;
 
 export function formatTradeListByTeam(
   list: TradeList,
-  opts: { username: string | null }
+  opts: {
+    username: string | null;
+    include?: { needed?: boolean; duplicates?: boolean };
+  }
 ): string {
   if (list.needed.length === 0 && list.duplicates.length === 0) {
     return "Tu álbum está completo 🎉";
   }
+  const includeNeeded = opts.include?.needed ?? true;
+  const includeDuplicates = opts.include?.duplicates ?? true;
+  if (!includeNeeded && !includeDuplicates) return "";
+
   const header = opts.username
     ? `stickerSwap · Mundial 2026 — @${opts.username}`
     : "stickerSwap · Mundial 2026";
   const lines: string[] = [header, ""];
 
-  if (list.needed.length > 0) {
+  const renderedNeeded = includeNeeded && list.needed.length > 0;
+  const renderedDuplicates = includeDuplicates && list.duplicates.length > 0;
+
+  if (renderedNeeded) {
     lines.push("Me faltan*");
     lines.push(...renderBlock(list.needed, "needed"));
   }
-  if (list.duplicates.length > 0) {
-    if (list.needed.length > 0) lines.push("");
+  if (renderedDuplicates) {
+    if (renderedNeeded) lines.push("");
     lines.push("Tengo repes*");
     lines.push(...renderBlock(list.duplicates, "duplicates"));
   }
@@ -88,7 +98,7 @@ function renderBlock(entries: TradeListEntry[], mode: "needed" | "duplicates"): 
 }
 
 function formatItem(e: TradeListEntry, mode: "needed" | "duplicates"): string {
-  if (mode === "needed") return String(e.number);
+  if (mode === "needed") return e.code;
   const extras = e.count - 1;
-  return `${e.number} ×${extras}`;
+  return `${e.code} ×${extras}`;
 }

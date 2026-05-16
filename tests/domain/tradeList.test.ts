@@ -48,6 +48,14 @@ describe("formatTradeListByTeam", () => {
     expect(text).toBe("Tu álbum está completo 🎉");
   });
 
+  it("devuelve mensaje de álbum completo aunque include esté en false", () => {
+    const text = formatTradeListByTeam(
+      { needed: [], duplicates: [] },
+      { username: "oscar", include: { needed: false, duplicates: false } }
+    );
+    expect(text).toBe("Tu álbum está completo 🎉");
+  });
+
   const sample: TradeList = {
     needed: [
       { code: "KOR-5", number: 5, section: "Corea del Sur", team: "KOR", count: 0 },
@@ -68,30 +76,30 @@ describe("formatTradeListByTeam", () => {
     expect(text.startsWith("stickerSwap · Mundial 2026 — @oscar\n")).toBe(true);
   });
 
-  it("formatea faltantes agrupados por equipo en orden alfabético + sections sin equipo", () => {
+  it("formatea faltantes con código por equipo en orden alfabético + sections sin equipo", () => {
     const text = formatTradeListByTeam(sample, { username: "oscar" });
     const expected = [
       "stickerSwap · Mundial 2026 — @oscar",
       "",
       "Me faltan*",
-      "CZE 🇨🇿: 8",
-      "FRA 🇫🇷: 3, 8, 12",
-      "KOR 🇰🇷: 5, 11",
-      "Intro: 2, 5",
-      "Coca-Cola: 4"
+      "CZE 🇨🇿: CZE-8",
+      "FRA 🇫🇷: FRA-3, FRA-8, FRA-12",
+      "KOR 🇰🇷: KOR-5, KOR-11",
+      "Intro: INTRO-2, INTRO-5",
+      "Coca-Cola: CC-4"
     ].join("\n");
     expect(text).toBe(expected);
   });
 
-  it("incluye bloque de repes con ×N siempre (incluso ×1)", () => {
+  it("incluye bloque de repes con código + ×N (incluso ×1)", () => {
     const list: TradeList = {
       needed: [
         { code: "KOR-5", number: 5, section: "Corea del Sur", team: "KOR", count: 0 }
       ],
       duplicates: [
-        { code: "ARG-6", number: 6, section: "Argentina", team: "ARG", count: 3 }, // ×2
-        { code: "ESP-9", number: 9, section: "España", team: "ESP", count: 2 },    // ×1 → siempre muestra ×1
-        { code: "ESP-14", number: 14, section: "España", team: "ESP", count: 4 }   // ×3
+        { code: "ARG-6", number: 6, section: "Argentina", team: "ARG", count: 3 },
+        { code: "ESP-9", number: 9, section: "España", team: "ESP", count: 2 },
+        { code: "ESP-14", number: 14, section: "España", team: "ESP", count: 4 }
       ]
     };
     const text = formatTradeListByTeam(list, { username: "oscar" });
@@ -99,11 +107,11 @@ describe("formatTradeListByTeam", () => {
       "stickerSwap · Mundial 2026 — @oscar",
       "",
       "Me faltan*",
-      "KOR 🇰🇷: 5",
+      "KOR 🇰🇷: KOR-5",
       "",
       "Tengo repes*",
-      "ARG 🇦🇷: 6 ×2",
-      "ESP 🇪🇸: 9 ×1, 14 ×3"
+      "ARG 🇦🇷: ARG-6 ×2",
+      "ESP 🇪🇸: ESP-9 ×1, ESP-14 ×3"
     ].join("\n");
     expect(text).toBe(expected);
   });
@@ -117,5 +125,59 @@ describe("formatTradeListByTeam", () => {
     expect(text.startsWith("stickerSwap · Mundial 2026\n")).toBe(true);
     expect(text).not.toContain("—");
     expect(text).not.toContain("@");
+  });
+
+  it("omite bloque 'Me faltan' cuando include.needed === false", () => {
+    const list: TradeList = {
+      needed: [
+        { code: "KOR-5", number: 5, section: "Corea del Sur", team: "KOR", count: 0 }
+      ],
+      duplicates: [
+        { code: "ARG-6", number: 6, section: "Argentina", team: "ARG", count: 2 }
+      ]
+    };
+    const text = formatTradeListByTeam(list, {
+      username: "oscar",
+      include: { needed: false, duplicates: true }
+    });
+    expect(text).not.toContain("Me faltan*");
+    expect(text).not.toContain("KOR");
+    expect(text).toContain("Tengo repes*");
+    expect(text).toContain("ARG 🇦🇷: ARG-6 ×1");
+  });
+
+  it("omite bloque 'Tengo repes' cuando include.duplicates === false", () => {
+    const list: TradeList = {
+      needed: [
+        { code: "KOR-5", number: 5, section: "Corea del Sur", team: "KOR", count: 0 }
+      ],
+      duplicates: [
+        { code: "ARG-6", number: 6, section: "Argentina", team: "ARG", count: 2 }
+      ]
+    };
+    const text = formatTradeListByTeam(list, {
+      username: "oscar",
+      include: { needed: true, duplicates: false }
+    });
+    expect(text).toContain("Me faltan*");
+    expect(text).toContain("KOR 🇰🇷: KOR-5");
+    expect(text).not.toContain("Tengo repes*");
+    expect(text).not.toContain("ARG");
+  });
+
+  it("retorna string vacío cuando include excluye todo pero la lista no está vacía", () => {
+    const list: TradeList = {
+      needed: [
+        { code: "KOR-5", number: 5, section: "Corea del Sur", team: "KOR", count: 0 }
+      ],
+      duplicates: [
+        { code: "ARG-6", number: 6, section: "Argentina", team: "ARG", count: 2 }
+      ]
+    };
+    const text = formatTradeListByTeam(list, {
+      username: "oscar",
+      include: { needed: false, duplicates: false }
+    });
+    expect(text).toBe("");
   });
 });
