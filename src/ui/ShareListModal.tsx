@@ -35,7 +35,6 @@ export function ShareListModal({ visible, onClose, list, username }: Props) {
   const isComplete = list != null && list.needed.length === 0 && list.duplicates.length === 0;
   const hasNeeded = (list?.needed.length ?? 0) > 0;
   const hasDuplicates = (list?.duplicates.length ?? 0) > 0;
-  const bothOff = !showNeeded && !showDuplicates;
   const showToggles = !isComplete && (hasNeeded || hasDuplicates);
 
   const text = useMemo(() => {
@@ -67,7 +66,8 @@ export function ShareListModal({ visible, onClose, list, username }: Props) {
     else setShowDuplicates((v) => !v);
   };
 
-  const buttonsDisabled = bothOff || text.length === 0;
+  const buttonsDisabled = text.length === 0;
+  const showHint = !isComplete && list != null && text.length === 0;
 
   return (
     <Modal
@@ -143,7 +143,7 @@ export function ShareListModal({ visible, onClose, list, username }: Props) {
             >
               Tu álbum está completo 🎉
             </Text>
-          ) : bothOff ? (
+          ) : showHint ? (
             <Text
               style={{
                 color: theme.textMute,

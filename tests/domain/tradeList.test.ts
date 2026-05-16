@@ -178,6 +178,19 @@ describe("formatTradeListByTeam", () => {
     expect(text).toBe("");
   });
 
+  it("preserva orden por number ascendente dentro de un equipo aunque la entrada esté desordenada", () => {
+    const list: TradeList = {
+      needed: [
+        { code: "FRA-12", number: 12, section: "Francia", team: "FRA", count: 0 },
+        { code: "FRA-3", number: 3, section: "Francia", team: "FRA", count: 0 },
+        { code: "FRA-8", number: 8, section: "Francia", team: "FRA", count: 0 }
+      ],
+      duplicates: []
+    };
+    const text = formatTradeListByTeam(list, { username: "oscar" });
+    expect(text).toContain("FRA 🇫🇷: FRA-3, FRA-8, FRA-12");
+  });
+
   it("retorna string vacío cuando include excluye todo pero la lista no está vacía", () => {
     const list: TradeList = {
       needed: [
