@@ -1,19 +1,19 @@
 // Paleta legacy. Las claves se conservan para no romper consumidores
 // (`colors.dim`, `colors.purple`, etc.), pero los valores se remapearon
-// a la paleta cream/coffee del nuevo theme. Los nombres son misnombres
-// post-cream — la limpieza completa es trabajo de seguimiento.
+// a la paleta slate del theme actual. Los nombres son misnombres
+// post-coffee — la limpieza completa es trabajo de seguimiento.
 export const colors = {
   black: "#000000",
-  deep: "#fdf6e3",     // bg crema (era space deep)
-  dark: "#fffaf0",     // card off-white (era space dark)
-  mid: "#f5e8c8",      // tan suave (era space mid)
-  purple: "#6b4423",   // accent café oscuro (era purple)
-  violet: "#8b6f47",   // café medio (era violet)
-  blue: "#dc2626",     // rojo progress (era blue) — usado en algunos hilos visuales
-  sky: "#16a34a",      // verde progress (era sky)
-  ink: "#3a2e1a",      // texto principal (era ink)
-  mute: "#8b6f47",     // texto mute = café medio (era mute)
-  dim: "#a89472"       // texto dim = sand (era dim)
+  deep: "#f1f5f9",     // slate-100 (bg light)
+  dark: "#ffffff",     // white (card light)
+  mid: "#e2e8f0",      // slate-200
+  purple: "#334155",   // slate-700 (accent)
+  violet: "#64748b",   // slate-500 (medio)
+  blue: "#dc2626",     // rojo progress (sin cambios)
+  sky: "#16a34a",      // verde progress (sin cambios)
+  ink: "#0f172a",      // slate-900 (texto)
+  mute: "#64748b",     // slate-500 (texto mute)
+  dim: "#94a3b8"       // slate-400 (texto dim)
 } as const;
 
 export type ColorKey = keyof typeof colors;
