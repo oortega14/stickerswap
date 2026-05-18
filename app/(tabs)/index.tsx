@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import { View, Text, Pressable } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import { FlashList, type FlashListRef } from "@shopify/flash-list";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { Skeleton } from "@/ui/Skeleton";
@@ -19,6 +20,7 @@ import type { StickerWithStatus } from "@/domain/types";
 
 export default function Home() {
   const insets = useSafeAreaInsets();
+  const tabBarHeight = useBottomTabBarHeight();
   const { theme, mode, setMode } = useTheme();
   const dashboard = useDashboardStats();
   const album = useAlbumStickers();
@@ -28,8 +30,10 @@ export default function Home() {
   const expanded = useExpandedSections((s) => s.expanded);
   const toggleSection = useExpandedSections((s) => s.toggle);
 
+  // Suscribirse al state `filters` (no a `getFilter`, que es referencia
+  // estable y no dispara re-render al cambiar).
+  const filters = useFilterMode((s) => s.filters);
   const setFilter = useFilterMode((s) => s.setFilter);
-  const getFilter = useFilterMode((s) => s.getFilter);
 
   // Deep link: /?expand=ARG
   const params = useLocalSearchParams<{ expand?: string }>();
@@ -99,7 +103,13 @@ export default function Home() {
   if (album.isLoading || sections.length === 0) {
     return (
       <ThemedBackground>
-        <View style={{ paddingTop: insets.top + 12, paddingHorizontal: 16 }}>
+        <View
+          style={{
+            paddingTop: insets.top + 12,
+            paddingHorizontal: 16,
+            paddingBottom: tabBarHeight + 12
+          }}
+        >
           {renderHeader()}
           {Array.from({ length: 5 }).map((_, i) => (
             <Skeleton key={i} style={{ height: 60, marginBottom: 8 }} />
@@ -120,7 +130,7 @@ export default function Home() {
           <SectionCollapsible
             section={item}
             expanded={expanded.has(item.id)}
-            filterMode={getFilter(item.id)}
+            filterMode={filters[item.id] ?? "all"}
             viewMode={viewMode}
             onToggle={() => toggleSection(item.id)}
             onChangeFilter={(m) => setFilter(item.id, m)}
@@ -129,7 +139,7 @@ export default function Home() {
         contentContainerStyle={{
           paddingTop: insets.top + 12,
           paddingHorizontal: 16,
-          paddingBottom: 32
+          paddingBottom: tabBarHeight + 24
         }}
       />
     </ThemedBackground>
