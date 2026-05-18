@@ -1,5 +1,10 @@
 import React, { useMemo } from "react";
 import { View, Pressable, Text } from "react-native";
+import Animated, {
+  FadeIn,
+  FadeOut,
+  LinearTransition
+} from "react-native-reanimated";
 import { useTheme } from "@/theme/ThemeProvider";
 import { ProgressBar } from "@/ui/ProgressBar";
 import { FlagSvg } from "@/ui/flags/FlagSvg";
@@ -44,7 +49,10 @@ export function SectionCollapsible({
   const collected = counts.all - counts.missing;
 
   return (
-    <View style={{ marginBottom: 8 }}>
+    <Animated.View
+      style={{ marginBottom: 8 }}
+      layout={LinearTransition.duration(220)}
+    >
       <Pressable
         onPress={() => {
           haptics.light();
@@ -94,7 +102,9 @@ export function SectionCollapsible({
       </Pressable>
 
       {expanded && (
-        <View
+        <Animated.View
+          entering={FadeIn.duration(180)}
+          exiting={FadeOut.duration(140)}
           style={{
             backgroundColor: theme.card,
             borderWidth: 1,
@@ -102,7 +112,8 @@ export function SectionCollapsible({
             borderColor: theme.border,
             borderBottomLeftRadius: 10,
             borderBottomRightRadius: 10,
-            padding: 10
+            padding: 10,
+            overflow: "hidden"
           }}
         >
           <FilterChips counts={counts} active={filterMode} onChange={onChangeFilter} />
@@ -123,7 +134,7 @@ export function SectionCollapsible({
                 : "No hay cromos para mostrar."}
             </Text>
           ) : (
-            <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -3 }}>
+            <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -5 }}>
               {filtered.map((s) =>
                 viewMode === "compact" ? (
                   <StickerBolita key={s.code} sticker={s} teamCode={section.teamCode} />
@@ -133,8 +144,8 @@ export function SectionCollapsible({
               )}
             </View>
           )}
-        </View>
+        </Animated.View>
       )}
-    </View>
+    </Animated.View>
   );
 }
