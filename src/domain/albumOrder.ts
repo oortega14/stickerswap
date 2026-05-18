@@ -43,19 +43,3 @@ export function buildAlbumOrder<S extends Sticker>(stickers: S[]): AlbumSection<
   sections.sort((a, b) => a.minNumber - b.minNumber);
   return sections;
 }
-
-/**
- * Busca la sección cuyo `id` (team code) o `name` (sección en español)
- * matchea el identificador. Permite que las URLs `/album/MEX` y
- * `/album/México` apunten al mismo lugar.
- */
-export function findSectionIndex<S extends Sticker>(
-  order: AlbumSection<S>[],
-  identifier: string
-): number {
-  if (!identifier) return -1;
-  const idx = order.findIndex(
-    (s) => s.id === identifier || s.name === identifier
-  );
-  return idx;
-}

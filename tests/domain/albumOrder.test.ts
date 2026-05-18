@@ -1,4 +1,4 @@
-import { buildAlbumOrder, findSectionIndex } from "@/domain/albumOrder";
+import { buildAlbumOrder } from "@/domain/albumOrder";
 import type { Sticker } from "@/domain/types";
 
 const sticker = (
@@ -64,28 +64,5 @@ describe("buildAlbumOrder", () => {
     ];
     const order = buildAlbumOrder(stickers);
     expect(order[0].stickers.map((s) => s.code)).toEqual(["MEX-1", "MEX-2", "MEX-3"]);
-  });
-});
-
-describe("findSectionIndex", () => {
-  const stickers: Sticker[] = [
-    sticker("FWC-1", 1, "Intro", null),
-    sticker("MEX-1", 10, "México", "MEX"),
-    sticker("EX-1", 970, "Extras", null)
-  ];
-  const order = buildAlbumOrder(stickers);
-
-  it("acepta team code FIFA", () => {
-    expect(findSectionIndex(order, "MEX")).toBe(1);
-  });
-  it("acepta nombre de sección en español", () => {
-    expect(findSectionIndex(order, "México")).toBe(1);
-  });
-  it("acepta nombre de sección para especiales", () => {
-    expect(findSectionIndex(order, "Intro")).toBe(0);
-    expect(findSectionIndex(order, "Extras")).toBe(2);
-  });
-  it("devuelve -1 cuando no encuentra", () => {
-    expect(findSectionIndex(order, "Coca-Cola")).toBe(-1);
   });
 });
