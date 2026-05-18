@@ -42,7 +42,7 @@ export function StickerFullCard({ sticker, teamCode }: Props) {
           delayLongPress={350}
           accessibilityRole="button"
           accessibilityLabel={`${sticker.name}, ${
-            isMissing ? "falta" : hasDups ? `repetida ${sticker.count}` : "pegada"
+            isMissing ? "falta" : hasDups ? `tengo ${sticker.count - 1} repetidas` : "pegada"
           }`}
           accessibilityHint="Toca para sumar, manten para restar"
           style={{
@@ -108,19 +108,19 @@ export function StickerFullCard({ sticker, teamCode }: Props) {
           <View
             style={{
               position: "absolute",
-              top: -4,
-              right: -4,
+              top: -5,
+              right: -5,
               backgroundColor: "#ea580c",
               borderRadius: 999,
-              paddingHorizontal: 5,
-              paddingVertical: 1,
+              paddingHorizontal: 7,
+              paddingVertical: 2,
               borderWidth: 2,
               borderColor: "#fff",
               zIndex: 2
             }}
           >
-            <Text style={{ color: "#fff", fontSize: 9, fontWeight: "800" }}>
-              ×{sticker.count}
+            <Text style={{ color: "#fff", fontSize: 11, fontWeight: "800" }}>
+              ×{sticker.count - 1}
             </Text>
           </View>
         )}
