@@ -31,7 +31,7 @@ export interface DashboardStats {
   } | null;
 }
 
-interface StickerWithUpdatedAt extends StickerWithStatus {
+export interface StickerWithUpdatedAt extends StickerWithStatus {
   updatedAt?: number;
 }
 

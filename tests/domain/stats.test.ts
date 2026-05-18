@@ -1,7 +1,8 @@
 import { computeStats } from "@/domain/stats";
+import type { StickerWithUpdatedAt } from "@/domain/stats";
 import type { StickerWithStatus, Friend, FriendMatchSummary } from "@/domain/types";
 
-const baseSticker = (overrides: Partial<StickerWithStatus>): StickerWithStatus => ({
+const baseSticker = (overrides: Partial<StickerWithUpdatedAt>): StickerWithUpdatedAt => ({
   code: "X-1",
   number: 1,
   name: "Player",
@@ -126,9 +127,9 @@ describe("computeStats", () => {
 
   it("lastAdded devuelve el sticker con max updatedAt y count>=1", () => {
     const stickers = [
-      baseSticker({ code: "A-1", name: "Messi",  count: 1, updatedAt: 100 } as any),
-      baseSticker({ code: "A-2", name: "Lautaro", count: 1, updatedAt: 200 } as any),
-      baseSticker({ code: "A-3", name: "DiMaria", count: 0, updatedAt: 300 } as any) // ignorado (count 0)
+      baseSticker({ code: "A-1", name: "Messi",   count: 1, updatedAt: 100 }),
+      baseSticker({ code: "A-2", name: "Lautaro", count: 1, updatedAt: 200 }),
+      baseSticker({ code: "A-3", name: "DiMaria", count: 0, updatedAt: 300 }) // ignorado (count 0)
     ];
     const s = computeStats(stickers, [], []);
     expect(s.lastAdded).toEqual({
