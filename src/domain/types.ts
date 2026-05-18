@@ -7,6 +7,7 @@ export interface Sticker {
   team: string | null;
   section: string;
   type: StickerType;
+  imageUrl?: string | null;   // foto del jugador/escudo; null si todavía no la tenemos
 }
 
 export interface StickerStatus {

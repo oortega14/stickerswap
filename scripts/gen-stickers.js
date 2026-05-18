@@ -1115,7 +1115,8 @@ for (const item of INTRO) {
     team: null,
     section: "Intro",
     type: "icon",
-    group: null
+    group: null,
+    imageUrl: null
   });
   n++;
 }
@@ -1130,7 +1131,8 @@ function emitSimpleSection(items, section, type) {
       team: null,
       section,
       type,
-      group: null
+      group: null,
+      imageUrl: null
     });
   }
 }
@@ -1152,7 +1154,8 @@ for (const [groupLetter, teams] of GROUPS) {
       team: team.code,
       section: team.section,
       type: "team_badge",
-      group: groupLetter
+      group: groupLetter,
+      imageUrl: null
     });
 
     // N2..N12 → 11 jugadores
@@ -1164,7 +1167,8 @@ for (const [groupLetter, teams] of GROUPS) {
         team: team.code,
         section: team.section,
         type: "player",
-        group: groupLetter
+        group: groupLetter,
+        imageUrl: null
       });
     }
 
@@ -1176,7 +1180,8 @@ for (const [groupLetter, teams] of GROUPS) {
       team: team.code,
       section: team.section,
       type: "team_photo",
-      group: groupLetter
+      group: groupLetter,
+      imageUrl: null
     });
 
     // N14..N20 → 7 jugadores más
@@ -1188,7 +1193,8 @@ for (const [groupLetter, teams] of GROUPS) {
         team: team.code,
         section: team.section,
         type: "player",
-        group: groupLetter
+        group: groupLetter,
+        imageUrl: null
       });
     }
   }
@@ -1199,7 +1205,7 @@ emitSimpleSection(EXTRAS, "Extras", "special");
 emitSimpleSection(COCA_COLA, "Coca-Cola", "special");
 
 const dataset = {
-  version: 6,
+  version: 7,
   album: "FIFA World Cup 2026",
   stickers
 };
