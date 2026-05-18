@@ -2,6 +2,9 @@ import React from "react";
 import { View, Text } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { FLAG_MAP } from "./flagMap";
+import { IntroBadge } from "./specialBadges/IntroBadge";
+import { ExtrasBadge } from "./specialBadges/ExtrasBadge";
+import { CokeBadge } from "./specialBadges/CokeBadge";
 
 interface Props {
   code: string | null;          // FIFA code, o null para especiales
@@ -20,7 +23,10 @@ export function FlagSvg({ code, section, size }: Props) {
       />
     );
   }
-  // Fallback visual mientras el badge especial todavia no esta listo
+  if (section === "Intro")     return <IntroBadge size={size} />;
+  if (section === "Extras")    return <ExtrasBadge size={size} />;
+  if (section === "Coca-Cola") return <CokeBadge size={size} />;
+
   return (
     <View
       style={{
