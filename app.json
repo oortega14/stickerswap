@@ -2,7 +2,7 @@
   "expo": {
     "name": "StickerSwap",
     "slug": "stickerswap",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "scheme": "stickerswap",
@@ -30,7 +30,7 @@
         "backgroundColor": "#1a1410"
       },
       "package": "app.stickerswap",
-      "versionCode": 7,
+      "versionCode": 8,
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO"
