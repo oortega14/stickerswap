@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "album": "FIFA World Cup 2026",
+  "version": 8,
+  "album": "Mundial 2026",
   "stickers": [
     {
       "code": "0-0",
@@ -15,7 +15,7 @@
     {
       "code": "FWC-1",
       "number": 2,
-      "name": "Trofeo FIFA Primera Parte",
+      "name": "Trofeo Primera Parte",
       "team": null,
       "section": "Intro",
       "type": "icon",
@@ -25,7 +25,7 @@
     {
       "code": "FWC-2",
       "number": 3,
-      "name": "Trofeo FIFA Segunda Parte",
+      "name": "Trofeo Segunda Parte",
       "team": null,
       "section": "Intro",
       "type": "icon",
@@ -35,7 +35,7 @@
     {
       "code": "FWC-3",
       "number": 4,
-      "name": "Mascotas World Cup 2026",
+      "name": "Mascotas Mundial 2026",
       "team": null,
       "section": "Intro",
       "type": "icon",
@@ -45,7 +45,7 @@
     {
       "code": "FWC-4",
       "number": 5,
-      "name": "We Are Fifa World Cup 2026",
+      "name": "We Are Mundial 2026",
       "team": null,
       "section": "Intro",
       "type": "icon",

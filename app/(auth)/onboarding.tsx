@@ -88,7 +88,7 @@ export default function Onboarding() {
           <TextInput
             value={value}
             onChangeText={(s) => setValue(s.toLowerCase())}
-            placeholder="oscar_panini"
+            placeholder="oscar_demo"
             placeholderTextColor={theme.textMute}
             autoCapitalize="none"
             autoCorrect={false}

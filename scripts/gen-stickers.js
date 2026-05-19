@@ -1062,10 +1062,10 @@ const KNOWN_PLAYERS = {
 
 const INTRO = [
   { code: "0-0",   name: "Chilena Iconica" },
-  { code: "FWC-1", name: "Trofeo FIFA Primera Parte" },
-  { code: "FWC-2", name: "Trofeo FIFA Segunda Parte" },
-  { code: "FWC-3", name: "Mascotas World Cup 2026" },
-  { code: "FWC-4", name: "We Are Fifa World Cup 2026" },
+  { code: "FWC-1", name: "Trofeo Primera Parte" },
+  { code: "FWC-2", name: "Trofeo Segunda Parte" },
+  { code: "FWC-3", name: "Mascotas Mundial 2026" },
+  { code: "FWC-4", name: "We Are Mundial 2026" },
   { code: "FWC-5", name: "Pelota Oficial" },
   { code: "FWC-6", name: "Emblema Oficial - Canada" },
   { code: "FWC-7", name: "Emblema Oficial - Mexico" },
@@ -1205,8 +1205,8 @@ emitSimpleSection(EXTRAS, "Extras", "special");
 emitSimpleSection(COCA_COLA, "Coca-Cola", "special");
 
 const dataset = {
-  version: 7,
-  album: "FIFA World Cup 2026",
+  version: 8,
+  album: "Mundial 2026",
   stickers
 };
 

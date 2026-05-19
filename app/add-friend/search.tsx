@@ -55,7 +55,7 @@ export default function SearchFriend() {
           <TextInput
             value={q}
             onChangeText={setQ}
-            placeholder="oscar_panini"
+            placeholder="oscar_demo"
             placeholderTextColor={theme.textMute}
             autoCapitalize="none"
             autoCorrect={false}

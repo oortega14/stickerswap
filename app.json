@@ -32,8 +32,7 @@
       "package": "app.stickerswap",
       "versionCode": 8,
       "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO"
+        "android.permission.CAMERA"
       ]
     },
     "web": {
@@ -48,7 +47,9 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "Necesitamos la cámara para escanear códigos de amigos."
+          "cameraPermission": "Necesitamos la cámara para escanear códigos de amigos.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
         }
       ],
       "expo-web-browser"
