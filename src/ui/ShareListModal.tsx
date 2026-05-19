@@ -54,9 +54,12 @@ export function ShareListModal({ visible, onClose, list, username }: Props) {
   const handleShare = async () => {
     await haptics.light();
     try {
-      await Share.share({ message: text });
-    } catch {
-      // usuario canceló el share sheet — no es error
+      const result = await Share.share({ message: text });
+      // eslint-disable-next-line no-console
+      console.log("[share-list] result:", JSON.stringify(result));
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.warn("[share-list] error:", e);
     }
   };
 

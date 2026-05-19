@@ -25,8 +25,6 @@ export function buildTradeList(stickers: Sticker[], statuses: StickerStatus[]): 
 }
 
 
-const NON_TEAM_SECTION_ORDER = ["Intro", "Extras", "Coca-Cola"] as const;
-
 export function formatTradeListByTeam(
   list: TradeList,
   opts: {
@@ -51,54 +49,60 @@ export function formatTradeListByTeam(
 
   if (renderedNeeded) {
     lines.push("Me faltan*");
-    lines.push(...renderBlock(list.needed, "needed"));
+    lines.push(...renderBlock(list.needed));
   }
   if (renderedDuplicates) {
     if (renderedNeeded) lines.push("");
     lines.push("Tengo repes*");
-    lines.push(...renderBlock(list.duplicates, "duplicates"));
+    lines.push(...renderBlock(list.duplicates));
   }
   return lines.join("\n").trim();
 }
 
-function renderBlock(entries: TradeListEntry[], mode: "needed" | "duplicates"): string[] {
-  const withTeam = entries.filter((e) => e.team != null);
-  const withoutTeam = entries.filter((e) => e.team == null);
-
-  const teamGroups = new Map<string, TradeListEntry[]>();
-  for (const e of withTeam) {
-    const key = e.team as string;
-    if (!teamGroups.has(key)) teamGroups.set(key, []);
-    teamGroups.get(key)!.push(e);
+function renderBlock(entries: TradeListEntry[]): string[] {
+  // Agrupa por equipo (cuando hay team code) o por seccion (Intro/Extras/Coca-Cola).
+  // Orden de los grupos = orden de album (por el numero mas chico de cada grupo).
+  interface Group {
+    label: string;
+    teamCode: string | null;
+    items: TradeListEntry[];
+    minNumber: number;
   }
-  const teamCodes = Array.from(teamGroups.keys()).sort();
 
-  const sectionGroups = new Map<string, TradeListEntry[]>();
-  for (const e of withoutTeam) {
-    if (!sectionGroups.has(e.section)) sectionGroups.set(e.section, []);
-    sectionGroups.get(e.section)!.push(e);
+  const groups = new Map<string, Group>();
+  for (const e of entries) {
+    const isTeam = e.team != null;
+    const key = isTeam ? `team:${e.team}` : `section:${e.section}`;
+    let g = groups.get(key);
+    if (!g) {
+      g = {
+        label: isTeam ? (e.team as string) : e.section,
+        teamCode: isTeam ? (e.team as string) : null,
+        items: [],
+        minNumber: e.number
+      };
+      groups.set(key, g);
+    }
+    g.items.push(e);
+    if (e.number < g.minNumber) g.minNumber = e.number;
   }
+
+  const sortedGroups = Array.from(groups.values()).sort(
+    (a, b) => a.minNumber - b.minNumber
+  );
 
   const out: string[] = [];
-  for (const code of teamCodes) {
-    const items = teamGroups.get(code)!.slice().sort((a, b) => a.number - b.number);
-    const right = items.map((e) => formatItem(e, mode)).join(", ");
-    const flag = flagFor(code);
-    const prefix = flag ? `${code} ${flag}` : code;
-    out.push(`${prefix}: ${right}`);
-  }
-  for (const section of NON_TEAM_SECTION_ORDER) {
-    const items = sectionGroups.get(section);
-    if (!items || items.length === 0) continue;
-    const sorted = items.slice().sort((a, b) => a.number - b.number);
-    const right = sorted.map((e) => formatItem(e, mode)).join(", ");
-    out.push(`${section}: ${right}`);
+  for (const g of sortedGroups) {
+    const items = g.items.slice().sort((a, b) => a.number - b.number);
+    const right = items.map((e) => e.code).join(", ");
+    if (g.teamCode) {
+      const flag = flagFor(g.teamCode);
+      const prefix = flag ? `${g.teamCode} ${flag}` : g.teamCode;
+      out.push(`${prefix}: ${right}`);
+    } else {
+      out.push(`${g.label}: ${right}`);
+    }
   }
   return out;
 }
 
-function formatItem(e: TradeListEntry, mode: "needed" | "duplicates"): string {
-  if (mode === "needed") return e.code;
-  const extras = e.count - 1;
-  return `${e.code} ×${extras}`;
-}
