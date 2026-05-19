@@ -1,17 +1,30 @@
-import { useState } from "react";
-import { View, Text, Pressable, Alert, ActivityIndicator, Linking } from "react-native";
+import { useEffect, useState } from "react";
+import { View, Text, Pressable, Alert, ActivityIndicator, Linking, Platform } from "react-native";
+import * as AppleAuthentication from "expo-apple-authentication";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { AuthToggleBar } from "@/ui/AuthToggleBar";
 import { signInWithGoogle, isCancelError } from "@/auth/google";
+import { signInWithApple, isAppleAvailable, isAppleCancelError } from "@/auth/apple";
 import { useT } from "@/i18n/I18nProvider";
 import { useTheme } from "@/theme/ThemeProvider";
 import { PRIVACY_URL, TERMS_URL } from "@/lib/links";
 
 export default function SignIn() {
   const t = useT();
-  const { theme } = useTheme();
+  const { theme, mode } = useTheme();
   const [busy, setBusy] = useState(false);
+  const [appleAvailable, setAppleAvailable] = useState(false);
+
+  useEffect(() => {
+    let mounted = true;
+    isAppleAvailable().then((v) => {
+      if (mounted) setAppleAvailable(v);
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   const onGoogle = async () => {
     setBusy(true);
@@ -19,6 +32,19 @@ export default function SignIn() {
       await signInWithGoogle();
     } catch (e) {
       if (!isCancelError(e)) {
+        Alert.alert("Sign-in", String((e as Error).message ?? e));
+      }
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const onApple = async () => {
+    setBusy(true);
+    try {
+      await signInWithApple();
+    } catch (e) {
+      if (!isAppleCancelError(e)) {
         Alert.alert("Sign-in", String((e as Error).message ?? e));
       }
     } finally {
@@ -39,6 +65,24 @@ export default function SignIn() {
         <Text style={{ color: theme.textMute, textAlign: "center", marginBottom: 40 }}>
           {t("signIn_subtitle")}
         </Text>
+
+        {Platform.OS === "ios" && appleAvailable && (
+          <View className="w-full mb-3" style={{ opacity: busy ? 0.5 : 1 }}>
+            <AppleAuthentication.AppleAuthenticationButton
+              buttonType={AppleAuthentication.AppleAuthenticationButtonType.CONTINUE}
+              buttonStyle={
+                mode === "dark"
+                  ? AppleAuthentication.AppleAuthenticationButtonStyle.WHITE
+                  : AppleAuthentication.AppleAuthenticationButtonStyle.BLACK
+              }
+              cornerRadius={8}
+              style={{ width: "100%", height: 48 }}
+              onPress={() => {
+                if (!busy) void onApple();
+              }}
+            />
+          </View>
+        )}
 
         <GlowCard className="w-full mb-3">
           <Pressable
