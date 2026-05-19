@@ -8,6 +8,11 @@ export const es = {
   signIn_subtitle: "Tu álbum del Mundial 2026 en la nube.",
   signIn_googleCta: "Continuar con Google",
   signIn_terms: "Al continuar aceptas los términos y la política de privacidad.",
+  signIn_terms_prefix: "Al continuar aceptas los ",
+  signIn_terms_termsLabel: "términos",
+  signIn_terms_middle: " y la ",
+  signIn_terms_privacyLabel: "política de privacidad",
+  signIn_terms_suffix: ".",
 
   username_title: "Elige tu username",
   username_subtitle: "Así te encuentran tus amigos para intercambiar.",
@@ -55,6 +60,11 @@ export const en: Record<StringKey, string> = {
   signIn_subtitle: "Your World Cup 2026 album, in the cloud.",
   signIn_googleCta: "Continue with Google",
   signIn_terms: "By continuing you accept the terms and privacy policy.",
+  signIn_terms_prefix: "By continuing you accept the ",
+  signIn_terms_termsLabel: "terms",
+  signIn_terms_middle: " and ",
+  signIn_terms_privacyLabel: "privacy policy",
+  signIn_terms_suffix: ".",
 
   username_title: "Choose your username",
   username_subtitle: "So your friends can find you to trade.",

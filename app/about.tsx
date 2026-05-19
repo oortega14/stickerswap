@@ -4,9 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { APP_VERSION, BUILD_NUMBER } from "@/lib/version";
-
-const PRIVACY_URL = "https://example.com/stickerswap/privacy";
-const TERMS_URL = "https://example.com/stickerswap/terms";
+import { PRIVACY_URL, TERMS_URL } from "@/lib/links";
 
 export default function About() {
   const router = useRouter();

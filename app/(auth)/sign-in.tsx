@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { View, Text, Pressable, Alert, ActivityIndicator } from "react-native";
+import { View, Text, Pressable, Alert, ActivityIndicator, Linking } from "react-native";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { AuthToggleBar } from "@/ui/AuthToggleBar";
 import { signInWithGoogle, isCancelError } from "@/auth/google";
 import { useT } from "@/i18n/I18nProvider";
 import { useTheme } from "@/theme/ThemeProvider";
+import { PRIVACY_URL, TERMS_URL } from "@/lib/links";
 
 export default function SignIn() {
   const t = useT();
@@ -56,7 +57,23 @@ export default function SignIn() {
         </GlowCard>
 
         <Text style={{ color: theme.textMute, fontSize: 11, textAlign: "center", paddingHorizontal: 16 }}>
-          {t("signIn_terms")}
+          {t("signIn_terms_prefix")}
+          <Text
+            style={{ color: theme.accent, textDecorationLine: "underline" }}
+            onPress={() => Linking.openURL(TERMS_URL)}
+            accessibilityRole="link"
+          >
+            {t("signIn_terms_termsLabel")}
+          </Text>
+          {t("signIn_terms_middle")}
+          <Text
+            style={{ color: theme.accent, textDecorationLine: "underline" }}
+            onPress={() => Linking.openURL(PRIVACY_URL)}
+            accessibilityRole="link"
+          >
+            {t("signIn_terms_privacyLabel")}
+          </Text>
+          {t("signIn_terms_suffix")}
         </Text>
       </View>
     </ThemedBackground>
