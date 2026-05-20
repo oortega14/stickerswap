@@ -57,3 +57,6 @@ play-service-account.json
 # generated native folders
 /ios
 /android
+
+# source PDFs para extraccion de stickers (no se commitean al repo)
+/mundial2026
