@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { View, Pressable, Text } from "react-native";
 import { useTheme } from "@/theme/ThemeProvider";
 import { ProgressBar } from "@/ui/ProgressBar";
@@ -9,7 +9,7 @@ import { StickerBolita } from "./StickerBolita";
 import { StickerFullCard } from "./StickerFullCard";
 import { filterStickers, countByFilter, type FilterMode } from "@/domain/stickerFilter";
 import { haptics } from "@/lib/haptics";
-import { useBulkMarkTeam } from "@/hooks/useStickers";
+import { useBulkMarkTeam, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { getTeamColors } from "@/theme/teamColors";
 import type { StickerViewMode } from "@/store/stickerViewMode";
 import type { StickerWithStatus } from "@/domain/types";
@@ -32,8 +32,24 @@ export function SectionCollapsible({
   onToggle,
   onChangeFilter
 }: Props) {
-  const { theme } = useTheme();
+  const { theme, mode } = useTheme();
   const bulkMark = useBulkMarkTeam();
+  // Hoist mutations al parent: una sola pareja inc/dec por colapsible en
+  // lugar de 20 (una por bolita). Reduce drasticamente el costo de mount
+  // cuando se expande un equipo.
+  const inc = useIncrement();
+  const dec = useDecrement();
+  const handleIncrement = useCallback(
+    (code: string) => inc.mutate(code),
+    [inc]
+  );
+  const handleDecrement = useCallback(
+    (code: string) => dec.mutate(code),
+    [dec]
+  );
+  // Gris para bolitas faltantes. Constante por theme; pasado a bolitas para
+  // que el memo no falle por re-cálculo.
+  const missingBg = mode === "dark" ? "#475569" : "#cbd5e1";
 
   const teamColors = section.teamCode ? getTeamColors(section.teamCode) : null;
   const bandColor = teamColors?.bg ?? theme.accent;
@@ -185,9 +201,23 @@ export function SectionCollapsible({
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -5 }}>
               {filtered.map((s) =>
                 viewMode === "compact" ? (
-                  <StickerBolita key={s.code} sticker={s} teamCode={section.teamCode} />
+                  <StickerBolita
+                    key={s.code}
+                    sticker={s}
+                    teamCode={section.teamCode}
+                    missingBg={missingBg}
+                    onIncrement={handleIncrement}
+                    onDecrement={handleDecrement}
+                  />
                 ) : (
-                  <StickerFullCard key={s.code} sticker={s} teamCode={section.teamCode} />
+                  <StickerFullCard
+                    key={s.code}
+                    sticker={s}
+                    teamCode={section.teamCode}
+                    theme={theme}
+                    onIncrement={handleIncrement}
+                    onDecrement={handleDecrement}
+                  />
                 )
               )}
             </View>

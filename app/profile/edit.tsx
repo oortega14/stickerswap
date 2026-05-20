@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, ActivityIndicator, Alert, ScrollView, Switch } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -10,6 +10,7 @@ import { updateLocation } from "@/social/locationProfile";
 import { citySlug } from "@/lib/citySlug";
 import { useMyContacts, useUpdateMyContacts } from "@/hooks/useContacts";
 import { useTheme } from "@/theme/ThemeProvider";
+import type { Theme } from "@/theme/themes";
 
 const COUNTRIES = [
   { code: "AR", label: "Argentina" },
@@ -31,6 +32,47 @@ const COUNTRIES = [
   { code: "KR", label: "Corea del Sur" },
   { code: "OT", label: "Otro" }
 ];
+
+// Memoizado para que el grid (18 chips) NO se re-renderee en cada keystroke
+// de los TextInputs del form. Solo re-renderea cuando cambia el pais
+// seleccionado o el theme.
+const CountryGrid = memo(function CountryGrid({
+  selected,
+  onSelect,
+  theme
+}: {
+  selected: string | null;
+  onSelect: (code: string) => void;
+  theme: Theme;
+}) {
+  return (
+    <View className="flex-row flex-wrap" style={{ gap: 6 }}>
+      {COUNTRIES.map((c) => {
+        const isActive = selected === c.code;
+        return (
+          <Pressable
+            key={c.code}
+            onPress={() => onSelect(c.code)}
+            style={{
+              paddingHorizontal: 12,
+              paddingVertical: 6,
+              borderRadius: 999,
+              backgroundColor: isActive ? theme.accent : theme.card,
+              borderWidth: 1,
+              borderColor: theme.border
+            }}
+            accessibilityRole="button"
+            accessibilityState={{ selected: isActive }}
+          >
+            <Text style={{ color: isActive ? "#fff" : theme.text, fontSize: 13 }}>
+              {c.label}
+            </Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+});
 
 export default function EditProfile() {
   const router = useRouter();
@@ -122,28 +164,7 @@ export default function EditProfile() {
 
         <GlowCard className="mb-3">
           <Text className="text-space-mute text-xs mb-2">País</Text>
-          <View className="flex-row flex-wrap" style={{ gap: 6 }}>
-            {COUNTRIES.map((c) => (
-              <Pressable
-                key={c.code}
-                onPress={() => setCountry(c.code)}
-                style={{
-                  paddingHorizontal: 12,
-                  paddingVertical: 6,
-                  borderRadius: 999,
-                  backgroundColor: country === c.code ? theme.accent : theme.card,
-                  borderWidth: 1,
-                  borderColor: theme.border
-                }}
-                accessibilityRole="button"
-                accessibilityState={{ selected: country === c.code }}
-              >
-                <Text style={{ color: country === c.code ? "#fff" : theme.text, fontSize: 13 }}>
-                  {c.label}
-                </Text>
-              </Pressable>
-            ))}
-          </View>
+          <CountryGrid selected={country} onSelect={setCountry} theme={theme} />
         </GlowCard>
 
         <GlowCard className="mb-3">
