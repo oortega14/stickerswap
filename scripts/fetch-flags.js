@@ -38,8 +38,6 @@ const FIFA_TO_ISO = {
 
 const BASE_URL = "https://cdn.jsdelivr.net/gh/lipis/flag-icons@latest/flags/4x3";
 const OUT_DIR = path.join(__dirname, "..", "assets", "flags");
-const OUT_TS = path.join(__dirname, "..", "src", "ui", "flags", "flagMap.ts");
-
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
 function fetch(url) {
@@ -73,20 +71,6 @@ function fetch(url) {
     }
   }
 
-  const lines = [
-    "// Generado por scripts/fetch-flags.js. NO EDITAR A MANO.",
-    "// Banderas SVG de flagicons.lipis.dev (MIT License).",
-    "",
-    "export const FLAG_MAP: Record<string, string> = {"
-  ];
-  for (const [fifa, svg] of Object.entries(map)) {
-    const escaped = svg.replace(/`/g, "\\`").replace(/\$/g, "\\$");
-    lines.push(`  ${fifa}: \`${escaped}\`,`);
-  }
-  lines.push("};");
-  lines.push("");
-
-  fs.mkdirSync(path.dirname(OUT_TS), { recursive: true });
-  fs.writeFileSync(OUT_TS, lines.join("\n"));
-  console.log(`\nWrote ${Object.keys(map).length} flags to ${OUT_TS}`);
+  console.log(`\nDownloaded ${Object.keys(map).length} flag SVGs to ${OUT_DIR}`);
+  console.log("Run `node scripts/svg-to-png-flags.js` next to rasterize + regenerate flagMap.ts.");
 })();
