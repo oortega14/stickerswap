@@ -90,16 +90,16 @@ function findPdfInFolder(folder) {
   return path.join(folder, main || files[0]);
 }
 
-function extractEmbeddedJpgs(pdfPath, workDir) {
-  const prefix = path.join(workDir, "page");
-  execSync(`pdfimages -all "${pdfPath}" "${prefix}"`, { stdio: "pipe" });
-  const files = fs
+function renderPdfPages(pdfPath, workDir) {
+  // Renderizamos las paginas a PNG @ 300 DPI. Mas confiable que pdfimages
+  // porque algunos PDFs embeben cada sticker como JPG separado y otros como
+  // imagen plana de pagina entera. Renderizar funciona igual para los dos.
+  execSync(`pdftoppm -r 300 -png "${pdfPath}" "${path.join(workDir, "p")}"`, { stdio: "pipe" });
+  return fs
     .readdirSync(workDir)
-    .filter((f) => f.startsWith("page-"))
-    .map((f) => ({ name: f, path: path.join(workDir, f), size: fs.statSync(path.join(workDir, f)).size }))
-    .filter((f) => f.size > 100 * 1024)
-    .sort((a, b) => a.name.localeCompare(b.name));
-  return files;
+    .filter((f) => /^p-\d+\.png$/.test(f))
+    .sort()
+    .map((f) => path.join(workDir, f));
 }
 
 async function cropAndSave(imgPath, rows, startPos, teamCode, maxRows) {
@@ -142,16 +142,16 @@ async function processTeam(folderName, teamCode) {
     console.log(`  ⚠️  ${folderName}: no PDF`);
     return 0;
   }
-  const workDir = fs.mkdtempSync(path.join(os.tmpdir(), `pdfimg-${teamCode}-`));
+  const workDir = fs.mkdtempSync(path.join(os.tmpdir(), `render-${teamCode}-`));
   try {
-    const pages = extractEmbeddedJpgs(pdfPath, workDir);
+    const pages = renderPdfPages(pdfPath, workDir);
     if (pages.length === 0) {
-      console.log(`  ⚠️  ${folderName}: no se extrajeron imagenes del PDF`);
+      console.log(`  ⚠️  ${folderName}: no se renderizaron paginas`);
       return 0;
     }
-    let total = await cropAndSave(pages[0].path, ROWS_PAGE1, 1, teamCode, ROWS_PAGE1);
+    let total = await cropAndSave(pages[0], ROWS_PAGE1, 1, teamCode, ROWS_PAGE1);
     if (pages[1]) {
-      total += await cropAndSave(pages[1].path, ROWS_PAGE2, 17, teamCode, MAX_ROWS_PAGE2);
+      total += await cropAndSave(pages[1], ROWS_PAGE2, 17, teamCode, MAX_ROWS_PAGE2);
     }
     return total;
   } finally {
