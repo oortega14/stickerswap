@@ -1,10 +1,11 @@
-import React, { useCallback } from "react";
+import React, { memo, useCallback } from "react";
 import { View, Pressable, Text, Platform, type TextStyle } from "react-native";
+import { Image } from "expo-image";
+import { LinearGradient } from "expo-linear-gradient";
 import { FlagSvg } from "@/ui/flags/FlagSvg";
 import { haptics } from "@/lib/haptics";
-import { useIncrement, useDecrement } from "@/hooks/useStickers";
-import { useTheme } from "@/theme/ThemeProvider";
 import type { StickerWithStatus } from "@/domain/types";
+import { STICKER_PHOTOS } from "./stickerPhotos";
 
 // Android no renderea fontWeight numerico (800/900) sin fuentes custom;
 // usamos la variante sans-serif-black del sistema con weight normal.
@@ -16,30 +17,27 @@ const HEAVY_TEXT: TextStyle = Platform.select({
 interface Props {
   sticker: StickerWithStatus;
   teamCode: string | null;
+  // Hoisted del parent para evitar instanciar 20 mutations TanStack por team.
+  missingBg: string;
+  onIncrement: (code: string) => void;
+  onDecrement: (code: string) => void;
 }
 
-export function StickerBolita({ sticker, teamCode }: Props) {
-  const { theme, mode } = useTheme();
-  const inc = useIncrement();
-  const dec = useDecrement();
-  // Gris visible para "no la tengo": slate-300 en light, slate-600 en dark.
-  // Distinto del bg/card del theme para que la bolita misma se distinga
-  // del fondo del colapsible.
-  const missingBg = mode === "dark" ? "#475569" : "#cbd5e1";
-
+function StickerBolitaInner({ sticker, teamCode, missingBg, onIncrement, onDecrement }: Props) {
   const handlePress = useCallback(() => {
     haptics.light();
-    inc.mutate(sticker.code);
-  }, [sticker.code, inc]);
+    onIncrement(sticker.code);
+  }, [sticker.code, onIncrement]);
 
   const handleLongPress = useCallback(() => {
     if (sticker.count === 0) return;
     haptics.medium();
-    dec.mutate(sticker.code);
-  }, [sticker.code, sticker.count, dec]);
+    onDecrement(sticker.code);
+  }, [sticker.code, sticker.count, onDecrement]);
 
   const isMissing = sticker.count === 0;
   const hasDups = sticker.count > 1;
+  const photo = STICKER_PHOTOS[sticker.code];
 
   return (
     <View style={{ width: "25%", padding: 5 }}>
@@ -56,50 +54,92 @@ export function StickerBolita({ sticker, teamCode }: Props) {
           style={{
             width: "100%",
             height: "100%",
-            borderRadius: 9999,
+            borderRadius: 8,
             overflow: "hidden",
-            borderWidth: 2,
-            borderColor: "rgba(0,0,0,0.1)"
+            backgroundColor: missingBg
           }}
         >
-          {isMissing ? (
-            <View
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundColor: missingBg
-              }}
+          {/* Contenido principal: foto (o bandera fallback). Si falta, queda
+              solo el bg gris para distinguir visualmente.
+              La foto va anclada arriba (aspectRatio 3/4, top:0) en vez de
+              cover, asi mostramos la cabeza completa y cropeamos el bottom
+              (donde estan los datos del jugador, que no necesitamos en
+              compacto porque tenemos el codigo en el fade). */}
+          {!isMissing && photo && (
+            <Image
+              source={photo}
+              style={{ width: "100%", height: "100%" }}
+              contentFit="cover"
+              contentPosition="top"
             />
-          ) : (
+          )}
+          {!isMissing && !photo && (
             <FlagSvg code={teamCode} section={sticker.section} />
           )}
-          <View
-            style={{
-              position: "absolute",
-              top: 0, left: 0, right: 0, bottom: 0,
-              alignItems: "center",
-              justifyContent: "center"
-            }}
-            pointerEvents="none"
-          >
-            <View
+
+          {/* Overlay abajo con fade + codigo (estilo Netflix). Solo si tengo
+              el cromo (sino es un cuadro gris que ya dice "me falta"). */}
+          {!isMissing && (
+            <LinearGradient
+              colors={["transparent", "rgba(0,0,0,0.6)", "rgba(0,0,0,0.95)"]}
+              locations={[0, 0.3, 1]}
               style={{
-                backgroundColor: "#fff",
-                borderRadius: 999,
-                paddingHorizontal: 10,
-                paddingVertical: 4,
-                shadowColor: "#000",
-                shadowOffset: { width: 0, height: 1 },
-                shadowOpacity: 0.15,
-                shadowRadius: 2,
-                elevation: 2
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: "45%",
+                paddingHorizontal: 6,
+                paddingBottom: 5,
+                justifyContent: "flex-end"
               }}
+              pointerEvents="none"
             >
-              <Text style={[HEAVY_TEXT, { fontSize: 13, color: "#1c1917", letterSpacing: 0.2 }]}>
+              <Text
+                style={[
+                  HEAVY_TEXT,
+                  {
+                    fontSize: 11,
+                    color: "#fff",
+                    letterSpacing: 0.3,
+                    textShadowColor: "rgba(0,0,0,0.6)",
+                    textShadowOffset: { width: 0, height: 1 },
+                    textShadowRadius: 2
+                  }
+                ]}
+                numberOfLines={1}
+              >
                 {sticker.code}
               </Text>
+            </LinearGradient>
+          )}
+
+          {/* Si falta: pill blanco con codigo centrado para identificarlo */}
+          {isMissing && (
+            <View
+              style={{
+                position: "absolute",
+                top: 0, left: 0, right: 0, bottom: 0,
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+              pointerEvents="none"
+            >
+              <View
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: 999,
+                  paddingHorizontal: 9,
+                  paddingVertical: 3,
+                  opacity: 0.85
+                }}
+              >
+                <Text style={[HEAVY_TEXT, { fontSize: 11, color: "#1c1917", letterSpacing: 0.2 }]}>
+                  {sticker.code}
+                </Text>
+              </View>
             </View>
-          </View>
+          )}
         </Pressable>
         {hasDups && (
           <View
@@ -125,3 +165,5 @@ export function StickerBolita({ sticker, teamCode }: Props) {
     </View>
   );
 }
+
+export const StickerBolita = memo(StickerBolitaInner);
