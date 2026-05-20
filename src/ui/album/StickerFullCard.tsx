@@ -1,32 +1,32 @@
-import React, { useCallback } from "react";
+import React, { memo, useCallback } from "react";
 import { View, Pressable, Text, Image } from "react-native";
-import { useTheme } from "@/theme/ThemeProvider";
+import type { Theme } from "@/theme/themes";
 import { haptics } from "@/lib/haptics";
-import { useIncrement, useDecrement } from "@/hooks/useStickers";
 import { getInitials } from "@/domain/playerInitials";
 import { getTeamColors } from "@/theme/teamColors";
 import type { StickerWithStatus } from "@/domain/types";
+import { STICKER_PHOTOS } from "./stickerPhotos";
 
 interface Props {
   sticker: StickerWithStatus;
   teamCode: string | null;
+  // Hoisted del parent para evitar instanciar mutations TanStack en cada card.
+  theme: Theme;
+  onIncrement: (code: string) => void;
+  onDecrement: (code: string) => void;
 }
 
-export function StickerFullCard({ sticker, teamCode }: Props) {
-  const { theme } = useTheme();
-  const inc = useIncrement();
-  const dec = useDecrement();
-
+function StickerFullCardInner({ sticker, teamCode, theme, onIncrement, onDecrement }: Props) {
   const handlePress = useCallback(() => {
     haptics.light();
-    inc.mutate(sticker.code);
-  }, [sticker.code, inc]);
+    onIncrement(sticker.code);
+  }, [sticker.code, onIncrement]);
 
   const handleLongPress = useCallback(() => {
     if (sticker.count === 0) return;
     haptics.medium();
-    dec.mutate(sticker.code);
-  }, [sticker.code, sticker.count, dec]);
+    onDecrement(sticker.code);
+  }, [sticker.code, sticker.count, onDecrement]);
 
   const isMissing = sticker.count === 0;
   const hasDups = sticker.count > 1;
@@ -79,7 +79,13 @@ export function StickerFullCard({ sticker, teamCode }: Props) {
               overflow: "hidden"
             }}
           >
-            {sticker.imageUrl ? (
+            {STICKER_PHOTOS[sticker.code] ? (
+              <Image
+                source={STICKER_PHOTOS[sticker.code]}
+                style={{ width: "100%", height: "100%" }}
+                resizeMode="cover"
+              />
+            ) : sticker.imageUrl ? (
               <Image
                 source={{ uri: sticker.imageUrl }}
                 style={{ width: "100%", height: "100%" }}
@@ -128,3 +134,5 @@ export function StickerFullCard({ sticker, teamCode }: Props) {
     </View>
   );
 }
+
+export const StickerFullCard = memo(StickerFullCardInner);
