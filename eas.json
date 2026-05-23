@@ -34,9 +34,8 @@
   "submit": {
     "production": {
       "ios": {
-        "appleId": "REEMPLAZAR_con_tu_email_de_apple_developer",
-        "ascAppId": "REEMPLAZAR_con_app_id_de_app_store_connect",
-        "appleTeamId": "REEMPLAZAR_con_team_id_de_developer_apple_com"
+        "appleId": "ortegaoscar14@gmail.com",
+        "appleTeamId": "CH748UQS5R"
       },
       "android": {
         "serviceAccountKeyPath": "./play-service-account.json",
