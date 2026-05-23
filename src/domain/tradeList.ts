@@ -43,8 +43,8 @@ export function formatTradeListByTeam(
   if (!renderedNeeded && !renderedDuplicates) return "";
 
   const header = opts.username
-    ? `stickerSwap · Mundial 2026 — @${opts.username}`
-    : "stickerSwap · Mundial 2026";
+    ? `stickerSwap — @${opts.username}`
+    : "stickerSwap";
   const lines: string[] = [header, ""];
 
   if (renderedNeeded) {

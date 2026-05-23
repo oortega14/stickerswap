@@ -5,7 +5,7 @@
 // resto de la app queda en español hasta que se decida traducir todo.
 
 export const es = {
-  signIn_subtitle: "Tu álbum del Mundial 2026 en la nube.",
+  signIn_subtitle: "Tu álbum de cromos en la nube.",
   signIn_googleCta: "Continuar con Google",
   signIn_appleCta: "Continuar con Apple",
   signIn_terms: "Al continuar aceptas los términos y la política de privacidad.",
@@ -38,7 +38,7 @@ export const es = {
 
   onb1_title: "Bienvenido a tu álbum",
   onb1_body:
-    "Lleva el control de las 994 láminas del Mundial 2026: las que ya pegaste, las que te faltan y las repetidas. Todo se sincroniza entre tus dispositivos.",
+    "Lleva el control de las 994 láminas de tu álbum: las que ya pegaste, las que te faltan y las repetidas. Todo se sincroniza entre tus dispositivos.",
   onb1_cta: "Siguiente",
   onb2_title: "Marca rápido",
   onb2_body:
@@ -58,7 +58,7 @@ export const es = {
 export type StringKey = keyof typeof es;
 
 export const en: Record<StringKey, string> = {
-  signIn_subtitle: "Your World Cup 2026 album, in the cloud.",
+  signIn_subtitle: "Your sticker album, in the cloud.",
   signIn_googleCta: "Continue with Google",
   signIn_appleCta: "Continue with Apple",
   signIn_terms: "By continuing you accept the terms and privacy policy.",
@@ -91,7 +91,7 @@ export const en: Record<StringKey, string> = {
 
   onb1_title: "Welcome to your album",
   onb1_body:
-    "Track all 994 stickers of the World Cup 2026: the ones you've collected, the ones you're missing, and your duplicates. Everything syncs across your devices.",
+    "Track all 994 stickers of your album: the ones you've collected, the ones you're missing, and your duplicates. Everything syncs across your devices.",
   onb1_cta: "Next",
   onb2_title: "Tap to mark",
   onb2_body:

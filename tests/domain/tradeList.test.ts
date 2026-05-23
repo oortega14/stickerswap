@@ -72,14 +72,14 @@ describe("formatTradeListByTeam", () => {
 
   it("incluye header con app y handle cuando hay username", () => {
     const text = formatTradeListByTeam(sample, { username: "oscar" });
-    expect(text.startsWith("stickerSwap · Mundial 2026 — @oscar\n")).toBe(true);
+    expect(text.startsWith("stickerSwap — @oscar\n")).toBe(true);
   });
 
   it("formatea grupos en orden de album (por number mas chico de cada grupo)", () => {
     // Para `sample`: Intro min=2, FRA min=3, Estrellas min=4, KOR min=5, CZE min=8.
     const text = formatTradeListByTeam(sample, { username: "oscar" });
     const expected = [
-      "stickerSwap · Mundial 2026 — @oscar",
+      "stickerSwap — @oscar",
       "",
       "Me faltan*",
       "Intro: INTRO-2, INTRO-5",
@@ -104,7 +104,7 @@ describe("formatTradeListByTeam", () => {
     };
     const text = formatTradeListByTeam(list, { username: "oscar" });
     const expected = [
-      "stickerSwap · Mundial 2026 — @oscar",
+      "stickerSwap — @oscar",
       "",
       "Me faltan*",
       "KOR 🇰🇷: KOR-5",
@@ -122,7 +122,7 @@ describe("formatTradeListByTeam", () => {
       duplicates: []
     };
     const text = formatTradeListByTeam(list, { username: null });
-    expect(text.startsWith("stickerSwap · Mundial 2026\n")).toBe(true);
+    expect(text.startsWith("stickerSwap\n")).toBe(true);
     expect(text).not.toContain("—");
     expect(text).not.toContain("@");
   });

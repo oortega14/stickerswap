@@ -1,4 +1,4 @@
-// Mapa estático código FIFA → letra de grupo (A-L) del Mundial 2026.
+// Mapa estático código de país → letra de grupo (A-L).
 // Fuente de verdad: scripts/gen-stickers.js. Si cambia el orden o los
 // equipos del álbum, actualizar acá.
 

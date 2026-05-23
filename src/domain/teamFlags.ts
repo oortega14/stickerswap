@@ -1,5 +1,5 @@
-// Mapa estático código FIFA → emoji bandera para los 48 equipos del
-// Mundial 2026. Los emojis son secuencias de Regional Indicator Symbols
+// Mapa estático código de país → emoji bandera para los 48 equipos del
+// album. Los emojis son secuencias de Regional Indicator Symbols
 // (o subtag para ENG/SCO) que renderizan en iOS 14+ y Android 11+.
 export const FIFA_TO_FLAG: Record<string, string> = {
   ALG: "🇩🇿", ARG: "🇦🇷", AUS: "🇦🇺", AUT: "🇦🇹",
