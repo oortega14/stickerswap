@@ -4,6 +4,7 @@
     "slug": "stickerswap",
     "version": "1.2.0",
     "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
     "icon": "./assets/icon.png",
     "scheme": "stickerswap",
     "splash": {
@@ -14,7 +15,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "app.stickerswap",
-      "buildNumber": "1",
+      "buildNumber": "2",
       "config": {
         "usesNonExemptEncryption": false
       },
