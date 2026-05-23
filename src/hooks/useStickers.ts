@@ -40,7 +40,7 @@ export function useSectionStickers(sectionName: string) {
 
 /**
  * Carga todos los stickers + counts y los devuelve agrupados por sección
- * en orden de álbum (Intro → equipos A-L → Extras → Coca-Cola). Usado por
+ * en orden de álbum (Intro → equipos A-L → Extras → Estrellas). Usado por
  * la vista /album/[id] para el scroll continuo.
  */
 export function useAlbumStickers() {

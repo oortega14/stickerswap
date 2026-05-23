@@ -1,11 +1,9 @@
 import React, { memo, useCallback } from "react";
 import { View, Pressable, Text, Platform, type TextStyle } from "react-native";
-import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { FlagSvg } from "@/ui/flags/FlagSvg";
 import { haptics } from "@/lib/haptics";
 import type { StickerWithStatus } from "@/domain/types";
-import { STICKER_PHOTOS } from "./stickerPhotos";
 
 // Android no renderea fontWeight numerico (800/900) sin fuentes custom;
 // usamos la variante sans-serif-black del sistema con weight normal.
@@ -37,7 +35,6 @@ function StickerBolitaInner({ sticker, teamCode, missingBg, onIncrement, onDecre
 
   const isMissing = sticker.count === 0;
   const hasDups = sticker.count > 1;
-  const photo = STICKER_PHOTOS[sticker.code];
 
   return (
     <View style={{ width: "25%", padding: 5 }}>
@@ -47,7 +44,7 @@ function StickerBolitaInner({ sticker, teamCode, missingBg, onIncrement, onDecre
           onLongPress={handleLongPress}
           delayLongPress={350}
           accessibilityRole="button"
-          accessibilityLabel={`${sticker.name}, ${
+          accessibilityLabel={`${sticker.code}, ${
             isMissing ? "falta" : hasDups ? `tengo ${sticker.count - 1} repetidas` : "pegada"
           }`}
           accessibilityHint="Toca para sumar, manten para restar"
@@ -59,36 +56,20 @@ function StickerBolitaInner({ sticker, teamCode, missingBg, onIncrement, onDecre
             backgroundColor: missingBg
           }}
         >
-          {/* Contenido principal: foto (o bandera fallback). Si falta, queda
-              solo el bg gris para distinguir visualmente.
-              La foto va anclada arriba (aspectRatio 3/4, top:0) en vez de
-              cover, asi mostramos la cabeza completa y cropeamos el bottom
-              (donde estan los datos del jugador, que no necesitamos en
-              compacto porque tenemos el codigo en el fade). */}
-          {!isMissing && photo && (
-            <Image
-              source={photo}
-              style={{ width: "100%", height: "100%" }}
-              contentFit="cover"
-              contentPosition="top"
-            />
-          )}
-          {!isMissing && !photo && (
-            <FlagSvg code={teamCode} section={sticker.section} />
-          )}
+          {!isMissing && <FlagSvg code={teamCode} section={sticker.section} />}
 
           {/* Overlay abajo con fade + codigo (estilo Netflix). Solo si tengo
               el cromo (sino es un cuadro gris que ya dice "me falta"). */}
           {!isMissing && (
             <LinearGradient
-              colors={["transparent", "rgba(0,0,0,0.6)", "rgba(0,0,0,0.95)"]}
-              locations={[0, 0.3, 1]}
+              colors={["transparent", "rgba(0,0,0,0.25)", "rgba(0,0,0,0.55)"]}
+              locations={[0, 0.4, 1]}
               style={{
                 position: "absolute",
                 bottom: 0,
                 left: 0,
                 right: 0,
-                height: "45%",
+                height: "40%",
                 paddingHorizontal: 6,
                 paddingBottom: 5,
                 justifyContent: "flex-end"
@@ -102,9 +83,9 @@ function StickerBolitaInner({ sticker, teamCode, missingBg, onIncrement, onDecre
                     fontSize: 11,
                     color: "#fff",
                     letterSpacing: 0.3,
-                    textShadowColor: "rgba(0,0,0,0.6)",
+                    textShadowColor: "rgba(0,0,0,0.85)",
                     textShadowOffset: { width: 0, height: 1 },
-                    textShadowRadius: 2
+                    textShadowRadius: 3
                   }
                 ]}
                 numberOfLines={1}

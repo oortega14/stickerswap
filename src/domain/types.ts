@@ -3,11 +3,9 @@ export type StickerType = "player" | "team_badge" | "team_photo" | "stadium" | "
 export interface Sticker {
   code: string;
   number: number;
-  name: string;
   team: string | null;
   section: string;
   type: StickerType;
-  imageUrl?: string | null;   // foto del jugador/escudo; null si todavía no la tenemos
 }
 
 export interface StickerStatus {
@@ -25,7 +23,7 @@ export interface SectionProgress {
   total: number;
   collected: number;
   pct: number;
-  teamCode: string | null;  // null para Intro/Extras/Coca-Cola, código FIFA para equipos
+  teamCode: string | null;  // null para Intro/Extras/Estrellas, código FIFA para equipos
 }
 
 export interface OverallProgress {

@@ -12,7 +12,7 @@ const sample = {
   version: 2,
   album: "Test",
   stickers: [
-    { code: "X1", number: 1, name: "Foo", team: null, section: "S1", type: "player" as const }
+    { code: "X1", number: 1, team: null, section: "S1", type: "player" as const }
   ]
 };
 
@@ -45,8 +45,8 @@ describe("seedStickers", () => {
       version: 3,
       album: "Test",
       stickers: [
-        { code: "X1", number: 1, name: "Foo", team: null, section: "S1", type: "player" as const },
-        { code: "X2", number: 2, name: "Bar", team: null, section: "S2", type: "player" as const }
+        { code: "X1", number: 1, team: null, section: "S1", type: "player" as const },
+        { code: "X2", number: 2, team: null, section: "S2", type: "player" as const }
       ]
     };
     await seedStickers(sample2);

@@ -18,15 +18,14 @@ export interface DashboardStats {
   badgesTotal: number;
   legendsCollected: number;
   legendsTotal: number;
-  cokeCollected: number;
-  cokeTotal: number;
+  starsCollected: number;
+  starsTotal: number;
 
   friendsCount: number;
   matchesCount: number;
 
   lastAdded: {
     stickerCode: string;
-    stickerName: string;
     updatedAt: number;
   } | null;
 }
@@ -37,7 +36,7 @@ export interface StickerWithUpdatedAt extends StickerWithStatus {
 
 const TEAMS_TOTAL = 48;
 const LEGENDS_TOTAL = 11;
-const COKE_TOTAL = 14;
+const STARS_TOTAL = 14;
 
 export function computeStats(
   stickers: StickerWithUpdatedAt[],
@@ -48,7 +47,7 @@ export function computeStats(
   let duplicates = 0;
   let badgesCollected = 0;
   let legendsCollected = 0;
-  let cokeCollected = 0;
+  let starsCollected = 0;
 
   const sectionAgg = new Map<
     string,
@@ -63,13 +62,12 @@ export function computeStats(
     if (count > 1) duplicates += count - 1;
     if (s.type === "team_badge" && count >= 1) badgesCollected += 1;
     if (s.section === "Extras" && count >= 1) legendsCollected += 1;
-    if (s.section === "Coca-Cola" && count >= 1) cokeCollected += 1;
+    if (s.section === "Estrellas" && count >= 1) starsCollected += 1;
 
     if (count >= 1 && typeof s.updatedAt === "number") {
       if (!lastAdded || s.updatedAt > lastAdded.updatedAt) {
         lastAdded = {
           stickerCode: s.code,
-          stickerName: s.name,
           updatedAt: s.updatedAt
         };
       }
@@ -120,8 +118,8 @@ export function computeStats(
     badgesTotal: TEAMS_TOTAL,
     legendsCollected,
     legendsTotal: LEGENDS_TOTAL,
-    cokeCollected,
-    cokeTotal: COKE_TOTAL,
+    starsCollected,
+    starsTotal: STARS_TOTAL,
     friendsCount,
     matchesCount,
     lastAdded

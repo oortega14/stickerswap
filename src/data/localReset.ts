@@ -1,7 +1,7 @@
 import * as SecureStore from "expo-secure-store";
 import { getDb } from "./db";
 
-const ONBOARDING_KEY = "panini_onboarded_v1";
+const ONBOARDING_KEY = "stickerswap_onboarded_v1";
 
 const USER_TABLES = [
   "sticker_status",

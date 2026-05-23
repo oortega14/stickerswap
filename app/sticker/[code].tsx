@@ -26,7 +26,7 @@ export default function StickerDetail() {
       <View className="flex-1 p-6 justify-center">
         <GlowCard>
           <Text className="text-space-mute text-xs tracking-wider mb-1">#{data.number}</Text>
-          <Text className="text-space-ink text-2xl font-bold mb-1">{data.name}</Text>
+          <Text className="text-space-ink text-2xl font-bold mb-1">{data.code}</Text>
           {data.team && <Text className="text-space-mute mb-3">{data.team}</Text>}
           <Text className="text-space-violet text-xs uppercase tracking-widest mb-4">
             {data.section}

@@ -15,14 +15,14 @@ beforeEach(async () => {
   const db = getDb();
   // 3 stickers del team ARG, 1 de URU, 1 sin team (Intro)
   await db.runAsync(
-    `INSERT INTO stickers (code, number, name, team, section, type) VALUES
-     (?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO stickers (code, number, team, section, type) VALUES
+     (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?)`,
     [
-      "ARG-1", 1, "Foo", "ARG", "Argentina", "player",
-      "ARG-2", 2, "Bar", "ARG", "Argentina", "player",
-      "ARG-3", 3, "Baz", "ARG", "Argentina", "player",
-      "URU-1", 1, "Qux", "URU", "Uruguay", "player",
-      "FWC-1", 1, "Logo", null, "Intro", "logo"
+      "ARG-1", 1, "ARG", "Argentina", "player",
+      "ARG-2", 2, "ARG", "Argentina", "player",
+      "ARG-3", 3, "ARG", "Argentina", "player",
+      "URU-1", 1, "URU", "Uruguay", "player",
+      "FWC-1", 1, null, "Intro", "logo"
     ]
   );
 });

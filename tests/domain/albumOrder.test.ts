@@ -9,7 +9,6 @@ const sticker = (
 ): Sticker => ({
   code,
   number,
-  name: `n${number}`,
   team,
   section,
   type: team ? "player" : "icon"
@@ -24,7 +23,7 @@ describe("buildAlbumOrder", () => {
       sticker("MEX-2", 11, "México", "MEX"),
       sticker("ARG-1", 50, "Argentina", "ARG"),
       sticker("EX-1", 970, "Extras", null),
-      sticker("CC1", 981, "Coca-Cola", null)
+      sticker("CC1", 981, "Estrellas", null)
     ];
     const order = buildAlbumOrder(stickers);
     expect(order.map((s) => s.id)).toEqual([
@@ -32,7 +31,7 @@ describe("buildAlbumOrder", () => {
       "MEX",
       "ARG",
       "Extras",
-      "Coca-Cola"
+      "Estrellas"
     ]);
   });
 

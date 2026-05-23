@@ -6,12 +6,10 @@ import { FlagSvg } from "@/ui/flags/FlagSvg";
 import { showSnackbar } from "@/ui/Snackbar";
 import { FilterChips } from "./FilterChips";
 import { StickerBolita } from "./StickerBolita";
-import { StickerFullCard } from "./StickerFullCard";
 import { filterStickers, countByFilter, type FilterMode } from "@/domain/stickerFilter";
 import { haptics } from "@/lib/haptics";
 import { useBulkMarkTeam, useIncrement, useDecrement } from "@/hooks/useStickers";
 import { getTeamColors } from "@/theme/teamColors";
-import type { StickerViewMode } from "@/store/stickerViewMode";
 import type { StickerWithStatus } from "@/domain/types";
 import type { AlbumSection } from "@/domain/albumOrder";
 
@@ -19,7 +17,6 @@ interface Props {
   section: AlbumSection<StickerWithStatus>;
   expanded: boolean;
   filterMode: FilterMode;
-  viewMode: StickerViewMode;
   onToggle: () => void;
   onChangeFilter: (mode: FilterMode) => void;
 }
@@ -28,7 +25,6 @@ export function SectionCollapsible({
   section,
   expanded,
   filterMode,
-  viewMode,
   onToggle,
   onChangeFilter
 }: Props) {
@@ -62,7 +58,7 @@ export function SectionCollapsible({
 
   const collected = counts.all - counts.missing;
   // "Pegar todo" solo cuando hay equipo (teamCode != null) y todavia
-  // faltan cromos por marcar. Intro/Extras/Coca-Cola se omiten porque no
+  // faltan cromos por marcar. Intro/Extras/Estrellas se omiten porque no
   // son "equipos" — el flujo de marcado masivo de coleccionista no aplica.
   const canBulkMark = section.teamCode != null && counts.missing > 0;
   const handleBulkMark = () => {
@@ -199,27 +195,16 @@ export function SectionCollapsible({
             </Text>
           ) : (
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -5 }}>
-              {filtered.map((s) =>
-                viewMode === "compact" ? (
-                  <StickerBolita
-                    key={s.code}
-                    sticker={s}
-                    teamCode={section.teamCode}
-                    missingBg={missingBg}
-                    onIncrement={handleIncrement}
-                    onDecrement={handleDecrement}
-                  />
-                ) : (
-                  <StickerFullCard
-                    key={s.code}
-                    sticker={s}
-                    teamCode={section.teamCode}
-                    theme={theme}
-                    onIncrement={handleIncrement}
-                    onDecrement={handleDecrement}
-                  />
-                )
-              )}
+              {filtered.map((s) => (
+                <StickerBolita
+                  key={s.code}
+                  sticker={s}
+                  teamCode={section.teamCode}
+                  missingBg={missingBg}
+                  onIncrement={handleIncrement}
+                  onDecrement={handleDecrement}
+                />
+              ))}
             </View>
           )}
         </View>

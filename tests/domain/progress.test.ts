@@ -2,9 +2,9 @@ import { computeProgress } from "@/domain/progress";
 import type { Sticker } from "@/domain/types";
 
 const stickers: Sticker[] = [
-  { code: "A1", number: 1, name: "Messi", team: "ARG", section: "Argentina", type: "player" },
-  { code: "A2", number: 2, name: "De Paul", team: "ARG", section: "Argentina", type: "player" },
-  { code: "B1", number: 3, name: "Mbappé", team: "FRA", section: "Francia", type: "player" }
+  { code: "A1", number: 1, team: "ARG", section: "Argentina", type: "player" },
+  { code: "A2", number: 2, team: "ARG", section: "Argentina", type: "player" },
+  { code: "B1", number: 3, team: "FRA", section: "Francia", type: "player" }
 ];
 
 describe("computeProgress", () => {
@@ -52,10 +52,10 @@ describe("computeProgress", () => {
     // Argentina abre con number 1, Brasil con number 50, Alemania con number 100.
     // Alfabético sería Alemania, Argentina, Brasil. Álbum: Argentina, Brasil, Alemania.
     const albumStickers: Sticker[] = [
-      { code: "A1", number: 1,   name: "x", team: "ARG", section: "Argentina", type: "player" },
-      { code: "A2", number: 2,   name: "x", team: "ARG", section: "Argentina", type: "player" },
-      { code: "B1", number: 50,  name: "x", team: "BRA", section: "Brasil",    type: "player" },
-      { code: "G1", number: 100, name: "x", team: "GER", section: "Alemania",  type: "player" }
+      { code: "A1", number: 1,   team: "ARG", section: "Argentina", type: "player" },
+      { code: "A2", number: 2,   team: "ARG", section: "Argentina", type: "player" },
+      { code: "B1", number: 50,  team: "BRA", section: "Brasil",    type: "player" },
+      { code: "G1", number: 100, team: "GER", section: "Alemania",  type: "player" }
     ];
     const r = computeProgress(albumStickers, []);
     expect(r.bySection.map((s) => s.section)).toEqual([

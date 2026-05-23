@@ -7,11 +7,9 @@ import { FlashList, type FlashListRef } from "@shopify/flash-list";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { Skeleton } from "@/ui/Skeleton";
 import { DashboardGrid } from "@/ui/dashboard/DashboardGrid";
-import { ViewModeToggle } from "@/ui/album/ViewModeToggle";
 import { SectionCollapsible } from "@/ui/album/SectionCollapsible";
 import { useDashboardStats } from "@/hooks/useDashboardStats";
 import { useAlbumStickers } from "@/hooks/useStickers";
-import { useStickerViewMode } from "@/store/stickerViewMode";
 import { useExpandedSections } from "@/store/expandedSections";
 import { useFilterMode } from "@/store/filterMode";
 import { useTheme } from "@/theme/ThemeProvider";
@@ -24,8 +22,6 @@ export default function Home() {
   const { theme, mode, setMode } = useTheme();
   const dashboard = useDashboardStats();
   const album = useAlbumStickers();
-  const viewMode = useStickerViewMode((s) => s.mode);
-  const setViewMode = useStickerViewMode((s) => s.setMode);
 
   const expanded = useExpandedSections((s) => s.expanded);
   const toggleSection = useExpandedSections((s) => s.toggle);
@@ -93,11 +89,9 @@ export default function Home() {
             ))}
           </View>
         )}
-
-        <ViewModeToggle mode={viewMode} onChange={setViewMode} />
       </View>
     ),
-    [theme, mode, setMode, dashboard.stats, viewMode, setViewMode]
+    [theme, mode, setMode, dashboard.stats]
   );
 
   if (album.isLoading || sections.length === 0) {
@@ -131,7 +125,6 @@ export default function Home() {
             section={item}
             expanded={expanded.has(item.id)}
             filterMode={filters[item.id] ?? "all"}
-            viewMode={viewMode}
             onToggle={() => toggleSection(item.id)}
             onChangeFilter={(m) => setFilter(item.id, m)}
           />

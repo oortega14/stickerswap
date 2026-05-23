@@ -2,7 +2,7 @@ import type { Sticker } from "./types";
 
 export interface AlbumSection<S extends Sticker = Sticker> {
   /** Identificador estable para URLs. Para teams es el código FIFA, para
-   *  especiales es el nombre de sección tal cual (Intro/Extras/Coca-Cola). */
+   *  especiales es el nombre de sección tal cual (Intro/Extras/Estrellas). */
   id: string;
   type: "team" | "special";
   name: string;

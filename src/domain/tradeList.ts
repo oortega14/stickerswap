@@ -60,7 +60,7 @@ export function formatTradeListByTeam(
 }
 
 function renderBlock(entries: TradeListEntry[]): string[] {
-  // Agrupa por equipo (cuando hay team code) o por seccion (Intro/Extras/Coca-Cola).
+  // Agrupa por equipo (cuando hay team code) o por seccion (Intro/Extras/Estrellas).
   // Orden de los grupos = orden de album (por el numero mas chico de cada grupo).
   interface Group {
     label: string;

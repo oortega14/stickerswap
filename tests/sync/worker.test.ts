@@ -25,7 +25,7 @@ beforeEach(async () => {
   mockUpsert.mockReset();
   const db = getDb();
   await db.runAsync(
-    `INSERT INTO stickers (code, number, name, team, section, type) VALUES ('X', 1, 'foo', null, 'S', 'player')`
+    `INSERT INTO stickers (code, number, team, section, type) VALUES ('X', 1, null, 'S', 'player')`
   );
 });
 

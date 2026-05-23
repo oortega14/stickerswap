@@ -5,7 +5,7 @@ import type { Sticker, StickerWithStatus } from "@/domain/types";
 export async function getAllStickers(): Promise<Sticker[]> {
   const db = getDb();
   return db.getAllAsync<Sticker>(
-    `SELECT code, number, name, team, section, type FROM stickers ORDER BY number`
+    `SELECT code, number, team, section, type FROM stickers ORDER BY number`
   );
 }
 
@@ -21,7 +21,7 @@ export async function getStickersWithStatus(filter: {
   const params: SQLiteBindValue[] = [];
 
   if (filter.q && filter.q.trim().length > 0) {
-    where.push(`(s.name LIKE ? OR s.team LIKE ? OR CAST(s.number AS TEXT) LIKE ?)`);
+    where.push(`(s.code LIKE ? OR s.team LIKE ? OR CAST(s.number AS TEXT) LIKE ?)`);
     const like = `%${filter.q.trim()}%`;
     params.push(like, like, like);
   }
@@ -33,7 +33,7 @@ export async function getStickersWithStatus(filter: {
 
   const whereSql = where.length > 0 ? `WHERE ${where.join(" AND ")}` : "";
   return db.getAllAsync<StickerWithStatus>(
-    `SELECT s.code, s.number, s.name, s.team, s.section, s.type,
+    `SELECT s.code, s.number, s.team, s.section, s.type,
             COALESCE(ss.count, 0) AS count
      FROM stickers s
      LEFT JOIN sticker_status ss ON ss.sticker_code = s.code
@@ -46,7 +46,7 @@ export async function getStickersWithStatus(filter: {
 export async function getStickersByTeam(teamCode: string): Promise<StickerWithStatus[]> {
   const db = getDb();
   return db.getAllAsync<StickerWithStatus>(
-    `SELECT s.code, s.number, s.name, s.team, s.section, s.type,
+    `SELECT s.code, s.number, s.team, s.section, s.type,
             COALESCE(ss.count, 0) AS count
      FROM stickers s
      LEFT JOIN sticker_status ss ON ss.sticker_code = s.code
@@ -59,7 +59,7 @@ export async function getStickersByTeam(teamCode: string): Promise<StickerWithSt
 export async function getStickersBySection(sectionName: string): Promise<StickerWithStatus[]> {
   const db = getDb();
   return db.getAllAsync<StickerWithStatus>(
-    `SELECT s.code, s.number, s.name, s.team, s.section, s.type,
+    `SELECT s.code, s.number, s.team, s.section, s.type,
             COALESCE(ss.count, 0) AS count
      FROM stickers s
      LEFT JOIN sticker_status ss ON ss.sticker_code = s.code
@@ -72,7 +72,7 @@ export async function getStickersBySection(sectionName: string): Promise<Sticker
 export async function getStickerByCode(code: string): Promise<StickerWithStatus | null> {
   const db = getDb();
   return db.getFirstAsync<StickerWithStatus>(
-    `SELECT s.code, s.number, s.name, s.team, s.section, s.type,
+    `SELECT s.code, s.number, s.team, s.section, s.type,
             COALESCE(ss.count, 0) AS count
      FROM stickers s
      LEFT JOIN sticker_status ss ON ss.sticker_code = s.code

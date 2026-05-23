@@ -1,4 +1,4 @@
-# Política de Privacidad — Panini Album
+# Política de Privacidad — Stickerswap
 
 Última actualización: 2026-04-30.
 

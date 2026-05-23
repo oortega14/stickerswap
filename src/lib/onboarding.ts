@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { create } from "zustand";
 import * as SecureStore from "expo-secure-store";
 
-const KEY = "panini_onboarded_v1";
+const KEY = "stickerswap_onboarded_v1";
 
 interface OnboardingState {
   // null = aún no leímos SecureStore

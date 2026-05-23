@@ -2,11 +2,11 @@ import { buildTradeList, formatTradeListByTeam } from "@/domain/tradeList";
 import type { Sticker, StickerStatus, TradeList } from "@/domain/types";
 
 const stickers: Sticker[] = [
-  { code: "ARG-1", number: 100, name: "Crest", team: "ARG", section: "Argentina", type: "team_badge" },
-  { code: "ARG-2", number: 101, name: "Messi", team: "ARG", section: "Argentina", type: "player" },
-  { code: "ARG-3", number: 102, name: "De Paul", team: "ARG", section: "Argentina", type: "player" },
-  { code: "BRA-1", number: 110, name: "Crest", team: "BRA", section: "Brasil", type: "team_badge" },
-  { code: "STAD-1", number: 5, name: "Azteca", team: null, section: "Estadios", type: "stadium" }
+  { code: "ARG-1", number: 100, team: "ARG", section: "Argentina", type: "team_badge" },
+  { code: "ARG-2", number: 101, team: "ARG", section: "Argentina", type: "player" },
+  { code: "ARG-3", number: 102, team: "ARG", section: "Argentina", type: "player" },
+  { code: "BRA-1", number: 110, team: "BRA", section: "Brasil", type: "team_badge" },
+  { code: "STAD-1", number: 5, team: null, section: "Estadios", type: "stadium" }
 ];
 
 describe("buildTradeList", () => {
@@ -65,7 +65,7 @@ describe("formatTradeListByTeam", () => {
       { code: "CZE-8", number: 8, section: "República Checa", team: "CZE", count: 0 },
       { code: "INTRO-2", number: 2, section: "Intro", team: null, count: 0 },
       { code: "INTRO-5", number: 5, section: "Intro", team: null, count: 0 },
-      { code: "CC-4", number: 4, section: "Coca-Cola", team: null, count: 0 }
+      { code: "CC-4", number: 4, section: "Estrellas", team: null, count: 0 }
     ],
     duplicates: []
   };
@@ -76,7 +76,7 @@ describe("formatTradeListByTeam", () => {
   });
 
   it("formatea grupos en orden de album (por number mas chico de cada grupo)", () => {
-    // Para `sample`: Intro min=2, FRA min=3, Coca-Cola min=4, KOR min=5, CZE min=8.
+    // Para `sample`: Intro min=2, FRA min=3, Estrellas min=4, KOR min=5, CZE min=8.
     const text = formatTradeListByTeam(sample, { username: "oscar" });
     const expected = [
       "stickerSwap · Mundial 2026 — @oscar",
@@ -84,7 +84,7 @@ describe("formatTradeListByTeam", () => {
       "Me faltan*",
       "Intro: INTRO-2, INTRO-5",
       "FRA 🇫🇷: FRA-3, FRA-8, FRA-12",
-      "Coca-Cola: CC-4",
+      "Estrellas: CC-4",
       "KOR 🇰🇷: KOR-5, KOR-11",
       "CZE 🇨🇿: CZE-8"
     ].join("\n");

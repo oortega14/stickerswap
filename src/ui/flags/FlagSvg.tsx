@@ -3,7 +3,7 @@ import { View, Text, Image } from "react-native";
 import { FLAG_PNG } from "./flagMap";
 import { IntroBadge } from "./specialBadges/IntroBadge";
 import { ExtrasBadge } from "./specialBadges/ExtrasBadge";
-import { CokeBadge } from "./specialBadges/CokeBadge";
+import { StarsBadge } from "./specialBadges/StarsBadge";
 
 interface Props {
   code: string | null;          // FIFA code, o null para especiales
@@ -12,7 +12,7 @@ interface Props {
 }
 
 // Pese al nombre legacy ("FlagSvg"), las banderas de pais son PNG @1x/@2x/@3x
-// para render instantaneo via hardware. Solo Intro/Extras/Coca-Cola siguen
+// para render instantaneo via hardware. Solo Intro/Extras/Estrellas siguen
 // siendo SVG porque son badges custom hechos a mano.
 export function FlagSvg({ code, section, size }: Props) {
   const source = code ? FLAG_PNG[code] : undefined;
@@ -31,7 +31,7 @@ export function FlagSvg({ code, section, size }: Props) {
   }
   if (section === "Intro")     return <IntroBadge size={size} />;
   if (section === "Extras")    return <ExtrasBadge size={size} />;
-  if (section === "Coca-Cola") return <CokeBadge size={size} />;
+  if (section === "Estrellas") return <StarsBadge size={size} />;
 
   return (
     <View

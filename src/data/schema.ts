@@ -1,10 +1,11 @@
 import { getDb } from "./db";
 
-const SCHEMA_VERSION = 4;
+const SCHEMA_VERSION = 5;
 
 export async function initSchema(): Promise<void> {
   const db = getDb();
 
+  // Garantiza meta para poder consultar schema_version antes de tocar stickers.
   await db.execAsync(`
     PRAGMA journal_mode = WAL;
     PRAGMA foreign_keys = ON;
@@ -13,11 +14,23 @@ export async function initSchema(): Promise<void> {
       key TEXT PRIMARY KEY,
       value TEXT NOT NULL
     );
+  `);
 
+  // Migracion v4 → v5: la tabla stickers ya no tiene columna `name`.
+  // SQLite no soporta DROP COLUMN portable, asi que recreamos la tabla si
+  // venimos de un schema viejo.
+  const currentVersion = await db.getFirstAsync<{ value: string }>(
+    `SELECT value FROM meta WHERE key = 'schema_version'`
+  );
+  const v = currentVersion ? parseInt(currentVersion.value, 10) : 0;
+  if (v > 0 && v < 5) {
+    await db.execAsync(`DROP TABLE IF EXISTS stickers`);
+  }
+
+  await db.execAsync(`
     CREATE TABLE IF NOT EXISTS stickers (
       code TEXT PRIMARY KEY,
       number INTEGER NOT NULL,
-      name TEXT NOT NULL,
       team TEXT,
       section TEXT NOT NULL,
       type TEXT NOT NULL

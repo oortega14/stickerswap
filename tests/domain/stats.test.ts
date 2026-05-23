@@ -5,7 +5,6 @@ import type { StickerWithStatus, Friend, FriendMatchSummary } from "@/domain/typ
 const baseSticker = (overrides: Partial<StickerWithUpdatedAt>): StickerWithUpdatedAt => ({
   code: "X-1",
   number: 1,
-  name: "Player",
   team: null,
   section: "Intro",
   type: "player",
@@ -25,7 +24,7 @@ describe("computeStats", () => {
     expect(s.teamsZero).toBe(0);
     expect(s.badgesCollected).toBe(0);
     expect(s.legendsCollected).toBe(0);
-    expect(s.cokeCollected).toBe(0);
+    expect(s.starsCollected).toBe(0);
     expect(s.friendsCount).toBe(0);
     expect(s.matchesCount).toBe(0);
     expect(s.lastAdded).toBeNull();
@@ -94,15 +93,15 @@ describe("computeStats", () => {
     expect(s.legendsTotal).toBe(11);
   });
 
-  it("cuenta coke por section=Coca-Cola", () => {
+  it("cuenta stars por section=Estrellas", () => {
     const stickers = [
-      baseSticker({ code: "CC1", section: "Coca-Cola", count: 1 }),
-      baseSticker({ code: "CC2", section: "Coca-Cola", count: 1 }),
-      baseSticker({ code: "X1",  section: "Intro",      count: 1 })
+      baseSticker({ code: "CC1", section: "Estrellas", count: 1 }),
+      baseSticker({ code: "CC2", section: "Estrellas", count: 1 }),
+      baseSticker({ code: "X1",  section: "Intro",     count: 1 })
     ];
     const s = computeStats(stickers, [], []);
-    expect(s.cokeCollected).toBe(2);
-    expect(s.cokeTotal).toBe(14);
+    expect(s.starsCollected).toBe(2);
+    expect(s.starsTotal).toBe(14);
   });
 
   it("cuenta friends solo accepted", () => {
@@ -127,14 +126,13 @@ describe("computeStats", () => {
 
   it("lastAdded devuelve el sticker con max updatedAt y count>=1", () => {
     const stickers = [
-      baseSticker({ code: "A-1", name: "Messi",   count: 1, updatedAt: 100 }),
-      baseSticker({ code: "A-2", name: "Lautaro", count: 1, updatedAt: 200 }),
-      baseSticker({ code: "A-3", name: "DiMaria", count: 0, updatedAt: 300 }) // ignorado (count 0)
+      baseSticker({ code: "A-1", count: 1, updatedAt: 100 }),
+      baseSticker({ code: "A-2", count: 1, updatedAt: 200 }),
+      baseSticker({ code: "A-3", count: 0, updatedAt: 300 }) // ignorado (count 0)
     ];
     const s = computeStats(stickers, [], []);
     expect(s.lastAdded).toEqual({
       stickerCode: "A-2",
-      stickerName: "Lautaro",
       updatedAt: 200
     });
   });

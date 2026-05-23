@@ -1,12 +1,12 @@
-# Términos de Uso — Panini Album
+# Términos de Uso — Stickerswap
 
-Última actualización: 2026-04-30.
+Última actualización: 2026-05-23.
 
 ## Uso aceptable
 
 - Esta app es para uso personal de coleccionistas.
 - No usás cuenta múltiple para spamear amigos ajenos.
-- No es oficial de Panini ni de la FIFA. Marcas y números son referenciales.
+- App independiente, sin afiliación con ninguna editorial o federación. Los códigos son referenciales.
 
 ## Sin garantías
 

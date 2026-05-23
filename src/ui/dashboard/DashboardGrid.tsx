@@ -25,7 +25,7 @@ export function DashboardGrid({ stats }: Props) {
   const router = useRouter();
 
   const lastAddedValue = stats.lastAdded ? formatRelative(stats.lastAdded.updatedAt) : "—";
-  const lastAddedSub = stats.lastAdded?.stickerName ?? "Sin actividad";
+  const lastAddedSub = stats.lastAdded?.stickerCode ?? "Sin actividad";
 
   return (
     <View>
@@ -49,7 +49,7 @@ export function DashboardGrid({ stats }: Props) {
       <View style={{ flexDirection: "row", gap: 8, marginBottom: 8 }}>
         <StatCard label="Escudos" value={String(stats.badgesCollected)} sub={`/ ${stats.badgesTotal}`} />
         <StatCard label="Leyendas" value={String(stats.legendsCollected)} sub={`/ ${stats.legendsTotal}`} />
-        <StatCard label="Coca-Cola" value={String(stats.cokeCollected)} sub={`/ ${stats.cokeTotal}`} />
+        <StatCard label="Estrellas" value={String(stats.starsCollected)} sub={`/ ${stats.starsTotal}`} />
       </View>
 
       <View style={{ flexDirection: "row", gap: 8, marginBottom: 8 }}>

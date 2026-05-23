@@ -4,7 +4,6 @@ import type { StickerWithStatus } from "@/domain/types";
 const mk = (code: string, count: number): StickerWithStatus => ({
   code,
   number: 1,
-  name: code,
   team: null,
   section: "X",
   type: "player",

@@ -25,8 +25,8 @@ export async function seedStickers(dataset: StickerDataset): Promise<void> {
     await db.execAsync(`DELETE FROM stickers`);
     for (const s of dataset.stickers) {
       await db.runAsync(
-        `INSERT INTO stickers (code, number, name, team, section, type) VALUES (?, ?, ?, ?, ?, ?)`,
-        [s.code, s.number, s.name, s.team, s.section, s.type]
+        `INSERT INTO stickers (code, number, team, section, type) VALUES (?, ?, ?, ?, ?)`,
+        [s.code, s.number, s.team, s.section, s.type]
       );
     }
     await db.runAsync(

@@ -4,7 +4,7 @@ import { es, en, type StringKey } from "./strings";
 
 export type Lang = "es" | "en";
 
-const STORAGE_KEY = "panini.lang";
+const STORAGE_KEY = "stickerswap.lang";
 
 type I18nContextValue = {
   lang: Lang;

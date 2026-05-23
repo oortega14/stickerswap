@@ -4,7 +4,7 @@ let _db: SQLite.SQLiteDatabase | null = null;
 
 export function getDb(): SQLite.SQLiteDatabase {
   if (!_db) {
-    _db = SQLite.openDatabaseSync("panini.db");
+    _db = SQLite.openDatabaseSync("stickerswap.db");
   }
   return _db;
 }

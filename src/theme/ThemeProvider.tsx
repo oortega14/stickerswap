@@ -6,7 +6,7 @@ import { lightTheme, darkTheme, type Theme } from "./themes";
 
 export type Mode = "light" | "dark";
 
-const STORAGE_KEY = "panini.theme.mode";
+const STORAGE_KEY = "stickerswap.theme.mode";
 
 type ThemeContextValue = {
   theme: Theme;
