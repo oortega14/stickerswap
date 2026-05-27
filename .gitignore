@@ -38,6 +38,10 @@ yarn-error.*
 # brainstorm session artifacts
 .superpowers/
 
+# specs y plans nuevos quedan locales (los previamente commiteados siguen versionados)
+docs/superpowers/specs/
+docs/superpowers/plans/
+
 # local design scratch
 assets/card-drafts/
 
