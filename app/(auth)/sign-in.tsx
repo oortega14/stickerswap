@@ -3,7 +3,7 @@ import { View, Text, Pressable, Alert, ActivityIndicator, Linking, Platform } fr
 import * as AppleAuthentication from "expo-apple-authentication";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
-import { AuthToggleBar } from "@/ui/AuthToggleBar";
+import { AuthThemeToggle } from "@/ui/AuthThemeToggle";
 import { signInWithGoogle, isCancelError } from "@/auth/google";
 import { signInWithApple, isAppleAvailable, isAppleCancelError } from "@/auth/apple";
 import { useT } from "@/i18n/I18nProvider";
@@ -54,7 +54,7 @@ export default function SignIn() {
 
   return (
     <ThemedBackground>
-      <AuthToggleBar />
+      <AuthThemeToggle />
       <View className="flex-1 items-center justify-center px-6">
         <Text style={{ fontSize: 56, marginBottom: 4 }}>⚽</Text>
         <Text style={{ fontSize: 32, fontWeight: "800", marginBottom: 6 }}>

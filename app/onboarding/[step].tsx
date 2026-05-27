@@ -1,7 +1,7 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { View, Text } from "react-native";
 import { ThemedBackground } from "@/ui/ThemedBackground";
-import { AuthToggleBar } from "@/ui/AuthToggleBar";
+import { AuthThemeToggle } from "@/ui/AuthThemeToggle";
 import { PrimaryButton } from "@/ui/PrimaryButton";
 import { useTheme } from "@/theme/ThemeProvider";
 import { useT } from "@/i18n/I18nProvider";
@@ -39,7 +39,7 @@ export default function OnboardingStep() {
 
   return (
     <ThemedBackground>
-      <AuthToggleBar />
+      <AuthThemeToggle />
       <View className="flex-1 px-6 justify-center">
         <Text
           style={{

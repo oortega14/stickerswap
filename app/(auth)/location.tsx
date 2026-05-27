@@ -3,7 +3,7 @@ import { View, Text, TextInput, Pressable, Alert, Switch, ScrollView } from "rea
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
-import { AuthToggleBar } from "@/ui/AuthToggleBar";
+import { AuthThemeToggle } from "@/ui/AuthThemeToggle";
 import { PrimaryButton } from "@/ui/PrimaryButton";
 import { useSession, useSessionStore } from "@/auth/useSession";
 import { supabase } from "@/auth/supabaseClient";
@@ -78,7 +78,7 @@ export default function LocationStep() {
 
   return (
     <ThemedBackground>
-      <AuthToggleBar />
+      <AuthThemeToggle />
       <ScrollView className="flex-1 px-6" keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingTop: insets.top + 64, paddingBottom: insets.bottom + 24 }}>
         <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800", marginBottom: 6 }}>
           {t("location_title")}

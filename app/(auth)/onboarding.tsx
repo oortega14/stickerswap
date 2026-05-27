@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
-import { AuthToggleBar } from "@/ui/AuthToggleBar";
+import { AuthThemeToggle } from "@/ui/AuthThemeToggle";
 import { PrimaryButton } from "@/ui/PrimaryButton";
 import { isValidUsername, isUsernameTaken } from "@/auth/username";
 import { useSession, useSessionStore } from "@/auth/useSession";
@@ -72,7 +72,7 @@ export default function Onboarding() {
 
   return (
     <ThemedBackground>
-      <AuthToggleBar />
+      <AuthThemeToggle />
       <View className="flex-1 px-6" style={{ paddingTop: insets.top + 64 }}>
         <Text style={{ color: theme.text, fontSize: 28, fontWeight: "800", marginBottom: 6 }}>
           {t("username_title")}
