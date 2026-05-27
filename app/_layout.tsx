@@ -78,6 +78,10 @@ function SyncEngine() {
     };
 
     (async () => {
+      // Drain primero: si el usuario venía de modo invitado, esta cola tiene
+      // su progreso local que debe subir antes de cualquier pull que pudiera
+      // sobreescribirlo con data más vieja del servidor.
+      await tick();
       try {
         await pullRemoteStatus(user.id);
       } catch (e) {
@@ -88,7 +92,6 @@ function SyncEngine() {
       } catch (e) {
         console.warn("trades pull error", e);
       }
-      await tick();
       timer = setInterval(tick, 30_000);
     })();
 
