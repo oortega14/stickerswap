@@ -6,12 +6,15 @@ import {
   declineFriendRequest,
   deleteMyOutgoingRequest
 } from "@/social/nearbyMatches";
+import { useSessionStore } from "@/auth/useSession";
 
 export function usePendingRequests() {
+  const session = useSessionStore((s) => s.session);
   return useQuery({
     queryKey: ["pendingRequests"],
     queryFn: fetchPendingRequests,
-    staleTime: 30_000
+    staleTime: 30_000,
+    enabled: !!session
   });
 }
 
@@ -21,10 +24,12 @@ export function usePendingRequestsCount() {
 }
 
 export function useOutgoingRequests() {
+  const session = useSessionStore((s) => s.session);
   return useQuery({
     queryKey: ["outgoingRequests"],
     queryFn: fetchOutgoingRequests,
-    staleTime: 30_000
+    staleTime: 30_000,
+    enabled: !!session
   });
 }
 
