@@ -2,7 +2,7 @@
   "expo": {
     "name": "StickerSwap",
     "slug": "stickerswap",
-    "version": "1.2.1",
+    "version": "1.2.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "icon": "./assets/icon.png",
@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "app.stickerswap",
-      "buildNumber": "3",
+      "buildNumber": "5",
       "config": {
         "usesNonExemptEncryption": false
       },
