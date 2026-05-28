@@ -223,18 +223,22 @@ function AuthGate({ children }: { children: React.ReactNode }) {
     const inAuth = segments[0] === "(auth)";
     const inOnboardingIntro = segments[0] === "onboarding";
 
+    // 1. Intro tutorial pendiente: forzamos a /onboarding/1 hasta verlo.
     if (!onboardedIntro) {
       if (!inOnboardingIntro) router.replace("/onboarding/1" as never);
       return;
     }
 
-    if (!session) {
-      if (!inAuth) router.replace("/(auth)/sign-in" as never);
-      return;
-    }
+    // 2. Sin sesión: el usuario es invitado. Lo dejamos libre en (tabs),
+    // (auth)/sign-in o modales. NO redirigimos a sign-in.
+    if (!session) return;
 
+    // 3. Con sesión pero el perfil aún no cargó.
     if (!user) return;
 
+    // 4. Con sesión y perfil pero faltan pasos de onboarding signed-in
+    // (username + location). Lo mantenemos dentro de (auth)/onboarding o
+    // (auth)/location hasta completarlos.
     if (!user.onboarding_completed) {
       const path = segments.join("/");
       if (path !== "(auth)/onboarding" && path !== "(auth)/location") {
@@ -243,6 +247,8 @@ function AuthGate({ children }: { children: React.ReactNode }) {
       return;
     }
 
+    // 5. Usuario firmado y onboarding completo: si está en (auth) o intro,
+    // lo mandamos a tabs.
     if (inAuth || inOnboardingIntro) {
       router.replace("/(tabs)" as never);
     }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, Pressable, Alert, ActivityIndicator, Linking, Platform } from "react-native";
 import * as AppleAuthentication from "expo-apple-authentication";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { ThemedBackground } from "@/ui/ThemedBackground";
 import { GlowCard } from "@/ui/GlowCard";
 import { AuthThemeToggle } from "@/ui/AuthThemeToggle";
@@ -15,6 +16,13 @@ export default function SignIn() {
   const { theme, mode } = useTheme();
   const [busy, setBusy] = useState(false);
   const [appleAvailable, setAppleAvailable] = useState(false);
+  const router = useRouter();
+  const params = useLocalSearchParams<{ returnTo?: string }>();
+  const cameFromPaywall = params.returnTo === "social";
+
+  const onContinueWithoutAccount = () => {
+    router.replace("/(tabs)" as never);
+  };
 
   useEffect(() => {
     let mounted = true;
@@ -119,6 +127,25 @@ export default function SignIn() {
           </Text>
           {t("signIn_terms_suffix")}
         </Text>
+
+        {!cameFromPaywall && (
+          <Pressable
+            onPress={onContinueWithoutAccount}
+            accessibilityRole="button"
+            accessibilityLabel="Continuar sin cuenta"
+            style={{ marginTop: 28 }}
+          >
+            <Text
+              style={{
+                color: theme.textMute,
+                fontSize: 14,
+                textDecorationLine: "underline"
+              }}
+            >
+              Continuar sin cuenta
+            </Text>
+          </Pressable>
+        )}
       </View>
     </ThemedBackground>
   );
