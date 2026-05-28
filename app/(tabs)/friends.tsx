@@ -3,7 +3,8 @@ import { ScrollView, View, Text, Pressable, RefreshControl, Alert, ActivityIndic
 import { useRouter } from "expo-router";
 import { useQueryClient } from "@tanstack/react-query";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useSession } from "@/auth/useSession";
+import { useSession, useSessionStore } from "@/auth/useSession";
+import { SocialPaywall } from "@/ui/SocialPaywall";
 import { haptics } from "@/lib/haptics";
 import type { Trade, TradeStatus } from "@/domain/types";
 import { useCancelTrade } from "@/hooks/useCancelTrade";
@@ -35,7 +36,7 @@ import { useShareList } from "@/hooks/useShareList";
 
 type Subtab = "amigos" | "trueques" | "cerca";
 
-export default function Friends() {
+function FriendsAuthenticated() {
   const [tab, setTab] = useState<Subtab>("amigos");
   const { theme } = useTheme();
   const qc = useQueryClient();
@@ -691,4 +692,10 @@ function CercaView() {
       )}
     </View>
   );
+}
+
+export default function Friends() {
+  const session = useSessionStore((s) => s.session);
+  if (!session) return <SocialPaywall reason="friends" />;
+  return <FriendsAuthenticated />;
 }
