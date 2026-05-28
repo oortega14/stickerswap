@@ -44,7 +44,72 @@ export default function Profile() {
     }, [])
   );
 
-  if (!user) return null;
+  if (!user) {
+    return (
+      <ThemedBackground>
+        <ScrollView
+          className="flex-1 px-4"
+          contentContainerStyle={{ paddingTop: insets.top + 12, paddingBottom: 32 }}
+        >
+          <Text className="text-space-violet font-bold tracking-widest text-sm mb-4">PERFIL</Text>
+
+          <GlowCard className="items-center mb-4">
+            <View
+              className="rounded-full items-center justify-center"
+              style={{ width: 80, height: 80, backgroundColor: theme.card, borderWidth: 1, borderColor: theme.border }}
+            >
+              <Text style={{ fontSize: 36 }}>👤</Text>
+            </View>
+            <Text className="text-space-ink text-lg font-bold mt-3">Modo invitado</Text>
+            <Text className="text-space-mute text-sm">Sin cuenta — tu progreso vive en este dispositivo.</Text>
+          </GlowCard>
+
+          <Pressable
+            onPress={() => router.push("/(auth)/sign-in" as never)}
+            style={{
+              backgroundColor: theme.accent,
+              borderRadius: 12,
+              paddingVertical: 14,
+              alignItems: "center",
+              marginBottom: 16
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Iniciar sesión"
+          >
+            <Text style={{ color: theme.bg, fontSize: 16, fontWeight: "700" }}>Iniciar sesión</Text>
+          </Pressable>
+
+          <View className="mb-4">
+            <Text className="text-space-mute text-xs tracking-widest mb-2">APARIENCIA</Text>
+            <View
+              className="rounded-xl bg-space-dark px-4 py-3 flex-row items-center justify-between"
+              style={{ borderWidth: 1, borderColor: theme.border }}
+            >
+              <Text className="text-space-ink text-base">Tema oscuro</Text>
+              <Switch
+                value={mode === "dark"}
+                onValueChange={(v) => setMode(v ? "dark" : "light")}
+                trackColor={{ false: theme.textMute, true: theme.accent }}
+                thumbColor={theme.card}
+                accessibilityLabel="Tema oscuro"
+                accessibilityRole="switch"
+                accessibilityState={{ checked: mode === "dark" }}
+              />
+            </View>
+          </View>
+
+          <Pressable
+            onPress={() => router.push("/about" as never)}
+            className="bg-space-mid rounded-xl py-3 items-center"
+            accessibilityLabel="Acerca de"
+            accessibilityRole="button"
+          >
+            <Text className="text-space-ink">Acerca de</Text>
+          </Pressable>
+        </ScrollView>
+      </ThemedBackground>
+    );
+  }
 
   return (
     <ThemedBackground>
