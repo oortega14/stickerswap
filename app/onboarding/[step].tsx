@@ -18,7 +18,7 @@ interface StepData {
 const STEPS: Record<string, StepData> = {
   "1": { titleKey: "onb1_title", bodyKey: "onb1_body", ctaKey: "onb1_cta", next: "/onboarding/2" },
   "2": { titleKey: "onb2_title", bodyKey: "onb2_body", ctaKey: "onb2_cta", next: "/onboarding/3" },
-  "3": { titleKey: "onb3_title", bodyKey: "onb3_body", ctaKey: "onb3_cta", next: "(tabs)" }
+  "3": { titleKey: "onb3_title", bodyKey: "onb3_body", ctaKey: "onb3_cta", next: "(auth)/sign-in" }
 };
 
 export default function OnboardingStep() {
@@ -29,9 +29,9 @@ export default function OnboardingStep() {
   const data = STEPS[step ?? "1"] ?? STEPS["1"];
 
   const onNext = async () => {
-    if (data.next === "(tabs)") {
+    if (data.next === "(auth)/sign-in") {
       await markOnboardingSeen();
-      router.replace("/(tabs)" as never);
+      router.replace("/(auth)/sign-in" as never);
     } else {
       router.push(data.next as never);
     }
