@@ -13,6 +13,7 @@ import { useAlbumStickers } from "@/hooks/useStickers";
 import { useExpandedSections } from "@/store/expandedSections";
 import { useFilterMode } from "@/store/filterMode";
 import { useTheme } from "@/theme/ThemeProvider";
+import { GuestSyncBanner } from "@/ui/GuestSyncBanner";
 import type { AlbumSection } from "@/domain/albumOrder";
 import type { StickerWithStatus } from "@/domain/types";
 
@@ -79,6 +80,8 @@ export default function Home() {
             </Text>
           </Pressable>
         </View>
+
+        <GuestSyncBanner />
 
         {dashboard.stats ? (
           <DashboardGrid stats={dashboard.stats} />
