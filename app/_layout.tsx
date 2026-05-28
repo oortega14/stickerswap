@@ -17,6 +17,7 @@ import { subscribeToFriendUpdates, unsubscribe } from "@/social/realtime";
 import { justScanned } from "@/social/recentScans";
 import { supabase } from "@/auth/supabaseClient";
 import { Snackbar, showSnackbar } from "@/ui/Snackbar";
+import { AuthPromptSheet } from "@/ui/AuthPromptSheet";
 import { useHydrateOnboarding, useOnboardingSeen } from "@/lib/onboarding";
 import datasetJson from "../assets/stickers.json";
 
@@ -289,6 +290,7 @@ export default function RootLayout() {
               <ThemedStack />
             </AuthGate>
             <Snackbar />
+            <AuthPromptSheet />
           </QueryClientProvider>
         )}
         </I18nProvider>
