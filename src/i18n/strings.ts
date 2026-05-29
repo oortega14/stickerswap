@@ -36,7 +36,7 @@ export const es = {
 
   onb1_title: "Bienvenido a tu álbum",
   onb1_body:
-    "Lleva el control de las 994 láminas de tu álbum: las que ya pegaste, las que te faltan y las repetidas. Todo se sincroniza entre tus dispositivos.",
+    "Lleva el control de todas las láminas de tu álbum: las que ya pegaste, las que te faltan y las repetidas. Todo se sincroniza entre tus dispositivos.",
   onb1_cta: "Siguiente",
   onb2_title: "Marca rápido",
   onb2_body:
