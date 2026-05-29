@@ -22,7 +22,7 @@ beforeEach(async () => {
       "ARG-2", 2, "ARG", "Argentina", "player",
       "ARG-3", 3, "ARG", "Argentina", "player",
       "URU-1", 1, "URU", "Uruguay", "player",
-      "FWC-1", 1, null, "Intro", "logo"
+      "INT-1", 1, null, "Intro", "logo"
     ]
   );
 });
@@ -49,7 +49,7 @@ describe("bulkSetOwnedForTeam", () => {
   it("does not affect stickers from other teams", async () => {
     await bulkSetOwnedForTeam("ARG");
     expect((await getStatus("URU-1"))?.count ?? 0).toBe(0);
-    expect((await getStatus("FWC-1"))?.count ?? 0).toBe(0);
+    expect((await getStatus("INT-1"))?.count ?? 0).toBe(0);
   });
 
   it("returns 0 when all team stickers already have count >= 1", async () => {

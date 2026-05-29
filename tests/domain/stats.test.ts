@@ -63,7 +63,7 @@ describe("computeStats", () => {
       // MEX sin empezar
       baseSticker({ code: "MEX-1", team: "MEX", section: "México", count: 0 }),
       // Intro: NO cuenta como equipo aunque este completo
-      baseSticker({ code: "FWC-1", team: null, section: "Intro", count: 1 })
+      baseSticker({ code: "INT-1", team: null, section: "Intro", count: 1 })
     ];
     const s = computeStats(stickers, [], []);
     expect(s.teamsComplete).toBe(1); // ARG
@@ -95,8 +95,8 @@ describe("computeStats", () => {
 
   it("cuenta stars por section=Estrellas", () => {
     const stickers = [
-      baseSticker({ code: "CC1", section: "Estrellas", count: 1 }),
-      baseSticker({ code: "CC2", section: "Estrellas", count: 1 }),
+      baseSticker({ code: "STR-1", section: "Estrellas", count: 1 }),
+      baseSticker({ code: "STR-2", section: "Estrellas", count: 1 }),
       baseSticker({ code: "X1",  section: "Intro",     count: 1 })
     ];
     const s = computeStats(stickers, [], []);

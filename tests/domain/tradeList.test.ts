@@ -65,7 +65,7 @@ describe("formatTradeListByTeam", () => {
       { code: "CZE-8", number: 8, section: "República Checa", team: "CZE", count: 0 },
       { code: "INTRO-2", number: 2, section: "Intro", team: null, count: 0 },
       { code: "INTRO-5", number: 5, section: "Intro", team: null, count: 0 },
-      { code: "CC-4", number: 4, section: "Estrellas", team: null, count: 0 }
+      { code: "STR-4", number: 4, section: "Estrellas", team: null, count: 0 }
     ],
     duplicates: []
   };
@@ -84,7 +84,7 @@ describe("formatTradeListByTeam", () => {
       "Me faltan*",
       "Intro: INTRO-2, INTRO-5",
       "FRA 🇫🇷: FRA-3, FRA-8, FRA-12",
-      "Estrellas: CC-4",
+      "Estrellas: STR-4",
       "KOR 🇰🇷: KOR-5, KOR-11",
       "CZE 🇨🇿: CZE-8"
     ].join("\n");
