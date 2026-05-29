@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-// Genera assets/stickers.json con la estructura del album de cromos del Mundial.
+// Genera assets/stickers.json con la estructura del álbum de cromos.
 // Estructura:
-//   - 9 stickers de intro (0-0 + FWC-1..FWC-8)
+//   - 9 stickers de intro (INT-1..INT-9)
 //   - 48 equipos en 12 grupos × 4 equipos
 //   - Por equipo: 20 stickers
 //       N1 = escudo (team_badge)
 //       N2..N12 = 11 jugadores
 //       N13 = team_photo
 //       N14..N20 = 7 jugadores más
-//   - 11 stickers de Extras (FWC historicos)
-//   - 14 stickers de Estrellas (set especial)
+//   - 11 stickers de Extras (EXT-1..EXT-11)
+//   - 14 stickers de Estrellas (STR-1..STR-14)
 //
 // Para regenerar: node scripts/gen-stickers.js
 
@@ -91,9 +91,9 @@ const GROUPS = [
   ]]
 ];
 
-const INTRO_CODES = ["0-0", "FWC-1", "FWC-2", "FWC-3", "FWC-4", "FWC-5", "FWC-6", "FWC-7", "FWC-8"];
-const EXTRAS_CODES = ["FWC-9", "FWC-10", "FWC-11", "FWC-12", "FWC-13", "FWC-14", "FWC-15", "FWC-16", "FWC-17", "FWC-18", "FWC-19"];
-const STARS_CODES = ["CC1", "CC2", "CC3", "CC4", "CC5", "CC6", "CC7", "CC8", "CC9", "CC10", "CC11", "CC12", "CC13", "CC14"];
+const INTRO_CODES = ["INT-1", "INT-2", "INT-3", "INT-4", "INT-5", "INT-6", "INT-7", "INT-8", "INT-9"];
+const EXTRAS_CODES = ["EXT-1", "EXT-2", "EXT-3", "EXT-4", "EXT-5", "EXT-6", "EXT-7", "EXT-8", "EXT-9", "EXT-10", "EXT-11"];
+const STARS_CODES = ["STR-1", "STR-2", "STR-3", "STR-4", "STR-5", "STR-6", "STR-7", "STR-8", "STR-9", "STR-10", "STR-11", "STR-12", "STR-13", "STR-14"];
 
 const stickers = [];
 let n = 1;
@@ -132,7 +132,7 @@ for (const code of STARS_CODES) {
 }
 
 const dataset = {
-  version: 9,
+  version: 10,
   album: "Stickerswap",
   stickers
 };
