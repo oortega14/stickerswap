@@ -1,9 +1,9 @@
 {
-  "version": 9,
+  "version": 10,
   "album": "Stickerswap",
   "stickers": [
     {
-      "code": "0-0",
+      "code": "INT-1",
       "number": 1,
       "team": null,
       "section": "Intro",
@@ -11,7 +11,7 @@
       "group": null
     },
     {
-      "code": "FWC-1",
+      "code": "INT-2",
       "number": 2,
       "team": null,
       "section": "Intro",
@@ -19,7 +19,7 @@
       "group": null
     },
     {
-      "code": "FWC-2",
+      "code": "INT-3",
       "number": 3,
       "team": null,
       "section": "Intro",
@@ -27,7 +27,7 @@
       "group": null
     },
     {
-      "code": "FWC-3",
+      "code": "INT-4",
       "number": 4,
       "team": null,
       "section": "Intro",
@@ -35,7 +35,7 @@
       "group": null
     },
     {
-      "code": "FWC-4",
+      "code": "INT-5",
       "number": 5,
       "team": null,
       "section": "Intro",
@@ -43,7 +43,7 @@
       "group": null
     },
     {
-      "code": "FWC-5",
+      "code": "INT-6",
       "number": 6,
       "team": null,
       "section": "Intro",
@@ -51,7 +51,7 @@
       "group": null
     },
     {
-      "code": "FWC-6",
+      "code": "INT-7",
       "number": 7,
       "team": null,
       "section": "Intro",
@@ -59,7 +59,7 @@
       "group": null
     },
     {
-      "code": "FWC-7",
+      "code": "INT-8",
       "number": 8,
       "team": null,
       "section": "Intro",
@@ -67,7 +67,7 @@
       "group": null
     },
     {
-      "code": "FWC-8",
+      "code": "INT-9",
       "number": 9,
       "team": null,
       "section": "Intro",
@@ -7755,7 +7755,7 @@
       "group": "L"
     },
     {
-      "code": "FWC-9",
+      "code": "EXT-1",
       "number": 970,
       "team": null,
       "section": "Extras",
@@ -7763,7 +7763,7 @@
       "group": null
     },
     {
-      "code": "FWC-10",
+      "code": "EXT-2",
       "number": 971,
       "team": null,
       "section": "Extras",
@@ -7771,7 +7771,7 @@
       "group": null
     },
     {
-      "code": "FWC-11",
+      "code": "EXT-3",
       "number": 972,
       "team": null,
       "section": "Extras",
@@ -7779,7 +7779,7 @@
       "group": null
     },
     {
-      "code": "FWC-12",
+      "code": "EXT-4",
       "number": 973,
       "team": null,
       "section": "Extras",
@@ -7787,7 +7787,7 @@
       "group": null
     },
     {
-      "code": "FWC-13",
+      "code": "EXT-5",
       "number": 974,
       "team": null,
       "section": "Extras",
@@ -7795,7 +7795,7 @@
       "group": null
     },
     {
-      "code": "FWC-14",
+      "code": "EXT-6",
       "number": 975,
       "team": null,
       "section": "Extras",
@@ -7803,7 +7803,7 @@
       "group": null
     },
     {
-      "code": "FWC-15",
+      "code": "EXT-7",
       "number": 976,
       "team": null,
       "section": "Extras",
@@ -7811,7 +7811,7 @@
       "group": null
     },
     {
-      "code": "FWC-16",
+      "code": "EXT-8",
       "number": 977,
       "team": null,
       "section": "Extras",
@@ -7819,7 +7819,7 @@
       "group": null
     },
     {
-      "code": "FWC-17",
+      "code": "EXT-9",
       "number": 978,
       "team": null,
       "section": "Extras",
@@ -7827,7 +7827,7 @@
       "group": null
     },
     {
-      "code": "FWC-18",
+      "code": "EXT-10",
       "number": 979,
       "team": null,
       "section": "Extras",
@@ -7835,7 +7835,7 @@
       "group": null
     },
     {
-      "code": "FWC-19",
+      "code": "EXT-11",
       "number": 980,
       "team": null,
       "section": "Extras",
@@ -7843,7 +7843,7 @@
       "group": null
     },
     {
-      "code": "CC1",
+      "code": "STR-1",
       "number": 981,
       "team": null,
       "section": "Estrellas",
@@ -7851,7 +7851,7 @@
       "group": null
     },
     {
-      "code": "CC2",
+      "code": "STR-2",
       "number": 982,
       "team": null,
       "section": "Estrellas",
@@ -7859,7 +7859,7 @@
       "group": null
     },
     {
-      "code": "CC3",
+      "code": "STR-3",
       "number": 983,
       "team": null,
       "section": "Estrellas",
@@ -7867,7 +7867,7 @@
       "group": null
     },
     {
-      "code": "CC4",
+      "code": "STR-4",
       "number": 984,
       "team": null,
       "section": "Estrellas",
@@ -7875,7 +7875,7 @@
       "group": null
     },
     {
-      "code": "CC5",
+      "code": "STR-5",
       "number": 985,
       "team": null,
       "section": "Estrellas",
@@ -7883,7 +7883,7 @@
       "group": null
     },
     {
-      "code": "CC6",
+      "code": "STR-6",
       "number": 986,
       "team": null,
       "section": "Estrellas",
@@ -7891,7 +7891,7 @@
       "group": null
     },
     {
-      "code": "CC7",
+      "code": "STR-7",
       "number": 987,
       "team": null,
       "section": "Estrellas",
@@ -7899,7 +7899,7 @@
       "group": null
     },
     {
-      "code": "CC8",
+      "code": "STR-8",
       "number": 988,
       "team": null,
       "section": "Estrellas",
@@ -7907,7 +7907,7 @@
       "group": null
     },
     {
-      "code": "CC9",
+      "code": "STR-9",
       "number": 989,
       "team": null,
       "section": "Estrellas",
@@ -7915,7 +7915,7 @@
       "group": null
     },
     {
-      "code": "CC10",
+      "code": "STR-10",
       "number": 990,
       "team": null,
       "section": "Estrellas",
@@ -7923,7 +7923,7 @@
       "group": null
     },
     {
-      "code": "CC11",
+      "code": "STR-11",
       "number": 991,
       "team": null,
       "section": "Estrellas",
@@ -7931,7 +7931,7 @@
       "group": null
     },
     {
-      "code": "CC12",
+      "code": "STR-12",
       "number": 992,
       "team": null,
       "section": "Estrellas",
@@ -7939,7 +7939,7 @@
       "group": null
     },
     {
-      "code": "CC13",
+      "code": "STR-13",
       "number": 993,
       "team": null,
       "section": "Estrellas",
@@ -7947,7 +7947,7 @@
       "group": null
     },
     {
-      "code": "CC14",
+      "code": "STR-14",
       "number": 994,
       "team": null,
       "section": "Estrellas",

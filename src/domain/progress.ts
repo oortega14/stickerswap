@@ -44,7 +44,7 @@ export function computeProgress(
   }
 
   // Orden de álbum: el menor `number` de cada sección representa su posición
-  // canónica en el álbum (el dataset enumera n=1..994 en orden de páginas).
+  // canónica en el álbum (el dataset enumera n=1..N en orden de páginas).
   const bySection: SectionProgress[] = Array.from(sectionTotals.entries())
     .sort(([, a], [, b]) => a.minNumber - b.minNumber)
     .map(([section, v]) => ({
