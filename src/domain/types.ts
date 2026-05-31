@@ -23,7 +23,7 @@ export interface SectionProgress {
   total: number;
   collected: number;
   pct: number;
-  teamCode: string | null;  // null para Intro/Extras/Estrellas, código FIFA para equipos
+  teamCode: string | null;  // null para Intro/Extras/Estrellas, código de país para equipos
 }
 
 export interface OverallProgress {

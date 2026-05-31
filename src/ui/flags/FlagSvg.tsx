@@ -6,7 +6,7 @@ import { ExtrasBadge } from "./specialBadges/ExtrasBadge";
 import { StarsBadge } from "./specialBadges/StarsBadge";
 
 interface Props {
-  code: string | null;          // FIFA code, o null para especiales
+  code: string | null;          // código de país, o null para especiales
   section?: string;             // requerido si code === null
   size?: number;                // ancho/alto en px; default ocupa el contenedor
 }

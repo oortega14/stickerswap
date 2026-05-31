@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 // Genera assets/stickers.json con la estructura del álbum de cromos.
+//
+// Es una colección genérica de banderas del mundo, en una lista plana
+// en el orden de las páginas del álbum. No hay grupos ni agrupaciones de
+// ningún tipo. No representa ningún torneo, evento, federación ni
+// competición real, ni reproduce su estructura ni su agrupación.
+//
 // Estructura:
 //   - 9 stickers de intro (INT-1..INT-9)
-//   - 48 equipos en 12 grupos × 4 equipos
-//   - Por equipo: 20 stickers
-//       N1 = escudo (team_badge)
-//       N2..N12 = 11 jugadores
-//       N13 = team_photo
-//       N14..N20 = 7 jugadores más
+//   - 48 banderas (lista plana, orden del álbum)
+//   - Por bandera: 20 cromos
+//       N1  = bandera principal (team_badge)
+//       N2..N12  = 11 cromos
+//       N13 = foto del set (team_photo)
+//       N14..N20 = 7 cromos más
 //   - 11 stickers de Extras (EXT-1..EXT-11)
 //   - 14 stickers de Estrellas (STR-1..STR-14)
 //
@@ -16,79 +22,56 @@
 const fs = require("fs");
 const path = require("path");
 
-const GROUPS = [
-  ["A", [
-    { code: "MEX", section: "México" },
-    { code: "RSA", section: "Sudáfrica" },
-    { code: "KOR", section: "Corea del Sur" },
-    { code: "CZE", section: "República Checa" }
-  ]],
-  ["B", [
-    { code: "CAN", section: "Canadá" },
-    { code: "BIH", section: "Bosnia y Herzegovina" },
-    { code: "QAT", section: "Catar" },
-    { code: "SUI", section: "Suiza" }
-  ]],
-  ["C", [
-    { code: "BRA", section: "Brasil" },
-    { code: "MAR", section: "Marruecos" },
-    { code: "HAI", section: "Haití" },
-    { code: "SCO", section: "Escocia" }
-  ]],
-  ["D", [
-    { code: "USA", section: "USA" },
-    { code: "PAR", section: "Paraguay" },
-    { code: "AUS", section: "Australia" },
-    { code: "TUR", section: "Turquía" }
-  ]],
-  ["E", [
-    { code: "GER", section: "Alemania" },
-    { code: "CUW", section: "Curazao" },
-    { code: "CIV", section: "Costa de Marfil" },
-    { code: "ECU", section: "Ecuador" }
-  ]],
-  ["F", [
-    { code: "NED", section: "Países Bajos" },
-    { code: "JPN", section: "Japón" },
-    { code: "SWE", section: "Suecia" },
-    { code: "TUN", section: "Túnez" }
-  ]],
-  ["G", [
-    { code: "BEL", section: "Bélgica" },
-    { code: "EGY", section: "Egipto" },
-    { code: "IRN", section: "Irán" },
-    { code: "NZL", section: "Nueva Zelanda" }
-  ]],
-  ["H", [
-    { code: "ESP", section: "España" },
-    { code: "CPV", section: "Cabo Verde" },
-    { code: "KSA", section: "Arabia Saudita" },
-    { code: "URU", section: "Uruguay" }
-  ]],
-  ["I", [
-    { code: "FRA", section: "Francia" },
-    { code: "SEN", section: "Senegal" },
-    { code: "IRQ", section: "Irak" },
-    { code: "NOR", section: "Noruega" }
-  ]],
-  ["J", [
-    { code: "ARG", section: "Argentina" },
-    { code: "ALG", section: "Argelia" },
-    { code: "AUT", section: "Austria" },
-    { code: "JOR", section: "Jordania" }
-  ]],
-  ["K", [
-    { code: "POR", section: "Portugal" },
-    { code: "COD", section: "RD Congo" },
-    { code: "UZB", section: "Uzbekistán" },
-    { code: "COL", section: "Colombia" }
-  ]],
-  ["L", [
-    { code: "ENG", section: "Inglaterra" },
-    { code: "CRO", section: "Croacia" },
-    { code: "GHA", section: "Ghana" },
-    { code: "PAN", section: "Panamá" }
-  ]]
+// Lista plana de banderas en el orden de las páginas del álbum (sin grupos).
+const FLAGS = [
+  { code: "MEX", section: "México" },
+  { code: "RSA", section: "Sudáfrica" },
+  { code: "KOR", section: "Corea del Sur" },
+  { code: "CZE", section: "República Checa" },
+  { code: "CAN", section: "Canadá" },
+  { code: "BIH", section: "Bosnia y Herzegovina" },
+  { code: "QAT", section: "Catar" },
+  { code: "SUI", section: "Suiza" },
+  { code: "BRA", section: "Brasil" },
+  { code: "MAR", section: "Marruecos" },
+  { code: "HAI", section: "Haití" },
+  { code: "SCO", section: "Escocia" },
+  { code: "USA", section: "USA" },
+  { code: "PAR", section: "Paraguay" },
+  { code: "AUS", section: "Australia" },
+  { code: "TUR", section: "Turquía" },
+  { code: "GER", section: "Alemania" },
+  { code: "CUW", section: "Curazao" },
+  { code: "CIV", section: "Costa de Marfil" },
+  { code: "ECU", section: "Ecuador" },
+  { code: "NED", section: "Países Bajos" },
+  { code: "JPN", section: "Japón" },
+  { code: "SWE", section: "Suecia" },
+  { code: "TUN", section: "Túnez" },
+  { code: "BEL", section: "Bélgica" },
+  { code: "EGY", section: "Egipto" },
+  { code: "IRN", section: "Irán" },
+  { code: "NZL", section: "Nueva Zelanda" },
+  { code: "ESP", section: "España" },
+  { code: "CPV", section: "Cabo Verde" },
+  { code: "KSA", section: "Arabia Saudita" },
+  { code: "URU", section: "Uruguay" },
+  { code: "FRA", section: "Francia" },
+  { code: "SEN", section: "Senegal" },
+  { code: "IRQ", section: "Irak" },
+  { code: "NOR", section: "Noruega" },
+  { code: "ARG", section: "Argentina" },
+  { code: "ALG", section: "Argelia" },
+  { code: "AUT", section: "Austria" },
+  { code: "JOR", section: "Jordania" },
+  { code: "POR", section: "Portugal" },
+  { code: "COD", section: "RD Congo" },
+  { code: "UZB", section: "Uzbekistán" },
+  { code: "COL", section: "Colombia" },
+  { code: "ENG", section: "Inglaterra" },
+  { code: "CRO", section: "Croacia" },
+  { code: "GHA", section: "Ghana" },
+  { code: "PAN", section: "Panamá" }
 ];
 
 const INTRO_CODES = ["INT-1", "INT-2", "INT-3", "INT-4", "INT-5", "INT-6", "INT-7", "INT-8", "INT-9"];
@@ -99,40 +82,38 @@ const stickers = [];
 let n = 1;
 
 for (const code of INTRO_CODES) {
-  stickers.push({ code, number: n++, team: null, section: "Intro", type: "icon", group: null });
+  stickers.push({ code, number: n++, team: null, section: "Intro", type: "icon" });
 }
 
-for (const [groupLetter, teams] of GROUPS) {
-  for (const team of teams) {
+for (const flag of FLAGS) {
+  stickers.push({
+    code: `${flag.code}-1`, number: n++, team: flag.code, section: flag.section, type: "team_badge"
+  });
+  for (let i = 0; i < 11; i++) {
     stickers.push({
-      code: `${team.code}-1`, number: n++, team: team.code, section: team.section, type: "team_badge", group: groupLetter
+      code: `${flag.code}-${i + 2}`, number: n++, team: flag.code, section: flag.section, type: "player"
     });
-    for (let i = 0; i < 11; i++) {
-      stickers.push({
-        code: `${team.code}-${i + 2}`, number: n++, team: team.code, section: team.section, type: "player", group: groupLetter
-      });
-    }
+  }
+  stickers.push({
+    code: `${flag.code}-13`, number: n++, team: flag.code, section: flag.section, type: "team_photo"
+  });
+  for (let i = 0; i < 7; i++) {
     stickers.push({
-      code: `${team.code}-13`, number: n++, team: team.code, section: team.section, type: "team_photo", group: groupLetter
+      code: `${flag.code}-${i + 14}`, number: n++, team: flag.code, section: flag.section, type: "player"
     });
-    for (let i = 0; i < 7; i++) {
-      stickers.push({
-        code: `${team.code}-${i + 14}`, number: n++, team: team.code, section: team.section, type: "player", group: groupLetter
-      });
-    }
   }
 }
 
 for (const code of EXTRAS_CODES) {
-  stickers.push({ code, number: n++, team: null, section: "Extras", type: "special", group: null });
+  stickers.push({ code, number: n++, team: null, section: "Extras", type: "special" });
 }
 
 for (const code of STARS_CODES) {
-  stickers.push({ code, number: n++, team: null, section: "Estrellas", type: "special", group: null });
+  stickers.push({ code, number: n++, team: null, section: "Estrellas", type: "special" });
 }
 
 const dataset = {
-  version: 10,
+  version: 11,
   album: "Stickerswap",
   stickers
 };

@@ -4,7 +4,7 @@ Guía rápida para Claude (o cualquier persona/IA) que retome el proyecto. Es un
 
 ## Qué es
 
-App móvil offline-first para gestionar tu álbum de cromos del torneo de selecciones 2026. Marcás láminas pegadas, contás repetidas, ves progreso por equipo, intercambiás con amigos por QR/username, ves matches automáticos.
+App móvil offline-first para gestionar tu álbum genérico de cromos de banderas del mundo. Marcás láminas pegadas, contás repetidas, ves progreso por bandera, intercambiás con amigos por QR/username, ves matches automáticos. No representa ningún torneo, evento ni competición real.
 
 Personal project del autor (Oscar Ortega), para uso individual + amigos. App independiente, sin afiliación con ninguna editorial ni federación.
 
@@ -96,16 +96,17 @@ eas submit --platform android --latest  # Play Internal track
 
 994 stickers con campos mínimos:
 
-- `code` (string, PK único — ej. `FWC-1`, `MEX-1`, `CC1`)
+- `code` (string, PK único — ej. `INT-1`, `MEX-1`, `STR-3`)
 - `number` (int, posición en el álbum)
 - `team` (código de país o null para especiales)
 - `section` (nombre de la sección)
 - `type` (`player`, `team_badge`, `team_photo`, `icon`, `special`)
-- `group` (letra A-L para teams; null para especiales)
 
 **No incluye nombres de jugadores ni imágenes** — para minimizar riesgo de IP. La UI muestra el código del cromo + la bandera del país.
 
-Secciones: 9 stickers Intro + 48 equipos × 20 + 11 Extras + 14 Estrellas.
+Es una colección genérica de banderas del mundo, agrupadas por continente (África, América, Asia, Europa, Oceanía). NO representa ningún torneo, evento, federación ni competición real, ni reproduce su estructura, listado de equipos o agrupación (sin grupos A-L, sin año de torneo).
+
+Secciones: 9 stickers Intro + 48 banderas × 20 + 11 Extras + 14 Estrellas.
 
 Para regenerar: editar `scripts/gen-stickers.js`, bumpear `version`, correr `node scripts/gen-stickers.js`. La app detecta version mayor al boot y re-siembra `stickers` local sin tocar `sticker_status` (progreso).
 

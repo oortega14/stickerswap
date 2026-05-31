@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "app.stickerswap",
-      "buildNumber": "8",
+      "buildNumber": "9",
       "config": {
         "usesNonExemptEncryption": false
       },
@@ -31,7 +31,7 @@
         "backgroundColor": "#1a1410"
       },
       "package": "app.stickerswap",
-      "versionCode": 10,
+      "versionCode": 11,
       "permissions": [
         "android.permission.CAMERA"
       ]
