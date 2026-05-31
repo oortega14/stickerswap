@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "album": "Stickerswap",
   "stickers": [
     {
@@ -7,7952 +7,6958 @@
       "number": 1,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-2",
       "number": 2,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-3",
       "number": 3,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-4",
       "number": 4,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-5",
       "number": 5,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-6",
       "number": 6,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-7",
       "number": 7,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-8",
       "number": 8,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "INT-9",
       "number": 9,
       "team": null,
       "section": "Intro",
-      "type": "icon",
-      "group": null
+      "type": "icon"
     },
     {
       "code": "MEX-1",
       "number": 10,
       "team": "MEX",
       "section": "México",
-      "type": "team_badge",
-      "group": "A"
+      "type": "team_badge"
     },
     {
       "code": "MEX-2",
       "number": 11,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-3",
       "number": 12,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-4",
       "number": 13,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-5",
       "number": 14,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-6",
       "number": 15,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-7",
       "number": 16,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-8",
       "number": 17,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-9",
       "number": 18,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-10",
       "number": 19,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-11",
       "number": 20,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-12",
       "number": 21,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-13",
       "number": 22,
       "team": "MEX",
       "section": "México",
-      "type": "team_photo",
-      "group": "A"
+      "type": "team_photo"
     },
     {
       "code": "MEX-14",
       "number": 23,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-15",
       "number": 24,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-16",
       "number": 25,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-17",
       "number": 26,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-18",
       "number": 27,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-19",
       "number": 28,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "MEX-20",
       "number": 29,
       "team": "MEX",
       "section": "México",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-1",
       "number": 30,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "team_badge",
-      "group": "A"
+      "type": "team_badge"
     },
     {
       "code": "RSA-2",
       "number": 31,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-3",
       "number": 32,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-4",
       "number": 33,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-5",
       "number": 34,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-6",
       "number": 35,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-7",
       "number": 36,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-8",
       "number": 37,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-9",
       "number": 38,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-10",
       "number": 39,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-11",
       "number": 40,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-12",
       "number": 41,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-13",
       "number": 42,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "team_photo",
-      "group": "A"
+      "type": "team_photo"
     },
     {
       "code": "RSA-14",
       "number": 43,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-15",
       "number": 44,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-16",
       "number": 45,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-17",
       "number": 46,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-18",
       "number": 47,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-19",
       "number": 48,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "RSA-20",
       "number": 49,
       "team": "RSA",
       "section": "Sudáfrica",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-1",
       "number": 50,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "team_badge",
-      "group": "A"
+      "type": "team_badge"
     },
     {
       "code": "KOR-2",
       "number": 51,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-3",
       "number": 52,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-4",
       "number": 53,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-5",
       "number": 54,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-6",
       "number": 55,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-7",
       "number": 56,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-8",
       "number": 57,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-9",
       "number": 58,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-10",
       "number": 59,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-11",
       "number": 60,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-12",
       "number": 61,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-13",
       "number": 62,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "team_photo",
-      "group": "A"
+      "type": "team_photo"
     },
     {
       "code": "KOR-14",
       "number": 63,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-15",
       "number": 64,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-16",
       "number": 65,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-17",
       "number": 66,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-18",
       "number": 67,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-19",
       "number": 68,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "KOR-20",
       "number": 69,
       "team": "KOR",
       "section": "Corea del Sur",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-1",
       "number": 70,
       "team": "CZE",
       "section": "República Checa",
-      "type": "team_badge",
-      "group": "A"
+      "type": "team_badge"
     },
     {
       "code": "CZE-2",
       "number": 71,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-3",
       "number": 72,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-4",
       "number": 73,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-5",
       "number": 74,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-6",
       "number": 75,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-7",
       "number": 76,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-8",
       "number": 77,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-9",
       "number": 78,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-10",
       "number": 79,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-11",
       "number": 80,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-12",
       "number": 81,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-13",
       "number": 82,
       "team": "CZE",
       "section": "República Checa",
-      "type": "team_photo",
-      "group": "A"
+      "type": "team_photo"
     },
     {
       "code": "CZE-14",
       "number": 83,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-15",
       "number": 84,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-16",
       "number": 85,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-17",
       "number": 86,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-18",
       "number": 87,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-19",
       "number": 88,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CZE-20",
       "number": 89,
       "team": "CZE",
       "section": "República Checa",
-      "type": "player",
-      "group": "A"
+      "type": "player"
     },
     {
       "code": "CAN-1",
       "number": 90,
       "team": "CAN",
       "section": "Canadá",
-      "type": "team_badge",
-      "group": "B"
+      "type": "team_badge"
     },
     {
       "code": "CAN-2",
       "number": 91,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-3",
       "number": 92,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-4",
       "number": 93,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-5",
       "number": 94,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-6",
       "number": 95,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-7",
       "number": 96,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-8",
       "number": 97,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-9",
       "number": 98,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-10",
       "number": 99,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-11",
       "number": 100,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-12",
       "number": 101,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-13",
       "number": 102,
       "team": "CAN",
       "section": "Canadá",
-      "type": "team_photo",
-      "group": "B"
+      "type": "team_photo"
     },
     {
       "code": "CAN-14",
       "number": 103,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-15",
       "number": 104,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-16",
       "number": 105,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-17",
       "number": 106,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-18",
       "number": 107,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-19",
       "number": 108,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "CAN-20",
       "number": 109,
       "team": "CAN",
       "section": "Canadá",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-1",
       "number": 110,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "team_badge",
-      "group": "B"
+      "type": "team_badge"
     },
     {
       "code": "BIH-2",
       "number": 111,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-3",
       "number": 112,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-4",
       "number": 113,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-5",
       "number": 114,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-6",
       "number": 115,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-7",
       "number": 116,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-8",
       "number": 117,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-9",
       "number": 118,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-10",
       "number": 119,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-11",
       "number": 120,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-12",
       "number": 121,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-13",
       "number": 122,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "team_photo",
-      "group": "B"
+      "type": "team_photo"
     },
     {
       "code": "BIH-14",
       "number": 123,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-15",
       "number": 124,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-16",
       "number": 125,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-17",
       "number": 126,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-18",
       "number": 127,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-19",
       "number": 128,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BIH-20",
       "number": 129,
       "team": "BIH",
       "section": "Bosnia y Herzegovina",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-1",
       "number": 130,
       "team": "QAT",
       "section": "Catar",
-      "type": "team_badge",
-      "group": "B"
+      "type": "team_badge"
     },
     {
       "code": "QAT-2",
       "number": 131,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-3",
       "number": 132,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-4",
       "number": 133,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-5",
       "number": 134,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-6",
       "number": 135,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-7",
       "number": 136,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-8",
       "number": 137,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-9",
       "number": 138,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-10",
       "number": 139,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-11",
       "number": 140,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-12",
       "number": 141,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-13",
       "number": 142,
       "team": "QAT",
       "section": "Catar",
-      "type": "team_photo",
-      "group": "B"
+      "type": "team_photo"
     },
     {
       "code": "QAT-14",
       "number": 143,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-15",
       "number": 144,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-16",
       "number": 145,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-17",
       "number": 146,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-18",
       "number": 147,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-19",
       "number": 148,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "QAT-20",
       "number": 149,
       "team": "QAT",
       "section": "Catar",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-1",
       "number": 150,
       "team": "SUI",
       "section": "Suiza",
-      "type": "team_badge",
-      "group": "B"
+      "type": "team_badge"
     },
     {
       "code": "SUI-2",
       "number": 151,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-3",
       "number": 152,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-4",
       "number": 153,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-5",
       "number": 154,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-6",
       "number": 155,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-7",
       "number": 156,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-8",
       "number": 157,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-9",
       "number": 158,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-10",
       "number": 159,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-11",
       "number": 160,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-12",
       "number": 161,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-13",
       "number": 162,
       "team": "SUI",
       "section": "Suiza",
-      "type": "team_photo",
-      "group": "B"
+      "type": "team_photo"
     },
     {
       "code": "SUI-14",
       "number": 163,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-15",
       "number": 164,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-16",
       "number": 165,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-17",
       "number": 166,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-18",
       "number": 167,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-19",
       "number": 168,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "SUI-20",
       "number": 169,
       "team": "SUI",
       "section": "Suiza",
-      "type": "player",
-      "group": "B"
+      "type": "player"
     },
     {
       "code": "BRA-1",
       "number": 170,
       "team": "BRA",
       "section": "Brasil",
-      "type": "team_badge",
-      "group": "C"
+      "type": "team_badge"
     },
     {
       "code": "BRA-2",
       "number": 171,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-3",
       "number": 172,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-4",
       "number": 173,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-5",
       "number": 174,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-6",
       "number": 175,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-7",
       "number": 176,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-8",
       "number": 177,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-9",
       "number": 178,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-10",
       "number": 179,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-11",
       "number": 180,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-12",
       "number": 181,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-13",
       "number": 182,
       "team": "BRA",
       "section": "Brasil",
-      "type": "team_photo",
-      "group": "C"
+      "type": "team_photo"
     },
     {
       "code": "BRA-14",
       "number": 183,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-15",
       "number": 184,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-16",
       "number": 185,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-17",
       "number": 186,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-18",
       "number": 187,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-19",
       "number": 188,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "BRA-20",
       "number": 189,
       "team": "BRA",
       "section": "Brasil",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-1",
       "number": 190,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "team_badge",
-      "group": "C"
+      "type": "team_badge"
     },
     {
       "code": "MAR-2",
       "number": 191,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-3",
       "number": 192,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-4",
       "number": 193,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-5",
       "number": 194,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-6",
       "number": 195,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-7",
       "number": 196,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-8",
       "number": 197,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-9",
       "number": 198,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-10",
       "number": 199,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-11",
       "number": 200,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-12",
       "number": 201,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-13",
       "number": 202,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "team_photo",
-      "group": "C"
+      "type": "team_photo"
     },
     {
       "code": "MAR-14",
       "number": 203,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-15",
       "number": 204,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-16",
       "number": 205,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-17",
       "number": 206,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-18",
       "number": 207,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-19",
       "number": 208,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "MAR-20",
       "number": 209,
       "team": "MAR",
       "section": "Marruecos",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-1",
       "number": 210,
       "team": "HAI",
       "section": "Haití",
-      "type": "team_badge",
-      "group": "C"
+      "type": "team_badge"
     },
     {
       "code": "HAI-2",
       "number": 211,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-3",
       "number": 212,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-4",
       "number": 213,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-5",
       "number": 214,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-6",
       "number": 215,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-7",
       "number": 216,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-8",
       "number": 217,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-9",
       "number": 218,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-10",
       "number": 219,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-11",
       "number": 220,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-12",
       "number": 221,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-13",
       "number": 222,
       "team": "HAI",
       "section": "Haití",
-      "type": "team_photo",
-      "group": "C"
+      "type": "team_photo"
     },
     {
       "code": "HAI-14",
       "number": 223,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-15",
       "number": 224,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-16",
       "number": 225,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-17",
       "number": 226,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-18",
       "number": 227,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-19",
       "number": 228,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "HAI-20",
       "number": 229,
       "team": "HAI",
       "section": "Haití",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-1",
       "number": 230,
       "team": "SCO",
       "section": "Escocia",
-      "type": "team_badge",
-      "group": "C"
+      "type": "team_badge"
     },
     {
       "code": "SCO-2",
       "number": 231,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-3",
       "number": 232,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-4",
       "number": 233,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-5",
       "number": 234,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-6",
       "number": 235,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-7",
       "number": 236,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-8",
       "number": 237,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-9",
       "number": 238,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-10",
       "number": 239,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-11",
       "number": 240,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-12",
       "number": 241,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-13",
       "number": 242,
       "team": "SCO",
       "section": "Escocia",
-      "type": "team_photo",
-      "group": "C"
+      "type": "team_photo"
     },
     {
       "code": "SCO-14",
       "number": 243,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-15",
       "number": 244,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-16",
       "number": 245,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-17",
       "number": 246,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-18",
       "number": 247,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-19",
       "number": 248,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "SCO-20",
       "number": 249,
       "team": "SCO",
       "section": "Escocia",
-      "type": "player",
-      "group": "C"
+      "type": "player"
     },
     {
       "code": "USA-1",
       "number": 250,
       "team": "USA",
       "section": "USA",
-      "type": "team_badge",
-      "group": "D"
+      "type": "team_badge"
     },
     {
       "code": "USA-2",
       "number": 251,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-3",
       "number": 252,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-4",
       "number": 253,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-5",
       "number": 254,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-6",
       "number": 255,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-7",
       "number": 256,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-8",
       "number": 257,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-9",
       "number": 258,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-10",
       "number": 259,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-11",
       "number": 260,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-12",
       "number": 261,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-13",
       "number": 262,
       "team": "USA",
       "section": "USA",
-      "type": "team_photo",
-      "group": "D"
+      "type": "team_photo"
     },
     {
       "code": "USA-14",
       "number": 263,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-15",
       "number": 264,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-16",
       "number": 265,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-17",
       "number": 266,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-18",
       "number": 267,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-19",
       "number": 268,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "USA-20",
       "number": 269,
       "team": "USA",
       "section": "USA",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-1",
       "number": 270,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "team_badge",
-      "group": "D"
+      "type": "team_badge"
     },
     {
       "code": "PAR-2",
       "number": 271,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-3",
       "number": 272,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-4",
       "number": 273,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-5",
       "number": 274,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-6",
       "number": 275,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-7",
       "number": 276,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-8",
       "number": 277,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-9",
       "number": 278,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-10",
       "number": 279,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-11",
       "number": 280,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-12",
       "number": 281,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-13",
       "number": 282,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "team_photo",
-      "group": "D"
+      "type": "team_photo"
     },
     {
       "code": "PAR-14",
       "number": 283,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-15",
       "number": 284,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-16",
       "number": 285,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-17",
       "number": 286,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-18",
       "number": 287,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-19",
       "number": 288,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "PAR-20",
       "number": 289,
       "team": "PAR",
       "section": "Paraguay",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-1",
       "number": 290,
       "team": "AUS",
       "section": "Australia",
-      "type": "team_badge",
-      "group": "D"
+      "type": "team_badge"
     },
     {
       "code": "AUS-2",
       "number": 291,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-3",
       "number": 292,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-4",
       "number": 293,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-5",
       "number": 294,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-6",
       "number": 295,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-7",
       "number": 296,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-8",
       "number": 297,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-9",
       "number": 298,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-10",
       "number": 299,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-11",
       "number": 300,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-12",
       "number": 301,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-13",
       "number": 302,
       "team": "AUS",
       "section": "Australia",
-      "type": "team_photo",
-      "group": "D"
+      "type": "team_photo"
     },
     {
       "code": "AUS-14",
       "number": 303,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-15",
       "number": 304,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-16",
       "number": 305,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-17",
       "number": 306,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-18",
       "number": 307,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-19",
       "number": 308,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "AUS-20",
       "number": 309,
       "team": "AUS",
       "section": "Australia",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-1",
       "number": 310,
       "team": "TUR",
       "section": "Turquía",
-      "type": "team_badge",
-      "group": "D"
+      "type": "team_badge"
     },
     {
       "code": "TUR-2",
       "number": 311,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-3",
       "number": 312,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-4",
       "number": 313,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-5",
       "number": 314,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-6",
       "number": 315,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-7",
       "number": 316,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-8",
       "number": 317,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-9",
       "number": 318,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-10",
       "number": 319,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-11",
       "number": 320,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-12",
       "number": 321,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-13",
       "number": 322,
       "team": "TUR",
       "section": "Turquía",
-      "type": "team_photo",
-      "group": "D"
+      "type": "team_photo"
     },
     {
       "code": "TUR-14",
       "number": 323,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-15",
       "number": 324,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-16",
       "number": 325,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-17",
       "number": 326,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-18",
       "number": 327,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-19",
       "number": 328,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "TUR-20",
       "number": 329,
       "team": "TUR",
       "section": "Turquía",
-      "type": "player",
-      "group": "D"
+      "type": "player"
     },
     {
       "code": "GER-1",
       "number": 330,
       "team": "GER",
       "section": "Alemania",
-      "type": "team_badge",
-      "group": "E"
+      "type": "team_badge"
     },
     {
       "code": "GER-2",
       "number": 331,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-3",
       "number": 332,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-4",
       "number": 333,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-5",
       "number": 334,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-6",
       "number": 335,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-7",
       "number": 336,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-8",
       "number": 337,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-9",
       "number": 338,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-10",
       "number": 339,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-11",
       "number": 340,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-12",
       "number": 341,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-13",
       "number": 342,
       "team": "GER",
       "section": "Alemania",
-      "type": "team_photo",
-      "group": "E"
+      "type": "team_photo"
     },
     {
       "code": "GER-14",
       "number": 343,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-15",
       "number": 344,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-16",
       "number": 345,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-17",
       "number": 346,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-18",
       "number": 347,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-19",
       "number": 348,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "GER-20",
       "number": 349,
       "team": "GER",
       "section": "Alemania",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-1",
       "number": 350,
       "team": "CUW",
       "section": "Curazao",
-      "type": "team_badge",
-      "group": "E"
+      "type": "team_badge"
     },
     {
       "code": "CUW-2",
       "number": 351,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-3",
       "number": 352,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-4",
       "number": 353,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-5",
       "number": 354,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-6",
       "number": 355,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-7",
       "number": 356,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-8",
       "number": 357,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-9",
       "number": 358,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-10",
       "number": 359,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-11",
       "number": 360,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-12",
       "number": 361,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-13",
       "number": 362,
       "team": "CUW",
       "section": "Curazao",
-      "type": "team_photo",
-      "group": "E"
+      "type": "team_photo"
     },
     {
       "code": "CUW-14",
       "number": 363,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-15",
       "number": 364,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-16",
       "number": 365,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-17",
       "number": 366,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-18",
       "number": 367,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-19",
       "number": 368,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CUW-20",
       "number": 369,
       "team": "CUW",
       "section": "Curazao",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-1",
       "number": 370,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "team_badge",
-      "group": "E"
+      "type": "team_badge"
     },
     {
       "code": "CIV-2",
       "number": 371,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-3",
       "number": 372,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-4",
       "number": 373,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-5",
       "number": 374,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-6",
       "number": 375,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-7",
       "number": 376,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-8",
       "number": 377,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-9",
       "number": 378,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-10",
       "number": 379,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-11",
       "number": 380,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-12",
       "number": 381,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-13",
       "number": 382,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "team_photo",
-      "group": "E"
+      "type": "team_photo"
     },
     {
       "code": "CIV-14",
       "number": 383,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-15",
       "number": 384,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-16",
       "number": 385,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-17",
       "number": 386,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-18",
       "number": 387,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-19",
       "number": 388,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "CIV-20",
       "number": 389,
       "team": "CIV",
       "section": "Costa de Marfil",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-1",
       "number": 390,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "team_badge",
-      "group": "E"
+      "type": "team_badge"
     },
     {
       "code": "ECU-2",
       "number": 391,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-3",
       "number": 392,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-4",
       "number": 393,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-5",
       "number": 394,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-6",
       "number": 395,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-7",
       "number": 396,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-8",
       "number": 397,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-9",
       "number": 398,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-10",
       "number": 399,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-11",
       "number": 400,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-12",
       "number": 401,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-13",
       "number": 402,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "team_photo",
-      "group": "E"
+      "type": "team_photo"
     },
     {
       "code": "ECU-14",
       "number": 403,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-15",
       "number": 404,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-16",
       "number": 405,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-17",
       "number": 406,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-18",
       "number": 407,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-19",
       "number": 408,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "ECU-20",
       "number": 409,
       "team": "ECU",
       "section": "Ecuador",
-      "type": "player",
-      "group": "E"
+      "type": "player"
     },
     {
       "code": "NED-1",
       "number": 410,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "team_badge",
-      "group": "F"
+      "type": "team_badge"
     },
     {
       "code": "NED-2",
       "number": 411,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-3",
       "number": 412,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-4",
       "number": 413,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-5",
       "number": 414,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-6",
       "number": 415,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-7",
       "number": 416,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-8",
       "number": 417,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-9",
       "number": 418,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-10",
       "number": 419,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-11",
       "number": 420,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-12",
       "number": 421,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-13",
       "number": 422,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "team_photo",
-      "group": "F"
+      "type": "team_photo"
     },
     {
       "code": "NED-14",
       "number": 423,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-15",
       "number": 424,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-16",
       "number": 425,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-17",
       "number": 426,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-18",
       "number": 427,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-19",
       "number": 428,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "NED-20",
       "number": 429,
       "team": "NED",
       "section": "Países Bajos",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-1",
       "number": 430,
       "team": "JPN",
       "section": "Japón",
-      "type": "team_badge",
-      "group": "F"
+      "type": "team_badge"
     },
     {
       "code": "JPN-2",
       "number": 431,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-3",
       "number": 432,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-4",
       "number": 433,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-5",
       "number": 434,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-6",
       "number": 435,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-7",
       "number": 436,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-8",
       "number": 437,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-9",
       "number": 438,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-10",
       "number": 439,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-11",
       "number": 440,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-12",
       "number": 441,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-13",
       "number": 442,
       "team": "JPN",
       "section": "Japón",
-      "type": "team_photo",
-      "group": "F"
+      "type": "team_photo"
     },
     {
       "code": "JPN-14",
       "number": 443,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-15",
       "number": 444,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-16",
       "number": 445,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-17",
       "number": 446,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-18",
       "number": 447,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-19",
       "number": 448,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "JPN-20",
       "number": 449,
       "team": "JPN",
       "section": "Japón",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-1",
       "number": 450,
       "team": "SWE",
       "section": "Suecia",
-      "type": "team_badge",
-      "group": "F"
+      "type": "team_badge"
     },
     {
       "code": "SWE-2",
       "number": 451,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-3",
       "number": 452,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-4",
       "number": 453,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-5",
       "number": 454,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-6",
       "number": 455,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-7",
       "number": 456,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-8",
       "number": 457,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-9",
       "number": 458,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-10",
       "number": 459,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-11",
       "number": 460,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-12",
       "number": 461,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-13",
       "number": 462,
       "team": "SWE",
       "section": "Suecia",
-      "type": "team_photo",
-      "group": "F"
+      "type": "team_photo"
     },
     {
       "code": "SWE-14",
       "number": 463,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-15",
       "number": 464,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-16",
       "number": 465,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-17",
       "number": 466,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-18",
       "number": 467,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-19",
       "number": 468,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "SWE-20",
       "number": 469,
       "team": "SWE",
       "section": "Suecia",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-1",
       "number": 470,
       "team": "TUN",
       "section": "Túnez",
-      "type": "team_badge",
-      "group": "F"
+      "type": "team_badge"
     },
     {
       "code": "TUN-2",
       "number": 471,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-3",
       "number": 472,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-4",
       "number": 473,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-5",
       "number": 474,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-6",
       "number": 475,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-7",
       "number": 476,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-8",
       "number": 477,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-9",
       "number": 478,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-10",
       "number": 479,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-11",
       "number": 480,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-12",
       "number": 481,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-13",
       "number": 482,
       "team": "TUN",
       "section": "Túnez",
-      "type": "team_photo",
-      "group": "F"
+      "type": "team_photo"
     },
     {
       "code": "TUN-14",
       "number": 483,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-15",
       "number": 484,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-16",
       "number": 485,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-17",
       "number": 486,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-18",
       "number": 487,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-19",
       "number": 488,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "TUN-20",
       "number": 489,
       "team": "TUN",
       "section": "Túnez",
-      "type": "player",
-      "group": "F"
+      "type": "player"
     },
     {
       "code": "BEL-1",
       "number": 490,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "team_badge",
-      "group": "G"
+      "type": "team_badge"
     },
     {
       "code": "BEL-2",
       "number": 491,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-3",
       "number": 492,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-4",
       "number": 493,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-5",
       "number": 494,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-6",
       "number": 495,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-7",
       "number": 496,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-8",
       "number": 497,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-9",
       "number": 498,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-10",
       "number": 499,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-11",
       "number": 500,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-12",
       "number": 501,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-13",
       "number": 502,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "team_photo",
-      "group": "G"
+      "type": "team_photo"
     },
     {
       "code": "BEL-14",
       "number": 503,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-15",
       "number": 504,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-16",
       "number": 505,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-17",
       "number": 506,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-18",
       "number": 507,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-19",
       "number": 508,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "BEL-20",
       "number": 509,
       "team": "BEL",
       "section": "Bélgica",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-1",
       "number": 510,
       "team": "EGY",
       "section": "Egipto",
-      "type": "team_badge",
-      "group": "G"
+      "type": "team_badge"
     },
     {
       "code": "EGY-2",
       "number": 511,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-3",
       "number": 512,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-4",
       "number": 513,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-5",
       "number": 514,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-6",
       "number": 515,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-7",
       "number": 516,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-8",
       "number": 517,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-9",
       "number": 518,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-10",
       "number": 519,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-11",
       "number": 520,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-12",
       "number": 521,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-13",
       "number": 522,
       "team": "EGY",
       "section": "Egipto",
-      "type": "team_photo",
-      "group": "G"
+      "type": "team_photo"
     },
     {
       "code": "EGY-14",
       "number": 523,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-15",
       "number": 524,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-16",
       "number": 525,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-17",
       "number": 526,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-18",
       "number": 527,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-19",
       "number": 528,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "EGY-20",
       "number": 529,
       "team": "EGY",
       "section": "Egipto",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-1",
       "number": 530,
       "team": "IRN",
       "section": "Irán",
-      "type": "team_badge",
-      "group": "G"
+      "type": "team_badge"
     },
     {
       "code": "IRN-2",
       "number": 531,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-3",
       "number": 532,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-4",
       "number": 533,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-5",
       "number": 534,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-6",
       "number": 535,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-7",
       "number": 536,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-8",
       "number": 537,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-9",
       "number": 538,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-10",
       "number": 539,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-11",
       "number": 540,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-12",
       "number": 541,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-13",
       "number": 542,
       "team": "IRN",
       "section": "Irán",
-      "type": "team_photo",
-      "group": "G"
+      "type": "team_photo"
     },
     {
       "code": "IRN-14",
       "number": 543,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-15",
       "number": 544,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-16",
       "number": 545,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-17",
       "number": 546,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-18",
       "number": 547,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-19",
       "number": 548,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "IRN-20",
       "number": 549,
       "team": "IRN",
       "section": "Irán",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-1",
       "number": 550,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "team_badge",
-      "group": "G"
+      "type": "team_badge"
     },
     {
       "code": "NZL-2",
       "number": 551,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-3",
       "number": 552,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-4",
       "number": 553,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-5",
       "number": 554,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-6",
       "number": 555,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-7",
       "number": 556,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-8",
       "number": 557,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-9",
       "number": 558,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-10",
       "number": 559,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-11",
       "number": 560,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-12",
       "number": 561,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-13",
       "number": 562,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "team_photo",
-      "group": "G"
+      "type": "team_photo"
     },
     {
       "code": "NZL-14",
       "number": 563,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-15",
       "number": 564,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-16",
       "number": 565,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-17",
       "number": 566,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-18",
       "number": 567,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-19",
       "number": 568,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "NZL-20",
       "number": 569,
       "team": "NZL",
       "section": "Nueva Zelanda",
-      "type": "player",
-      "group": "G"
+      "type": "player"
     },
     {
       "code": "ESP-1",
       "number": 570,
       "team": "ESP",
       "section": "España",
-      "type": "team_badge",
-      "group": "H"
+      "type": "team_badge"
     },
     {
       "code": "ESP-2",
       "number": 571,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-3",
       "number": 572,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-4",
       "number": 573,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-5",
       "number": 574,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-6",
       "number": 575,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-7",
       "number": 576,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-8",
       "number": 577,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-9",
       "number": 578,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-10",
       "number": 579,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-11",
       "number": 580,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-12",
       "number": 581,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-13",
       "number": 582,
       "team": "ESP",
       "section": "España",
-      "type": "team_photo",
-      "group": "H"
+      "type": "team_photo"
     },
     {
       "code": "ESP-14",
       "number": 583,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-15",
       "number": 584,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-16",
       "number": 585,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-17",
       "number": 586,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-18",
       "number": 587,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-19",
       "number": 588,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "ESP-20",
       "number": 589,
       "team": "ESP",
       "section": "España",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-1",
       "number": 590,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "team_badge",
-      "group": "H"
+      "type": "team_badge"
     },
     {
       "code": "CPV-2",
       "number": 591,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-3",
       "number": 592,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-4",
       "number": 593,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-5",
       "number": 594,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-6",
       "number": 595,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-7",
       "number": 596,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-8",
       "number": 597,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-9",
       "number": 598,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-10",
       "number": 599,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-11",
       "number": 600,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-12",
       "number": 601,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-13",
       "number": 602,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "team_photo",
-      "group": "H"
+      "type": "team_photo"
     },
     {
       "code": "CPV-14",
       "number": 603,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-15",
       "number": 604,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-16",
       "number": 605,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-17",
       "number": 606,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-18",
       "number": 607,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-19",
       "number": 608,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "CPV-20",
       "number": 609,
       "team": "CPV",
       "section": "Cabo Verde",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-1",
       "number": 610,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "team_badge",
-      "group": "H"
+      "type": "team_badge"
     },
     {
       "code": "KSA-2",
       "number": 611,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-3",
       "number": 612,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-4",
       "number": 613,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-5",
       "number": 614,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-6",
       "number": 615,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-7",
       "number": 616,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-8",
       "number": 617,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-9",
       "number": 618,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-10",
       "number": 619,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-11",
       "number": 620,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-12",
       "number": 621,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-13",
       "number": 622,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "team_photo",
-      "group": "H"
+      "type": "team_photo"
     },
     {
       "code": "KSA-14",
       "number": 623,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-15",
       "number": 624,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-16",
       "number": 625,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-17",
       "number": 626,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-18",
       "number": 627,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-19",
       "number": 628,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "KSA-20",
       "number": 629,
       "team": "KSA",
       "section": "Arabia Saudita",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-1",
       "number": 630,
       "team": "URU",
       "section": "Uruguay",
-      "type": "team_badge",
-      "group": "H"
+      "type": "team_badge"
     },
     {
       "code": "URU-2",
       "number": 631,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-3",
       "number": 632,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-4",
       "number": 633,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-5",
       "number": 634,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-6",
       "number": 635,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-7",
       "number": 636,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-8",
       "number": 637,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-9",
       "number": 638,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-10",
       "number": 639,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-11",
       "number": 640,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-12",
       "number": 641,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-13",
       "number": 642,
       "team": "URU",
       "section": "Uruguay",
-      "type": "team_photo",
-      "group": "H"
+      "type": "team_photo"
     },
     {
       "code": "URU-14",
       "number": 643,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-15",
       "number": 644,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-16",
       "number": 645,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-17",
       "number": 646,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-18",
       "number": 647,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-19",
       "number": 648,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "URU-20",
       "number": 649,
       "team": "URU",
       "section": "Uruguay",
-      "type": "player",
-      "group": "H"
+      "type": "player"
     },
     {
       "code": "FRA-1",
       "number": 650,
       "team": "FRA",
       "section": "Francia",
-      "type": "team_badge",
-      "group": "I"
+      "type": "team_badge"
     },
     {
       "code": "FRA-2",
       "number": 651,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-3",
       "number": 652,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-4",
       "number": 653,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-5",
       "number": 654,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-6",
       "number": 655,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-7",
       "number": 656,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-8",
       "number": 657,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-9",
       "number": 658,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-10",
       "number": 659,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-11",
       "number": 660,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-12",
       "number": 661,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-13",
       "number": 662,
       "team": "FRA",
       "section": "Francia",
-      "type": "team_photo",
-      "group": "I"
+      "type": "team_photo"
     },
     {
       "code": "FRA-14",
       "number": 663,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-15",
       "number": 664,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-16",
       "number": 665,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-17",
       "number": 666,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-18",
       "number": 667,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-19",
       "number": 668,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "FRA-20",
       "number": 669,
       "team": "FRA",
       "section": "Francia",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-1",
       "number": 670,
       "team": "SEN",
       "section": "Senegal",
-      "type": "team_badge",
-      "group": "I"
+      "type": "team_badge"
     },
     {
       "code": "SEN-2",
       "number": 671,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-3",
       "number": 672,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-4",
       "number": 673,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-5",
       "number": 674,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-6",
       "number": 675,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-7",
       "number": 676,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-8",
       "number": 677,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-9",
       "number": 678,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-10",
       "number": 679,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-11",
       "number": 680,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-12",
       "number": 681,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-13",
       "number": 682,
       "team": "SEN",
       "section": "Senegal",
-      "type": "team_photo",
-      "group": "I"
+      "type": "team_photo"
     },
     {
       "code": "SEN-14",
       "number": 683,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-15",
       "number": 684,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-16",
       "number": 685,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-17",
       "number": 686,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-18",
       "number": 687,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-19",
       "number": 688,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "SEN-20",
       "number": 689,
       "team": "SEN",
       "section": "Senegal",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-1",
       "number": 690,
       "team": "IRQ",
       "section": "Irak",
-      "type": "team_badge",
-      "group": "I"
+      "type": "team_badge"
     },
     {
       "code": "IRQ-2",
       "number": 691,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-3",
       "number": 692,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-4",
       "number": 693,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-5",
       "number": 694,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-6",
       "number": 695,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-7",
       "number": 696,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-8",
       "number": 697,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-9",
       "number": 698,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-10",
       "number": 699,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-11",
       "number": 700,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-12",
       "number": 701,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-13",
       "number": 702,
       "team": "IRQ",
       "section": "Irak",
-      "type": "team_photo",
-      "group": "I"
+      "type": "team_photo"
     },
     {
       "code": "IRQ-14",
       "number": 703,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-15",
       "number": 704,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-16",
       "number": 705,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-17",
       "number": 706,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-18",
       "number": 707,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-19",
       "number": 708,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "IRQ-20",
       "number": 709,
       "team": "IRQ",
       "section": "Irak",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-1",
       "number": 710,
       "team": "NOR",
       "section": "Noruega",
-      "type": "team_badge",
-      "group": "I"
+      "type": "team_badge"
     },
     {
       "code": "NOR-2",
       "number": 711,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-3",
       "number": 712,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-4",
       "number": 713,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-5",
       "number": 714,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-6",
       "number": 715,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-7",
       "number": 716,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-8",
       "number": 717,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-9",
       "number": 718,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-10",
       "number": 719,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-11",
       "number": 720,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-12",
       "number": 721,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-13",
       "number": 722,
       "team": "NOR",
       "section": "Noruega",
-      "type": "team_photo",
-      "group": "I"
+      "type": "team_photo"
     },
     {
       "code": "NOR-14",
       "number": 723,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-15",
       "number": 724,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-16",
       "number": 725,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-17",
       "number": 726,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-18",
       "number": 727,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-19",
       "number": 728,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "NOR-20",
       "number": 729,
       "team": "NOR",
       "section": "Noruega",
-      "type": "player",
-      "group": "I"
+      "type": "player"
     },
     {
       "code": "ARG-1",
       "number": 730,
       "team": "ARG",
       "section": "Argentina",
-      "type": "team_badge",
-      "group": "J"
+      "type": "team_badge"
     },
     {
       "code": "ARG-2",
       "number": 731,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-3",
       "number": 732,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-4",
       "number": 733,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-5",
       "number": 734,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-6",
       "number": 735,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-7",
       "number": 736,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-8",
       "number": 737,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-9",
       "number": 738,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-10",
       "number": 739,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-11",
       "number": 740,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-12",
       "number": 741,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-13",
       "number": 742,
       "team": "ARG",
       "section": "Argentina",
-      "type": "team_photo",
-      "group": "J"
+      "type": "team_photo"
     },
     {
       "code": "ARG-14",
       "number": 743,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-15",
       "number": 744,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-16",
       "number": 745,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-17",
       "number": 746,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-18",
       "number": 747,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-19",
       "number": 748,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ARG-20",
       "number": 749,
       "team": "ARG",
       "section": "Argentina",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-1",
       "number": 750,
       "team": "ALG",
       "section": "Argelia",
-      "type": "team_badge",
-      "group": "J"
+      "type": "team_badge"
     },
     {
       "code": "ALG-2",
       "number": 751,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-3",
       "number": 752,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-4",
       "number": 753,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-5",
       "number": 754,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-6",
       "number": 755,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-7",
       "number": 756,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-8",
       "number": 757,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-9",
       "number": 758,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-10",
       "number": 759,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-11",
       "number": 760,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-12",
       "number": 761,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-13",
       "number": 762,
       "team": "ALG",
       "section": "Argelia",
-      "type": "team_photo",
-      "group": "J"
+      "type": "team_photo"
     },
     {
       "code": "ALG-14",
       "number": 763,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-15",
       "number": 764,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-16",
       "number": 765,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-17",
       "number": 766,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-18",
       "number": 767,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-19",
       "number": 768,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "ALG-20",
       "number": 769,
       "team": "ALG",
       "section": "Argelia",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-1",
       "number": 770,
       "team": "AUT",
       "section": "Austria",
-      "type": "team_badge",
-      "group": "J"
+      "type": "team_badge"
     },
     {
       "code": "AUT-2",
       "number": 771,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-3",
       "number": 772,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-4",
       "number": 773,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-5",
       "number": 774,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-6",
       "number": 775,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-7",
       "number": 776,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-8",
       "number": 777,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-9",
       "number": 778,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-10",
       "number": 779,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-11",
       "number": 780,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-12",
       "number": 781,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-13",
       "number": 782,
       "team": "AUT",
       "section": "Austria",
-      "type": "team_photo",
-      "group": "J"
+      "type": "team_photo"
     },
     {
       "code": "AUT-14",
       "number": 783,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-15",
       "number": 784,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-16",
       "number": 785,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-17",
       "number": 786,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-18",
       "number": 787,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-19",
       "number": 788,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "AUT-20",
       "number": 789,
       "team": "AUT",
       "section": "Austria",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-1",
       "number": 790,
       "team": "JOR",
       "section": "Jordania",
-      "type": "team_badge",
-      "group": "J"
+      "type": "team_badge"
     },
     {
       "code": "JOR-2",
       "number": 791,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-3",
       "number": 792,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-4",
       "number": 793,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-5",
       "number": 794,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-6",
       "number": 795,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-7",
       "number": 796,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-8",
       "number": 797,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-9",
       "number": 798,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-10",
       "number": 799,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-11",
       "number": 800,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-12",
       "number": 801,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-13",
       "number": 802,
       "team": "JOR",
       "section": "Jordania",
-      "type": "team_photo",
-      "group": "J"
+      "type": "team_photo"
     },
     {
       "code": "JOR-14",
       "number": 803,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-15",
       "number": 804,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-16",
       "number": 805,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-17",
       "number": 806,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-18",
       "number": 807,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-19",
       "number": 808,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "JOR-20",
       "number": 809,
       "team": "JOR",
       "section": "Jordania",
-      "type": "player",
-      "group": "J"
+      "type": "player"
     },
     {
       "code": "POR-1",
       "number": 810,
       "team": "POR",
       "section": "Portugal",
-      "type": "team_badge",
-      "group": "K"
+      "type": "team_badge"
     },
     {
       "code": "POR-2",
       "number": 811,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-3",
       "number": 812,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-4",
       "number": 813,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-5",
       "number": 814,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-6",
       "number": 815,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-7",
       "number": 816,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-8",
       "number": 817,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-9",
       "number": 818,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-10",
       "number": 819,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-11",
       "number": 820,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-12",
       "number": 821,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-13",
       "number": 822,
       "team": "POR",
       "section": "Portugal",
-      "type": "team_photo",
-      "group": "K"
+      "type": "team_photo"
     },
     {
       "code": "POR-14",
       "number": 823,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-15",
       "number": 824,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-16",
       "number": 825,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-17",
       "number": 826,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-18",
       "number": 827,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-19",
       "number": 828,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "POR-20",
       "number": 829,
       "team": "POR",
       "section": "Portugal",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-1",
       "number": 830,
       "team": "COD",
       "section": "RD Congo",
-      "type": "team_badge",
-      "group": "K"
+      "type": "team_badge"
     },
     {
       "code": "COD-2",
       "number": 831,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-3",
       "number": 832,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-4",
       "number": 833,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-5",
       "number": 834,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-6",
       "number": 835,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-7",
       "number": 836,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-8",
       "number": 837,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-9",
       "number": 838,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-10",
       "number": 839,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-11",
       "number": 840,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-12",
       "number": 841,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-13",
       "number": 842,
       "team": "COD",
       "section": "RD Congo",
-      "type": "team_photo",
-      "group": "K"
+      "type": "team_photo"
     },
     {
       "code": "COD-14",
       "number": 843,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-15",
       "number": 844,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-16",
       "number": 845,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-17",
       "number": 846,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-18",
       "number": 847,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-19",
       "number": 848,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COD-20",
       "number": 849,
       "team": "COD",
       "section": "RD Congo",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-1",
       "number": 850,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "team_badge",
-      "group": "K"
+      "type": "team_badge"
     },
     {
       "code": "UZB-2",
       "number": 851,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-3",
       "number": 852,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-4",
       "number": 853,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-5",
       "number": 854,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-6",
       "number": 855,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-7",
       "number": 856,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-8",
       "number": 857,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-9",
       "number": 858,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-10",
       "number": 859,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-11",
       "number": 860,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-12",
       "number": 861,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-13",
       "number": 862,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "team_photo",
-      "group": "K"
+      "type": "team_photo"
     },
     {
       "code": "UZB-14",
       "number": 863,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-15",
       "number": 864,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-16",
       "number": 865,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-17",
       "number": 866,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-18",
       "number": 867,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-19",
       "number": 868,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "UZB-20",
       "number": 869,
       "team": "UZB",
       "section": "Uzbekistán",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-1",
       "number": 870,
       "team": "COL",
       "section": "Colombia",
-      "type": "team_badge",
-      "group": "K"
+      "type": "team_badge"
     },
     {
       "code": "COL-2",
       "number": 871,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-3",
       "number": 872,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-4",
       "number": 873,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-5",
       "number": 874,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-6",
       "number": 875,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-7",
       "number": 876,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-8",
       "number": 877,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-9",
       "number": 878,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-10",
       "number": 879,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-11",
       "number": 880,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-12",
       "number": 881,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-13",
       "number": 882,
       "team": "COL",
       "section": "Colombia",
-      "type": "team_photo",
-      "group": "K"
+      "type": "team_photo"
     },
     {
       "code": "COL-14",
       "number": 883,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-15",
       "number": 884,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-16",
       "number": 885,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-17",
       "number": 886,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-18",
       "number": 887,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-19",
       "number": 888,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "COL-20",
       "number": 889,
       "team": "COL",
       "section": "Colombia",
-      "type": "player",
-      "group": "K"
+      "type": "player"
     },
     {
       "code": "ENG-1",
       "number": 890,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "team_badge",
-      "group": "L"
+      "type": "team_badge"
     },
     {
       "code": "ENG-2",
       "number": 891,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-3",
       "number": 892,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-4",
       "number": 893,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-5",
       "number": 894,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-6",
       "number": 895,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-7",
       "number": 896,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-8",
       "number": 897,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-9",
       "number": 898,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-10",
       "number": 899,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-11",
       "number": 900,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-12",
       "number": 901,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-13",
       "number": 902,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "team_photo",
-      "group": "L"
+      "type": "team_photo"
     },
     {
       "code": "ENG-14",
       "number": 903,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-15",
       "number": 904,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-16",
       "number": 905,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-17",
       "number": 906,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-18",
       "number": 907,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-19",
       "number": 908,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "ENG-20",
       "number": 909,
       "team": "ENG",
       "section": "Inglaterra",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-1",
       "number": 910,
       "team": "CRO",
       "section": "Croacia",
-      "type": "team_badge",
-      "group": "L"
+      "type": "team_badge"
     },
     {
       "code": "CRO-2",
       "number": 911,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-3",
       "number": 912,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-4",
       "number": 913,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-5",
       "number": 914,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-6",
       "number": 915,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-7",
       "number": 916,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-8",
       "number": 917,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-9",
       "number": 918,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-10",
       "number": 919,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-11",
       "number": 920,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-12",
       "number": 921,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-13",
       "number": 922,
       "team": "CRO",
       "section": "Croacia",
-      "type": "team_photo",
-      "group": "L"
+      "type": "team_photo"
     },
     {
       "code": "CRO-14",
       "number": 923,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-15",
       "number": 924,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-16",
       "number": 925,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-17",
       "number": 926,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-18",
       "number": 927,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-19",
       "number": 928,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "CRO-20",
       "number": 929,
       "team": "CRO",
       "section": "Croacia",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-1",
       "number": 930,
       "team": "GHA",
       "section": "Ghana",
-      "type": "team_badge",
-      "group": "L"
+      "type": "team_badge"
     },
     {
       "code": "GHA-2",
       "number": 931,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-3",
       "number": 932,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-4",
       "number": 933,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-5",
       "number": 934,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-6",
       "number": 935,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-7",
       "number": 936,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-8",
       "number": 937,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-9",
       "number": 938,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-10",
       "number": 939,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-11",
       "number": 940,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-12",
       "number": 941,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-13",
       "number": 942,
       "team": "GHA",
       "section": "Ghana",
-      "type": "team_photo",
-      "group": "L"
+      "type": "team_photo"
     },
     {
       "code": "GHA-14",
       "number": 943,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-15",
       "number": 944,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-16",
       "number": 945,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-17",
       "number": 946,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-18",
       "number": 947,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-19",
       "number": 948,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "GHA-20",
       "number": 949,
       "team": "GHA",
       "section": "Ghana",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-1",
       "number": 950,
       "team": "PAN",
       "section": "Panamá",
-      "type": "team_badge",
-      "group": "L"
+      "type": "team_badge"
     },
     {
       "code": "PAN-2",
       "number": 951,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-3",
       "number": 952,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-4",
       "number": 953,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-5",
       "number": 954,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-6",
       "number": 955,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-7",
       "number": 956,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-8",
       "number": 957,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-9",
       "number": 958,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-10",
       "number": 959,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-11",
       "number": 960,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-12",
       "number": 961,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-13",
       "number": 962,
       "team": "PAN",
       "section": "Panamá",
-      "type": "team_photo",
-      "group": "L"
+      "type": "team_photo"
     },
     {
       "code": "PAN-14",
       "number": 963,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-15",
       "number": 964,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-16",
       "number": 965,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-17",
       "number": 966,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-18",
       "number": 967,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-19",
       "number": 968,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "PAN-20",
       "number": 969,
       "team": "PAN",
       "section": "Panamá",
-      "type": "player",
-      "group": "L"
+      "type": "player"
     },
     {
       "code": "EXT-1",
       "number": 970,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-2",
       "number": 971,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-3",
       "number": 972,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-4",
       "number": 973,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-5",
       "number": 974,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-6",
       "number": 975,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-7",
       "number": 976,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-8",
       "number": 977,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-9",
       "number": 978,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-10",
       "number": 979,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "EXT-11",
       "number": 980,
       "team": null,
       "section": "Extras",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-1",
       "number": 981,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-2",
       "number": 982,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-3",
       "number": 983,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-4",
       "number": 984,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-5",
       "number": 985,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-6",
       "number": 986,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-7",
       "number": 987,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-8",
       "number": 988,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-9",
       "number": 989,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-10",
       "number": 990,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-11",
       "number": 991,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-12",
       "number": 992,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-13",
       "number": 993,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     },
     {
       "code": "STR-14",
       "number": 994,
       "team": null,
       "section": "Estrellas",
-      "type": "special",
-      "group": null
+      "type": "special"
     }
   ]
 }

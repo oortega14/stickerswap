@@ -1,4 +1,4 @@
-// Mapeo FIFA code → emoji bandera. Para Inglaterra y Escocia se usan los
+// Mapeo código de país → emoji bandera. Para Inglaterra y Escocia se usan los
 // flags subdivisión de UK (pueden no renderizar en algunos sistemas viejos).
 const FLAGS: Record<string, string> = {
   ARG: "🇦🇷",

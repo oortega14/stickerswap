@@ -1,7 +1,7 @@
-// Mapa estático código de país → emoji bandera para los 48 equipos del
+// Mapa estático código de país → emoji bandera para las 48 banderas del
 // album. Los emojis son secuencias de Regional Indicator Symbols
 // (o subtag para ENG/SCO) que renderizan en iOS 14+ y Android 11+.
-export const FIFA_TO_FLAG: Record<string, string> = {
+export const COUNTRY_TO_FLAG: Record<string, string> = {
   ALG: "🇩🇿", ARG: "🇦🇷", AUS: "🇦🇺", AUT: "🇦🇹",
   BEL: "🇧🇪", BIH: "🇧🇦", BRA: "🇧🇷", CAN: "🇨🇦",
   CIV: "🇨🇮", COD: "🇨🇩", COL: "🇨🇴", CPV: "🇨🇻",
@@ -16,7 +16,7 @@ export const FIFA_TO_FLAG: Record<string, string> = {
   TUR: "🇹🇷", URU: "🇺🇾", USA: "🇺🇸", UZB: "🇺🇿"
 };
 
-export function flagFor(fifaCode: string | null | undefined): string {
-  if (!fifaCode) return "";
-  return FIFA_TO_FLAG[fifaCode] ?? "";
+export function flagFor(countryCode: string | null | undefined): string {
+  if (!countryCode) return "";
+  return COUNTRY_TO_FLAG[countryCode] ?? "";
 }

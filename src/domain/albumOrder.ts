@@ -1,7 +1,7 @@
 import type { Sticker } from "./types";
 
 export interface AlbumSection<S extends Sticker = Sticker> {
-  /** Identificador estable para URLs. Para teams es el código FIFA, para
+  /** Identificador estable para URLs. Para teams es el código de país, para
    *  especiales es el nombre de sección tal cual (Intro/Extras/Estrellas). */
   id: string;
   type: "team" | "special";
@@ -15,7 +15,7 @@ export interface AlbumSection<S extends Sticker = Sticker> {
  * Agrupa los stickers por sección y devuelve la lista en orden de álbum
  * (el menor `number` de cada sección marca su posición; el dataset enumera
  * n=1..N en orden de páginas del álbum). El id para teams es el código
- * FIFA y para especiales el nombre de sección.
+ * de país y para especiales el nombre de sección.
  */
 export function buildAlbumOrder<S extends Sticker>(stickers: S[]): AlbumSection<S>[] {
   const grouped = new Map<string, S[]>();

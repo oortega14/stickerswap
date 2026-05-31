@@ -1,4 +1,4 @@
-// Generado a partir de assets/flags-png/<FIFA>.png (+ @2x + @3x).
+// Generado a partir de assets/flags-png/<CODE>.png (+ @2x + @3x).
 // Para regenerar los PNG desde los SVG: node scripts/svg-to-png-flags.js
 // React Native elige automaticamente la variante segun la densidad del device.
 
